@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_apply_discount">
+            <field name="name">Apply discount</field>
+            <field name="model">crm.apply.voucher</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" required="True"/>
+                            <field name="partner_id" invisible="True"/>
+                            <field name="crm_id" invisible="True"/>
+                        </group>
+                        <footer class="text-center">
+                            <button name="check_code_voucher" type="object" string="Check voucher" class="btn-info"/>
+                            <button string="Cancel" class="btn-danger" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_apply_voucher_finish" model="ir.ui.view">
+            <field name="name">Apply success</field>
+            <field name="model">crm.apply.voucher</field>
+            <field name="arch" type="xml">
+                <form>
+                    <separator
+                            string="Voucher đã áp dụng thành công!!"/>
+                    <footer class="text-center">
+                        <button string="Ok" class="oe_highlight" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_apply_success_wizard" model="ir.actions.act_window">
+            <field name="name">Apply success</field>
+            <field name="res_model">crm.apply.voucher</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_apply_voucher_finish"/>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_apply_discount_prg">
+            <field name="name">Apply discount program</field>
+            <field name="model">crm.apply.discount.program</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="campaign_id" readonly="True" options="{'no_open':True,'no_create':True}"/>
+                            <field name="program_discount_id" options="{'no_open':True,'no_create':True}"
+                                   required="True"/>
+                            <field name="crm_id" invisible="True"/>
+                            <field name="partner_id" invisible="True"/>
+                        </group>
+                        <footer class="text-center">
+                            <button name="check_prg" type="object" string="Set discount" class="btn-info"/>
+                            <button special="cancel" string="Cancel" class="btn-danger"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

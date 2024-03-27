@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+<!--        <menuitem id="menu_op_discipline_root"-->
+<!--                  name="Discipline"-->
+<!--                  sequence="45"-->
+<!--                  web_icon="openeducat_discipline,static/description/icon.png"/>-->
+
+<!--        <menuitem id="menu_op_discipline"-->
+<!--                  parent="menu_op_discipline_root"-->
+<!--                  sequence="10"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office"-->
+<!--                  action="act_open_op_discipline_view"/>-->
+
+<!--        <menuitem id="menu_suspended_student"-->
+<!--                  parent="menu_op_discipline_root"-->
+<!--                  sequence="30"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office"-->
+<!--                  action="act_open_suspended_student_view"/>-->
+
+<!--        <menuitem id="menu_op_discipline_achievers"-->
+<!--                  parent="menu_op_discipline_root"-->
+<!--                  sequence="40"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office,openeducat_core.group_op_faculty"-->
+<!--                  action="act_open_student_achievers_view"/>-->
+
+<!--        <menuitem id="menu_op_discipline_config"-->
+<!--                  name="Configuration"-->
+<!--                  parent="menu_op_discipline_root"-->
+<!--                  sequence="80"/>-->
+
+<!--        <menuitem id="menu_discipline_category"-->
+<!--                  parent="menu_op_discipline_config"-->
+<!--                  sequence="10"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office,openeducat_core.group_op_faculty"-->
+<!--                  action="act_open_misbehaviour_category_view"/>-->
+
+<!--        <menuitem id="menu_discipline_sub_category"-->
+<!--                  parent="menu_op_discipline_config"-->
+<!--                  sequence="20"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office,openeducat_core.group_op_faculty"-->
+<!--                  action="act_open_misbehaviour_sub_category_view"/>-->
+
+<!--        <menuitem id="menu_achievement_category"-->
+<!--                  parent="menu_op_discipline_config"-->
+<!--                  sequence="30"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office"-->
+<!--                  action="act_open_achievement_category_view"/>-->
+
+<!--        <menuitem id="menu_op_discipline_report"-->
+<!--                  name="Reports"-->
+<!--                  parent="menu_op_discipline_root"-->
+<!--                  sequence="50"/>-->
+
+<!--        <menuitem id="menu_misbehaviour_type"-->
+<!--                  parent="menu_op_discipline_report"-->
+<!--                  sequence="10"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office"-->
+<!--                  action="misbehaviour_type_act"/>-->
+
+<!--        <menuitem id="menu_student_wise"-->
+<!--                  parent="menu_op_discipline_report"-->
+<!--                  sequence="20"-->
+<!--                  groups="openeducat_core.group_op_back_office_admin,openeducat_core.group_op_back_office"-->
+<!--                  action="student_wise_act"/>-->
+
+        <!--Side Menu-->
+        <menuitem id="menu_op_school_config_offence"
+                  name="Rules Management"
+                  parent="openeducat_core.menu_op_school_config"
+                  sequence="90"/>
+
+<!--        <menuitem id="menu_op_school_offences"-->
+<!--                  name="School Offences"-->
+<!--                  parent="menu_op_school_config_offence"-->
+<!--                  sequence="10"-->
+<!--                  action="act_open_school_offences_view"-->
+<!--                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin,openeducat_core.group_op_student"/>-->
+
+<!--        <menuitem id="menu_op_elearning_rules"-->
+<!--                  name="Elearning Rules"-->
+<!--                  parent="menu_op_school_config_offence"-->
+<!--                  sequence="20"-->
+<!--                  action="act_open_elearning_rules_view"-->
+<!--                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin,openeducat_core.group_op_student"/>-->
+    </data>
+</odoo>

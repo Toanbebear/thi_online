@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_inherit_crm_line">
+            <field name="name">Crm Line</field>
+            <field name="model">crm.line</field>
+            <field name="inherit_id" ref="crm_base.form_crm_line"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="after">
+                    <field name="service_id"/>
+                    <field name="exam_room_ids" widget="many2many_tags" groups="base.group_system"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_inherit_crm_line_form_booking">
+            <field name="name">Booking</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm_base.crm_lead_form_booking"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='crm_line_ids']/form/sheet/group/group/field[@name='line_special']" position="after">
+                    <field name="consultants" domain="[('company_id', '=', company_id)]" options="{'no_open':True,'no_create':True}"/>
+                </xpath>
+                <xpath expr="//field[@name='crm_line_ids']/tree/field[@name='number_used']" position="after">
+                    <field name="come_number"/>
+                </xpath>
+                <xpath expr="//group[@name='service']/field[@name='product_id']" position="before">
+                    <field name="odontology" groups="base.group_system"
+                           attrs="{'invisible':[('parent.type_brand','!=', 'hospital')]}"/>
+                    <field name="institution" invisible="True"/>
+                    <field name="institution_shared" attrs="{'invisible': [('type_brand', '!=', 'hospital')]}"
+                           widget="many2many_tags"/>
+                    <field name="service_id"
+                           attrs="{'invisible': [('type_brand', '!=', 'hospital')],'required': [('type_brand', '=', 'hospital')]}"
+                           domain="[('institution', 'in', institution_shared)]"
+                           options="{'no_open':True,'no_create':True}"/>
+                    <field name="exam_room_ids" attrs="{'invisible': [('type_brand', '!=', 'hospital')]}"
+                           widget="many2many_tags" groups="base.group_system"/>
+                </xpath>
+                <xpath expr="//group[@name='service']/field[@name='product_id']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                    <attribute name="readonly">True</attribute>
+                    <attribute name="force_save">True</attribute>
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page string="Lịch sử khám" attrs="{'invisible': [('type_brand', '!=', 'hospital')]}">
+                        <field name="walkin_ids">
+                            <tree create="false">
+                                <field name="name"/>
+                                <field name="state"/>
+                                <field name="service_room"/>
+                                <field name="doctor"/>
+                                <field name="date"/>
+                                <field name="service" widget="many2many_tags"/>
+                                <field name="reason_check"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_inherit_crm_line_form_lead">
+            <field name="name">Lead</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm_base.form_crm_lead"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='service']/field[@name='product_id']" position="before">
+                    <field name="institution_shared" attrs="{'invisible': [('type_brand', '!=', 'hospital')]}"
+                           widget="many2many_tags" invisible="True"/>
+                    <field name="service_id"
+                           attrs="{'invisible': [('type_brand', '!=', 'hospital')],'required': [('type_brand', '=', 'hospital')]}"
+                           domain="[('institution', 'in', institution_shared)]"/>
+                    <field name="exam_room_ids" attrs="{'invisible': [('type_brand', '!=', 'hospital')]}"
+                           widget="many2many_tags" invisible="True"/>
+                </xpath>
+                <xpath expr="//group[@name='service']/field[@name='product_id']" position="attributes">
+                    <attribute name="groups">base.group_system</attribute>
+                    <attribute name="readonly">True</attribute>
+                    <attribute name="force_save">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--        #chỉnh view tree phiếu thu-->
+        <record id="sh_walkin_payment_view_tree_crm" model="ir.ui.view">
+            <field name="name">Payment</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="shealth_all_in_one.sh_walkin_payment_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='amount']" position="after">
+                    <field name="amount_vnd" string="Số tiền VNĐ"/>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

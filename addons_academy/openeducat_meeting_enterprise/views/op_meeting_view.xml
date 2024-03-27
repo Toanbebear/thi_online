@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Calendar Events : Views and Actions -->
+    <record id="view_op_meeting_tree" model="ir.ui.view">
+        <field name="name">op.meeting.tree</field>
+        <field name="model">op.meeting</field>
+        <field name="arch" type="xml">
+            <tree string="Meetings" decoration-bf="message_needaction==True">
+                <field name="name" string="Subject"/>
+                <field name="allday" invisible="True"/>
+                <field name="start" string="Start Date"/>
+                <field name="stop" string="End Date"/>
+                <field name="partner_ids"/>
+                <field name="location"/>
+                <field name="state" invisible="True"/>
+                <field name="duration"/>
+                <field name="message_needaction" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_op_meeting_form" model="ir.ui.view">
+        <field name="name">op.meeting.form</field>
+        <field name="model">op.meeting</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <form string="Meetings">
+                <sheet>
+                    <field name="state" invisible="1"/>
+                    <field name="is_attendee" invisible="1"/>
+                    <field name="attendee_status" invisible="1"/>
+                    <div class="oe_title">
+                        <div class="oe_edit_only"><label for="name"/></div>
+                        <h1><field name="name" placeholder="e.g. Business Lunch"/></h1>
+                        <label for="partner_ids" string="Attendees" class="oe_edit_only"/>
+                        <h2>
+                            <field name="partner_ids" widget="many2manyattendee"
+                                   placeholder="Select attendees..."
+                                   context="{'force_email':True}" class="oe_inline"/>
+                        </h2>
+                    </div>
+                    <notebook>
+                        <page string="Meeting Details">
+                            <group>
+                                <group>
+                                    <field name="start" invisible="1"/>
+                                    <field name="stop" invisible="1"/>
+                                    <field name="id" invisible="1"/>
+                                    <field name="start_date" string="Starting at"
+                                           attrs="{'invisible': [('allday','=',False)], 'readonly': [('id', '!=', False)]}"/>
+                                    <field name="stop_date" string="Ending at"
+                                           attrs="{'invisible': [('allday','=',False)], 'readonly': [('id', '!=', False)]}"/>
+                                    <field name="start_datetime" string="Starting at"
+                                           attrs="{'invisible': [('allday','=',True)]}"/>
+                                    <field name="stop_datetime" invisible="1"/>
+                                    <label for="duration" attrs="{'invisible': [('allday','=',True)]}"/>
+                                    <div attrs="{'invisible': [('allday','=',True)]}">
+                                        <field name="duration" widget="float_time" string="Duration" class="oe_inline"/>
+                                        <span>hours</span>
+                                    </div>
+                                    <field name="allday"/>
+                                </group>
+                                <group>
+                                    <field name="categ_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                                    <field name="alarm_ids" widget="many2many_tags"/>
+                                    <field name="location"/>
+                                </group>
+                            </group>
+                            <label for="description"/>
+                            <field name="description"/>
+                        </page>
+                        <page string="Options">
+                            <group>
+                                <group>
+                                    <field name="privacy"/>
+                                    <field name="show_as"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Invitations" groups="base.group_no_one">
+                            <button name="action_sendmail" type="object" string="Send mail" icon="fa-envelope" class="oe_link"/>
+                            <field name="attendee_ids" widget="one2many">
+                                <tree string="Invitation details" editable="top" create="false" delete="false">
+                                    <field name="partner_id"/>
+                                    <field name="state"/>
+                                    <field name="email" widget="email"/>
+                                    <button name="do_tentative" states="needsAction,declined,accepted"
+                                            string="Uncertain" type="object" icon="fa-asterisk"/>
+                                    <button name="do_accept" string="Accept"
+                                            states="needsAction,tentative,declined"
+                                            type="object" icon="fa-check text-success"/>
+                                    <button name="do_decline" string="Decline" states="needsAction,tentative,accepted"
+                                            type="object" icon="fa-times-circle text-danger"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Misc" groups="base.group_no_one">
+                            <group>
+                                <label for="user_id" string="Owner"/>
+                                <field name="user_id" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_op_meeting_form_popup" model="ir.ui.view">
+        <field name="name">op.meeting.event.form</field>
+        <field name="model">op.meeting</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <form string="Meetings">
+                <field name="state" invisible="1"/>
+                <field name="is_attendee" invisible="1"/>
+                <field name="attendee_status" invisible="1"/>
+                <group>
+                    <group>
+                        <field name="start_date" string="Starting at" attrs="{'invisible': [('allday','=',False)]}"/>
+                        <field name="start_datetime" string="Starting at" attrs="{'invisible': [('allday','=',True)]}"/>
+                        <label for="duration" attrs="{'invisible': [('allday','=',True)]}"/>
+                        <div attrs="{'invisible': [('allday','=',True)]}">
+                            <field name="duration" widget="float_time" class="oe_inline"/>
+                            <span>hours</span>
+                        </div>
+                        <field name="allday" class="oe_inline" attrs="{'invisible': [('allday','=',False)]}"/>
+                        <field name="partner_ids" widget="many2manyattendee" string="Attendees"/>
+                    </group>
+                    <group>
+                        <field name="location"/>
+                        <field name="categ_ids" widget="many2many_tags"/>
+                        <field name="alarm_ids" widget="many2many_tags"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_op_meeting_event" model="ir.ui.view">
+        <field name="name">op.meeting.event</field>
+        <field name="model">op.meeting</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Meetings" mode="month" date_start="start" date_stop="stop"
+                      date_delay="duration" all_day="allday" color="partner_id"
+                      event_open_popup="%(openeducat_meeting_enterprise.view_op_meeting_form_popup)s">
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="partner_id"/>
+                <field name="partner_ids"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_op_meeting_event_search" model="ir.ui.view">
+        <field name="name">op.meeting.event.search</field>
+        <field name="model">op.meeting</field>
+        <field name="arch" type="xml">
+            <search string="Search Meetings">
+                <field name="name" string="Meeting" filter_domain="[('name','ilike',self)]"/>
+                <field name="partner_ids"/>
+                <field name="categ_ids"/>
+                <field name="user_id"/>
+                <field name="show_as"/>
+                <field name="privacy" string="Privacy"/>
+                <filter string="My Events" name="myevent"
+                        domain="[('user_id','=',uid)]" help="My Events"/>
+                <filter string="My Meetings" name="mymeetings"
+                        help="My Meetings" context='{"mymeetings": 1}'/>
+                <filter string="Unread Messages" name="message_needaction"
+                        domain="[('message_needaction','=',True)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Responsible" name="group_by_meeting_user_id"
+                            domain="[]" context="{'group_by':'user_id'}"/>
+                    <filter string="Availability" name="group_by_meeting_show"
+                            domain="[]" context="{'group_by':'show_as'}"/>
+                    <filter string="Privacy" name="group_by_meeting_privacy"
+                            domain="[]" context="{'group_by':'privacy'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_op_meeting_event" model="ir.actions.act_window">
+        <field name="name">Meetings</field>
+        <field name="res_model">op.meeting</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_id" ref="view_op_meeting_event"/>
+        <field name="search_view_id" ref="view_op_meeting_event_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to schedule a new meeting.</p>
+            <p>
+                The calendar is shared between employees and fully integrated with
+                other applications such as the employee holidays or the
+                business
+                opportunities.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_view_op_meeting_event" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="action_op_meeting_event"/>
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="view_op_meeting_event"/>
+    </record>
+
+    <record id="action_view_op_meeting_tree" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="action_op_meeting_event"/>
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_op_meeting_tree"/>
+    </record>
+
+    <record id="action_view_op_meeting_form" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="action_op_meeting_event"/>
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_op_meeting_form"/>
+    </record>
+
+    <!-- Menus -->
+<!--    <menuitem id="menu_meeting"-->
+<!--              name="Meeting"-->
+<!--              sequence="2"-->
+<!--              action="action_op_meeting_event"-->
+<!--              web_icon="openeducat_meeting_enterprise,static/description/icon.png"-->
+<!--              groups="openeducat_core.group_op_student,openeducat_parent.group_op_parent"/>-->
+
+    <!-- called in js from '/js/base_calendar.js' -->
+    <record id="action_op_meeting_event_notify" model="ir.actions.act_window">
+        <field name="name">Meetings</field>
+        <field name="res_model">op.meeting</field>
+        <field name="view_mode">form,calendar,tree</field>
+        <field name="view_id" ref="view_op_meeting_form"/>
+    </record>
+</odoo>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_op_lms_course_tree" model="ir.ui.view">
+            <field name="name">op.course.tree</field>
+            <field name="model">op.course</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="section"/>
+                    <field name="parent_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_lms_course_form" model="ir.ui.view">
+            <field name="name">op.course.form</field>
+            <field name="model">op.course</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Course">
+                    <header>
+                        <button name="action_confirm" states="draft"
+                                string="Confirm" type="object" class="oe_highlight"/>
+                        <button name="action_draft" states="closed"
+                                string="Re-open" type="object" class="oe_highlight"/>
+                        <button name="action_closed" states="open"
+                                string="Closed" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <field name="online_course" class="oe_edit_only" readonly="1"/>
+                            <label class="oe_edit_only" for="online_course" string="Online Course ?"/>
+                            <h1><field name="name" placeholder="Course Name"/></h1>
+                        </div>
+                        <group col="2">
+                            <group>
+                                <field name="code" required="1"/>
+                                <field name="confirm_date" readonly="1"/>
+                                <field name="section" required="1"/>
+                                <field name="user_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page name="general" string="General">
+                                <group col="2">
+                                    <group>
+                                        <field name="visibility" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="navigation_policy" widget="radio"/>
+                                    </group>
+                                </group>
+                                <group string="Short Description">
+                                    <field name="short_description" colspan="4" nolabel="1"/>
+                                </group>
+                                <group string="Full Description">
+                                    <field name="full_description" colspan="4" nolabel="1"/>
+                                </group>
+                            </page>
+                            <page string="Invited Users" attrs="{'invisible': [('visibility', '!=', 'invited_user')]}">
+                                <button name="%(act_open_course_invitation_wizard_view)d" string="Invited Users"
+                                        type="action" class="oe_highlight"/>
+                                <field name="invited_users_ids">
+                                    <tree string="User" editable="top">
+                                        <field name="name"/>
+                                        <field name="login"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page name="enrollments" string="Enrollments">
+                                <field name="course_enrollment_ids" options="{'no_create': True}"/>
+                            </page>
+                            <page name="course_materials" string="Course Materials">
+                                <group col="4" colspan="4">
+                                    <field name="total_time" widget="float_time"/>
+                                </group>
+                                <field name="course_section_ids">
+                                    <tree string="Course Material" default_order="sequence">
+                                        <field name="sequence"/>
+                                        <field name="name"/>
+                                        <field name="total_time" widget="float_time"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="sequence"/>
+                                            <field name="name"/>
+                                        </group>
+                                        <group string="Materials">
+                                            <field name="section_material_ids" nolabel="1">
+                                                <tree string="Section Material" default_order="sequence" editable="bottom">
+                                                    <field name="sequence"/>
+                                                    <field name="material_id" domain="[('user_id','=',uid)]"/>
+                                                    <field name="preview"/>
+                                                    <field name="total_time" widget="float_time" readonly="1"/>
+                                                </tree>
+                                            </field>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="faculties" string="Faculties">
+                                <field name="faculty_ids" options="{'no_create': True}"/>
+                            </page>
+                            <page name="suggested course" string="Suggested Course">
+                                <field name="suggested_course_ids" options="{'no_create': True}" domain="[('online_course','=',True)]"/>
+                            </page>
+                            <page name="categories" string="Categories">
+                                <field name="category_ids" options="{'no_create': True}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_lms_course_search" model="ir.ui.view">
+            <field name="name">op.course.search</field>
+            <field name="model">op.course</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Course">
+                    <field name="name" select="True"/>
+                    <separator/>
+                    <filter string="Online Course" name="online_course" domain="[('online_course','=',1)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_lms_course_view">
+            <field name="name">Course</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_lms_course_search"/>
+            <field name="context">{'default_online_course':1,'search_default_online_course':1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_lms_course_view_form">
+            <field name="act_window_id" ref="act_open_op_lms_course_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_lms_course_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_lms_course_view_tree">
+            <field name="act_window_id" ref="act_open_op_lms_course_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_lms_course_tree"/>
+        </record>
+    </data>
+</odoo>

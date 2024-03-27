@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_form_discount_review_manager" model="ir.ui.view">
+            <field name="name">Discount review manager</field>
+            <field name="model">crm.discount.review</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="approve" string="Approve" class="btn-info" type="object"
+                                attrs="{'invisible': [('stage_id', '=', 'approve')]}"
+                                groups="crm_base.branch_management"/>
+                        <button name="refuse" string="Refuse" class="btn-warning" type="object"
+                                attrs="{'invisible': [('stage_id', '=', 'refuse')]}"
+                                groups="crm_base.branch_management"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" readonly="True" force_save="True"/>
+                                <field name="crm_line_id" required="True"/>
+                                <field name="rule_discount_id" readonly="True" force_save="True"/>
+                                <field name="booking_id" options="{'no_open':True,'no_create':True}" readonly="True"
+                                       force_save="True"/>
+                                <field name="company_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="partner_id" options="{'no_open':True,'no_create':True}" readonly="True"
+                                       force_save="True"/>
+                                <field name="type" attrs="{'readonly': [('stage_id', '!=', 'offer')]}"/>
+                                <field name="discount" attrs="{'readonly': [('stage_id', '!=', 'offer')]}"
+                                       force_save="True"/>
+                                <field name="stage_id" readonly="True" force_save="True"/>
+                                <field name="color" groups="base.group_no_one"/>
+                                <field name="active" groups="base.group_no_one"/>
+                                <field name="total_amount_after_discount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_discount_review_manager" model="ir.ui.view">
+            <field name="name">Discount review manager</field>
+            <field name="model">crm.discount.review</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date desc" decoration-danger="stage_id == 'refuse'" decoration-success="stage_id == 'approve'">
+                    <field name="name"/>
+                    <field name="booking_id"/>
+                    <field name="stage_id"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_open_view_discount_rv" model="ir.actions.act_window">
+            <field name="name">Discount review</field>
+            <field name="res_model">crm.discount.review</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="crm_menu_discount_rv_root"
+                  name="Discount review"
+                  parent="crm.crm_menu_root"
+                  sequence="12"
+        />
+
+        <menuitem id="crm_menu_discount_review"
+                  name="Discount review"
+                  parent="crm_menu_discount_rv_root"
+                  action="action_open_view_discount_rv"
+                  groups="crm_base.receptionist_crm"
+                  sequence="1"/>
+
+        <record id="view_form_rule_discount" model="ir.ui.view">
+            <field name="name">Form rule discount</field>
+            <field name="model">crm.rule.discount</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="active" groups="base.group_no_one"/>
+                            <field name="name" readonly="True" force_save="True"/>
+                            <field name="discount" required="True"/>
+                            <field name="discount2" required="True"/>
+                            <field name="user_ids">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_rule_discount" model="ir.ui.view">
+            <field name="name">Tree rule discount</field>
+            <field name="model">crm.rule.discount</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_open_view_rule_dis" model="ir.actions.act_window">
+            <field name="name">Rule discount</field>
+            <field name="res_model">crm.rule.discount</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+
+        <menuitem id="crm_menu_discount_rule"
+                  name="Discount rule"
+                  parent="crm_menu_discount_rv_root"
+                  action="action_open_view_rule_dis"
+                  groups="base.group_system"
+                  sequence="2"/>
+
+    </data>
+</odoo>

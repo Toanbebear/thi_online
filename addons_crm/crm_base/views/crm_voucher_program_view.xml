@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="voucher_program_form_view" model="ir.ui.view">
+        <field name="name">Voucher program</field>
+        <field name="model">crm.voucher.program</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="check_sequence" type="object" string="Create voucher" class="btn-info"
+                            attrs="{'invisible':[('stage_prg_voucher','!=','active')]}"
+                            groups="crm_base.promotion_user"
+                    />
+                    <field name="stage_prg_voucher" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <field name="active" groups="base.group_system" attrs=""/>
+                    <div class="oe_title">
+                        <label for="name" string="Name" style="color: #002050;font-size: 25px;"/>
+                        <h1>
+                            <field name="name" placeholder="Describe the program..." required="True"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="General">
+                            <field name="brand_id" required="True"
+                                   readonly="True" force_save="True"
+                                   options='{"no_open": True, "no_create": True}'/>
+                            <field name="campaign_id"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"
+                                   options='{"no_open": True, "no_create": True}' required="True"/>
+                            <field name="company_id"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"
+                                   widget="many2many_tags"
+                                   placeholder="if the branch field has no value, it applies to all branches of the brand by default"
+                                   options='{"no_open": True, "no_create": True}'
+                            />
+                            <field name="start_date" required="True"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                            <field name="end_date" required="True"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                            <field name="prefix" required="True"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                            <field name="quantity" required="True"/>
+                            <field name="type_voucher"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"
+                                   required="True"/>
+                            <field name="loyalty_active"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                        </group>
+                        <group string="Condition voucher fix price" attrs="{'invisible':[('type_voucher','!=','fix')]}">
+                            <field name="product_id"
+                                   attrs="{'required':[('type_voucher','=','fix')],'readonly':[('stage_prg_voucher','in',('active','expire'))]}"
+                                   options='{"no_open": True, "no_create": True}'/>
+                            <field name="price"
+                                   attrs="{'required':[('type_voucher','=','fix')],'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                        </group>
+                        <group string="Condition voucher discount" attrs="{'invisible':[('type_voucher','!=','dis')]}">
+                            <field name="discount"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                            <field name="sequence_id" groups="base.group_system" readonly="True" force_save="True"/>
+                            <field name="current_number_voucher"/>
+                            <field name="type_service"
+                                   attrs="{'required':[('type_voucher','=','dis')],'readonly':[('stage_prg_voucher','in',('active','expire'))]}"/>
+                            <field name="product_ids"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))], 'invisible':[('type_service','!=','product')]}">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                            <field name="product_ctg_ids"
+                                   attrs="{'readonly':[('stage_prg_voucher','in',('active','expire'))],'invisible':[('type_service','!=','category')]}">
+                                <tree>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="tree_voucher_program">
+        <field name="name">Voucher program</field>
+        <field name="model">crm.voucher.program</field>
+        <field name="arch" type="xml">
+            <tree default_order="create_date desc">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="prefix"/>
+                <field name="quantity"/>
+                <field name="stage_prg_voucher"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_voucher_program" model="ir.actions.act_window">
+        <field name="name">Voucher Program</field>
+        <field name="view_mode">tree,form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.voucher.program</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <menuitem id="menu_crm_voucher_program"
+              name="Voucher program"
+              parent="crm.crm_menu_root"
+              sequence="10"
+    />
+
+    <menuitem id="menu_crm_voucher_program_2"
+              name="Voucher program"
+              parent="menu_crm_voucher_program"
+              action="open_voucher_program"
+              sequence="1"
+    />
+
+
+</odoo>

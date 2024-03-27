@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_course_lms_blog_form">
+        <field name="name">op.course.form.blog.inherit</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_lms.view_op_lms_course_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='categories']" position="after">
+                <page name="gamification challenge" string="Gamification Challenge">
+                    <group name="gamification challenge" string="Gamification Challenge">
+                        <field name="challenge_ids" nolabel="1"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

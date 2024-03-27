@@ -1,0 +1,730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:09+0000\n"
+"PO-Revision-Date: 2018-03-08 05:00-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Vietnamese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_transportation_enterprise/i18n/openeducat_transportation_enterprise.pot\n"
+"Language: vi_VN\n"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_needaction
+msgid "Action Needed"
+msgstr "Thời khóa biểu báo cáo"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_active
+msgid "Active"
+msgstr "Hoạt động"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_co2
+msgid "CO2 Emissions"
+msgstr "Lượng khí thải CO2"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_co2
+msgid "CO2 emissions of the vehicle"
+msgstr "Lượng khí thải CO2 của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_capacity
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Capacity"
+msgstr "Công suất"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_car_value
+msgid "Catalog Value (VAT Incl.)"
+msgstr "Danh mục giá trị (đã gồm VAT)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_vin_sn
+msgid "Chassis Number"
+msgstr "Chassis số"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_color
+msgid "Color"
+msgstr "Màu sắc"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_color
+msgid "Color of the vehicle"
+msgstr "Màu sắc của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_count
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_contracts
+msgid "Contracts"
+msgstr "Hợp đồng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_cost
+msgid "Cost"
+msgstr "Chi phí"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_cost_count
+msgid "Costs"
+msgstr "Chi phí"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_create_date
+msgid "Created on"
+msgstr "Tạo ngày"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_state_id
+msgid "Current state of the vehicle"
+msgstr "Các trạng thái hiện tại của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Ngày thông báo cuối cùng được đăng trên hồ sơ."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_acquisition_date
+msgid "Date when the vehicle has been immatriculated"
+msgstr "Ngày khi chiếc xe đã là immatriculated"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_doors
+msgid "Doors Number"
+msgstr "Cửa số"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "Draft"
+msgstr "Dự thảo"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_driver_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_driver_id
+msgid "Driver"
+msgstr "Trình điều khiển"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_route_line_driver_id
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_driver_id
+msgid "Driver of the vehicle"
+msgstr "Trình điều khiển của xe"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,route_type:0
+msgid "Drop"
+msgstr "Thả"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "End"
+msgstr "Kết thúc"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "End Trip"
+msgstr "Kết thúc chuyến đi"
+
+#. module: openeducat_transportation_enterprise
+#: code:addons/openeducat_transportation_enterprise/models/vehicle.py:40
+#, python-format
+msgid "Enter proper Capacity."
+msgstr "Nhập dung lượng thích hợp."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_estimated_time
+msgid "Estimated Arrival"
+msgstr "Ước tính đến"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_estimated_arrival_conf
+msgid "Estimated Arrival Time"
+msgstr "Ước tính đến thời gian"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_follower_ids
+msgid "Followers"
+msgstr "Những người theo"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Theo tôi (kênh)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Theo tôi (đối tác)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_fuel_logs_count
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_fuel
+msgid "Fuel Logs"
+msgstr "Nhật ký nhiên liệu"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_fuel_type
+msgid "Fuel Type"
+msgstr "Loại nhiên liệu"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_fuel_type
+msgid "Fuel Used by the vehicle"
+msgstr "Nhiên liệu được sử dụng bởi xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Get Stops"
+msgstr "Nhận được điểm dừng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_overdue
+msgid "Has Contracts Overdue"
+msgstr "Có hợp đồng quá hạn"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_due_soon
+msgid "Has Contracts to renew"
+msgstr "Có hợp đồng để gia hạn"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.module.category,description:openeducat_transportation_enterprise.module_category_openeducat_transportation
+msgid "Helps you manage user related to transportation."
+msgstr "Giúp bạn quản lý người dùng liên quan đến giao thông vận tải."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_horsepower
+msgid "Horsepower"
+msgstr "Mã lực"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_horsepower_tax
+msgid "Horsepower Taxation"
+msgstr "Thuế suất"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Nếu kiểm tra thư mới đòi hỏi sự chú ý của bạn."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Nếu đã kiểm tra, thư mới đòi hỏi sự chú ý của bạn."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_acquisition_date
+msgid "Immatriculation Date"
+msgstr "Immatriculation ngày"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_is_follower
+msgid "Is Follower"
+msgstr "Là người đi theo"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_last_post
+msgid "Last Message Date"
+msgstr "Ngày thông báo cuối cùng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer
+msgid "Last Odometer"
+msgstr "Công tơ mét cuối"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_write_uid
+msgid "Last Updated by"
+msgstr "Cập Nhật lần cuối bởi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_write_date
+msgid "Last Updated on"
+msgstr "Lần cập nhật cuối"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_license_plate
+msgid "License Plate"
+msgstr "Tấm giấy phép"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_license_plate
+msgid "License plate number of the vehicle (i = plate number for a car)"
+msgstr "Biển số xe (i = bảng số cho một chiếc xe)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_location
+msgid "Location"
+msgstr "Vị trí"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_location
+msgid "Location of the vehicle (garage, ...)"
+msgstr "Vị trí của xe (để xe,...)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image
+msgid "Logo"
+msgstr "Biểu tượng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image_medium
+msgid "Logo (medium)"
+msgstr "Biểu tượng (trung bình)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image_small
+msgid "Logo (small)"
+msgstr "Biểu tượng (nhỏ)"
+
+#. module: openeducat_transportation_enterprise
+#: model:res.groups,name:openeducat_transportation_enterprise.group_op_transport_manager
+msgid "Manager"
+msgstr "Quản lý"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image_medium
+msgid "Medium-sized logo of the brand. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Vừa logo của thương hiệu. Nó tự động định lại kích thước như là một hình ảnh 128x128px, với tỉ lệ được bảo tồn. Sử dụng các lĩnh vực này ở dạng xem hoặc xem một số kanban."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_model_id
+msgid "Model"
+msgstr "Mô hình"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_model_year
+msgid "Model Year"
+msgstr "Năm mô hình"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_model_id
+msgid "Model of the vehicle"
+msgstr "Mô hình của chiếc xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_name
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Name"
+msgstr "Tên"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_name
+msgid "Name of contract to renew soon"
+msgstr "Tên của các hợp đồng gia hạn sớm"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng các hành động"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_doors
+msgid "Number of doors of the vehicle"
+msgstr "Số lượng các cửa của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Số lượng tin nhắn mà yêu cầu một hành động"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_seats
+msgid "Number of seats of the vehicle"
+msgstr "Số chỗ ngồi của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Số lượng tin nhắn chưa đọc"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer_count
+msgid "Odometer"
+msgstr "Công tơ mét"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer_unit
+msgid "Odometer Unit"
+msgstr "Đơn vị đo đường"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "Biện pháp công tơ mét của xe tại thời điểm này đăng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.module.category,name:openeducat_transportation_enterprise.module_category_openeducat_transportation
+msgid "OpenEduCat Transportation"
+msgstr "Giao thông vận tải OpenEduCat"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_passenger_ids
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_partner_id
+msgid "Passenger"
+msgstr "Hành khách"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Passengers"
+msgstr "Hành khách"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_partner_ids
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_form
+msgid "Person(s)"
+msgstr "Người)"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,route_type:0
+msgid "Pickup"
+msgstr "Xe bán tải"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_power
+msgid "Power"
+msgstr "Sức mạnh"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_power
+msgid "Power in kW of the vehicle"
+msgstr "Quyền lực trong kW của xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_present
+msgid "Present/Absent"
+msgstr "Hiện tại/vắng mặt"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_residual_value
+msgid "Residual Value"
+msgstr "Giá trị còn lại"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_route_id
+msgid "Route"
+msgstr "Tuyến đường"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_route_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_route_line_id
+msgid "Route Line"
+msgstr "Tuyến đường"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_type
+msgid "Route Type"
+msgstr "Route loại"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_line_view
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_stop_line_view
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_view
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_route_sub
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_tree
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_tree
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_tree
+msgid "Routes"
+msgstr "Tuyến đường"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_seats
+msgid "Seats Number"
+msgstr "Số chỗ ngồi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_sequence
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_sequence
+msgid "Sequence"
+msgstr "Trình tự"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_service_count
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_services
+msgid "Services Logs"
+msgstr "Dịch vụ bản ghi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image_small
+msgid "Small-sized logo of the brand. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Có kích thước nhỏ logo của thương hiệu. Nó tự động định lại kích thước như là một hình ảnh 64x64px, với tỉ lệ được bảo tồn. Sử dụng các lĩnh vực này bất cứ nơi nào một hình ảnh nhỏ được yêu cầu."
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_start_time
+msgid "Start Time"
+msgstr "Thời gian bắt đầu"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Start Trip"
+msgstr "Bắt đầu chuyến đi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_state
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_state_id
+msgid "State"
+msgstr "Nhà nước"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_stop_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_stop_id
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_tree
+msgid "Stop"
+msgstr "Dừng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_form
+msgid "Stop(s)"
+msgstr "Stop(s)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_stop_view
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_stop_ids
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_ids
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_stop_sub
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Stops"
+msgstr "Điểm dừng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_tag_ids
+msgid "Tags"
+msgstr "Từ khóa"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image
+msgid "This field holds the image used as logo for the brand, limited to 1024x1024px."
+msgstr "Lĩnh vực này giữ các hình ảnh được sử dụng như là biểu tượng cho các thương hiệu, giới hạn trong 1024x1024px."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_total
+msgid "Total of contracts due or overdue minus one"
+msgstr "Tổng số hợp đồng đáo hạn hoặc quá hạn trừ một"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_transmission
+msgid "Transmission"
+msgstr "Bộ truyền động"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_transmission
+msgid "Transmission Used by the vehicle"
+msgstr "Truyền được sử dụng bởi xe"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_transportations_main
+msgid "Transportation"
+msgstr "Giao thông vận tải"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_route_line_sub
+msgid "Trips"
+msgstr "Chuyến đi"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr "Số duy nhất được viết trên động cơ xe (VIN/SN số)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_odometer_unit
+msgid "Unit of the odometer "
+msgstr "Các đơn vị của công tơ mét "
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_unread
+msgid "Unread Messages"
+msgstr "Tin nhắn chưa đọc"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Số lượt truy cập tin nhắn chưa đọc"
+
+#. module: openeducat_transportation_enterprise
+#: model:res.groups,name:openeducat_transportation_enterprise.group_op_transport_user
+msgid "User"
+msgstr "Người sử dụng"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_car_value
+msgid "Value of the bought vehicle"
+msgstr "Giá trị của chiếc xe mua"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_vehicle_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_vehicle_id
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_tree
+msgid "Vehicle"
+msgstr "Xe"
+
+#. module: openeducat_transportation_enterprise
+#: code:addons/openeducat_transportation_enterprise/models/stop.py:45
+#, python-format
+msgid "Vehicle capacity is over."
+msgstr "Công suất xe là hơn."
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_vehicle_view
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_vehicle_sub
+msgid "Vehicles"
+msgstr "Xe cộ"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_website_message_ids
+msgid "Website Messages"
+msgstr "Trang web tin nhắn"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_website_message_ids
+msgid "Website communication history"
+msgstr "Trang web thông tin lịch sử"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_model_year
+msgid "Year of the model"
+msgstr "Năm mô hình"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route
+msgid "op.route"
+msgstr "op.Route"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_line
+msgid "op.route.line"
+msgstr "op.Route.Line"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_passenger
+msgid "op.route.passenger"
+msgstr "op.Route.Passenger"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_stop_line
+msgid "op.route.stop.line"
+msgstr "op.Route.Stop.Line"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_stop
+msgid "op.stop"
+msgstr "op.Stop"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_vehicle
+msgid "op.vehicle"
+msgstr "op.Vehicle"
+

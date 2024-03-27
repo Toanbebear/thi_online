@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!--        NHOM DANH MUC-->
+        <record model="product.category" id="sh_sci_health">
+            <field name="name">Bệnh viện</field>
+        </record>
+
+        <record model="product.category" id="sh_sci_services">
+            <field name="name">Dịch vụ kỹ thuật</field>
+            <field name="parent_id" ref="sh_sci_health"/>
+        </record>
+        <record model="product.category" id="sh_sci_medical_product">
+            <field name="name">Sản phẩm</field>
+            <field name="parent_id" ref="sh_sci_health"/>
+        </record>
+
+        <!--        DICH VU-->
+        <record model="product.category" id="sh_imaging">
+            <field name="name">Chuẩn đoán hình ảnh</field>
+            <field name="parent_id" ref="sh_sci_services"/>
+        </record>
+        <record model="product.category" id="sh_labtests">
+            <field name="name">Xét nghiệm</field>
+            <field name="parent_id" ref="sh_sci_services"/>
+        </record>
+        <record model="product.category" id="sh_services">
+            <field name="name">Dịch vụ</field>
+            <field name="parent_id" ref="sh_sci_services"/>
+        </record>
+
+        <!--        SP Y TE-->
+        <!--        TUYẾN CUNG ỨNG NỘI BỘ-->
+        <record model="stock.location.route" id="internal_route">
+            <field name="name">Nội bộ</field>
+            <field name="sequence">1</field>
+            <field name="product_categ_selectable" eval="True"/>
+            <field name="product_selectable" eval="False"/>
+        </record>
+
+        <record model="product.category" id="sh_medicines">
+            <field name="name">Thuốc</field>
+            <field name="parent_id" ref="sh_sci_medical_product"/>
+            <!--            <field name="route_ids" eval="[(5, 0, 0)]"/>-->
+            <field name="removal_strategy_id" eval="ref('stock.removal_fifo')"/>
+        </record>
+        <record model="product.category" id="sh_supplies">
+            <field name="name">Vật tư</field>
+            <field name="parent_id" ref="sh_sci_medical_product"/>
+            <!--            <field name="route_ids" eval="[(5, 0, 0)]"/>-->
+            <field name="removal_strategy_id" eval="ref('stock.removal_fifo')"/>
+        </record>
+
+        <!--    ====================    KANGNAM HÀ NỘI =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_k_hn_tc">
+            <field name="company_name">BỆNH VIỆN KANGNAM HÀ NỘI HÀ NỘI</field>
+            <field name="health_center_type">Hospital</field>
+            <field name="brand" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="partner_id" ref="shealth_all_in_one.k_hn_tc_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.k_hn_tc_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_k_hn_tc">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+        <record model="sh.medical.health.center.ward" id="sh_labtest_dep_k_hn_tc">
+            <field name="name">Khoa Cận lâm sàng</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Laboratory</field>
+            <field name="info">Khoa Cận lâm sàng - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_k_hn_tc">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_k_hn_tc">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_k_hn_tc">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_k_hn_tc">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - Bệnh viện thẩm mỹ Kangnam Hà Nội</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_k_hn_tc">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hn_tc"/>
+            <field name="info">Khoa dược - BỆNH VIỆN KANGNAM HÀ NỘI</field>
+        </record>
+
+        <!--    ====================    KANGNAM HCM =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_k_hcm_bhtq">
+            <field name="company_name">BỆNH VIỆN KANGNAM HỒ CHÍ MINH</field>
+            <field name="health_center_type">Hospital</field>
+            <field name="brand" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="partner_id" ref="shealth_all_in_one.k_hcm_bhtq_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.k_hcm_bhtq_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_k_hcm_bhtq">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+        <record model="sh.medical.health.center.ward" id="sh_labtest_dep_k_hcm_bhtq">
+            <field name="name">Khoa Cận lâm sàng</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Laboratory</field>
+            <field name="info">Khoa Cận lâm sàng - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_k_hcm_bhtq">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_k_hcm_bhtq">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_k_hcm_bhtq">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_k_hcm_bhtq">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - Bệnh viện thẩm mỹ Kangnam HỒ CHÍ MINH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_k_hcm_bhtq">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_bhtq"/>
+            <field name="info">Khoa dược - BỆNH VIỆN KANGNAM HỒ CHÍ MINH</field>
+        </record>
+
+        <!--    ====================    KANGNAM SÀI GÒN 666 =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_k_hcm_666">
+            <field name="company_name">BỆNH VIỆN KANGNAM SÀI GÒN</field>
+            <field name="health_center_type">Hospital</field>
+            <field name="brand" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="partner_id" ref="shealth_all_in_one.k_hcm_666_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.k_hcm_666_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_k_hcm_666">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+        <record model="sh.medical.health.center.ward" id="sh_labtest_dep_k_hcm_666">
+            <field name="name">Khoa Cận lâm sàng</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Laboratory</field>
+            <field name="info">Khoa Cận lâm sàng - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_k_hcm_666">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_k_hcm_666">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_k_hcm_666">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_k_hcm_666">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - Bệnh viện thẩm mỹ Kangnam Sài Gòn</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_k_hcm_666">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_k_hcm_666"/>
+            <field name="info">Khoa dược - BỆNH VIỆN KANGNAM SÀI GÒN</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á KIM MÃ HÀ NỘI =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_hn_km">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á KIM MÃ</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_hn_km_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_hn_km_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_hn_km">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á KIM MÃ HÀ NỘI</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_hn_km">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á KIM MÃ HÀ NỘI</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_hn_km">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - TMV ĐÔNG Á KIM MÃ HÀ NỘI</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_hn_km">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - TMV ĐÔNG Á KIM MÃ HÀ NỘI</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_d_hn_km">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - TMV ĐÔNG Á KIM MÃ HÀ NỘI</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_hn_km">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hn_km"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á KIM MÃ</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á TÔ HIỆU HẢI PHÒNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_hp_th">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á HẢI PHÒNG</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_hp_th_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_hp_th_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_hp_th">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hp_th"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á TÔ HIỆU HẢI PHÒNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_hp_th">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hp_th"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á TÔ HIỆU HẢI PHÒNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_hp_th">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hp_th"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - TMV ĐÔNG Á TÔ HIỆU HẢI PHÒNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_hp_th">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hp_th"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - TMV ĐÔNG Á TÔ HIỆU HẢI PHÒNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_hp_th">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hp_th"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á HẢI PHÒNG</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á NGHỆ AN =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_na_nvc">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á VINH</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_na_nvc_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_na_nvc_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_na_nvc">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_na_nvc"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á NGHỆ AN</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_na_nvc">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_na_nvc"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á NGHỆ AN</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_na_nvc">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_na_nvc"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - TMV ĐÔNG Á NGHỆ AN</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_na_nvc">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_na_nvc"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - TMV ĐÔNG Á NGHỆ AN</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_na_nvc">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_na_nvc"/>
+            <field name="info">Khoa dược - TMV ĐÔNG Á NGHỆ AN</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á ĐÀ NẴNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_dn_hv">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á ĐÀ NẴNG</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_dn_hv_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_dn_hv_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_dn_hv">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_dn_hv"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á ĐÀ NẴNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_dn_hv">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_dn_hv"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á ĐÀ NẴNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_dn_hv">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_dn_hv"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - TMV ĐÔNG Á ĐÀ NẴNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_dn_hv">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_dn_hv"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - TMV ĐÔNG Á ĐÀ NẴNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_dn_hv">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_dn_hv"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á ĐÀ NẴNG</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á 3/2 HỒ CHÍ MINH =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_hcm_32">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á 3/2</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_hcm_32_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_hcm_32_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_hcm_32">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_32"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á 3/2 Hồ Chí Minh</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_hcm_32">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_32"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á 3/2 Hồ Chí Minh</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_hcm_32">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_32"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - TMV ĐÔNG Á 3/2 Hồ Chí Minh</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_hcm_32">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_32"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - TMV ĐÔNG Á 3/2 Hồ Chí Minh</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_hcm_32">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_32"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á 3/2</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á BÌNH DƯƠNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_bd_dlbd">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+            <field name="health_center_type">Hospital</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_bd_dlbd_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_bd_dlbd_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_bd_dlbd">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_bd_dlbd"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_bd_dlbd">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_bd_dlbd"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_bd_dlbd">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_bd_dlbd"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_bd_dlbd">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_bd_dlbd"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_bd_dlbd">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_bd_dlbd"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+        </record>
+
+        <!--    ====================   ĐÔNG Á CẦN THƠ =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_ct_ltt">
+            <field name="company_name">THẨM MỸ VIỆN ĐÔNG Á CẦN THƠ</field>
+            <field name="health_center_type">Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_ct_ltt_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_ct_ltt_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_ct_ltt">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_ct_ltt"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - TMV ĐÔNG Á CẦN THƠ</field>
+        </record>
+
+        <!--        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_ct_ltt">-->
+        <!--            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>-->
+        <!--            <field name="institution" ref="sh_medicines_health_center_d_ct_ltt"/>-->
+        <!--            <field name="type">Surgery</field>-->
+        <!--            <field name="info">Khoa phẫu thuật thủ thuật - TMV ĐÔNG Á CẦN THƠ</field>-->
+        <!--        </record>-->
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_ct_ltt">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_ct_ltt"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - ĐÔNG Á CẦN THƠ</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_ct_ltt">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_ct_ltt"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - ĐÔNG Á CẦN THƠ</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_ct_ltt">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_ct_ltt"/>
+            <field name="info">Khoa dược - THẨM MỸ VIỆN ĐÔNG Á CẦN THƠ</field>
+        </record>
+
+        <!--    ====================    BỆNH VIỆN ĐÔNG Á NGUYỄN TRÃI =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_d_hcm_nt">
+            <field name="company_name">BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+            <field name="health_center_type">Hospital</field>
+            <field name="brand" ref="shealth_all_in_one.brand_donga"/>
+            <field name="partner_id" ref="shealth_all_in_one.d_hcm_nt_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.d_hcm_nt_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_d_hcm_nt">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+        <record model="sh.medical.health.center.ward" id="sh_labtest_dep_d_hcm_nt">
+            <field name="name">Khoa Cận lâm sàng</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Laboratory</field>
+            <field name="info">Khoa Cận lâm sàng - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_surgeries_dep_d_hcm_nt">
+            <field name="name">Khoa Phẫu thuật - Gây mê hồi sức</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Surgery</field>
+            <field name="info">Khoa phẫu thuật thủ thuật - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_dep_d_hcm_nt">
+            <field name="name">Phòng Spa</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Spa</field>
+            <field name="info">Phòng Spa - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_dalieu_laser_dep_d_hcm_nt">
+            <field name="name">Phòng Laser</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Laser</field>
+            <field name="info">Phòng Laser - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_d_hcm_nt">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_kd_dep_d_hcm_nt">
+            <field name="name">Khoa dược</field>
+            <field name="institution" ref="sh_medicines_health_center_d_hcm_nt"/>
+            <field name="info">Khoa dược - BỆNH VIỆN THẨM MỸ ĐÔNG Á</field>
+        </record>
+
+        <!--    ====================   PARIS HÀ NỘI QUANG TRUNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hn_qt">
+            <field name="company_name">NHA KHOA PARIS QUANG TRUNG</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hn_qt_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hn_qt_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hn_qt">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_qt"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HÀ NỘI - QUANG TRUNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hn_qt">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_qt"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HÀ NỘI - QUANG TRUNG</field>
+        </record>
+
+        <!--    ====================   PARIS HÀ NỘI THÁI THỊNH =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hn_tt">
+            <field name="company_name">NHA KHOA PARIS THÁI THỊNH</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hn_tt_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hn_tt_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hn_tt">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_tt"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HÀ NỘI - THÁI THỊNH</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hn_tt">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_tt"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HÀ NỘI - THÁI THỊNH</field>
+        </record>
+
+        <!--    ====================   PARIS HẢI PHÒNG TÔ HIỆU =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hp_th">
+            <field name="company_name">NHA KHOA PARIS HẢI PHÒNG</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hp_th_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hp_th_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hp_th">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hp_th"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HẢI PHÒNG - TÔ HIỆU</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hp_th">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hp_th"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HẢI PHÒNG - TÔ HIỆU</field>
+        </record>
+
+        <!--    ====================   PARIS NGHỆ AN =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_na_nvc">
+            <field name="company_name">NHA KHOA PARIS VINH</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_na_nvc_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_na_nvc_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_na_nvc">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_na_nvc"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - NGHỆ AN - NGUYỄN VĂN CỪ</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_na_nvc">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_na_nvc"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - NGHỆ AN - NGUYỄN VĂN CỪ</field>
+        </record>
+
+        <!--    ====================   PARIS ĐÀ NẴNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_dn_ldl">
+            <field name="company_name">NHA KHOA PARIS ĐÀ NẴNG</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_dn_ldl_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_dn_ldl_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_dn_ldl">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_dn_ldl"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - ĐÀ NẴNG - lÊ ĐÌNH LÝ</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_dn_ldl">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_dn_ldl"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - ĐÀ NẴNG - lÊ ĐÌNH LÝ</field>
+        </record>
+
+        <!--    ====================   PARIS HCM 3/2 =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hcm_32">
+            <field name="company_name">NHA KHOA PARIS 3/2</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hcm_32_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hcm_32_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hcm_32">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_32"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HỒ CHÍ MINH - 3/2</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hcm_32">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_32"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HỒ CHÍ MINH - 3/2</field>
+        </record>
+
+        <!--    ====================   PARIS HCM CỘNG HÒA =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hcm_ch">
+            <field name="company_name">NHA KHOA PARIS CỘNG HÒA</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hcm_ch_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hcm_ch_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hcm_ch">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_ch"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HỒ CHÍ MINH - CỘNG HÒA</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hcm_ch">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_ch"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HỒ CHÍ MINH - CỘNG HÒA</field>
+        </record>
+
+        <!--    ====================   PARIS HCM NGUYỄN THÁI HỌC =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hcm_nth">
+            <field name="company_name">NHA KHOA PARIS NGUYỄN THÁI HỌC</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hcm_nth_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hcm_nth_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hcm_nth">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_nth"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - HỒ CHÍ MINH - NGUYỄN THÁI HỌC</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hcm_nth">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hcm_nth"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - HỒ CHÍ MINH - NGUYỄN THÁI HỌC</field>
+        </record>
+
+        <!--    ====================   PARIS QUẢNG NINH =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_qn_hl">
+            <field name="company_name">NHA KHOA PARIS QUẢNG NINH</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_qn_hl_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_qn_hl_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_qn_hl">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_qn_hl"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - QUẢNG NINH - HẠ LONG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_qn_hl">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_qn_hl"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - QUẢNG NINH - HẠ LONG</field>
+        </record>
+
+        <!--    ====================   PARIS BÌNH DƯƠNG =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_bd_cmt8">
+            <field name="company_name">NHA KHOA PARIS BÌNH DƯƠNG</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_bd_cmt8_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_bd_cmt8_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_bd_cmt8">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_bd_cmt8"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - BÌNH DƯƠNG</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_bd_cmt8">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_bd_cmt8"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - BÌNH DƯƠNG</field>
+        </record>
+
+        <!--    ====================   PARIS KIM MÃ =================== -->
+        <!--  HEALTH CENTER -->
+        <record model="sh.medical.health.center" id="sh_medicines_health_center_p_hn_km">
+            <field name="company_name">NHA KHOA PARIS KIM MÃ</field>
+            <field name="health_center_type">Dental Clinic</field>
+            <field name="brand" ref="shealth_all_in_one.brand_paris"/>
+            <field name="partner_id" ref="shealth_all_in_one.p_hn_km_partner"/>
+            <field name="company_id" eval="False"/>
+            <field name="his_company" ref="shealth_all_in_one.p_hn_km_company"/>
+        </record>
+
+        <!--  DEPARTMENT -->
+        <record model="sh.medical.health.center.ward" id="sh_kb_dep_p_hn_km">
+            <field name="name">Khoa Khám bệnh</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_km"/>
+            <field name="type">Examination</field>
+            <field name="info">Khoa Khám bệnh - NK PARIS - KIM MÃ</field>
+        </record>
+
+        <record model="sh.medical.health.center.ward" id="sh_rhm_dep_p_hn_km">
+            <field name="name">Phòng Nha</field>
+            <field name="institution" ref="sh_medicines_health_center_p_hn_km"/>
+            <field name="type">Odontology</field>
+            <field name="info">Phòng Nha - NK PARIS - KIM MÃ</field>
+        </record>
+
+    </data>
+</odoo>

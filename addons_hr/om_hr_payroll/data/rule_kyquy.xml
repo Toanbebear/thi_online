@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="contribution_register_gosi" model="hr.contribution.register">
+            <field name="name">Tiền ký quỹ</field>
+            <field name="partner_id" eval="False"/>
+        </record>
+
+        <record id="contribution_register_gosicompany" model="hr.contribution.register">
+            <field name="name">Tiền công đoàn</field>
+            <field name="partner_id" eval="False"/>
+        </record>
+
+        <record id="contribution_register_bhxh" model="hr.contribution.register">
+            <field name="name">Tiền BHXH</field>
+            <field name="partner_id" eval="False"/>
+        </record>
+
+        <record id="hr_rule_gosi" model="hr.salary.rule">
+            <field name="name">Ký quỹ</field>
+            <field name="sequence" eval="99"/>
+            <field name="code">GOSI</field>
+            <field name="category_id" ref="DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = (0 if employee.check_kq else employee.money_per_month)</field>
+            <field name="register_id" ref="contribution_register_gosi"/>
+        </record>
+
+        <record id="hr_rule_gosi_bhxh" model="hr.salary.rule">
+            <field name="name">Trích BHXH</field>
+            <field name="sequence" eval="90"/>
+            <field name="code">BHXH</field>
+            <field name="category_id" ref="DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = (0 if employee.check_bh else employee.money_per_month_bh)</field>
+            <field name="register_id" ref="contribution_register_bhxh"/>
+        </record>
+
+        <record id="hr_rule_gosi_comp" model="hr.salary.rule">
+            <field name="name">Trích công đoàn</field>
+            <field name="sequence" eval="99"/>
+            <field name="code">GOSI_COMP</field>
+            <field name="category_id" ref="DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">fix</field>
+            <field eval="100000" name="amount_fix"/>
+            <field name="register_id" ref="contribution_register_gosicompany"/>
+        </record>
+
+        <record id="structure_1717" model="hr.payroll.structure">
+            <field name="code">SCI_BASE</field>
+            <field name="name">Cấu trúc lương nhân viên chính thức SCI</field>
+            <field eval="[(6, 0, [ref('hr_rule_gosi'),ref('hr_rule_basic'),ref('hr_rule_net')
+            ,ref('hr_rule_taxable'),ref('hr_rule_gosi_comp'), ref('hr_rule_pc')])]" name="rule_ids"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="parent_id" ref="structure_base"/>
+        </record>
+    </data>
+</odoo>

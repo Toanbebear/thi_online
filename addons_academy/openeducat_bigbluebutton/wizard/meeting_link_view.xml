@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_MeetingLink_form" model="ir.ui.view">
+            <field name="name">meeting.link.form</field>
+            <field name="model">meeting.link</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Online Meeting Link">
+                    <field name="name"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_MeetingLink_view">
+            <field name="name">Online Meeting Link</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">meeting.link</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_MeetingLink_view_form">
+            <field name="act_window_id" ref="act_open_MeetingLink_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_MeetingLink_form"/>
+        </record>
+    </data>
+</odoo>

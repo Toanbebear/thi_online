@@ -1,0 +1,219 @@
+2022-01-06 01:35:24,827 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Create internal students`. 
+2022-01-06 01:35:24,909 1 INFO thionline13 odoo.addons.base.models.ir_attachment: _read_file reading /var/lib/odoo/filestore/thionline13/07/07b93a1fdb8cb47a0b960f499d342210697bd39f 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 745, in get
+    value = self._data[field][record._ids[0]]
+KeyError: 9447
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1037, in __get__
+    value = env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 751, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('hr.employee(9447,).image_1920', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 745, in get
+    value = self._data[field][record._ids[0]]
+KeyError: 84019
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1037, in __get__
+    value = env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 751, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('ir.attachment(84019,).datas', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_attachment.py", line 103, in _file_read
+    with open(full_path,'rb') as fd:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/lib/odoo/filestore/thionline13/07/07b93a1fdb8cb47a0b960f499d342210697bd39f'
+2022-01-06 01:35:25,242 1 ERROR thionline13 odoo.addons.base.models.ir_cron: Call from cron Create internal students for server action #863 failed in Job #38 
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/tools/cache.py", line 85, in lookup
+    r = d[key]
+  File "/usr/lib/python3/dist-packages/odoo/tools/func.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/tools/lru.py", line 44, in __getitem__
+    a = self.d[obj].me
+KeyError: ('ir.qweb', <function IrQWeb.compile at 0x7f0aac36f0d0>, 353, ('vi_VN', None, None, None, None, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 745, in get
+    value = self._data[field][record._ids[0]]
+KeyError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1037, in __get__
+    value = env.cache.get(record, self)
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 751, in get
+    raise CacheMiss(record, field)
+odoo.exceptions.CacheMiss: ('res.company(1,).partner_id', None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 357, in get_template
+    document = options.get('load', self.load)(template, options)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_qweb.py", line 116, in load
+    lang = options.get('lang', get_lang(self.env).code)
+  File "/usr/lib/python3/dist-packages/odoo/tools/misc.py", line 1177, in get_lang
+    for code in [lang_code, env.context.get('lang'), env.user.company_id.partner_id.lang, langs[0]]:
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 2366, in __get__
+    return super().__get__(records, owner)
+  File "/usr/lib/python3/dist-packages/odoo/fields.py", line 1044, in __get__
+    recs._fetch_field(self)
+  File "/usr/lib/python3/dist-packages/odoo/models.py", line 2994, in _fetch_field
+    self._read(fnames)
+  File "/mnt/extra-addons/stock_intercompany_transfer/models/res_company.py", line 52, in _read
+    if request.session.debug == 'tests':
+  File "/usr/lib/python3/dist-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/lib/python3/dist-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/usr/lib/python3/dist-packages/werkzeug/local.py", line 135, in _lookup
+    raise RuntimeError('object unbound')
+RuntimeError: object unbound
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/tools/safe_eval.py", line 354, in safe_eval
+    return unsafe_eval(c, globals_dict, locals_dict)
+  File "", line 1, in <module>
+  File "/mnt/extra-addons-academy/openeducat_core/models/student.py", line 83, in create_internal_student_cron
+    student = self.env['op.student'].create(vals)
+  File "<decorator-gen-110>", line 2, in create
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 335, in _model_create_multi
+    return create(self, [arg])
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 269, in create
+    threads = super(MailThread, self).create(vals_list)
+  File "<decorator-gen-3>", line 2, in create
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 336, in _model_create_multi
+    return create(self, arg)
+  File "/usr/lib/python3/dist-packages/odoo/models.py", line 3799, in create
+    parent.write(data['inherited'][model_name])
+  File "/usr/lib/python3/dist-packages/odoo/addons/snailmail/models/res_partner.py", line 24, in write
+    return super(ResPartner, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/partner_autocomplete/models/res_partner.py", line 197, in write
+    res = super(ResPartner, self).write(values)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/res_partner.py", line 520, in write
+    result = result and super(Partner, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_activity.py", line 680, in write
+    return super(MailActivityMixin, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 326, in write
+    self._message_auto_subscribe(values)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 2885, in _message_auto_subscribe
+    self.with_context(lang=lang)._message_auto_subscribe_notify(pids, template)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 2813, in _message_auto_subscribe_notify
+    assignation_msg = view.render(values, engine='ir.qweb', minimal_qcontext=True)
+  File "/usr/lib/python3/dist-packages/odoo/addons/website/models/ir_ui_view.py", line 335, in render
+    return super(View, self).render(values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web_editor/models/ir_ui_view.py", line 25, in render
+    return super(IrUiView, self).render(values=values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_ui_view.py", line 1162, in render
+    return self.env[engine].render(self.id, qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_qweb.py", line 58, in render
+    result = super(IrQWeb, self).render(id_or_xml_id, values=values, **context)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 259, in render
+    self.compile(template, options)(self, body.append, values or {})
+  File "<decorator-gen-52>", line 2, in compile
+  File "/usr/lib/python3/dist-packages/odoo/tools/cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_qweb.py", line 113, in compile
+    return super(IrQWeb, self).compile(id_or_xml_id, options=options)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 276, in compile
+    element, document = self.get_template(template, options)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 362, in get_template
+    path = options['last_path_node']
+KeyError: 'last_path_node'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_cron.py", line 102, in _callback
+    self.env['ir.actions.server'].browse(server_action_id).run()
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_actions.py", line 545, in run
+    res = func(action, eval_context=eval_context)
+  File "/usr/lib/python3/dist-packages/odoo/addons/website/models/ir_actions.py", line 59, in run_action_code_multi
+    res = super(ServerAction, self).run_action_code_multi(action, eval_context)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_actions.py", line 430, in run_action_code_multi
+    safe_eval(action.sudo().code.strip(), eval_context, mode="exec", nocopy=True)  # nocopy allows to return 'action'
+  File "/usr/lib/python3/dist-packages/odoo/tools/safe_eval.py", line 377, in safe_eval
+    pycompat.reraise(ValueError, ValueError('%s: "%s" while evaluating\n%r' % (ustr(type(e)), ustr(e), expr)), exc_info[2])
+  File "/usr/lib/python3/dist-packages/odoo/tools/pycompat.py", line 13, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/odoo/tools/safe_eval.py", line 354, in safe_eval
+    return unsafe_eval(c, globals_dict, locals_dict)
+  File "", line 1, in <module>
+  File "/mnt/extra-addons-academy/openeducat_core/models/student.py", line 83, in create_internal_student_cron
+    student = self.env['op.student'].create(vals)
+  File "<decorator-gen-110>", line 2, in create
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 335, in _model_create_multi
+    return create(self, [arg])
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 269, in create
+    threads = super(MailThread, self).create(vals_list)
+  File "<decorator-gen-3>", line 2, in create
+  File "/usr/lib/python3/dist-packages/odoo/api.py", line 336, in _model_create_multi
+    return create(self, arg)
+  File "/usr/lib/python3/dist-packages/odoo/models.py", line 3799, in create
+    parent.write(data['inherited'][model_name])
+  File "/usr/lib/python3/dist-packages/odoo/addons/snailmail/models/res_partner.py", line 24, in write
+    return super(ResPartner, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/partner_autocomplete/models/res_partner.py", line 197, in write
+    res = super(ResPartner, self).write(values)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/res_partner.py", line 520, in write
+    result = result and super(Partner, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_activity.py", line 680, in write
+    return super(MailActivityMixin, self).write(vals)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 326, in write
+    self._message_auto_subscribe(values)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 2885, in _message_auto_subscribe
+    self.with_context(lang=lang)._message_auto_subscribe_notify(pids, template)
+  File "/usr/lib/python3/dist-packages/odoo/addons/mail/models/mail_thread.py", line 2813, in _message_auto_subscribe_notify
+    assignation_msg = view.render(values, engine='ir.qweb', minimal_qcontext=True)
+  File "/usr/lib/python3/dist-packages/odoo/addons/website/models/ir_ui_view.py", line 335, in render
+    return super(View, self).render(values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/web_editor/models/ir_ui_view.py", line 25, in render
+    return super(IrUiView, self).render(values=values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_ui_view.py", line 1162, in render
+    return self.env[engine].render(self.id, qcontext)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_qweb.py", line 58, in render
+    result = super(IrQWeb, self).render(id_or_xml_id, values=values, **context)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 259, in render
+    self.compile(template, options)(self, body.append, values or {})
+  File "<decorator-gen-52>", line 2, in compile
+  File "/usr/lib/python3/dist-packages/odoo/tools/cache.py", line 90, in lookup
+    value = d[key] = self.method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/ir_qweb.py", line 113, in compile
+    return super(IrQWeb, self).compile(id_or_xml_id, options=options)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 276, in compile
+    element, document = self.get_template(template, options)
+  File "/usr/lib/python3/dist-packages/odoo/addons/base/models/qweb.py", line 362, in get_template
+    path = options['last_path_node']
+ValueError: <class 'KeyError'>: "last_path_node" while evaluating
+'model.create_internal_student_cron()'
+2022-01-06 01:35:25,248 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Create internal students` done. 
+2022-01-06 01:35:25,249 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Update internal student course`. 
+2022-01-06 01:35:25,259 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Update internal student course` done. 
+2022-01-06 01:35:25,260 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Update Stage Voucher`. 
+2022-01-06 01:35:25,270 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Update Stage Voucher` done. 
+2022-01-06 01:35:25,271 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2022-01-06 01:35:25,283 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2022-01-06 01:35:25,284 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Calendar: Event Reminder`. 
+2022-01-06 01:35:25,297 1 INFO thionline13 odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2022-01-06 01:35:25,301 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Calendar: Event Reminder` done. 
+2022-01-06 01:35:31,075 1 INFO thionline13 odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2022-01-06 01:35:31,086 1 INFO thionline13 odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 

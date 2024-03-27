@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:06+0000\n"
+"PO-Revision-Date: 2018-03-08 23:45-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_online_admission/i18n/openeducat_online_admission.pot\n"
+"Language: da_DK\n"
+
+#. module: openeducat_online_admission
+#: model:ir.model,name:openeducat_online_admission.model_op_admission
+msgid "Admission"
+msgstr "Optagelse"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "City"
+msgstr "City"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.view_op_admission_inherit_online_form
+msgid "Confirm"
+msgstr "Bekræfte"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Country"
+msgstr "Land"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Country..."
+msgstr "Land..."
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Date of Birth"
+msgstr "Fødselsdag"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Email"
+msgstr "E-mail"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Female"
+msgstr "Kvinde"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "First Name"
+msgstr "Fornavn"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Gender"
+msgstr "Køn"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Last Name"
+msgstr "Efternavn"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Male"
+msgstr "Mand"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Middle Name"
+msgstr "Mellemnavn"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Mobile Number"
+msgstr "Mobil nummer"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Next"
+msgstr "Næste"
+
+#. module: openeducat_online_admission
+#: model:website.menu,name:openeducat_online_admission.menu_course_registration
+msgid "Registration"
+msgstr "Registrering"
+
+#. module: openeducat_online_admission
+#: model:ir.model.fields,field_description:openeducat_online_admission.field_op_course_reg_fees
+msgid "Registration Fees"
+msgstr "Registreringsafgifter"
+
+#. module: openeducat_online_admission
+#: model:ir.model.fields,field_description:openeducat_online_admission.field_op_admission_order_id
+msgid "Registration Fees Ref"
+msgstr "Registrering gebyrer Ref"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Select Class"
+msgstr "Vælg klasse"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Select Course"
+msgstr "Vælg kursus"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Street"
+msgstr "Street"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.application_confirmed
+msgid "Your application has been confirmed."
+msgstr "Din ansøgning er blevet bekræftet."
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Zip / Postal\n"
+"                                                    Code"
+msgstr "Zip / Postal kode"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "Zip / Postal Code"
+msgstr "Zip / Postal kode"
+
+#. module: openeducat_online_admission
+#: model:ir.ui.view,arch_db:openeducat_online_admission.admission_registration
+msgid "mm/dd/yyyy"
+msgstr "dd/mm/åååå"
+
+#. module: openeducat_online_admission
+#: model:ir.model,name:openeducat_online_admission.model_op_course
+msgid "op.course"
+msgstr "op.Course"
+

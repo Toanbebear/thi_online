@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="voucher_form" model="ir.ui.view">
+            <field name="name">Voucher</field>
+            <field name="model">crm.voucher</field>
+            <field name="arch" type="xml">
+                <form duplicate="0" create="false" delete="false">
+                    <sheet>
+                        <group>
+                            <field name="active" groups="base.group_system"/>
+                            <field name="name"/>
+                            <field name="voucher_program_id"/>
+                            <field name="crm_id"/>
+                            <field name="brand_id"/>
+                            <field name="order_id"/>
+                            <field name="partner_id"/>
+                            <field name="partner2_id"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="stage_voucher"/>
+                            <field name="qr_code" widget="image"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="voucher_tree" model="ir.ui.view">
+            <field name="name">Voucher</field>
+            <field name="model">crm.voucher</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date desc" create="false">
+                    <field name="name"/>
+                    <field name="voucher_program_id"/>
+                    <field name="partner2_id"/>
+                    <field name="stage_voucher"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="open_voucher" model="ir.actions.act_window">
+            <field name="name">Voucher</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.voucher</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_crm_voucher"
+                  name="Voucher"
+                  parent="menu_crm_voucher_program"
+                  sequence="2"
+                  action="open_voucher"
+                  groups="base.group_system"/>
+    </data>
+</odoo>

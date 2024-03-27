@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_admission_inherit_online_form" model="ir.ui.view">
+            <field name="name">op.admission.form</field>
+            <field name="model">op.admission</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="openeducat_admission.view_op_admission_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='confirm_in_progress']" position="replace">
+                    <button name="confirm_in_progress"
+                            states="submit,online" string="Confirm"
+                            type="object" class="oe_highlight"/>
+                </xpath>
+                <xpath expr="//field[@name='fees']" position="after">
+                    <field name="order_id" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--Course Material for Python-->
+        <record id="material_python_intro_course" model="op.material">
+            <field name="name">Introduction to the course</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">12.51</field>
+            <field name="url"
+                   eval="'https://www.youtube.com/watch?v=41qgdwd3zAg'"/>
+            <field name="document_id">41qgdwd3zAg</field>
+        </record>
+
+        <record id="material_python_cnd_image" model="op.material">
+            <field name="name">Python Conditional Statements</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">infographic</field>
+            <field name="total_time" type="float">0.5</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/python-programming-essentials.jpg"/>
+        </record>
+
+        <record id="material_python_syntax_pdf" model="op.material">
+            <field name="name">Python Basic Syntax</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">document</field>
+            <field name="total_time" type="float">5.8</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/byte_of_python.pdf"/>
+        </record>
+
+        <record id="material_python_words" model="op.material">
+            <field name="name">A few words about Python</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">audio</field>
+            <field name="total_time" type="float">3.07</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/a-few-words-about-Python.mp3"/>
+        </record>
+
+        <record id="material_python_anaconda_bundle" model="op.material">
+            <field name="name">Installing Python through the Anaconda bundle</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">2.3</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/Installing-Python-through-the-Anaconda-bundle.mp4"/>
+        </record>
+
+        <record id="material_python_install" model="op.material">
+            <field name="name">Installing Python the default way</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">3.49</field>
+            <field name="url" eval="'https://youtu.be/m48gXqAfWm0'"/>
+            <field name="document_id">m48gXqAfWm0</field>
+        </record>
+
+        <record id="material_python_variable" model="op.material">
+            <field name="name">Variables</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">6.45</field>
+            <field name="url" eval="'https://youtu.be/667ZeuZ0Q8M'"/>
+            <field name="document_id">667ZeuZ0Q8M</field>
+        </record>
+
+        <record id="material_python_string_number" model="op.material">
+            <field name="name">String and Number</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">13.92</field>
+            <field name="url" eval="'https://youtu.be/vTX3IwquFkc'"/>
+            <field name="document_id">vTX3IwquFkc</field>
+        </record>
+
+        <record id="material_python_functions" model="op.material">
+            <field name="name">Functions</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">0.92</field>
+            <field name="url" eval="'https://youtu.be/RFzdLOrmHnU'"/>
+            <field name="document_id">RFzdLOrmHnU</field>
+        </record>
+
+        <record id="material_python_sequence_list" model="op.material">
+            <field name="name">Sequence with List</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">5.01</field>
+            <field name="url" eval="'https://youtu.be/XWQ0cyCrY7w'"/>
+            <field name="document_id">XWQ0cyCrY7w</field>
+        </record>
+
+        <record id="material_python_iteration" model="op.material">
+            <field name="name">Iterate Through Python List Using Loops</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">8.51</field>
+            <field name="url" eval="'https://youtu.be/YT6ldZuBW4Y'"/>
+            <field name="document_id">YT6ldZuBW4Y</field>
+        </record>
+
+        <record id="material_python_files" model="op.material">
+            <field name="name">Working with files</field>
+            <field name="website_published" eval="True"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">0.8</field>
+            <field name="url" eval="'https://youtu.be/0DHt_gC-k_E'"/>
+            <field name="document_id">0DHt_gC-k_E</field>
+        </record>
+
+        <record id="material_python_files_rw" model="op.material">
+            <field name="name">Read/Write Operations</field>
+            <field name="website_published" eval="True"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">7.2</field>
+            <field name="url" eval="'https://youtu.be/evcUugVyauY'"/>
+            <field name="document_id">evcUugVyauY</field>
+        </record>
+
+        <!--Course Material for French-->
+        <record id="material_french_video" model="op.material">
+            <field name="name">French Tutorials</field>
+            <field name="website_published" eval="True"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">1.45</field>
+            <field name="url" eval="'https://youtu.be/AdfwQXJ0ZVM'"/>
+            <field name="document_id">AdfwQXJ0ZVM</field>
+        </record>
+
+        <record id="material_french_pdf" model="op.material">
+            <field name="name">French CookBooks</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">document</field>
+            <field name="total_time" type="float">15.28</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/French.pdf"/>
+        </record>
+
+        <record id="material_french_image" model="op.material">
+            <field name="name">Way to french</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">infographic</field>
+            <field name="total_time" type="float">0.45</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/french.jpg"/>
+        </record>
+
+        <!--Course Material for Sell-->
+        <record id="material_sell_video" model="op.material">
+            <field name="name">Sells</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">video</field>
+            <field name="total_time" type="float">4.0</field>
+            <field name="url" eval="'https://youtu.be/ynXIeutsLz8'"/>
+            <field name="document_id">ynXIeutsLz8</field>
+        </record>
+
+        <record id="material_sell_pdf" model="op.material">
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="name">All time Sell</field>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">document</field>
+            <field name="total_time" type="float">6.0</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/sellany.pdf"/>
+        </record>
+
+        <record id="material_sell_image" model="op.material">
+            <field name="name">Sell on spot</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="website_published" eval="True"/>
+            <field name="material_type">infographic</field>
+            <field name="total_time" type="float">2.3</field>
+            <field name="datas" type="base64"
+                   file="openeducat_lms/demo/files/sellany.png"/>
+        </record>
+    </data>
+</odoo>

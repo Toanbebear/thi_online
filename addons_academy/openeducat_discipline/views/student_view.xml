@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_student_inherit_discipline" model="ir.ui.view">
+            <field name="name">op.student.form</field>
+            <field name="model">op.student</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="discipline" string="Discipline" invisible="1">
+                        <field name="discipline_ids" readonly="1">
+                            <tree string="Discipline Details">
+                                <field name="misbehaviour_category_id"/>
+                                <field name="misbehaviour_sub_category_id"/>
+                                <field name="misbehaviour_type"/>
+                                <button string="Submit Letter"
+                                        groups="openeducat_core.group_op_student"
+                                        type="object"
+                                        name="submit_apology_letter"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="achievement" string="Achievement" invisible="1">
+                        <field name="achievement_line_ids" readonly="1">
+                            <tree string="Achievement Details">
+                                <field name="student_achievers_id"/>
+                                <field name="achievement_category_id"/>
+                                <field name="achievers_date"/>
+                                <field name="remark"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

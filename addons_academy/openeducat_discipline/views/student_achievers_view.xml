@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_student_achievers_tree" model="ir.ui.view">
+            <field name="name">student.achievers.tree</field>
+            <field name="model">student.achievers</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Student Achievers">
+                    <field name="course_id"/>
+                    <field name="faculty_id"/>
+                    <field name="achievers_date"/>
+                    <field name="achievement_category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_student_achievers_form" model="ir.ui.view">
+            <field name="name">student.achievers.form</field>
+            <field name="model">student.achievers</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Student Achievers">
+                    <header groups="base.group_user">
+                        <button name="send_students_list" states="draft" string="Send To Discipline Members"
+                                type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done" clickable="True"/>
+                    </header>
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="course_id"/>
+                            <field name="faculty_id"/>
+                            <field name="achievers_date"/>
+                            <field name="achievement_category_id"/>
+                        </group>
+                        <group string="Student Achievers Line">
+                            <field name="student_achievers_line_ids" nolabel="1">
+                                <tree string="Select Students" editable="bottom">
+                                    <field name="student_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="remark"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_student_achievers_view">
+            <field name="name">Student Achievers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">student.achievers</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_student_achievers_view_form">
+            <field name="act_window_id" ref="act_open_student_achievers_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_student_achievers_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_student_achievers_view_tree">
+            <field name="act_window_id" ref="act_open_student_achievers_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_student_achievers_tree"/>
+        </record>
+    </data>
+</odoo>

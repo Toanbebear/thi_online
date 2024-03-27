@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <!--        Hợp đồng Trợ thủ Paris Đà Nẵng-->
+    <record model="temp.creation" id="pr_dn_ttn_contract_template">
+        <field name="template" type="base64" file="sci_hrms/data/contract/paris/HD_TTN_PR_DN.docx"/>
+        <field name="current_datetime_positions_2">currentyear</field>
+        <field name="current_datetime_format_2">%Y</field>
+        <field name="current_datetime_format">Ngày %d tháng vl%m năm %Y</field>
+        <field name="name">HĐ Trợ thủ nha Paris Đà Nẵng</field>
+        <field name="template_name">HD_TTN_PR_DN.docx</field>
+        <field name="reference">PR_DN-ttn</field>
+        <field name="export_user_name" eval="True"/>
+        <field name="export_user_position">user</field>
+        <field name="current_datetime_positions">currentdate</field>
+        <field name="export_current_datetime" eval="True"/>
+        <field name="main_model" model="ir.model" search="[('model', '=', 'hr.contract')]"/>
+        <field name="access_groups" eval="[(6, 0, [ref('hr_recruitment.group_hr_recruitment_user')])]"/>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_1">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_upper': True}</field>
+        <field name="temp_mark">name1</field>
+        <field name="python_code">employee_id.display_name</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_2">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'male': 'Ông', 'female': 'Bà', 'to_upper': True}</field>
+        <field name="temp_mark">gender1</field>
+        <field name="python_code">employee_id.gender</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_3">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+        <field name="temp_mark">birthday</field>
+        <field name="python_code">employee_id.birthday</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_4">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">birthplace</field>
+        <field name="python_code">employee_id.place_of_birth</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_5">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">tdcm</field>
+        <field name="python_code">employee_id.study_field</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_6">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">idnum</field>
+        <field name="python_code">employee_id.identification_id</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_7">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">address</field>
+        <field name="python_code">employee_id.address_home_id.street</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_8">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+        <field name="temp_mark">startdate</field>
+        <field name="python_code">date_start</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_9">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'time_format': '%d/%m-%Y'}</field>
+        <field name="temp_mark">enddate</field>
+        <field name="python_code">date_end</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_10">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">position</field>
+        <field name="python_code">job_id.display_name</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_11">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_int': True}</field>
+        <field name="temp_mark">wage</field>
+        <field name="python_code">wage</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_12">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'n2w': True}</field>
+        <field name="temp_mark">wagechar</field>
+        <field name="python_code">wage</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_13">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">name2</field>
+        <field name="python_code">employee_id.name</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_14">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'male': 'Ông', 'female': 'Bà'}</field>
+        <field name="temp_mark">gender2</field>
+        <field name="python_code">employee_id.gender</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_15">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_upper': True}</field>
+        <field name="temp_mark">worklocation1</field>
+        <field name="python_code">employee_id.work_location</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_16">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">worklocation2</field>
+        <field name="python_code">employee_id.work_location</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_17">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'time_format': '%d/%m/%Y'}</field>
+        <field name="temp_mark">iddate</field>
+        <field name="python_code">employee_id.id_issue_date</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_18">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">idplace</field>
+        <field name="python_code">employee_id.id_issue_place</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_19">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_int': True}</field>
+        <field name="temp_mark">basicsalary</field>
+        <field name="python_code">basic_salary</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_20">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'n2w': True}</field>
+        <field name="temp_mark">basicsalarychar</field>
+        <field name="python_code">basic_salary</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_21">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_int': True}</field>
+        <field name="temp_mark">allowance</field>
+        <field name="python_code">allowance</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_23">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">country</field>
+        <field name="python_code">employee_id.country_id</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_24">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'to_int': True}</field>
+        <field name="temp_mark">deposit</field>
+        <field name="python_code">deposit</field>
+    </record>
+<!--    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_25">-->
+<!--        <field name="line" ref="pr_dn_ttn_contract_template"/>-->
+<!--        <field name="replacement_format">{'False':''}</field>-->
+<!--        <field name="temp_mark">contract_term</field>-->
+<!--        <field name="python_code">contract_term</field>-->
+<!--    </record>-->
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_26">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'n2w': True}</field>
+        <field name="temp_mark">depositchar</field>
+        <field name="python_code">deposit</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_27">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="replacement_format">{'time_format': 'ngày %d tháng %m năm %Y'}</field>
+        <field name="temp_mark">startdatechar</field>
+        <field name="python_code">date_start</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_28">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">payment_term</field>
+        <field name="python_code">payment_term</field>
+    </record>
+    <record model="fields.line" id="pr_dn_ttn_contract_template_fields_line_29">
+        <field name="line" ref="pr_dn_ttn_contract_template"/>
+        <field name="temp_mark">money_per_month</field>
+        <field name="python_code">money_per_month</field>
+    </record>
+</data>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.actions.act_window" id="act_open_op_session_internal_batch_view">
+        <field name="name">Sessions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">op.session</field>
+        <field name="view_mode">calendar,kanban</field>
+        <field name="domain">[('batch_id.internal', '=', True)]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_op_session_external_batch_view">
+        <field name="name">Sessions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">op.session</field>
+        <field name="view_mode">calendar,kanban</field>
+        <field name="domain">[('batch_id.internal', '=', False)]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="menu_op_session_internal_batch"
+              name="Thời khóa biểu"
+              parent="openeducat_core.menu_internal_op_course_sub"
+              action="act_open_op_session_internal_batch_view"
+              groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin,openeducat_core.group_op_faculty"/>
+
+    <menuitem id="menu_op_session_external_batch"
+              name="Thời khóa biểu"
+              parent="openeducat_core.menu_external_op_course_sub"
+              action="act_open_op_session_external_batch_view"
+              groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin,openeducat_core.group_op_faculty"/>
+
+
+</odoo>

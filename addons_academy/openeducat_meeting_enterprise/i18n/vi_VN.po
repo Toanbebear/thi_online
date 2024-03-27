@@ -1,0 +1,579 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:05+0000\n"
+"PO-Revision-Date: 2018-03-08 05:04-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Vietnamese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_meeting_enterprise/i18n/openeducat_meeting_enterprise.pot\n"
+"Language: vi_VN\n"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_highlighted
+msgid "# Meetings Highlight"
+msgstr "# Cuộc họp làm nổi bật"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "<span> hours</span>"
+msgstr "<span> giờ</span>"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Accept"
+msgstr "Chấp nhận"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "Active"
+msgstr "Hoạt động"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_allday
+msgid "All Day"
+msgstr "Tất cả các ngày"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Are You Sure You Want To Create Meeting"
+msgstr "Bạn có chắc bạn muốn tạo cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_attendee
+msgid "Attendee"
+msgstr "Người tham dự"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_status
+msgid "Attendee Status"
+msgstr "Tình trạng người tham dự"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_ids
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Attendees"
+msgstr "Những người tham dự"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Availability"
+msgstr "Tính khả dụng"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_byday
+msgid "By day"
+msgstr "Theo ngày"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "Click to schedule a new meeting."
+msgstr "Nhấn vào đây để lịch trình một cuộc họp mới."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: openeducat_meeting_enterprise
+#: code:addons/openeducat_meeting_enterprise/wizard/op_meeting_wizard.py:47
+#, python-format
+msgid "Create Event"
+msgstr "Tạo sự kiện"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Create Meeting Event"
+msgstr "Tạo cuộc họp sự kiện"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_uid
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_date
+msgid "Created on"
+msgstr "Tạo ngày"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_start
+msgid "Date"
+msgstr "Ngày"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_day
+msgid "Date of month"
+msgstr "Ngày tháng"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Decline"
+msgstr "Từ chối"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_description
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_name
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_id
+msgid "Document ID"
+msgstr "ID tài liệu"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model_id
+msgid "Document Model"
+msgstr "Tài liệu mẫu"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model
+msgid "Document Model Name"
+msgstr "Tài liệu mô hình Tên"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_duration
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Duration"
+msgstr "Thời gian thực hiện"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "End Date"
+msgstr "Ngày kết thúc"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_datetime
+msgid "End Datetime"
+msgstr "Kết thúc Datetime"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Ending at"
+msgstr "Kết thúc lúc"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_time
+msgid "Event Time"
+msgstr "Thời gian tổ chức sự kiện"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_faculty
+msgid "Faculty"
+msgstr "Giảng viên"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_fr
+msgid "Fri"
+msgstr "Thứ sáu"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Group By"
+msgstr "Nhóm theo"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "If the active field is set to false, it will allow you to hide the event alarm information without removing it."
+msgstr "Nếu lĩnh vực hoạt động được đặt thành false, nó sẽ cho phép bạn để ẩn thông tin báo động sự kiện mà không loại bỏ nó."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitation details"
+msgstr "Chi tiết lời mời"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitations"
+msgstr "Lời mời"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting___last_update
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard___last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_uid
+msgid "Last Updated by"
+msgstr "Cập Nhật lần cuối bởi"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_date
+msgid "Last Updated on"
+msgstr "Lần cập nhật cuối"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Let the event automatically repeat at that interval"
+msgstr "Hãy để sự kiện này sẽ tự động lặp lại tại khoảng thời gian đó"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location"
+msgstr "Vị trí"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location of Event"
+msgstr "Vị trí của tổ chức sự kiện"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_faculty
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_parent
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_wizard_student
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_meeting_id
+#: model:ir.ui.menu,name:openeducat_meeting_enterprise.menu_meeting
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Meeting"
+msgstr "Cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Meeting Details"
+msgstr "Chi tiết cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_name
+msgid "Meeting Subject"
+msgstr "Chủ đề cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event_notify
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Meetings"
+msgstr "Cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Misc"
+msgstr "Linh tinh"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_mo
+msgid "Mon"
+msgstr "Mon"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Events"
+msgstr "Sự kiện của tôi"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Meetings"
+msgstr "Cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_month_by
+msgid "Option"
+msgstr "Tùy chọn"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Options"
+msgstr "Tùy chọn"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Owner"
+msgstr "Chủ sở hữu"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_parent
+msgid "Parent"
+msgstr "Phụ huynh"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_ids
+msgid "Participant"
+msgstr "Người tham gia"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_partner_id
+msgid "Partner-related data of the user"
+msgstr "Đối tác liên quan đến dữ liệu của người dùng"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_privacy
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Privacy"
+msgstr "Sự riêng tư"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Recurrence"
+msgstr "Tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_end_type
+msgid "Recurrence Termination"
+msgstr "Chấm dứt sự tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent"
+msgstr "Tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id
+msgid "Recurrent ID"
+msgstr "ID tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id_date
+msgid "Recurrent ID date"
+msgstr "Tái phát ID ngày"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent Meeting"
+msgstr "Cuộc họp tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule
+msgid "Recurrent Rule"
+msgstr "Quy tắc tái phát"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_alarm_ids
+msgid "Reminders"
+msgstr "Nhắc nhở"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat"
+msgstr "Lặp lại"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat Every"
+msgstr "Lặp lại mỗi"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_final_date
+msgid "Repeat Until"
+msgstr "Lặp lại cho đến khi"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Lặp lại mỗi (ngày/tuần/tháng/năm)"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat x times"
+msgstr "Lặp lại x lần"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_user_id
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Responsible"
+msgstr "Chịu trách nhiệm"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_sa
+msgid "Sat"
+msgstr "Thứ bảy"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Search Meetings"
+msgstr "Tìm kiếm các cuộc họp"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Select attendees..."
+msgstr "Chọn người tham gia..."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Send mail"
+msgstr "Gửi thư"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_show_as
+msgid "Show Time as"
+msgstr "Hiển thị thời gian là"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start"
+msgstr "Bắt đầu"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Start Date"
+msgstr "Ngày bắt đầu"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_datetime
+msgid "Start DateTime"
+msgstr "Bắt đầu DateTime"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start date of an event, without time for full days events"
+msgstr "Ngày bắt đầu của một sự kiện, mà không có thời gian cho các sự kiện ngày đầy đủ"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Starting at"
+msgstr "Bắt đầu từ"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_state
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop"
+msgstr "Dừng"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop date of an event, without time for full days events"
+msgstr "Dừng lại ngày của sự kiện, mà không có thời gian cho các sự kiện ngày đầy đủ"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_student
+msgid "Student"
+msgstr "Sinh viên"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Subject"
+msgstr "Môn học"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_su
+msgid "Sun"
+msgstr "Sun"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_categ_ids
+msgid "Tags"
+msgstr "Từ khóa"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "The calendar is shared between employees and fully integrated with\n"
+"                other applications such as the employee holidays or the\n"
+"                business\n"
+"                opportunities."
+msgstr "Lịch được chia sẻ giữa các nhân viên và tích hợp đầy đủ với các ứng dụng khác chẳng hạn như ngày lễ nhân viên hoặc cơ hội kinh doanh."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_th
+msgid "Thu"
+msgstr "Thứ năm"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_tu
+msgid "Tue"
+msgstr "Thứ ba"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Uncertain"
+msgstr "Không chắc chắn"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Unread Messages"
+msgstr "Tin nhắn chưa đọc"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_we
+msgid "Wed"
+msgstr "Thứ tư"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_week_list
+msgid "Weekday"
+msgstr "Ngày trong tuần"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "e.g. Business Lunch"
+msgstr "Ví dụ như là bữa ăn trưa kinh doanh"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_faculty
+msgid "op.faculty"
+msgstr "op.Faculty"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting
+msgid "op.meeting"
+msgstr "op.Meeting"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting_wizard
+msgid "op.meeting.wizard"
+msgstr "op.Meeting.Wizard"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_parent
+msgid "op.parent"
+msgstr "op.Parent"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_student
+msgid "op.student"
+msgstr "op.Student"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "or"
+msgstr "hoặc"
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="add_button_cancel_batch" model="ir.ui.view">
+        <field name="name">add_button_cancel_batch</field>
+        <field name="model">op.batch</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook/page[@name='students']/field/tree" position="inside">
+                <button name="cancel_course" string="Cancel" type="object" class="btn-danger"
+                        confirm="Are you sure cancel ?"
+                        attrs="{'invisible': ['|', ('status', '=', 'finish'), ('status', '=', 'cancel')]}"
+                        groups="openeducat_core.group_op_back_office"/>
+            </xpath>
+
+        </field>
+    </record>
+    <!-- Inherit Form View to Modify it -->
+    <record id="form_internal_batch_add_survey" model="ir.ui.view">
+        <field name="name">form_internal_batch_add_survey</field>
+        <field name="model">op.batch</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_batch_form_internal"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='products_domain']" position="after">
+                <field name="survey_survey" style="width:150px" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button string="Send Surveys" type="object" name="send_survey" groups="openeducat_core.group_op_back_office"
+                        class="oe_stat_button" icon="fa-file-text-o"/>
+            </xpath>
+            <xpath expr="//page[@name='students']/field/tree/field[@name='student_id']" position="after">
+                <field name="job_id"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

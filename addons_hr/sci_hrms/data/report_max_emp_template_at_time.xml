@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="temp.creation" id="report_max_emp_at_time_template">
+        <field name="template" type="base64" file="sci_hrms/static/xls/bao_cao_dinh_bien_hien_tai.xlsx"/>
+        <field name="name">Báo cáo định biên hiện tại</field>
+        <field name="max_samples">10</field>
+        <field name="template_name">bao_cao_dinh_bien_hien_tai.xlsx</field>
+        <field name="all_in_one" eval="True"/>
+        <field name="max_row">3110</field>
+        <field name="grp_by_cell">a5</field>
+        <field name="main_model" model="ir.model" search="[('model', '=', 'hr.job')]"/>
+    </record>
+    <record model="fields.line" id="report_max_emp_template_fields_line_1">
+        <field name="line" ref="report_max_emp_template"/>
+        <field name="python_code">group_job</field>
+        <field name="temp_mark">b6</field>
+    </record>
+    <record model="fields.line" id="report_max_emp_template_fields_line_2">
+        <field name="line" ref="report_max_emp_template"/>
+        <field name="python_code">name</field>
+        <field name="temp_mark">c6</field>
+    </record>
+    <record model="fields.line" id="report_max_emp_template_fields_line_3">
+        <field name="line" ref="report_max_emp_template"/>
+        <field name="python_code">total_payroll</field>
+        <field name="temp_mark">d6</field>
+    </record>
+    <record model="fields.line" id="report_max_emp_template_fields_line_4">
+        <field name="line" ref="report_max_emp_template"/>
+        <field name="python_code">no_of_employee</field>
+        <field name="temp_mark">e6</field>
+    </record>
+    <record model="fields.line" id="report_max_emp_template_fields_line_5">
+        <field name="line" ref="report_max_emp_template"/>
+        <field name="python_code">employee_ids.name</field>
+        <field name="replacement_format">{'all_to_str': True}</field>
+        <field name="temp_mark">g6</field>
+    </record>
+<!--    <record model="ir.actions.act_window" id="act_report_max_emp_template">-->
+<!--        <field name="name">Báo cáo định biên</field>-->
+<!--        <field name="type">ir.actions.act_window</field>-->
+<!--        <field name="res_model">temp.wizard</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--        <field name="view_type">form</field>-->
+<!--        <field name="target">inline</field>-->
+<!--        <field name="view_id" ref="ms_templates.report_wizard"/>-->
+<!--        <field name="binding_model_id" model="ir.model" search="[('model', '=', 'hr.job')]"/>-->
+<!--        <field name="context" eval="{'default_template_id': ref('report_max_emp_template')}"/>-->
+<!--    </record>-->
+
+</odoo>

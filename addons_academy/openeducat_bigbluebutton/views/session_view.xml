@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_session_meeting_form" model="ir.ui.view">
+            <field name="name">op.session.form</field>
+            <field name="model">op.session</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="openeducat_timetable.view_op_session_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <footer>
+                        <button type="action" name="%(act_open_BbbMeeting_view)d"
+                                attrs="{'invisible': [('online_meeting','=', True)]}"
+                                groups="openeducat_core.group_op_faculty"
+                                string="Create Online Meeting"/>
+                        <button string="Meeting Link"
+                                attrs="{'invisible': [('online_meeting','=', False)]}"
+                                type="object" name="get_meeting_url"/>
+                        <field name="salt" invisible="1"/>
+                        <field name="online_meeting" invisible="1"/>
+                        <field name="url" invisible="1"/>
+                        <field name="meeting_name" invisible="1"/>
+                    </footer>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="apw" attrs="{'invisible': [('online_meeting','=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

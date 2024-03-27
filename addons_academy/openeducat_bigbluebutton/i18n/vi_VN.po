@@ -1,0 +1,176 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openeducat_bigbluebutton
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-10 06:08+0000\n"
+"PO-Revision-Date: 2021-06-10 06:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__apw
+msgid "Attendee Password"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__apw
+msgid "Attendee password"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_bbb_meeting
+msgid "BBb Meeting"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model_terms:ir.ui.view,arch_db:openeducat_bigbluebutton.view_BbbMeeting_form
+msgid "Create Meeting"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model_terms:ir.ui.view,arch_db:openeducat_bigbluebutton.view_op_session_meeting_form
+msgid "Create Online Meeting"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__create_uid
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__create_date
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__display_name
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__id
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__id
+msgid "ID"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting____last_update
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__write_uid
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật gần đây bởi"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__write_date
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật gần đây vào"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__meeting_name
+msgid "Meeting ID"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_meeting_link
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link__name
+#: model_terms:ir.ui.view,arch_db:openeducat_bigbluebutton.view_op_session_meeting_form
+msgid "Meeting Link"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.actions.act_window,name:openeducat_bigbluebutton.act_open_BbbMeeting_view
+#: model_terms:ir.ui.view,arch_db:openeducat_bigbluebutton.view_BbbMeeting_form
+msgid "Meetings"
+msgstr "Cuộc họp"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__mpw
+msgid "Moderator Password"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__mpw
+msgid "Moderator password"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__name
+msgid "Name / Subject"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__online_meeting
+msgid "Online Meeting"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.actions.act_window,name:openeducat_bigbluebutton.act_open_MeetingLink_view
+#: model_terms:ir.ui.view,arch_db:openeducat_bigbluebutton.view_MeetingLink_form
+msgid "Online Meeting Link"
+msgstr "Cuộc họp trực tuyến liên kết"
+
+#. module: openeducat_bigbluebutton
+#: code:addons/openeducat_bigbluebutton/wizard/meeting.py:0
+#, python-format
+msgid "Please Configure BigBlueButton Credentials"
+msgstr "Xin vui lòng đặt cấu hình uỷ nhiệm BigBlueButton"
+
+#. module: openeducat_bigbluebutton
+#: code:addons/openeducat_bigbluebutton/wizard/meeting.py:0
+#, python-format
+msgid "Please Configure URL in System Parameters"
+msgstr "Hãy cấu hình URL trong tham số hệ thống"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__salt
+msgid "Salt"
+msgstr "Muối"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__session_id
+msgid "Session"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_op_session
+msgid "Sessions"
+msgstr "Buổi"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session__url
+msgid "URL"
+msgstr "Liên kết"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting__welcome_str
+msgid "Welcome String"
+msgstr ""
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,help:openeducat_bigbluebutton.field_bbb_meeting__welcome_str
+msgid ""
+"welcome message to be                               displayed when a user "
+"logs in to the meeting"
+msgstr ""

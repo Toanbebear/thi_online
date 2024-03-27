@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 05:51+0000\n"
+"PO-Revision-Date: 2017-12-12 05:51+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model.fields,field_description:openeducat_activity_enterprise.field_op_activity_company_id
+#: model:ir.model.fields,field_description:openeducat_activity_enterprise.field_op_activity_type_company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model,name:openeducat_activity_enterprise.model_op_activity
+msgid "op.activity"
+msgstr "op.activity"
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model,name:openeducat_activity_enterprise.model_op_activity_type
+msgid "op.activity.type"
+msgstr "op.activity.type"
+

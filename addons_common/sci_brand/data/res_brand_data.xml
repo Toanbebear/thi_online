@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data noupdate="True">
+        <record id="kn_brand_partner" model="res.partner">
+            <field name="name">Kangnam</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">19006466</field>
+            <field name="email">info@benhvienthammykangnam.vn</field>
+            <field name="website">https://benhvienthammykangnam.vn</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_kn.png"/>
+        </record>
+        <record id="da_brand_partner" model="res.partner">
+            <field name="name">Đông Á</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">19006499</field>
+            <field name="email">info@benhvienthammydonga.vn</field>
+            <field name="website">https://benhvienthammydonga.vn</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_da.png"/>
+        </record>
+        <record id="pr_brand_partner" model="res.partner">
+            <field name="name">Paris</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">19006900</field>
+            <field name="email">info@nhakhoaparis.vn</field>
+            <field name="website">https://nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_pr.png"/>
+        </record>
+        <record id="hh_brand_partner" model="res.partner">
+            <field name="name">Hồng Hà</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">1900633988</field>
+            <field name="email">info@benhvienhongha.vn</field>
+            <field name="website">https://benhvienhongha.vn</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_hh.png"/>
+        </record>
+        <record id="hv_brand_partner" model="res.partner">
+            <field name="name">Học Viện</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">1900633556</field>
+            <field name="email">info@scibeauty.edu.vn</field>
+            <field name="website">https://scibeauty.edu.vn</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_hv.png"/>
+        </record>
+        <record id="rh_brand_partner" model="res.partner">
+            <field name="name">Richard Huy</field>
+            <field name="company_id" eval="None"/>
+            <field name="is_company" eval="None"/>
+            <field name="street"></field>
+            <field name="city"></field>
+            <field name="zip"></field>
+            <field name="phone">1900066666</field>
+            <field name="email">info@richardhuy.com</field>
+            <field name="website">https://richardhuy.com</field>
+            <field name="image_1920" type="base64" file="sci_brand/static/img/res_brand_rh.png"/>
+        </record>
+
+        <record id="res_brand_kn" model="res.brand">
+            <field name="name">Kangnam</field>
+            <field name="partner_id" ref="kn_brand_partner"/>
+            <field name="code">KN</field>
+            <field name="type">hospital</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="res_brand_da" model="res.brand">
+            <field name="name">Đông Á</field>
+            <field name="partner_id" ref="da_brand_partner"/>
+            <field name="code">DA</field>
+            <field name="type">hospital</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="res_brand_paris" model="res.brand">
+            <field name="name">Paris</field>
+            <field name="partner_id" ref="pr_brand_partner"/>
+            <field name="code">PR</field>
+            <field name="type">hospital</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="res_brand_hh" model="res.brand">
+            <field name="name">Hồng Hà</field>
+            <field name="partner_id" ref="hh_brand_partner"/>
+            <field name="code">HH</field>
+            <field name="type">hospital</field>
+            <field name="sequence">4</field>
+        </record>
+        <record id="res_brand_hv" model="res.brand">
+            <field name="name">Học Viện SCIAcademy</field>
+            <field name="partner_id" ref="hv_brand_partner"/>
+            <field name="code">HV</field>
+            <field name="type">academy</field>
+            <field name="sequence">5</field>
+        </record>
+        <record id="res_brand_rh" model="res.brand">
+            <field name="name">Richard Huy</field>
+            <field name="partner_id" ref="rh_brand_partner"/>
+            <field name="code">RH</field>
+            <field name="type">hospital</field>
+            <field name="sequence">6</field>
+        </record>
+    </data>
+</odoo>

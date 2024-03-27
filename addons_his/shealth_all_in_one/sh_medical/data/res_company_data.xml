@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--        THƯƠNG HIỆU KANG NAM-->
+        <!--        KANGNAM HN-->
+        <record id="k_hn_tc_partner" model="res.partner">
+            <field name="name">BỆNH VIỆN KANGNAM HÀ NỘI</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Số 190A+B Trường Chinh</field>
+            <field name="street2">P. Khương Thượng, Q. Đống Đa</field>
+            <field name="city">TP. Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammykangnam.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="k_hn_tc_company" model="res.company">
+            <field name="name">BỆNH VIỆN KANGNAM HÀ NỘI</field>
+            <field name="partner_id" ref="k_hn_tc_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        KANGNAM HCM-->
+        <record id="k_hcm_bhtq_partner" model="res.partner">
+            <field name="name">BỆNH VIỆN KANGNAM HỒ CHÍ MINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">84A Bà Huyện Thanh Quan</field>
+            <field name="street2">P. 9, Q. 3</field>
+            <field name="city">TP. Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammykangnam.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="k_hcm_bhtq_company" model="res.company">
+            <field name="name">BỆNH VIỆN KANGNAM HỒ CHÍ MINH</field>
+            <field name="partner_id" ref="k_hcm_bhtq_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        KANGNAM SÀI GÒN-->
+        <record id="k_hcm_666_partner" model="res.partner">
+            <field name="name">BỆNH VIỆN KANGNAM SÀI GÒN</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">666 Cách mạng tháng Tám</field>
+            <field name="street2">P. 5, Q. Tân Bình</field>
+            <field name="city">TP. Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammykangnam.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="k_hcm_666_company" model="res.company">
+            <field name="name">BỆNH VIỆN KANGNAM SÀI GÒN</field>
+            <field name="partner_id" ref="k_hcm_666_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_kangnam"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        THƯƠNG HIỆU ĐÔNG Á -->
+        <!--        ĐÔNG Á KIM MÃ HN-->
+        <record id="d_hn_km_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á KIM MÃ</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">212 Kim Mã</field>
+            <field name="street2">P. Kim Mã, Q. Ba Đình</field>
+            <field name="city">TP. Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_hn_km_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á KIM MÃ</field>
+            <field name="partner_id" ref="d_hn_km_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        ĐÔNG Á HẢI PHÒNG-->
+        <record id="d_hp_th_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á HẢI PHÒNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">378 Tô Hiệu</field>
+            <field name="street2">Q. Lê Chân</field>
+            <field name="city">TP. Hải Phòng</field>
+            <field name="state_id" ref="base.state_vn_VN-HP"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_hp_th_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á HẢI PHÒNG</field>
+            <field name="partner_id" ref="d_hp_th_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        ĐÔNG Á VINH -->
+        <record id="d_na_nvc_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á VINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">148 Nguyễn Văn Cừ</field>
+            <field name="street2">Q. Hưng Phúc</field>
+            <field name="city"></field>
+            <field name="state_id" ref="base.state_vn_VN-18"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_na_nvc_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á VINH</field>
+            <field name="partner_id" ref="d_na_nvc_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        ĐÔNG Á ĐÀ NẴNG -->
+        <record id="d_dn_hv_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á ĐÀ NẴNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">293 Hùng Vương</field>
+            <field name="street2"></field>
+            <field name="city">Q. Thanh Khê</field>
+            <field name="state_id" ref="base.state_vn_VN-DN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_dn_hv_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á ĐÀ NẴNG</field>
+            <field name="partner_id" ref="d_dn_hv_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        BVTM ĐÔNG Á 3/2 HCM-->
+        <record id="d_hcm_32_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á 3/2</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Số 69A, đường 3/2</field>
+            <field name="street2">P. 11, Q. 10</field>
+            <field name="city">TP. Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_hcm_32_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á 3/2</field>
+            <field name="partner_id" ref="d_hcm_32_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        ĐÔNG Á BÌNH DƯƠNG -->
+        <record id="d_bd_dlbd_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">12 Lô NP1 TTTM Becamex Đại lộ Bình Dương</field>
+            <field name="street2"></field>
+            <field name="city">TP Thủ Dầu 1</field>
+            <field name="state_id" ref="base.state_vn_VN-57"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_bd_dlbd_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á BÌNH DƯƠNG</field>
+            <field name="partner_id" ref="d_bd_dlbd_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        ĐÔNG Á CẦN THƠ -->
+        <record id="d_ct_ltt_partner" model="res.partner">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á CẦN THƠ</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">28 Lý Tự Trọng</field>
+            <field name="street2">P. An cư, Q. Ninh Kiều</field>
+            <field name="city">TP. Cần Thơ</field>
+            <field name="state_id" ref="base.state_vn_VN-CT"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_ct_ltt_company" model="res.company">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á CẦN THƠ</field>
+            <field name="partner_id" ref="d_ct_ltt_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--      BỆNH VIỆN THẦM MỸ  ĐÔNG Á NGUYỄN TRÃI HCM-->
+        <record id="d_hcm_nt_partner" model="res.partner">
+            <field name="name">BỆNH VIỆN THẨM MỸ ĐÔNG Á HỒ CHÍ MINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Số 218 Nguyễn Trãi</field>
+            <field name="street2">P. 3, Q. 5</field>
+            <field name="city">TP. Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">www.benhvienthammydonga.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="d_hcm_nt_company" model="res.company">
+            <field name="name">BỆNH VIỆN THẨM MỸ ĐÔNG Á HỒ CHÍ MINH</field>
+            <field name="partner_id" ref="d_hcm_nt_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_donga"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        NHA KHOA PARIS -->
+        <!--        PARIS HÀ NỘI QUANG TRUNG -->
+        <record id="p_hn_qt_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS QUANG TRUNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Số 39 Quang Trung</field>
+            <field name="street2">P. Trần Hưng Đạo, Q. Hoàn Kiếm</field>
+            <field name="city">TP Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hn_qt_company" model="res.company">
+            <field name="name">NHA KHOA PARIS QUANG TRUNG</field>
+            <field name="partner_id" ref="p_hn_qt_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS HÀ NỘI THÁI THỊNH -->
+        <record id="p_hn_tt_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS THÁI THỊNH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Số 12 Thái Thịnh</field>
+            <field name="street2">P. Ngã Tư Sở, Q. Đống Đa</field>
+            <field name="city">TP Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hn_tt_company" model="res.company">
+            <field name="name">NHA KHOA PARIS THÁI THỊNH</field>
+            <field name="partner_id" ref="p_hn_tt_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS HẢI PHÒNG TÔ HIỆU -->
+        <record id="p_hp_th_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS HẢI PHÒNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">314 Tô Hiệu</field>
+            <field name="street2">P. Hồ Nam, Q. Lê Chân</field>
+            <field name="city">TP Hải Phòng</field>
+            <field name="state_id" ref="base.state_vn_VN-HP"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hp_th_company" model="res.company">
+            <field name="name">NHA KHOA PARIS HẢI PHÒNG</field>
+            <field name="partner_id" ref="p_hp_th_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS VINH NGUYỄN VĂN CỪ -->
+        <record id="p_na_nvc_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS VINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">143 Nguyễn Văn Cừ</field>
+            <field name="street2">P. Hưng Phúc</field>
+            <field name="city">TP Vinh</field>
+            <field name="state_id" ref="base.state_vn_VN-22"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_na_nvc_company" model="res.company">
+            <field name="name">NHA KHOA PARIS VINH</field>
+            <field name="partner_id" ref="p_na_nvc_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS ĐÀ NẴNG Lê Đình Lý -->
+        <record id="p_dn_ldl_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS ĐÀ NẴNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">52 Lê Đình Lý</field>
+            <field name="street2">P. Thạc Gián, Q. Thanh Khê</field>
+            <field name="city">TP Đà Nẵng</field>
+            <field name="state_id" ref="base.state_vn_VN-DN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_dn_ldl_company" model="res.company">
+            <field name="name">NHA KHOA PARIS ĐÀ NẴNG</field>
+            <field name="partner_id" ref="p_dn_ldl_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS HỒ CHÍ MINH 3/2 -->
+        <record id="p_hcm_32_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS 3/2</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">179C, Đường 3/2</field>
+            <field name="street2">P. 11, Q. 10</field>
+            <field name="city">TP Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hcm_32_company" model="res.company">
+            <field name="name">NHA KHOA PARIS 3/2</field>
+            <field name="partner_id" ref="p_hcm_32_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS HỒ CHÍ MINH CỘNG HÒA -->
+        <record id="p_hcm_ch_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS CỘNG HÒA</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">97 Cộng Hòa</field>
+            <field name="street2">P. 4, Q. Tân Bình</field>
+            <field name="city">TP Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hcm_ch_company" model="res.company">
+            <field name="name">NHA KHOA PARIS CỘNG HÒA</field>
+            <field name="partner_id" ref="p_hcm_ch_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS HỒ CHÍ MINH NGUYỄN THÁI HỌC -->
+        <record id="p_hcm_nth_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS NGUYỄN THÁI HỌC</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">87 Nguyễn Thái Học</field>
+            <field name="street2">P. Cầu Ông Lãnh, Q. 1</field>
+            <field name="city">TP Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hcm_nth_company" model="res.company">
+            <field name="name">NHA KHOA PARIS NGUYỄN THÁI HỌC</field>
+            <field name="partner_id" ref="p_hcm_nth_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS QUẢNG NINH HẠ LONG -->
+        <record id="p_qn_hl_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS QUẢNG NINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Shop house 6 - 7, KĐT Times Garden, đường Lê Thánh Tông</field>
+            <field name="street2"></field>
+            <field name="city">Tp. Hạ Long</field>
+            <field name="state_id" ref="base.state_vn_VN-13"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_qn_hl_company" model="res.company">
+            <field name="name">NHA KHOA PARIS QUẢNG NINH</field>
+            <field name="partner_id" ref="p_qn_hl_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS BÌNH DƯƠNG -->
+        <record id="p_bd_cmt8_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS BÌNH DƯƠNG</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">Cách mạng tháng 8</field>
+            <field name="street2"></field>
+            <field name="city">Tp. Bình Dương</field>
+            <field name="state_id" ref="base.state_vn_VN-57"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_bd_cmt8_company" model="res.company">
+            <field name="name">NHA KHOA PARIS BÌNH DƯƠNG</field>
+            <field name="partner_id" ref="p_bd_cmt8_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--        PARIS BÌNH DƯƠNG -->
+        <record id="p_hn_km_partner" model="res.partner">
+            <field name="name">NHA KHOA PARIS KIM MÃ</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">212 Kim Mã</field>
+            <field name="street2">P. Kim Mã, Q. Ba Đình</field>
+            <field name="city">TP Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">nhakhoaparis.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="p_hn_km_company" model="res.company">
+            <field name="name">NHA KHOA PARIS KIM MÃ</field>
+            <field name="partner_id" ref="p_hn_km_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_paris"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--       BỆNH VIỆN HỒNG HÀ -->
+        <record id="hh_hn_nnd_partner" model="res.partner">
+            <field name="name">BỆNH VIỆN HỒNG HÀ</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">16 Nguyễn Như Đổ</field>
+            <field name="street2">P. Văn Miếu, Q. Đống Đa</field>
+            <field name="city">TP Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">benhvienhongha.vn/</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="hh_hn_nnd_company" model="res.company">
+            <field name="name">BỆNH VIỆN HỒNG HÀ</field>
+            <field name="partner_id" ref="hh_hn_nnd_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_hongha"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+
+        <!--       HỌC VIỆN SCI -->
+        <!--       HỌC VIỆN SCI THÀNH PHỐ HỒ CHÍ MINH -->
+        <record id="hv_hcm_km_partner" model="res.partner">
+            <field name="name">HỌC VIỆN THẨM MỸ SCI HỒ CHÍ MINH</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">212 Kim Mã</field>
+            <field name="street2">P. Kim Mã, Q. Ba Đình</field>
+            <field name="city">TP Hồ Chí Minh</field>
+            <field name="state_id" ref="base.state_vn_VN-SG"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">scibeauty.edu.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="hv_hcm_km_company" model="res.company">
+            <field name="name">HỌC VIỆN THẨM MỸ SCI HỒ CHÍ MINH</field>
+            <field name="partner_id" ref="hv_hcm_km_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_academy"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+        <!--       HỌC VIỆN SCI KIM MÃ -->
+        <record id="hv_hn_km_partner" model="res.partner">
+            <field name="name">HỌC VIỆN THẨM MỸ SCI HÀ NỘI</field>
+            <field name="is_company" eval="True"/>
+            <field name="street">212 Kim Mã</field>
+            <field name="street2">P. Kim Mã, Q. Ba Đình</field>
+            <field name="city">TP Hà Nội</field>
+            <field name="state_id" ref="base.state_vn_VN-HN"/>
+            <field name="zip"></field>
+            <field name="mobile"></field>
+            <field name="email"></field>
+            <field name="website">scibeauty.edu.vn</field>
+            <field name="image_1920" type="base64" file="base/static/img/res_company_logo.png"/>
+        </record>
+
+        <record id="hv_hn_km_company" model="res.company">
+            <field name="name">HỌC VIỆN THẨM MỸ SCI HÀ NỘI</field>
+            <field name="partner_id" ref="hv_hn_km_partner"/>
+            <field name="currency_id" ref="base.VND"/>
+            <field name="brand_id" ref="shealth_all_in_one.brand_academy"/>
+            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Dashboard Action -->
+        <record model="ir.actions.act_window" id="act_dashboard_op_subject_view">
+            <field name="name">Subjects</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.subject</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="openeducat_core.view_op_subject_search"/>
+            <field name="domain">[('course_id','in',[active_id])]</field>
+        </record>
+
+        <record id="op_subject_from_view_inherited" model="ir.ui.view">
+            <field name="name">op.subject.form.inherited</field>
+            <field name="model">op.subject</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_subject_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="course_id" required="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

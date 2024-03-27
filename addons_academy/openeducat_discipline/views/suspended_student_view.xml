@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_suspended_student_tree" model="ir.ui.view">
+            <field name="name">suspended.student.tree</field>
+            <field name="model">suspended.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Suspended Students" editable="top">
+                    <field name="student_id"/>
+                    <field name="suspend_from_date"/>
+                    <field name="suspend_to_date"/>
+                    <field name="misbehaviour_category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_suspended_student_form" model="ir.ui.view">
+            <field name="name">suspended.student.form</field>
+            <field name="model">suspended.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Suspended Students">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="student_id"/>
+                            <field name="suspend_from_date"/>
+                            <field name="suspend_to_date"/>
+                            <field name="misbehaviour_category_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_suspended_student_view">
+            <field name="name">Suspended Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">suspended.student</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_suspended_student_view_tree">
+            <field name="act_window_id" ref="act_open_suspended_student_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_suspended_student_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_suspended_student_view_form">
+            <field name="act_window_id" ref="act_open_suspended_student_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_suspended_student_form"/>
+        </record>
+    </data>
+</odoo>

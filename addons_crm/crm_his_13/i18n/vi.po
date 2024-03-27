@@ -1,0 +1,300 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_his_13
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-10 06:25+0000\n"
+"PO-Revision-Date: 2021-06-10 06:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_his_13
+#: model:ir.model.fields.selection,name:crm_his_13.selection__sale_order_line__stage_sol__cancel
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__ceiling_price
+msgid "Ceiling price"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__come_number
+msgid "Come number"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__consultants
+msgid "Consultants"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_phone_call__date_out_location
+msgid "Date out"
+msgstr "Ngày ra viện"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_phone_call__date_re_exam
+msgid "Date re exam"
+msgstr "Ngày tái khám"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__dentistry
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_select_service__dentistry
+msgid "Dentistry"
+msgstr "Nha khoa"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_phone_call__desc_doctor
+msgid "Desc doctor"
+msgstr "Lời dặn của bác sĩ"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_his_13
+#: model:ir.model.fields.selection,name:crm_his_13.selection__sale_order_line__stage_sol__done
+msgid "Done"
+msgstr "Kết thúc"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__exam_room_ids
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_select_service__exam_room_id
+msgid "Exam room"
+msgstr "Phòng khám"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__foreign_affair
+msgid "Foreign affair"
+msgstr ""
+
+#. module: crm_his_13
+#: model_terms:ir.ui.view,arch_db:crm_his_13.form_tuition_inherit_sh_walkin_payment_view_form
+msgid "Gắn thanh toán với phiếu khám"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_sh_medical_appointment_register_walkin
+msgid "Information of Walkin"
+msgstr "Thông tin phiếu khám"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__institution
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_select_service__institution
+msgid "Institution"
+msgstr "Cơ sở"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__institution_shared
+msgid "Institution shared"
+msgstr "Cơ sở được share"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__laser
+msgid "Laser"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật gần đây bởi"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật gần đây vào"
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_select_service__institution_ids
+msgid "List institution"
+msgstr "Danh sách bệnh viện"
+
+#. module: crm_his_13
+#: model_terms:ir.ui.view,arch_db:crm_his_13.view_form_inherit_crm_line_form_booking
+msgid "Lịch sử khám"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__major
+msgid "Major"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__max_level
+msgid "Maximum levels(%)"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__minor
+msgid "Minor"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: crm_his_13
+#: model:ir.model.fields.selection,name:crm_his_13.selection__sale_order_line__stage_sol__new
+msgid "New"
+msgstr "Mới"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__odontology
+#: model:ir.model.fields,field_description:crm_his_13.field_sale_order__odontology
+#: model:ir.model.fields,field_description:crm_his_13.field_sale_order_line__odontology
+msgid "Odontology"
+msgstr "Nha khoa"
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: crm_his_13
+#: model:ir.model.fields.selection,name:crm_his_13.selection__sale_order_line__stage_sol__processing
+msgid "Processing"
+msgstr "Đang xử trí"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__product
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: crm_his_13
+#: model:ir.actions.act_window,name:crm_his_13.action_crm_rule_debt
+#: model:ir.ui.menu,name:crm_his_13.menu_rule_debt
+msgid "Rule debt"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_sale_order
+msgid "Sales Order"
+msgstr "Đơn bán hàng"
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Chi tiết đơn hàng"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_line__service_id
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_phone_call__service_id
+msgid "Service"
+msgstr "Dịch vụ"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_select_service__crm_line_ids
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__spa
+msgid "Spa"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_sale_order_line__stage_sol
+msgid "Stage"
+msgstr "Trạng thái"
+
+#. module: crm_his_13
+#: model_terms:ir.ui.view,arch_db:crm_his_13.sh_walkin_payment_view_tree_crm
+msgid "Số tiền VNĐ"
+msgstr ""
+
+#. module: crm_his_13
+#: code:addons/crm_his_13/wizard/select_service.py:0
+#, python-format
+msgid "The amount entered exceeds the amount for the service"
+msgstr "Số tiền bạn điền đang vượt quá số tiền 1 lần làm dịch vụ !!!"
+
+#. module: crm_his_13
+#: code:addons/crm_his_13/models/rule_debt.py:0
+#, python-format
+msgid "The maximum level should be between 0 and 100"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_account_payment__type_brand
+msgid "Type"
+msgstr "Loại"
+
+#. module: crm_his_13
+#: model_terms:ir.ui.view,arch_db:crm_his_13.view_form_phone_call_his
+msgid "Update disease"
+msgstr "Bệnh án"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_rule_debt__user_id
+msgid "User"
+msgstr "Người dùng"
+
+#. module: crm_his_13
+#: model:ir.model.fields,field_description:crm_his_13.field_crm_lead__walkin_ids
+msgid "Walkin"
+msgstr "Phiếu khám"
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_crm_line
+msgid "crm.line"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_crm_phone_call
+msgid "crm.phone.call"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_crm_rule_debt
+msgid "crm.rule.debt"
+msgstr ""
+
+#. module: crm_his_13
+#: model:ir.model,name:crm_his_13.model_crm_select_service
+msgid "crm.select.service"
+msgstr ""
+
+#. module: crm_his_13
+#: model_terms:ir.ui.view,arch_db:crm_his_13.view_form_crm_rule_debt
+msgid "if the value is 0 it will be applied to the prices of all products"
+msgstr ""

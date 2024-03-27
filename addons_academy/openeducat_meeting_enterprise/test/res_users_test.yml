@@ -1,0 +1,29 @@
+-
+   Create a user as 'Parent user'
+-
+  !record {model: res.users, id: res_users_parent_user_test, view: False}:
+    company_id: base.main_company
+    name: Parent Test
+    login: parent
+    email: parenttest@openeducat.org
+-
+  I added groups to Parent User.
+-
+  !record {model: res.users, id: res_users_parent_user_test}:
+    groups_id:
+      - openeducat_parent.group_op_parent
+-
+   Create an user as 'Faculty'
+-
+  !record {model: res.users, id: res_users_faculty_user_test, view: False}:
+    company_id: base.main_company
+    name: Faculty Test
+    login: faculty
+    email: facultytest@openeducat.org
+-
+  I added groups to Faculty User.
+-
+  !record {model: res.users, id: res_users_faculty_user_test}:
+    groups_id:
+      - openeducat_core.group_op_faculty
+

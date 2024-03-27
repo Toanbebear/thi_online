@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        Hợp đồng chính thức đông á kim mã-->
+        <record id="contract_dakm_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Đông Á Kim Mã</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_CT_DA_KM.docx"/>
+            <field name="store_fname">HD_CT_DA_KM.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức đông á đà nẵng-->
+        <record id="contract_dadn_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Đông Á Kim Mã</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_CT_DA_DN.docx"/>
+            <field name="store_fname">HD_CT_DA_DN.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức đông á hải phòng-->
+        <record id="contract_dahp_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Đông Á Hải Phòng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_CT_DA_HP.docx"/>
+            <field name="store_fname">HD_CT_DA_HP.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức đông á vinh-->
+        <record id="contract_dav_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Đông Á Hải Phòng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_CT_DA_Vinh.docx"/>
+            <field name="store_fname">HD_CT_DA_Vinh.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc đông á kim mã-->
+        <record id="contract_dakm_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Đông Á Kim Mã</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_TV_DA_KM.docx"/>
+            <field name="store_fname">HD_TV_DA_KM.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc đông á đà nẵng-->
+        <record id="contract_dadn_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Đông Á Đà Nẵng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_TV_DA_DN.docx"/>
+            <field name="store_fname">HD_TV_DA_DN.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc đông á hải phong-->
+        <record id="contract_dahp_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Đông Á Đà Nẵng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_TV_DA_HP.docx"/>
+            <field name="store_fname">HD_TV_DA_HP.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc đông á vinh-->
+        <record id="contract_dav_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Đông Á Vinh</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/donga/HD_TV_DA_Vinh.docx"/>
+            <field name="store_fname">HD_TV_DA_Vinh.docx</field>
+        </record>
+
+    </data>
+</odoo>

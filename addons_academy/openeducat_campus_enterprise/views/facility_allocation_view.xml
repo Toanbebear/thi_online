@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_facility_allocation_tree" model="ir.ui.view">
+            <field name="name">op.facility.allocation.tree</field>
+            <field name="model">op.facility.allocation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Facility Allocation">
+                    <field name="partner_id"/>
+                    <field name="facility_id"/>
+                    <field name="product_id"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_facility_allocation_form" model="ir.ui.view">
+            <field name="name">op.facility.allocation.form</field>
+            <field name="model">op.facility.allocation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Facility Allocation">
+                    <header>
+                        <button name="%(facility_invoice_act)d"
+                                type="action" string="Create Invoice"
+                                attrs="{'invisible':[('invoice_id','!=',False)]}"
+                                context="{'default_partner_id': partner_id,'default_product_id': product_id,'default_from_date': from_date,'default_to_date': to_date}"
+                                class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="partner_id" placeholder="Person" style="width: 100%%"/>
+                            </h1>
+                        </div>
+                        <newline/>
+                        <group col="4">
+                            <field name="facility_id" required="1" options="{'no_create_edit': True, 'no_create': True}"/>
+                            <field name="product_id" required="1"/>
+                            <field name="from_date" required="1"/>
+                            <field name="to_date" required="1"/>
+                            <field name="invoice_id" readonly="1"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_facility_allocation_calendar" model="ir.ui.view">
+            <field name="name">Facility Allocations</field>
+            <field name="model">op.facility.allocation</field>
+            <field name="arch" type="xml">
+                <calendar color="facility_id" mode="month"
+                          date_start="from_date" date_stop="to_date"
+                          string="Facility ALlocation">
+                    <field name="partner_id"/>
+                    <field name="facility_id"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_op_facility_allocation_search" model="ir.ui.view">
+            <field name="name">op.facility.allocation.search</field>
+            <field name="model">op.facility.allocation</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Facility Allocation">
+                    <field name="facility_id"/>
+                    <field name="from_date"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Name" name="group_by_facility_allocation_partner_id"
+                                domain="[]" context="{'group_by':'partner_id'}"/>
+                        <filter string="Facility" name="group_by_facility_allocation_faculty_id"
+                                domain="[]" context="{'group_by':'facility_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_facility_allocation_view">
+            <field name="name">Facility Allocations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.facility.allocation</field>
+            <field name="view_mode">calendar,tree</field>
+            <field name="search_view_id" ref="view_op_facility_allocation_search"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_facility_allocation_view_calendar">
+            <field name="act_window_id" ref="act_open_op_facility_allocation_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_op_facility_allocation_calendar"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_facility_allocation_view_tree">
+            <field name="act_window_id" ref="act_open_op_facility_allocation_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_facility_allocation_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_facility_allocation_view_form">
+            <field name="act_window_id" ref="act_open_op_facility_allocation_view"/>
+            <field name="sequence" eval="30"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_facility_allocation_form"/>
+        </record>
+    </data>
+</odoo>

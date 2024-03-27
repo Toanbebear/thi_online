@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <menuitem id="menu_main_dashboard_openeducat"-->
+<!--                  name="Dashboard"-->
+<!--                  parent="openeducat_core.menu_op_school_root"-->
+<!--                  sequence="1"/>-->
+
+        <record id="openeducat_course_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">op.course.dashboard.kanban</field>
+            <field name="model">op.course</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_account_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div t-attf-class="o_kanban_card_header">
+                                    <div class="o_kanban_card_header_title">
+                                        <div class="o_primary">
+                                            <a>
+                                                <field name="name"/>
+                                            </a>
+                                        </div>
+                                        <div class="o_secondary">
+                                            <a>
+                                                <field name="code"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_content">
+                                    <div class="row">
+                                        <div name="first_column" class="col-md-3 o_kanban_primary_left">
+                                            <button name="%(openeducat_core_enterprise.act_course_dashboard_op_student_view)d"
+                                                    type="action" class="btn btn-primary  btn-sm">Students
+                                            </button>
+                                        </div>
+                                        <div name="second_column" class="col-md-3 o_kanban_primary_left">
+                                            <button name="%(act_dashboard_op_batch_view)d" type="action"
+                                                    class="btn btn-primary btn-sm">Batches
+                                            </button>
+                                        </div>
+                                        <div name="third_column" class="col-md-3 o_kanban_primary_left">
+                                            <button name="%(act_dashboard_op_subject_view)d" type="action"
+                                                    class="btn btn-primary btn-sm">Subjects
+                                            </button>
+                                        </div>
+                                        <div name="forth_column" class="col-md-3 o_kanban_primary_left">
+                                        </div>
+                                    </div>
+                                    <div name="graph_section" class="o_kanban_graph_section"></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="open_course_dashboard_kanban" model="ir.actions.act_window">
+            <field name="name">Course Dashboard</field>
+            <field name="res_model">op.course</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="usage">menu</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p>This is the Course Dashboard.</p>
+            </field>
+        </record>
+
+<!--        <menuitem id="menu_course_dashboard_openeducat"-->
+<!--                  name="Course Dashboard"-->
+<!--                  action="open_course_dashboard_kanban"-->
+<!--                  parent="menu_main_dashboard_openeducat"-->
+<!--                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin,openeducat_core.group_op_faculty"-->
+<!--                  sequence="1"/>-->
+
+        <record id="openeducat_batch_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">op.batch.dashboard.kanban</field>
+            <field name="model">op.batch</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_account_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="#{kanban_color(record.color.raw_value)}">
+                                <div t-attf-class="o_kanban_card_header">
+                                    <div class="o_kanban_card_header_title">
+                                        <div class="o_primary">
+                                            <a>
+                                                <field name="name"/>
+                                            </a>
+                                        </div>
+                                        <div class="o_secondary">
+                                            <a>
+                                                <field name="code"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_manage_button_section">
+                                        <a class="o_kanban_manage_toggle_button" href="#">
+                                            <i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="container o_kanban_card_content">
+                                    <div class="row">
+                                        <div name="first_column" class="col-md-3 o_kanban_primary_left">
+                                            <button name="%(openeducat_core_enterprise.act_batch_dashboard_op_student_view)d"
+                                                    type="action" class="btn btn-primary btn-sm">Students
+                                            </button>
+                                        </div>
+                                        <div name="second_column" class="col-md-3 o_kanban_primary_right"></div>
+                                        <div name="third_column" class="col-md-6 o_kanban_primary_right"></div>
+                                    </div>
+                                    <div name="graph_section" class="o_kanban_graph_section"></div>
+                                </div>
+                                <div class="container o_kanban_card_manage_pane dropdown-menu" role="menu">
+                                    <div class="row">
+                                        <div class="col-md-4 o_kanban_card_manage_section o_kanban_manage_view">
+                                            <div name="openeducat_views" role="menuitem"
+                                                 class="o_kanban_card_manage_title">
+                                                <span>Views</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 o_kanban_card_manage_section o_kanban_manage_new">
+                                            <div name="openeducat_new" role="menuitem"
+                                                 class="o_kanban_card_manage_title">
+                                                <span>New</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 o_kanban_card_manage_section o_kanban_manage_reports">
+                                            <div name="openeducat_reports" role="menuitem"
+                                                 class="o_kanban_card_manage_title">
+                                                <span>Reports</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div t-if="widget.editable" class="o_kanban_card_manage_settings row">
+                                        <div role="menuitem" aria-haspopup="true" class="col-md-8">
+                                            <ul class="oe_kanban_colorpicker" data-field="color" role="menu"/>
+                                        </div>
+                                        <div class="col-md-4 text-right">
+                                            <a role="menuitem" type="edit">Settings</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="open_batch_dashboard_kanban" model="ir.actions.act_window">
+            <field name="name">Batch Dashboard</field>
+            <field name="res_model">op.batch</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="usage">menu</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p>This is the Batch Dashboard.</p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_batch_view_kanban">
+            <field name="act_window_id" ref="openeducat_core.act_open_op_batch_view"/>
+            <field name="sequence" eval="15"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="openeducat_batch_dashboard_kanban_view"/>
+        </record>
+
+
+<!--        <record model="ir.actions.act_window.view" id="act_open_op_course_view_kanban">-->
+<!--            <field name="act_window_id" ref="openeducat_core.act_open_op_course_view"/>-->
+<!--            <field name="sequence" eval="5"/>-->
+<!--            <field name="view_mode">kanban</field>-->
+<!--            <field name="view_id" ref="openeducat_course_dashboard_kanban_view"/>-->
+<!--        </record>-->
+
+<!--        <menuitem id="menu_batch_dashboard_openeducat"-->
+<!--                  name="Batch Dashboard"-->
+<!--                  action="open_batch_dashboard_kanban"-->
+<!--                  parent="menu_main_dashboard_openeducat"-->
+<!--                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin"-->
+<!--                  sequence="2"/>-->
+
+        <record id="enterprise_view_op_course_form_inherited" model="ir.ui.view">
+            <field name="name">enterprise.op.course.form</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(openeducat_core_enterprise.act_course_dashboard_op_student_view)d"
+                             type="action" icon="fa-users" attrs="{'invisible': [('internal', '=', True)]}" string="Students">
+                    </button>
+                    <button name="%(openeducat_core_enterprise.act_dashboard_op_batch_view)d"
+                            type="action" string="Batches" icon="fa-server"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

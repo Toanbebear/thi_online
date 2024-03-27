@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_op_media_unit_enterprise_form" model="ir.ui.view">
+            <field name="name">op.media.unit.form</field>
+            <field name="model">op.media.unit</field>
+            <field name="inherit_id" ref="openeducat_library.view_media_unit_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header" position="replace">
+                    <header>
+                        <button name="%(barcode_issue_media_act)d"
+                                type="action"
+                                string="Issue Media"
+                                attrs="{'invisible':[('state','!=','available')]}"
+                                context="{'default_transaction_type':'issue','default_media_unit_number': barcode}"
+                                class="oe_highlight"
+                                groups="openeducat_library.group_op_library"/>
+                        <button name="%(barcode_issue_media_act)d"
+                                type="action"
+                                string="Return Media"
+                                attrs="{'invisible':[('state','!=','issue')]}"
+                                context="{'default_transaction_type':'return','default_media_unit_number': barcode}"
+                                class="oe_highlight"
+                                groups="openeducat_library.group_op_library"/>
+                        <field name="state" widget="statusbar" statusbar_visible="available,issue" statusbar_colors='{"r":"red"}'/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

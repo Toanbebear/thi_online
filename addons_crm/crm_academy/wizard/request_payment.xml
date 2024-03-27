@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="request_payment_form_view" model="ir.ui.view">
+        <field name="name">Request Payment</field>
+        <field name="model">request.payment</field>
+        <field name="arch" type="xml">
+            <form string="Request Payment">
+                <group>
+                    <field name="booking_id" readonly="True"/>
+                    <field name="partner_id" readonly="True"/>
+                    <field name="company_id" readonly="True"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="amount_total"/>
+                    <!--                    <field name="name"/>-->
+                    <field name="currency_id" invisible="1"/>
+                    <field name="payment_amount" invisible="1"/>
+                    <field name="name" invisible="1"/>
+                </group>
+<!--                <notebook>-->
+<!--                    <page>-->
+<!--                        <field name="crm_line_ids" options="{'no_create': True,'not_delete':True}"-->
+<!--                               widget="one2many">-->
+<!--                            <tree editable="1" create="false" delete="false">-->
+<!--                                <field name="product_id" readonly="True"/>-->
+<!--                                <field name="total" widget="monetary"/>-->
+<!--                                <field name="check_payment" invisible="1"/>-->
+<!--                                <field name="money_receive" sum="Money receive"-->
+<!--                                       attrs="{'readonly': [('check_payment', '=', True)]}"/>-->
+<!--                                <field name="paid" readonly="True"/>-->
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                    </page>-->
+<!--                </notebook>-->
+                <footer class="text-center">
+                    <button name="request_draft_payment" type="object" string="Request payment" class="btn-info"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="relative_mother" model="type.relative">
+            <field name="name">Mother</field>
+        </record>
+
+        <record id="relative_father" model="type.relative">
+            <field name="name">Father</field>
+        </record>
+
+        <record id="relative_son" model="type.relative">
+            <field name="name">Son</field>
+        </record>
+
+        <record id="relative_friend" model="type.relative">
+            <field name="name">Friend</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_exam_result_form" model="ir.ui.view">
+            <field name="name">op.exam.result.form</field>
+            <field name="model">op.exam.result</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Held Exam Wizard">
+                    <field name="attendees_line">
+                        <tree editable="top" create="0">
+                            <field name="student_id" readonly="1"/>
+                            <field name="marks"/>
+                            <field name="note"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button string="Update" class="oe_highlight" type="object" name="update_result"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_exam_result_view">
+            <field name="name">Exam Result Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.exam.result</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+<!--        <record model="ir.actions.act_window.view" id="act_open_op_held_exam_view_form">-->
+<!--            <field name="act_window_id" ref="act_open_op_held_exam_view"/>-->
+<!--            <field name="sequence" eval="20"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="view_op_held_exam_form"/>-->
+<!--        </record>-->
+    </data>
+</odoo>

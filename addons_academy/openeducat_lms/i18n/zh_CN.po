@@ -1,0 +1,1518 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:03+0000\n"
+"PO-Revision-Date: 2018-04-12 09:25-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_lms/i18n/openeducat_lms.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_embed_views
+msgid "# of Embedded Views"
+msgstr "嵌入视图的 #"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_material_views
+msgid "# of Website Views"
+msgstr "# 网站视图"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Course Completed"
+msgstr ": 课程完成"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Course Duration"
+msgstr ": 课程持续时间"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Course In Progress"
+msgstr ": 正在进行的课程"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Course To Begin"
+msgstr ": 课程开始"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Days Since Launch"
+msgstr ": 发射后的天数"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Enrolled Users"
+msgstr ": 注册用户"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid ": Training Material"
+msgstr ": 培训材料"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid "<b>Course Content</b>"
+msgstr "<b>课程内容</b>"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid "<b>Course Count</b>"
+msgstr "<b>课程计数</b>"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.openeducat_lms_dashboard_kanban_view
+msgid "<b>Course Enrollment</b>"
+msgstr "<b>课程报名</b>"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.embed_material_forbidden
+msgid "<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                    This"
+msgstr "<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                    这"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "<i class=\"fa fa-eye\" aria-hidden=\"true\"/>\n"
+"                                                                                    <span class=\"hidden-xs hidden-sm\">\n"
+"                                                                                        Preview\n"
+"                                                                                    </span>"
+msgstr "<i class=\"fa fa-eye\" aria-hidden=\"true\"/>\n"
+"                                                                                    <span class=\"hidden-xs hidden-sm\">\n"
+"                                                                                        预览\n"
+"                                                                                    </span>"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.embed_material
+msgid "<i class=\"fa fa-spinner fa-spin\"/>\n"
+"                                Loading ..."
+msgstr "<i class=\"fa fa-spinner fa-spin\"/>\n"
+"                                加载..。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "<i class=\"fa fa-users\" aria-hidden=\"true\"/>\n"
+"                                                        Students:"
+msgstr "<i class=\"fa fa-users\" aria-hidden=\"true\"/>\n"
+"                                                        学生:"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "<i class=\"fa fa-users\" aria-hidden=\"true\"/>\n"
+"                                            Students:"
+msgstr "<i class=\"fa fa-users\" aria-hidden=\"true\"/>\n"
+"                                            学生:"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "<span>If you need a quick brush-up, or learning Python for the first time, you've come to the right place!</span>"
+msgstr "<span>如果你需要快速刷, 或者第一次学习 Python, 你就来对地方了!</span>"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "<strong>Testimonials\n\n"
+" </strong>"
+msgstr "<strong>推荐\n\n"
+" </strong>"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_words
+msgid "A few words about Python"
+msgstr "关于 Python 的几句话"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_active
+msgid "Active"
+msgstr "积极"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_sell_pdf
+msgid "All time Sell"
+msgstr "所有时间出售"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "And if you have any doubts about the course, be blown away by the glowing reviews left by students on this page.\n\n"
+"                        <br>\n"
+"                        <br>Your instructors are myself and Jean-Paul. Between us we have a collective sixty years of commercial software development experience, <strong>meaning you’re learning the right way to program to maximize your future development potential.</strong>\n"
+"                        <br>"
+msgstr "如果您对本课程有任何疑问, 请在本页的学生留下的光辉评论中被吹走。\n\n"
+"                        <br>\n"
+"                        <br>你的导师是我和吉恩-保罗。我们之间有一个集体六十年的商业软件开发经验, <strong>意味着你正在学习正确的方式来规划, 以最大限度地发挥你未来的发展潜力。</strong>\n"
+"                        <br>"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,help:openeducat_lms.field_op_course_material_total_time
+#: model:ir.model.fields,help:openeducat_lms.field_op_material_total_time
+msgid "Approx time to complete this material"
+msgstr "约时间完成此材料"
+
+#. module: openeducat_lms
+#: selection:op.material,material_type:0
+msgid "Audio"
+msgstr "音频"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_auto_publish
+msgid "Auto Publish"
+msgstr "自动发布"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_auto_publish_type
+msgid "Auto Publish Type"
+msgstr "自动发布类型"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Become an Instructor"
+msgstr "成为讲师"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Become an Instructor!"
+msgstr "成为一名讲师!"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_faculty_bio_data
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+#: model:ir.ui.view,arch_db:openeducat_lms.lms_faculty_form_view
+msgid "Bio Data"
+msgstr "生物数据"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Birth Date"
+msgstr "出生日期"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_invitation_wizard_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_ids
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Categories"
+msgstr "类别"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_category_id
+msgid "Category"
+msgstr "类别"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Category:\n"
+"                                    <br/>"
+msgstr "分类:\n"
+"                                    <br/>"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Choosing a course that’s perfect for you can be damn hard. You need Instructors:"
+msgstr "选择一门适合你的课程可能会很难。你需要导师:"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Click the <strong>Buy Now</strong> button and start learning now!"
+msgstr "点击 <strong>立即购买</strong> 按钮, 现在开始学习!"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Click the Free preview button on this page and check out a few of the videos to judge the quality yourself."
+msgstr "点击这个页面上的免费预览按钮, 并检查出一些视频, 以判断质量自己。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Close"
+msgstr "关闭"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+#: selection:op.course,state:0
+msgid "Closed"
+msgstr "关闭"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_code
+msgid "Code"
+msgstr "代码"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Comments"
+msgstr "评论"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_completed
+#: model:ir.ui.view,arch_db:openeducat_lms.my-courses
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "Completed"
+msgstr "完成"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_completed_percentage
+msgid "Completed Percentage"
+msgstr "完成百分比"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_completed_date
+msgid "Completed Time"
+msgstr "完成时间"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_completion_date
+msgid "Completion Date"
+msgstr "完成日期"
+
+#. module: openeducat_lms
+#: model:ir.ui.menu,name:openeducat_lms.menu_op_lms_configuration
+msgid "Configuration"
+msgstr "配置"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+#: selection:op.course,state:0
+msgid "Confirm"
+msgstr "确认"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_confirm_date
+msgid "Confirm Date"
+msgstr "确认日期"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_datas
+msgid "Content"
+msgstr "内容"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.my-courses
+msgid "Continue Learning"
+msgstr "继续学习"
+
+#. module: openeducat_lms
+#: code:addons/openeducat_lms/models/course_material.py:120
+#, python-format
+msgid "Could not fetch url. Document Id or                 access right not available:\n"
+"%s"
+msgstr "无法获取 url。文档 Id 或访问权限不可用:\n"
+"%s"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:15
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_op_lms_course_view
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_course_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_course_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_course_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_course_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_course_id
+#: model:ir.ui.view,arch_db:openeducat_lms.portal_my_course_menu
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_search
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_tree
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_search
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_tree
+#, python-format
+msgid "Course"
+msgstr "课程"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_course_category_view
+#: model:ir.model,name:openeducat_lms.model_op_course_category
+#: model:ir.ui.menu,name:openeducat_lms.menu_course_category
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_category_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_category_search
+msgid "Course Category"
+msgstr "课程类别"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:72
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_course_completed
+#, python-format
+msgid "Course Completed"
+msgstr "课程完成"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.op_lms_dashboard_kanban
+#: model:ir.ui.menu,name:openeducat_lms.menu_openeducat_lms_dashboard
+msgid "Course Dashboard"
+msgstr "课程仪表板"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:46
+#, python-format
+msgid "Course Duration"
+msgstr "课程持续时间"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:79
+#, python-format
+msgid "Course Enrollments"
+msgstr "课程招生"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:66
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_course_in_progress
+#, python-format
+msgid "Course In Progress"
+msgstr "课程正在进行中"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_invitation_wizard_form
+msgid "Course Invitation"
+msgstr "课程邀请"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_language
+msgid "Course Language"
+msgstr "课程语言"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Course Material"
+msgstr "课程资料"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Course Materials"
+msgstr "课程资料"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Course Name"
+msgstr "课程名称"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:60
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_course_to_begin
+#, python-format
+msgid "Course To Begin"
+msgstr "课程开始"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_category_tree
+msgid "Course category"
+msgstr "课程类别"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_suggested_course_ids
+#: model:ir.ui.menu,name:openeducat_lms.menu_op_course
+#: model:website.menu,name:openeducat_lms.website_menu_lms_courses
+msgid "Courses"
+msgstr "课程"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Create"
+msgstr "创建"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_user_id
+msgid "Create By"
+msgstr "创建者"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_create_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_create_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Curriculum"
+msgstr "课程"
+
+#. module: openeducat_lms
+#: selection:op.material,video_type:0
+msgid "Dartfish"
+msgstr "Dartfish"
+
+#. module: openeducat_lms
+#: model:ir.actions.client,name:openeducat_lms.action_lms_dashboard
+#: model:ir.ui.menu,name:openeducat_lms.menu_lms_main_dashboard
+msgid "Dashboard"
+msgstr "仪表 板v"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Days"
+msgstr "天"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_days_since_launch
+msgid "Days Since Launch"
+msgstr "启动后的天数"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:40
+#, python-format
+msgid "Days Since launch"
+msgstr "启动后的天数"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_desc
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Description"
+msgstr "描述"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_category_form
+msgid "Description..."
+msgstr "描述。。。"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_faculty_designation
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Designation"
+msgstr "指定"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_dislikes
+msgid "Dislikes"
+msgstr "讨厌"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_display_name
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_display_time
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_display_time
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_display_time
+msgid "Display Time"
+msgstr "显示时间"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,help:openeducat_lms.field_op_course_sequence
+msgid "Display order"
+msgstr "显示顺序"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "Do you want to become a programmer?"
+msgstr "你想成为一名程序员吗？"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+msgid "Document"
+msgstr "文档"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_document_id
+msgid "Document ID"
+msgstr "文档 ID"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_url
+msgid "Document URL"
+msgstr "文档 URL"
+
+#. module: openeducat_lms
+#: selection:op.material,material_type:0
+msgid "Document/PDF"
+msgstr "文档/PDF"
+
+#. module: openeducat_lms
+#: selection:op.course.enrollment,state:0
+msgid "Done"
+msgstr "做"
+
+#. module: openeducat_lms
+#: selection:op.course,state:0
+#: selection:op.course.enrollment,state:0
+msgid "Draft"
+msgstr "草案"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_category_form
+msgid "E.g fa fa-home"
+msgstr "E. 家庭法"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Email :"
+msgstr "电子邮件："
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_template_id
+msgid "Emails"
+msgstr "电子邮件"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_embed_code
+msgid "Embed Code"
+msgstr "嵌入代码"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.my-courses
+msgid "Enroll Course"
+msgstr "报名课程"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:32
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrolled_users
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_user_ids
+#, python-format
+msgid "Enrolled Users"
+msgstr "注册用户"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_enrollment_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_enrollment_id
+msgid "Enrollment"
+msgstr "招生"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_enrollment_date
+msgid "Enrollment Date"
+msgstr "报名日期"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_op_course_enrollment_view
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_course_enrollment_ids
+#: model:ir.ui.menu,name:openeducat_lms.menu_course_enrollment
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Enrollments"
+msgstr "入学 人数"
+
+#. module: openeducat_lms
+#: selection:op.course,visibility:0
+msgid "Everyone"
+msgstr "每个人 都"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Faculties"
+msgstr "院 系"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_promoted_material_id
+msgid "Featured Material"
+msgstr "特色材料"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Female"
+msgstr "女性"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.material_detail_view
+msgid "Finish"
+msgstr "完成"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "First Name"
+msgstr "名字"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+#: selection:op.course,type:0
+msgid "Free"
+msgstr "自由"
+
+#. module: openeducat_lms
+#: selection:op.course,navigation_policy:0
+msgid "Free Learning Path"
+msgstr "免费学习路径"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_french_pdf
+msgid "French CookBooks"
+msgstr "法式食谱"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_french_video
+msgid "French Tutorials"
+msgstr "法语教程"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_full_description
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_full_description
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Full Description"
+msgstr "完整说明"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_functions
+msgid "Functions"
+msgstr "功能"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Gender"
+msgstr "性别"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "General"
+msgstr "一般"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Hours"
+msgstr "小时"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "I hope you're excited to dive into the World of Python with this course. Well, what are you waiting for? Let's get started!"
+msgstr "我希望你能在这门课上跳进 Python 的世界中, 感到很兴奋。你还在等什么？我们开始吧!"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_id
+msgid "ID"
+msgstr "Id"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_image
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_image
+#: selection:op.material,material_type:0
+msgid "Image"
+msgstr "图像"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Importantly, our courses teach students the real-life skills needed to get those in-demand jobs or further your programming skills."
+msgstr "重要的是, 我们的课程教给学生需要的真实生活技能, 以获得这些需求的工作或进一步的编程技能。"
+
+#. module: openeducat_lms
+#: selection:op.course.enrollment,state:0
+msgid "In Progress"
+msgstr "正在进行"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_install
+msgid "Installing Python the default way"
+msgstr "安装 Python 的默认方法"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_anaconda_bundle
+msgid "Installing Python through the Anaconda bundle\n"
+"            "
+msgstr "通过蟒蛇束安装 Python\n"
+"            "
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_faculty_ids
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Instructor"
+msgstr "教练"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_intro_course
+msgid "Introduction to the course"
+msgstr "课程介绍"
+
+#. module: openeducat_lms
+#: model:mail.template,subject:openeducat_lms.email_template_course_invitation_mail
+msgid "Invitation for Course: ${object.name}"
+msgstr "课程邀请: ${object.name}"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_invited_users_ids
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Invited Users"
+msgstr "邀请用户"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_iteration
+msgid "Iterate Through Python List Using Loops"
+msgstr "使用循环循环访问 Python 列表"
+
+#. module: openeducat_lms
+#: model:ir.ui.menu,name:openeducat_lms.menu_lms_dashboard
+msgid "KPI Dashboard"
+msgstr "KPI 仪表板"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_kanban_lms_course_dashboard_graph
+msgid "Kanban Lms Course Dashboard Graph"
+msgstr "看板 Lms 课程仪表板图"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Know that you’re in the right place to <strong>master</strong> Python. For starters, this course will help you develop Python programs for Microsoft Windows, Mac OS X, and Linux."
+msgstr "知道你是在正确的地方 <strong>大师</strong> Python。首先, 本课程将帮助您开发用于 Microsoft Windows、Mac OS X 和 Linux 的 Python 程序。"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_quiz_lms
+#: model:ir.ui.menu,name:openeducat_lms.menu_lms_main
+msgid "LMS"
+msgstr "Lms"
+
+#. module: openeducat_lms
+#: model:op.course.category,name:openeducat_lms.category_1
+msgid "Language"
+msgstr "语言"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Language:"
+msgstr "语言："
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_last_access_date
+msgid "Last Access Time"
+msgstr "上次访问时间"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section___last_update
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material___last_update
+msgid "Last Modified on"
+msgstr "上次修改时间"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Last Name"
+msgstr "姓氏"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_write_uid
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_write_date
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_write_date
+msgid "Last Updated on"
+msgstr "上次更新时间"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "Learning Now"
+msgstr "现在学习"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Learning Python will give you more <strong>opportunities for jobs and career advancement</strong> because Python is one of the most requested skills in 2017!"
+msgstr "学习 python 将给你更多的 <strong>机会, 工作和职业发展</strong> 因为 python 是最要求的技能之一, 在 2017年!"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Let me guess. You want to do this without attending class, or going through a pile of textbooks or online guides."
+msgstr "让我猜猜。你想这样做, 不上课, 或通过一堆教科书或在线指南。"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "Let's get started learning one of the most easiest coding languages out there right now. There's no need to fret if you haven't coded before. By the time you finish this course, you'll be a pro at Python!"
+msgstr "让我们开始学习现在最简单的编码语言之一。没有必要担心, 如果你没有编码之前。当你完成这门课程的时候, 你会成为 Python 的专业人士!"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_likes
+msgid "Likes"
+msgstr "喜欢"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "Male"
+msgstr "男性"
+
+#. module: openeducat_lms
+#: model:op.course.category,name:openeducat_lms.category_3
+msgid "Management"
+msgstr "管理"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_op_course_material_view
+#: model:ir.model,name:openeducat_lms.model_op_material
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_material_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_material_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_material_id
+#: model:ir.ui.menu,name:openeducat_lms.menu_op_course_material
+msgid "Material"
+msgstr "材料"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_op_course_enrollment_material_view
+msgid "Material Enrollments"
+msgstr "材料招生"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+msgid "Material Name"
+msgstr "材料名称"
+
+#. module: openeducat_lms
+#: model:ir.actions.server,name:openeducat_lms.ir_cron_material_reminder_action_ir_actions_server
+#: model:ir.cron,cron_name:openeducat_lms.ir_cron_material_reminder_action
+#: model:ir.cron,name:openeducat_lms.ir_cron_material_reminder_action
+msgid "Material Reminder"
+msgstr "材料提醒"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_material_type
+msgid "Material Type"
+msgstr "材质类型"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_enrollment_material_line
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_enrollment_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Materials"
+msgstr "材料"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_image_medium
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_image_medium
+msgid "Medium"
+msgstr "中"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Minutes"
+msgstr "分钟"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Months"
+msgstr "月"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+msgid "More\n"
+"                                            <span class=\"caret\"/>"
+msgstr "更多\n"
+"                                            <span class=\"caret\"/>"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_name
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+msgid "Name"
+msgstr "名字"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_navigation_policy
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_navigation_policy
+msgid "Navigation Policy"
+msgstr "导航策略"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.material_detail_view
+msgid "Next"
+msgstr "下"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_not_found
+msgid "Nothing created or published yet."
+msgstr "还没有创建或发布。"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_online_course
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_search
+msgid "Online Course"
+msgstr "在线课程"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Online Course ?"
+msgstr "在线课程？"
+
+#. module: openeducat_lms
+#: selection:op.course,visibility:0
+msgid "Only Invited User"
+msgstr "仅受邀用户"
+
+#. module: openeducat_lms
+#: selection:op.course,visibility:0
+msgid "Only logged in User"
+msgstr "仅登录用户"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/js/openeducat_lms_dashboard.js:119
+#, python-format
+msgid "OpenEduCat"
+msgstr "OpenEduCat"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "Or is it that Python interests you?"
+msgstr "还是 Python 对你感兴趣？"
+
+#. module: openeducat_lms
+#: selection:op.course,type:0
+msgid "Paid"
+msgstr "支付"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_category_parent_id
+msgid "Parent Category"
+msgstr "父类别"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "Photos"
+msgstr "照片"
+
+#. module: openeducat_lms
+#: code:addons/openeducat_lms/models/course_material.py:116
+#, python-format
+msgid "Please enter valid URL: %s"
+msgstr "请输入有效的 URL: %s"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_preview
+msgid "Preview"
+msgstr "预览"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Price:"
+msgstr "价格："
+
+#. module: openeducat_lms
+#: model:op.course.category,name:openeducat_lms.category_2
+msgid "Programming"
+msgstr "编程"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_date_published
+msgid "Publish Date"
+msgstr "发布日期"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_syntax_pdf
+msgid "Python Basic Syntax"
+msgstr "Python 基本语法"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_cnd_image
+msgid "Python Conditional Statements"
+msgstr "Python 条件语句"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "Python is a great and friendly language to use and learn. It fun, and can be adapted to both small and large projects. Python will cut your development time greatly and overall, its much faster to write Python than other languages. This course will be a quick way to understand all the major concepts of Python programming. You'll be a whiz in no time."
+msgstr "Python 是一种伟大而友好的语言使用和学习。它的乐趣, 可以适应小规模和大型项目。python 将大大缩短您的开发时间, 它编写 python 的速度要比其他语言快得多。本课程将是一个快速了解 Python 编程的所有主要概念的方法。你很快就会成为高手的。"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_quiz
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_quiz_id
+#: selection:op.material,material_type:0
+msgid "Quiz"
+msgstr "测验"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_quiz_result
+msgid "Quiz Results"
+msgstr "测验结果"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Re-open"
+msgstr "重新打开"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_files_rw
+msgid "Read/Write Operations"
+msgstr "读/写操作"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Review"
+msgstr "检讨"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_material_section_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_section_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_name
+msgid "Section"
+msgstr "部分"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Section Material"
+msgstr "型材"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_section_material_ids
+msgid "Section Materials"
+msgstr "断面材料"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_course_section_ids
+msgid "Sections"
+msgstr "部分"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_invitation_wizard_form
+msgid "Select Users"
+msgstr "选择用户"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_sell_image
+msgid "Sell on spot"
+msgstr "现货销售"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_sell_video
+msgid "Sells"
+msgstr "销售"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_invitation_wizard_form
+msgid "Send"
+msgstr "发送"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_date
+msgid "Sent Date"
+msgstr "发送日期"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_sequence
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_sequence
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_sequence
+msgid "Sequence"
+msgstr "序列"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_sequence_list
+msgid "Sequence with List"
+msgstr "带有列表的序列"
+
+#. module: openeducat_lms
+#: selection:op.course,navigation_policy:0
+msgid "Sequential Learning Path"
+msgstr "顺序学习路径"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_short_description
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_short_description
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_course_material_form
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Short Description"
+msgstr "简短说明"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Show more"
+msgstr "显示更多"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "So, you want to be a kickass Python programmer?"
+msgstr "那么, 你想成为一个海扁王 Python 程序员？"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Sound like you?"
+msgstr "听起来像你？"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.my-courses
+msgid "Start Course"
+msgstr "开始课程"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_state
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_state
+msgid "State"
+msgstr "状态"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_string_number
+msgid "String and Number"
+msgstr "字符串和数字"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "Suggested Course"
+msgstr "建议课程"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Suggested Courses"
+msgstr "建议课程"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Take this course in confidence today knowing you have just found the <strong>BEST</strong> Python course on Udemy!  Don't delay. Every minute you’re not learning Python is another potential opportunity wasted."
+msgstr "今天, 请把握这门课程, 知道你刚刚在 Udemy 找到了 <strong>最好的</strong> Python 课程! 别耽搁了你不学习 Python 的每一分钟都是另一个可能浪费的机会。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "Teacher"
+msgstr "老师"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+#: model:ir.ui.view,arch_db:openeducat_lms.courses
+#: model:ir.ui.view,arch_db:openeducat_lms.my-courses
+msgid "Teacher:"
+msgstr "老师："
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "That’s what I do. And that’s the reason why I made it into the <strong>Top 10 List of Outstanding Instructors in the 2015 Udemy Instructor Awards</strong>."
+msgstr "我就是这么做的这就是为什么我在 2015 Udemy 讲师奖</strong> 的优秀导师名单中 <strong>名列前茅10。"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "The course is <strong>continually updated and enhanced, and fully supports Python 3</strong>. This guarantees what you’re learning is relevant for you today and will never be obsolete."
+msgstr "该课程 <strong>不断更新和增强, 完全支持 Python 3</strong>。这就保证了你今天所学的东西与你相关, 永远不会过时。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.material_detail_view
+msgid "The maximum number of quiz attempts has been reached !"
+msgstr "已达到最大测验次数!"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "There are currently no Courses for your account."
+msgstr "目前没有您的帐户的课程。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.portal_my_course
+msgid "There are currently no quotes for your account."
+msgstr "目前没有您的帐户报价。"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "This course assumes no previous programming or Python experience. If you’ve never programmed a computer before, or if you know another programming language and want to learn Python, this course will teach you how."
+msgstr "本课程不假定以前的编程或 Python 体验。如果您以前从未编程过计算机, 或者如果您知道其他编程语言并且想学习 Python, 本课程将教您如何操作。"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_2
+msgid "This course is a one-stop-shop for everything you'll need to know to get started with Python, along with a few incentives. We'll begin with the basics of Python, learning about strings, variables, and getting to know the data types. We'll soon move on to the loops and conditions in Python. Afterwards, we'll discuss a bit of file manipulation and functions. By then, you'll know all the basics of Python."
+msgstr "这门课程是一站式的所有你需要知道的东西开始与 Python, 以及一些奖励。我们将从 Python 的基本知识开始, 了解字符串、变量以及了解数据类型。我们将很快进入 Python 中的循环和条件。之后, 我们将讨论一些文件操作和功能。届时, 您将知道 Python 的所有基本知识。"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,help:openeducat_lms.op_lms_dashboard_kanban
+msgid "This is the LMS Course Dashboard."
+msgstr "这是 LMS 课程仪表板。"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_image_thumb
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_image_thumb
+msgid "Thumbnail"
+msgstr "缩略 图"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_name
+msgid "Title"
+msgstr "标题"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "To reinforce what you’ve learned, there are numerous challenges during the course designed to help you understand each concept being taught. You’re also shown the solution to the challenge so you know you’re always on the right track."
+msgstr "为了加强你所学到的, 在课程中有许多挑战, 帮助你理解被教导的每个概念。你也展示了挑战的解决方案, 所以你知道你一直都在正确的轨道上。"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_total_views
+msgid "Total # Views"
+msgstr "总计 # 视图"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.course_detail
+msgid "Total Duration"
+msgstr "总工期"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:7
+#, python-format
+msgid "Total Enrollments"
+msgstr "招生总数"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_material_total_time
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_section_total_time
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_total_time
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_total_time
+msgid "Total Time (HH:MM)"
+msgstr "总时间 (HH: MM)"
+
+#. module: openeducat_lms
+#. openerp-web
+#: code:addons/openeducat_lms/static/src/xml/openeducat_lms_dashboard.xml:52
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_training_material
+#, python-format
+msgid "Training Material"
+msgstr "培训材料"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_type
+msgid "Type"
+msgstr "类型"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_material_reminder_user_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_enrollment_user_id
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_user_id
+#: model:ir.ui.view,arch_db:openeducat_lms.view_op_lms_course_form
+msgid "User"
+msgstr "用户"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_course_invitaiton_user_ids
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_variable
+msgid "Variables"
+msgstr "变量"
+
+#. module: openeducat_lms
+#: selection:op.material,material_type:0
+msgid "Video"
+msgstr "视频"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_video_type
+msgid "Video Type"
+msgstr "视频类型"
+
+#. module: openeducat_lms
+#: selection:op.material,video_type:0
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_visibility
+msgid "Visibility Policy"
+msgstr "可见性策略"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_wait_until_date
+#: selection:op.material,auto_publish_type:0
+msgid "Wait Until"
+msgstr "等到"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_wait_until_duration
+#: selection:op.material,auto_publish_type:0
+msgid "Wait Until Duration"
+msgstr "等待持续时间"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_wait_until_duration_period
+msgid "Wait at least period"
+msgstr "至少等待期间"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_french_image
+msgid "Way to french"
+msgstr "方式到法语"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_course_website_message_ids
+msgid "Website Comments"
+msgstr "网站评论"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,field_description:openeducat_lms.field_op_material_website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,help:openeducat_lms.field_op_course_website_message_ids
+#: model:ir.model.fields,help:openeducat_lms.field_op_material_website_message_ids
+msgid "Website communication history"
+msgstr "网站通信历史记录"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Weeks"
+msgstr "星期"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Well, I’m Tim Buchalka, one of your instructors, and I’ve designed the Complete Python Masterclass just for you!"
+msgstr "嗯, 我是蒂姆 Buchalka, 你的导师之一, 我已经设计了完整的 Python 大师班只为你!"
+
+#. module: openeducat_lms
+#: model:op.material,name:openeducat_lms.material_python_files
+msgid "Working with files"
+msgstr "使用文件"
+
+#. module: openeducat_lms
+#: selection:op.material,wait_until_duration_period:0
+msgid "Years"
+msgstr "年"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "Yep, and I know the drill – you want to learn it straight away, so you can put your big plans into action and create stunning Python programs."
+msgstr "是的, 我知道这个演练--你想马上学习它, 这样你就可以把你的大计划付诸行动, 并创建令人惊叹的 Python 程序。"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.portal_my_course
+msgid "Your Course"
+msgstr "您的课程"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.my_profile
+msgid "Your Courses"
+msgstr "您的课程"
+
+#. module: openeducat_lms
+#: selection:op.material,video_type:0
+msgid "Youtube"
+msgstr "Youtube"
+
+#. module: openeducat_lms
+#: model:ir.model.fields,help:openeducat_lms.field_op_material_url
+msgid "Youtube or Google Document URL"
+msgstr "Youtube 或谷歌文档网址"
+
+#. module: openeducat_lms
+#: model:ir.actions.act_window,name:openeducat_lms.act_open_course_invitation_wizard_view
+msgid "course Invitation"
+msgstr "课程邀请"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_course_invitaiton
+msgid "course.invitaiton"
+msgstr "当然 invitaiton"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.embed_material_forbidden
+msgid "is private."
+msgstr "是私人的。"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_material_reminder
+msgid "material.reminder"
+msgstr "材料. 提醒"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_course
+msgid "op.course"
+msgstr "课程"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_course_enrollment
+msgid "op.course.enrollment"
+msgstr "op.course.enrollment"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_course_enrollment_material
+msgid "op.course.enrollment.material"
+msgstr "op.course.enrollment.material"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_course_material
+msgid "op.course.material"
+msgstr "op.course.material"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_course_section
+msgid "op.course.section"
+msgstr "op.course.section"
+
+#. module: openeducat_lms
+#: model:ir.model,name:openeducat_lms.model_op_faculty
+msgid "op.faculty"
+msgstr "教师"
+
+#. module: openeducat_lms
+#: model:ir.ui.view,arch_db:openeducat_lms.view_course_invitation_wizard_form
+msgid "or"
+msgstr "或"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "·      And most important, provide outstanding support and follow up to your questions"
+msgstr "· 最重要的是, 提供优秀的支持和跟进您的问题"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "·      Keep their courses continually updated"
+msgstr "· 保持课程不断更新"
+
+#. module: openeducat_lms
+#: model:op.course,full_description:openeducat_lms.demo_course_1
+msgid "·      Who are passionate about what they do"
+msgstr "· 他们对自己的所作所为充满激情"
+

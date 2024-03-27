@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_phone_call_his">
+            <field name="name">Phone call</field>
+            <field name="model">crm.phone.call</field>
+            <field name="inherit_id" ref="crm_base.view_form_phone_call"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_id']" position="after">
+                    <field name="service_id"/>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+                    <page name="Disease" attrs="{'invisible':[('type_brand','!=','hospital')]}" string="Update disease">
+                        <group>
+                            <field name="desc_doctor"/>
+                            <field name="date_re_exam"/>
+                            <field name="date_out_location" readonly="True" force_save="True"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_batch_tree" model="ir.ui.view">
+            <field name="name">op.batch.tree</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Batch" decoration-muted="status=='finish'" default_order="start_date desc">
+                    <field name="course_id" context="{'code_and_name': True}" options='{"always_reload": True}'/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="num_students"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_batch_form" model="ir.ui.view">
+            <field name="name">op.batch.form</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Batch">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(faculty_bom_act)d" string="Update materials"
+                                    type="action" icon="fa-check-square-o" groups="openeducat_core.group_op_faculty"/>
+                        </div>
+                        <group name="main">
+                            <group>
+                                <field name="institute" required="1"/>
+                                <field name="course_id" context="{'code_and_name': True}"
+                                       domain="[('internal', '=', False)]" options='{"always_reload": True}'/>
+                                <field name="code" string="Batch code"/>
+                                <field name="name" string="Batch name"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                            <group>
+                                <field name="faculty_id" domain="[('full_time' , '=', True)]"
+                                       context="{'default_full_time': True, 'default_institute': institute}"/>
+                                <field name="num_lessons"/>
+                                <field name="min_attendance"/>
+                                <field name="academic_year" attrs="{'invisible': [('internal', '=', True)]}"/>
+                                <field name="trial" attrs="{'invisible': [('internal', '=', True)]}"
+                                       groups="openeducat_core.group_op_back_office"/>
+                                <field name="internal" invisible="1"/>
+                                <field name="products_domain" widget="many2many_tags" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+
+                            <page string="Students" name="students">
+                                <field name="student_course" nolabel="1">
+                                    <!--                                attrs="{'readonly': [('trial', '!=', True)]}">-->
+                                    <tree editable="top">
+                                        <field name="student_id" required="1"/>
+                                        <field name="roll_number" invisible="1"/>
+                                        <field name="status"/>
+                                    </tree>
+                                    <form>
+                                        <group cols="2" colspan="2">
+                                            <field name="course_id"/>
+                                            <field name="student_id"/>
+                                            <field name="roll_number" invisible="1"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page name="faculty_bom" string="Faculty BOM"
+                                  attrs="{'invisible': [('internal', '=', True)]}">
+                                <field name="faculty_bom" readonly="1">
+                                    <tree editable="bottom" decoration-danger="exceed_maximum==True">
+                                        <field name="product"
+                                               domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>
+                                        <field name="quantity"/>
+                                        <field name="uom_id"/>
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                               invisible="1"/>
+                                        <field name="total_cost" widget='monetary'
+                                               options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                        <field name="exceed_maximum" invisible="1"/>
+                                        <!--                                        <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                                    </tree>
+                                    <form>
+                                        <field name="product"
+                                               domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>
+                                        <field name="quantity"/>
+                                        <field name="uom_id"/>
+                                        <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                               invisible="1"/>
+                                        <field name="total_cost" widget='monetary'
+                                               options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                        <!--                                        <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                                        <field name="currency_id" invisible="1"/>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Batch costs" invisible="1">
+                                <group>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="tutor_fee" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"
+                                           attrs="{'invisible': [('internal','=', False)]}"/>
+                                    <field name="teacher_cost" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"
+                                           attrs="{'invisible': [('internal','=', False)]}"/>
+                                    <field name="faculty_bom_cost" widget='monetary'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                </group>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_batch_form_internal" model="ir.ui.view">
+            <field name="name">op.batch.form.internal</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Batch">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--                            <button name="%(faculty_bom_act)d" string="Update materials"-->
+                            <!--                                    type="action" icon="fa-check-square-o" groups="openeducat_core.group_op_faculty"/>-->
+                        </div>
+                        <group name="main">
+                            <group>
+                                <field name="institute" required="1"/>
+                                <field name="course_id" context="{'code_and_name': True, 'default_internal': True}"
+                                       domain="[('internal', '=', True)]" options='{"always_reload": True}'/>
+                                <field name="code" string="Batch code"/>
+                                <field name="name" string="Batch name"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                            <group>
+                                <field name="faculty_id" domain="[('full_time', '=', False)]"
+                                       context="{'default_institute': institute}"/>
+                                <field name="num_lessons"/>
+                                <field name="min_attendance" invisible="1"/>
+                                <field name="internal" invisible="1"/>
+                                <field name="products_domain" widget="many2many_tags" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+
+                            <page string="Employee">
+                                <button name="%(employee_admission_act)d" string="Add employees" type="action"
+                                        class="oe_highlight"/>
+                                <button name="%(email_manager_act)d" string="Email managers" type="action"
+                                        groups="openeducat_core.group_op_back_office"/>
+                                <button name="enroll_employee" type="object"
+                                        groups="openeducat_core.group_op_back_office"
+                                        string="Enroll employees" class="oe_highlight"/>
+                                <field name="emp_ids" nolabel="1" readonly="1"/>
+                            </page>
+                            <page string="Students" name="students">
+                                <field name="student_course" nolabel="1">
+                                    <!--                                attrs="{'readonly': [('trial', '!=', True)]}">-->
+                                    <tree editable="top">
+                                        <field name="student_id" required="1"/>
+                                        <field name="roll_number" invisible="1"/>
+                                        <field name="status"/>
+                                    </tree>
+                                    <form>
+                                        <group cols="2" colspan="2">
+                                            <field name="course_id"/>
+                                            <field name="student_id"/>
+                                            <field name="roll_number" invisible="1"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <!--                            <page name="faculty_bom" string="Faculty BOM" attrs="{'invisible': [('internal', '=', True)]}">-->
+                            <!--                                <field name="faculty_bom" readonly="1">-->
+                            <!--                                    <tree editable="bottom" decoration-danger="exceed_maximum==True">-->
+                            <!--                                        <field name="product" domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>-->
+                            <!--                                        <field name="quantity"/>-->
+                            <!--                                        <field name="uom_id"/>-->
+                            <!--                                        <field name="currency_id" invisible="1"/>-->
+                            <!--                                        <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            <!--                                        <field name="total_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            <!--                                        <field name="exceed_maximum" invisible="1"/>-->
+                            <!--&lt;!&ndash;                                        <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}"/>&ndash;&gt;-->
+                            <!--                                    </tree>-->
+                            <!--                                    <form>-->
+                            <!--                                        <field name="product" domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>-->
+                            <!--                                        <field name="quantity"/>-->
+                            <!--                                        <field name="uom_id"/>-->
+                            <!--                                        <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            <!--                                        <field name="total_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            <!--&lt;!&ndash;                                        <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}"/>&ndash;&gt;-->
+                            <!--                                        <field name="currency_id" invisible="1"/>-->
+                            <!--                                    </form>-->
+                            <!--                                </field>-->
+                            <!--                            </page>-->
+                            <!--                            <page string="Batch costs">-->
+                            <!--                                <group>-->
+                            <!--                                    <field name="currency_id" invisible="1"/>-->
+                            <!--                                    <field name="tutor_fee" widget='monetary' options="{'currency_field': 'currency_id'}"-->
+                            <!--                                    attrs="{'invisible': [('internal','=', False)]}"/>-->
+                            <!--                                    <field name="teacher_cost" widget='monetary' options="{'currency_field': 'currency_id'}"-->
+                            <!--                                    attrs="{'invisible': [('internal','=', False)]}"/>-->
+                            <!--                                    <field name="faculty_bom_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                            <!--                                </group>-->
+                            <!--                            </page>-->
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_batch_search" model="ir.ui.view">
+            <field name="name">op.batch.search</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Batch">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="course_id"/>
+                    <field name="academic_year"/>
+                    <newline/>
+                    <filter string="Date" name="start_date" date="start_date"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter name="group_by_batch_start_date"
+                                string="Start Date" domain="[]"
+                                context="{'group_by':'start_date'}"/>
+                        <filter name="group_by_batch_end_date"
+                                string="End Date" domain="[]"
+                                context="{'group_by':'end_date'}"/>
+                        <filter name="group_by_academic_year"
+                                string="Niên khóa" domain="[]" context="{'group_by':'academic_year'}"/>
+                        <filter name="group_by_batch_course"
+                                string="Course" domain="[]" context="{'group_by':'course_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_batch_view">
+            <field name="name">External batches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.batch</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="view_op_batch_search"/>
+            <field name="domain">[('internal', '=', False)]</field>
+            <field name="context">{'search_default_group_by_academic_year': True,
+                'search_default_group_by_batch_course': True}
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_batch_view_internal">
+            <field name="name">Internal batches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.batch</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="view_op_batch_search"/>
+            <field name="domain">[('internal', '=', True)]</field>
+            <field name="context">{'default_internal': True, 'code_and_name': True,
+                'search_default_group_by_batch_start_date': True}
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_batch_view_form">
+            <field name="act_window_id" ref="act_open_op_batch_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_batch_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_batch_view_tree">
+            <field name="act_window_id" ref="act_open_op_batch_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_batch_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_batch_view_form_internal">
+            <field name="act_window_id" ref="act_open_op_batch_view_internal"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_batch_form_internal"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_batch_view_tree_internal">
+            <field name="act_window_id" ref="act_open_op_batch_view_internal"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_batch_tree"/>
+        </record>
+
+    </data>
+</odoo>

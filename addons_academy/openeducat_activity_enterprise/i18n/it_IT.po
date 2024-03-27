@@ -1,0 +1,34 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 05:51+0000\n"
+"PO-Revision-Date: 2018-03-06 00:35-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: it\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_activity_enterprise/i18n/openeducat_activity_enterprise.pot\n"
+"Language: it_IT\n"
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model.fields,field_description:openeducat_activity_enterprise.field_op_activity_company_id
+#: model:ir.model.fields,field_description:openeducat_activity_enterprise.field_op_activity_type_company_id
+msgid "Company"
+msgstr ""
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model,name:openeducat_activity_enterprise.model_op_activity
+msgid "op.activity"
+msgstr ""
+
+#. module: openeducat_activity_enterprise
+#: model:ir.model,name:openeducat_activity_enterprise.model_op_activity_type
+msgid "op.activity.type"
+msgstr ""
+

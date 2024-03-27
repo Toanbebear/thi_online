@@ -1,0 +1,557 @@
+.card.card.body{
+    &:hover{
+            border: 1px solid $o-brand-primary;
+        }
+}
+.website_lms_h2{
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #878787;
+    font-weight: 600;
+    margin: 0;
+    a{
+        color: #878787;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        &:hover{
+            color:$o-brand-primary;
+        }
+    }
+}
+.course-instructor {
+    padding: 5px 15px 15px;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    line-height: 32px;
+    font-style: italic;
+    display: block;
+    font-size: 14px;
+     color: #888888;
+}
+.faculty-img{
+    float: right;
+}
+.course-title {
+    padding: 25px 15px 0 15px;
+}
+.course-price {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: $o-brand-primary;
+    font-size: 20px;
+}
+.course-student {
+    padding: 12px 15px;
+    overflow: hidden;
+    color: #888888;
+    font-size: 14px;
+    .o_rating_card{
+        display: inline-block;
+        float:right;
+    }
+}
+.course-thumbnail{
+        height:262px;
+}
+
+@media screen and (max-width: 300px) {
+    .course-thumbnail{
+         height: 100%;
+    }
+    .learndash_course_review {
+        .o_rating_card{
+            right: 32% !important;
+        }
+    }
+}
+
+/*=======================================course-derail ==================*/
+.course-derail-h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #000;
+}
+.nbt-category-name:before {
+    content: "\f140";
+    display: block;
+    float: left;
+    font-family: 'Fontawesome';
+    line-height: 1;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    padding: 7px;
+    margin-right: 10px;
+}
+
+.nbt-date-price {
+    span {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        color: white;
+    }
+}
+
+.total-lecture {
+    span {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        color: white;
+    }
+}
+
+.nbt-date-lang {
+    span {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        color: white;
+    }
+}
+
+.nbt-date-price:before {
+    content: "\f155";
+    display: block;
+    float: left;
+    font-family: 'Fontawesome';
+    line-height: 1;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    padding: 9px;
+    margin-right: 10px;
+}
+.total-lecture:before {
+    content: "\f201";
+    display: block;
+    float: left;
+    font-family: 'Fontawesome';
+    line-height: 1;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    padding: 7px;
+    margin-right: 10px;
+}
+.nbt-date-lang:before {
+    content: "\f1ab";
+    display: block;
+    float: left;
+    font-family: 'Fontawesome';
+    line-height: 1;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    padding: 7px;
+    margin-right: 10px;
+}
+.learndash_course_review:before {
+    content: "\f005";
+    display: block;
+    float: left;
+    font-family: 'Fontawesome';
+    line-height: 1;
+    color: #cfcfcf;
+    border: 1px solid #cfcfcf;
+    padding: 7px;
+    margin-right: 10px;
+}
+.learndash_course_review{
+    .o_rating_star_card .stars{
+        color: white;
+    }
+}
+.learndash_course_review{
+    .o_rating_card{
+        position: relative;
+        right: 18%;
+         padding-top: 5px;
+      }
+}
+.learndash_course_info>div {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1;
+}
+.learndash_course_info>div>span{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+    color: white;
+    overflow: hidden;
+}
+.nbt-category-name{
+    p{
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.5;
+        color: white;
+}
+}
+/*========================= Tab View ==================*/
+.learndash_course_tabs{
+    .nav-tabs.nav-justified>li.active>a {
+        background: $o-brand-primary;
+        color: #fff !important;
+    }
+    .nav-tabs.nav-justified>li>a {
+        background: #f3f3f3;
+        color: #000;
+        padding: 20px 15px;
+        border-radius: 0;
+        margin: 0 2px 10px;
+    }
+    .tab-pane{
+        padding: 30px;
+        background: #fafafa;
+        line-height: 1.5;
+    }
+    .card-default{
+        background: #888;
+        color: #fff;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        background-clip: padding-box;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px;
+    }
+    .card-default > .card-header{
+        background-color: transparent;
+        border-color: transparent;
+        color:white;
+    }
+    .card-body{
+        background: white;
+        color: black;
+        padding:0px;
+        table{
+            tr{
+                border-bottom: 1px solid black;
+                td:first-child{
+                    padding: 8px;
+                    padding-left: 25px;
+                }
+            }
+            tr:last-child{
+                border-bottom: 0px;
+            }
+        }
+    }
+}
+.course_faculty_ids{
+    border-bottom: 1px solid #888;
+    padding-top: 36px;
+    padding-bottom: 44px;
+}
+.course_faculty_ids:last-child{
+    border-bottom: 0px;
+}
+.card-title a[data-toggle=collapse]:after{
+    position: absolute;
+    font-family: FontAwesome;
+    left: 66px;
+    line-height: 0;
+    margin-top: 11px;
+    color: #fff;
+
+}
+.card-title a[data-toggle=collapse]:before {
+    position: absolute;
+    content: "\f068";
+    font-family: FontAwesome;
+    left: 66px;
+    line-height: 0;
+    margin-top: 11px;
+    color: #fff;
+}
+.card-title a[data-toggle=collapse]:after {
+    content: "\f067";
+    transform: scaleY(0);
+    transition: transform .3s ease;
+}
+
+.card-title a[data-toggle=collapse].collapsed:after {
+    transform: scaleY(1);
+}
+.learndash_course_tabs{
+    .course-detail-tab{
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .learndash_course_tabs{
+        .tab-pane{
+            padding: 0px;
+        }
+    }
+    .card-title{
+        font-size: 14px;
+    }
+    .card-title a[data-toggle=collapse]:before {
+        left: 10%;
+    }
+
+    .card-title a[data-toggle=collapse]:after{
+        left: 10%;
+    }
+}
+/*===========================================suggested-img================*/
+.suggested-img{
+    img{
+            height: 209px;
+    }
+}
+
+/* ======================================== Category ==========*/
+.category-menu__item {
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    white-space: nowrap;
+}
+.category-menu__link--primary {
+    color: rgba(0,0,0,.55);
+    font-weight: 700;
+    padding: 12px 11px 12px 4px;
+}
+.category-menu__link {
+    font-size: 13px;
+    text-decoration: none;
+}
+.category-menu__link{
+    ul#menu, ol {
+        height: 32px; max-width: 90%;
+        overflow: hidden;
+    }
+    ul#menu > li, ol > li {
+        display: block; float: left;
+        height: 32px; white-space: nowrap;
+        padding: 4px 8px;
+    }
+    ol {
+        position: relative;
+        right: 0; top: 0;
+        overflow: visible;
+    }
+    ol > li { min-width: 120px; }
+
+    ol li ul > li {
+        list-style: none;
+        border-bottom: 1px solid gray;
+        padding: 4px 8px;
+    }
+    ol li ul > li:last-child {
+        border-bottom: 0px;
+    }
+
+}
+
+/*======================== Progress bar =======================*/
+#progressBar {
+    background-color: #f3f3f3;
+    height: 35px;
+}
+.progress-value{
+    display:none !important;
+}
+#progressBar div {
+    height: 100%;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 0;
+    background-color: $o-brand-primary;
+}
+
+/*==========================material-right=========*/
+.material-right i{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    color: green;
+
+}
+
+completed_percentage_course:after{
+    content: "\f295";
+    position: absolute;
+    font-family: FontAwesome;
+    left: 66px;
+    line-height: 0;
+    margin-top: 11px;
+    color: black;
+
+}
+
+/*============== Header Set in all Pages ==============*/
+.img-header {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    padding-top:50px;
+    padding-bottom:50px;
+    background-image: url('/openeducat_lms/static/src/img/promo_bg_1.jpg');
+}
+.img-header {
+    position: relative;
+    .container{
+            position: relative;
+    }
+
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(30, 30, 30, 0.36);
+    }
+}
+.ifram-width{
+    iframe{
+        width:100%;
+        height: 497px;
+    }
+    video{
+        width:100%;
+        height: 497px;
+    }
+    audio{
+        width:100%;
+    }
+}
+.embed-responsive-item{
+    audio{
+        width:100%;
+    }
+}
+/* ============================= Q&A ==================*/
+#course-q-and-a{
+  .question-block{
+        margin-bottom: 16px;
+  }
+ .question-name{
+        font-size: 150%;
+
+    }
+ .question-block{
+    margin-left:0px;
+    .label-default {
+                background-color: black;
+            }
+ }
+}
+
+/*============================= scrollbar ==============*/
+.dyn-height {
+    max-height: 419px;
+    overflow-y:auto;
+}
+
+
+/*===========================================Details View Tob design =======*/
+.lead__headline {
+    font-size: 21px!important;
+    line-height: 27px!important;
+}
+
+/*=====================See more and lees More design====================*/
+.text-overflow{
+    width:100%;
+    //height:330px;
+    display:block;
+    overflow:hidden;
+    word-break: break-word;
+    word-wrap: break-word;
+    margin-bottom:0px;
+}
+.btn-overflow {
+    display: none;
+    text-decoration: none;
+        color: #23527c;
+  }
+
+/* =======================Price in details ===================*/
+.price_view{
+    p{
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+
+
+.my_lms_profile{
+    background-color: #f0f0f0!important;
+    padding: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #F8F8F8;
+    .card-bd-top {
+        border-top: 3px solid $o-brand-primary;
+    }
+    .tabs .tab-content {
+        background-color: #FFF;
+        position: relative;
+    }
+    .tabs .nav-tabs {
+        background-color: $o-brand-primary;
+        border-bottom: none;
+    }
+    .tabs .nav-tabs>li.active>a, .tabs .nav-tabs>li.active>a:hover, .tabs .nav-tabs>li.active>a:focus {
+        border: none;
+        background: rgba(0,0,0,0.2);
+        color: #FFF;
+    }
+    .pd-20 {
+        padding: 20px !important;
+    }
+    .tabs .nav-tabs>li.active>a .menu-active, .tabs .nav-tabs>li.active>a:hover .menu-active, .tabs .nav-tabs>li.active>a:focus .menu-active {
+        visibility: visible;
+    }
+    .tabs .nav-tabs>li>a .menu-active {
+        width: 100%;
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        text-align: center;
+        visibility: hidden;
+        font-size: 16px;
+    }
+}
+.badges_style{
+    .content-list .menu-icon {
+        display: block;
+        float: left;
+        width: 16px;
+        text-align: center;
+        font-size: 14px;
+    }
+    .content-large .menu-icon {
+        font-size: 24px;
+        width: 100px;
+        height: 100px;
+    }
+}

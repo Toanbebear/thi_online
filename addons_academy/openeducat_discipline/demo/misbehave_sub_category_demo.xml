@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_misbehaviour_sub_category_1" model="op.misbehaviour.sub.category">
+            <field name="name">Cheat in the exam</field>
+        </record>
+
+        <record id="op_misbehaviour_sub_category_2" model="op.misbehaviour.sub.category">
+            <field name="name">Use of abusive language</field>
+        </record>
+
+        <record id="op_misbehaviour_sub_category_3" model="op.misbehaviour.sub.category">
+            <field name="name">Beating fellow students</field>
+        </record>
+
+        <record id="op_misbehaviour_sub_category_4" model="op.misbehaviour.sub.category">
+            <field name="name">Vernacular speaking</field>
+        </record>
+
+        <record id="op_misbehaviour_sub_category_5" model="op.misbehaviour.sub.category">
+            <field name="name">Coming to school late</field>
+        </record>
+
+        <record id="op_misbehaviour_sub_category_6" model="op.misbehaviour.sub.category">
+            <field name="name">Teasing fellow or new students</field>
+        </record>
+    </data>
+</odoo>

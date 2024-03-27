@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_op_course_tree" model="ir.ui.view">
+            <field name="name">op.course.tree</field>
+            <field name="model">op.course</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="category_id" string="Category Code"/>
+                    <field name="category_code" string="Category"/>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="evaluation_type" invisible="1"/>
+                    <field name="internal" invisible="1"/>
+                    <field name="subject_ids" widget="many2many_tags" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_course_form" model="ir.ui.view">
+            <field name="name">op.course.form</field>
+            <field name="model">op.course</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Course" duplicate="false">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(openeducat_core.act_open_op_student_course_view_internal_tree)d"
+                                    type="action" icon="fa-users" attrs="{'invisible': [('internal', '=', False)]}"
+                                    string="Employees">
+                            </button>
+                        </div>
+                        <group name="main">
+                            <group>
+                                <field name="category_id"/>
+                                <field name="category_code"/>
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="evaluation_type" invisible="1"/>
+                                <field name="parent_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="min_attendance"/>
+                                <field name="tutor_fee" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                                <!--                                <field name="equipment_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                                <field name="bom" attrs="{'invisible': [('internal', '=', True)]}"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="internal" invisible="1"/>
+                                <field name="min_unit_load" invisible="1"/>
+                                <field name="max_unit_load" invisible="1"/>
+                                <field name="products_domain" widget="many2many_tags" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="faculty_bom" string="Maximum BOM"
+                                  attrs="{'invisible': [('internal', '=', True)]}">
+                                <group>
+                                    <group>
+                                        <field name="course_bom" attrs="{'invisible': [('internal', '=', True)]}"/>
+                                    </group>
+                                    <field name="faculty_bom" nolabel="1">
+                                        <tree editable="bottom">
+                                            <field name="product"
+                                                   domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>
+                                            <field name="quantity"/>
+                                            <field name="uom_id" domain="[('category_id', '=', uom_category)]"
+                                                   readonly="1" force_save="1"/>
+                                            <field name="cost" widget='monetary'
+                                                   options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                            <field name="price" widget='monetary'
+                                                   options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                            <field name="currency_id" invisible="1"/>
+                                            <field name="uom_category" invisible="1"/>
+                                        </tree>
+                                        <form>
+                                            <field name="product"
+                                                   domain="[('id', 'not in', parent.products_domain), ('type', '!=', 'service')]"/>
+                                            <field name="quantity"/>
+                                            <field name="cost" widget='monetary'
+                                                   options="{'currency_field': 'currency_id'}"/>
+                                            <field name="price" widget='monetary'
+                                                   options="{'currency_field': 'currency_id'}"/>
+                                            <field name="currency_id" invisible="1"/>
+                                        </form>
+                                    </field>
+                                </group>
+                            </page>
+<!--                            <page name="job_ids" string="Job positions"-->
+<!--                                  attrs="{'invisible': [('internal', '=', False)]}">-->
+<!--                                <field name="job_ids" options="{'no_create': True}"/>-->
+<!--                            </page>-->
+                            <page name="department_ids" string="Departments"
+                                  attrs="{'invisible': [('internal', '=', False)]}">
+                                <field name="department_ids" options="{'no_create': True}"/>
+                            </page>
+                        </notebook>
+                        <!--                        <group string="Subjects" name="subject" invisible="1">-->
+                        <!--                            <field name="subject_ids" nolabel="1"/>-->
+                        <!--                        </group>-->
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_course_search" model="ir.ui.view">
+            <field name="name">op.course.search</field>
+            <field name="model">op.course</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Course">
+                    <field name="category_id" string="Category"
+                           filter_domain="['|',('category_id.name','ilike',self),('category_id.code','ilike',self)]"/>
+                    <field name="name" string="Course"
+                           filter_domain="['|',('name','ilike',self),('code','ilike',self)]"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter name="group_by_evaluation_type"
+                                string="Category" domain="[]"
+                                context="{'group_by':'category_id'}"/>
+                        <!--                        <filter name="group_by_partner_course"-->
+                        <!--                                string="Parent Course" domain="[]"-->
+                        <!--                                context="{'group_by':'parent_id'}"/>-->
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_course_view">
+            <field name="name">External courses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.course</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_op_course_search"/>
+            <field name="domain">[('internal', '=', False)]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--        <record model="ir.actions.act_window" id="act_open_op_course_view_internal">-->
+        <!--            <field name="name">Internal courses</field>-->
+        <!--            <field name="type">ir.actions.act_window</field>-->
+        <!--            <field name="res_model">op.course</field>-->
+        <!--            <field name="view_mode">kanban,tree,form</field>-->
+        <!--            <field name="search_view_id" ref="view_op_course_search"/>-->
+        <!--            <field name="domain">[('internal', '=', True)]</field>-->
+        <!--            <field name="context">{'default_internal': True, 'default_tutor_fee': 60000}</field>-->
+        <!--        </record>-->
+
+        <record model="ir.actions.act_window" id="act_open_op_course_view_internal">
+            <field name="name">Internal courses</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_course_search"/>
+            <field name="domain">[('internal', '=', True)]</field>
+            <field name="context">{'default_internal': True, 'default_tutor_fee': 60000}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_course_view_form">
+            <field name="act_window_id" ref="act_open_op_course_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_course_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_course_view_tree">
+            <field name="act_window_id" ref="act_open_op_course_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_course_tree"/>
+        </record>
+    </data>
+</odoo>

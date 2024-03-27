@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sync_user" model="user.sync">
+            <field name="name">http://testvtth.scisoftware.xyz/</field>
+            <field name="ip">103.159.54.252</field>
+            <field name="port">13333</field>
+            <field name="database">vtth_test</field>
+            <field name="user">admin_kn666</field>
+            <field name="password">123123</field>
+        </record>
+
+        <record id="cron_sync_user" model="ir.cron">
+            <field name="name">Sync user</field>
+            <field name="model_id" ref="model_user_sync"/>
+            <field name="state">code</field>
+            <field name="code">model.sync()</field>
+            <field name='interval_number'>5</field>
+            <field name='interval_type'>minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="active">False</field>
+        </record>
+    </data>
+</odoo>

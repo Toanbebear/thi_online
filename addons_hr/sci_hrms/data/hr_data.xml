@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_aplicant_state" model="mail.template">
+            <field name="name">Thư mời phỏng vấn</field>
+            <field name="model_id" ref="sci_hrms.model_hr_applicant_state"/>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="subject">Thư mời phỏng vấn</field>
+            <field name="body_html">
+                <![CDATA[
+                    <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="608" style="border: none; margin-left: 6.75pt; margin-right: 6.75pt;">
+                     <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes;
+                      page-break-inside:avoid;height:90.05pt">
+                      <td width="211" style="width:158.35pt;border:solid windowtext 1.0pt;padding:
+                      0in 5.35pt 0in 5.35pt;height:90.05pt">
+                      <p class="MsoNormal"><b><span style="text-transform:uppercase;
+                      mso-no-proof:yes"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+                       coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+                       filled="f" stroked="f">
+                       <v:stroke joinstyle="miter"></v:stroke>
+                       <v:formulas>
+                        <v:f eqn="if lineDrawn pixelLineWidth 0"></v:f>
+                        <v:f eqn="sum @0 1 0"></v:f>
+                        <v:f eqn="sum 0 0 @1"></v:f>
+                        <v:f eqn="prod @2 1 2"></v:f>
+                        <v:f eqn="prod @3 21600 pixelWidth"></v:f>
+                        <v:f eqn="prod @3 21600 pixelHeight"></v:f>
+                        <v:f eqn="sum @0 0 1"></v:f>
+                        <v:f eqn="prod @6 1 2"></v:f>
+                        <v:f eqn="prod @7 21600 pixelWidth"></v:f>
+                        <v:f eqn="sum @8 21600 0"></v:f>
+                        <v:f eqn="prod @7 21600 pixelHeight"></v:f>
+                        <v:f eqn="sum @10 21600 0"></v:f>
+                       </v:formulas>
+                       <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"></v:path>
+                       <o:lock v:ext="edit" aspectratio="t"></o:lock>
+                      </v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75"
+                       alt="Logo_SCI" style='width:147.75pt;height:76.5pt;visibility:visible;
+                       mso-wrap-style:square'>
+                       <v:imagedata src="/sci_hrms/static/description/logo-sci.png"
+                        o:title="Logo_SCI"></v:imagedata>
+                      </v:shape><![endif]--><!--[if !vml]--><img width="197" height="102" src="/sci_hrms/static/description/logo-sci.png" alt="Logo_SCI" v:shapes="Picture_x0020_1" class="" data-original-title="" title="" aria-describedby="tooltip708533"><!--[endif]--></span><span style="text-transform:uppercase"><o:p></o:p></span></b></p>
+                      </td>
+                      <td width="397" style="width:297.75pt;border:solid windowtext 1.0pt;border-left:
+                      none;mso-border-left-alt:solid windowtext 1.0pt;padding:0in 5.35pt 0in 5.35pt;
+                      height:90.05pt">
+                      <p class="MsoNormal" align="center" style="margin-left:75.75pt;text-align:center;
+                      text-indent:-75.75pt;line-height:115%;mso-element:frame;mso-element-frame-hspace:
+                      9.0pt;mso-element-wrap:around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:
+                      margin;mso-element-left:6.0pt;mso-element-top:34.4pt;mso-height-rule:exactly"><b><span style="font-size:14.0pt;line-height:
+                      115%">THƯ MỜI PHỎNG VẤN</span></b><o:p></o:p></p>
+                      </td>
+                     </tr>
+                    </tbody></table>
+
+                    <p class="MsoNormal" style="text-align: justify; line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p>&nbsp;</o:p></p>
+
+                    <p class="MsoNormal" style="text-align: justify; line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><br></p><p class="MsoNormal" style="text-align: justify; line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><br></p><p class="MsoNormal" style="text-align: justify; line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><br></p><p class="MsoNormal" style="text-align: justify; line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Kính gửi Anh/Chị <o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Cám ơn<b>&nbsp;</b>Anh/Chị&nbsp;đã quan tâm và ứng tuyển vào vị trí&nbsp;<span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">của&nbsp;</span><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; text-align: inherit;"><b>${object.applicant_id.job_id.name}</b></span><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">&nbsp;</span><b style="font-variant-ligatures: initial; font-variant-caps: initial; text-align: inherit;"><i>Tập đoàn SCI</i></b><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;"> chúng tôi!</span></p><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Như đã trao đổi qua điện thoại, chúng tôi
+                    trân trọng kính mời&nbsp;Anh/Chị&nbsp;tham dự phỏng vấn tại văn phòng công ty,
+                    cụ thể như sau:<o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><i>Thời gian: <b>&nbsp;</b></i>${object.start}.<o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><i>Địa điểm:</i>&nbsp;&nbsp; ${object.location}&nbsp; &nbsp; &nbsp; &nbsp;<o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Khi đến tham dự phỏng vấn Chị vui lòng
+                    mang theo CV để thuận tiện cho quá trình xem xét hồ sơ.<o:p></o:p></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Nếu có thắc mắc hoặc có thay đổi
+                    gì,&nbsp;Anh/Chị<b>&nbsp;</b>hãy liên hệ với&nbsp;chúng tôi:</p><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><i><b>- ${object.user_id.name or ''}</b></i></p><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><i><b>- ${object.user_id.email or ''}</b></i></p><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><i><b>- ${object.user_id.phone or ''}</b></i></p>
+
+                    <p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Xin vui lòng trả lời&nbsp;thư&nbsp;này gửi về&nbsp;&nbsp;<i style="font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;"><span style="font-weight: bolder;">${object.user_id.email or ''}</span></i><i style="font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;"><span style="font-weight: bolder;">&nbsp;</span></i><span style="font-style: initial; font-variant-ligatures: initial; font-variant-caps: initial; font-weight: initial; text-align: inherit;">để xác nhận sự tham gia&nbsp;của&nbsp;Anh/Chị.</span></p><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></p><table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" align="left" width="608" style="border: none; margin-left: 6.75pt; margin-right: 6.75pt;"></table><p class="MsoNormal" style="line-height: 15pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><o:p></o:p></p>
+                ]]>
+            </field>
+            <field name="user_signature" eval="False"/>
+            <field name="auto_delete" eval="False"/>
+        </record>
+
+        <record id="hr_contract_type_trainee" model="hr.contract.type">
+            <field name="name">Học việc</field>
+            <field name="code">HV</field>
+            <field name="type">hd</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="hr_contract_type_probation" model="hr.contract.type">
+            <field name="name">Thử việc</field>
+            <field name="code">TV</field>
+            <field name="type">hd</field>
+            <field name="sequence">25</field>
+        </record>
+
+        <record id="hr_contract_type_official" model="hr.contract.type">
+            <field name="name">Chính thức</field>
+            <field name="code">CT</field>
+            <field name="type">hd</field>
+            <field name="sequence">35</field>
+        </record>
+
+        <record id="hr_contract_type_sdha" model="hr.contract.type">
+            <field name="name">Sử dụng hình ảnh</field>
+            <field name="code">sdhd</field>
+            <field name="type">pl</field>
+            <field name="sequence">35</field>
+        </record>
+
+        <record id="acc_request_new" model="project.task.type">
+            <field name="name">Đăng ký người dùng</field>
+        </record>
+
+        <record id="acc_request" model="project.project">
+            <field name="name">Account requests</field>
+            <field name="type_ids" eval="[(4,ref('acc_request_new'))]"/>
+        </record>
+
+        <!--Danh sách đơn vị tham gia BHXH-->
+        <record id="insurance_1" model="hr.insurance.policy">
+            <field name="name">CÔNG TY CP TẬP ĐOÀN SCI</field>
+            <field name="code">TG2628G</field>
+            <field name="code_brand">SCI</field>
+        </record>
+
+        <record id="insurance_2" model="hr.insurance.policy">
+            <field name="name">CÔNG TY CP BỆNH VIỆN THẨM MỸ KANGNAM HÀ NỘI</field>
+            <field name="code">TF4776F</field>
+            <field name="code_brand">KN</field>
+        </record>
+
+        <record id="insurance_3" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH TMV ĐÔNG Á ( Lê Đức Tuấn)</field>
+            <field name="code">CA0061A</field>
+            <field name="code_brand">DA</field>
+        </record>
+        <record id="insurance_4" model="hr.insurance.policy">
+            <field name="name">CÔNG TY TNHH NHA KHOA PARIS</field>
+            <field name="code">TB1965B</field>
+            <field name="code_brand">PR</field>
+        </record>
+
+        <record id="insurance_5" model="hr.insurance.policy">
+            <field name="name">THẨM MỸ VIỆN ĐÔNG Á - ĐÀ NẴNG</field>
+            <field name="code">TB1797B</field>
+            <field name="code_brand">DA</field>
+        </record>
+
+        <record id="insurance_6" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH NHA KHOA PARIS - VINH</field>
+            <field name="code">CA63140</field>
+            <field name="code_brand">PR</field>
+        </record>
+
+        <record id="insurance_7" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH TMV ĐÔNG Á - VINH (Phan sáu)</field>
+            <field name="code">CA0020A</field>
+            <field name="code_brand">DA</field>
+        </record>
+
+        <record id="insurance_8" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH NHA KHOA PARIS - THÁI THỊNH (Hoàng Hồng Hạnh)</field>
+            <field name="code">CF0058F</field>
+            <field name="code_brand">PR</field>
+        </record>
+
+        <record id="insurance_9" model="hr.insurance.policy">
+            <field name="name">CÔNG TY TNHH HỌC VIỆN Y KHOA THẨM MỸ QUỐC TẾ SCI</field>
+            <field name="code">TA6710A</field>
+            <field name="code_brand">SCI</field>
+        </record>
+
+        <record id="insurance_10" model="hr.insurance.policy">
+            <field name="name">PARIS HẢI PHÒNG (Hộ kinh doanh Nguyễn Minh Hải)</field>
+            <field name="code">CC0010C</field>
+            <field name="code_brand">PR</field>
+        </record>
+
+        <record id="insurance_11" model="hr.insurance.policy">
+            <field name="name">ĐÔNG Á HẢI PHÒNG (Hộ kinh doanh Phạm Thị Lệ Sơn)</field>
+            <field name="code">CC0011C</field>
+            <field name="code_brand">DA</field>
+        </record>
+
+        <record id="insurance_12" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH NHA KHOA ĐÔNG Á</field>
+            <field name="code">CA0052A</field>
+            <field name="code_brand">DA</field>
+        </record>
+
+        <record id="insurance_13" model="hr.insurance.policy">
+            <field name="name">HỘ KINH DOANH NHA KHOA PARIS ( Paris Đà Nẵng)</field>
+            <field name="code">CB0052B</field>
+            <field name="code_brand">PR</field>
+        </record>
+
+        <record id="insurance_14" model="hr.insurance.policy">
+            <field name="name">CÔNG TY CP KINH DOANH VÀ ĐIỀU TRỊ Y TẾ ĐỨC KIÊN</field>
+            <field name="code_brand">HH</field>
+        </record>
+    </data>
+</odoo>

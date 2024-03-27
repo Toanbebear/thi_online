@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_fees_term_reminder_form" model="ir.ui.view">
+            <field name="name">op.fees.terms.form</field>
+            <field name="model">op.fees.terms</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="openeducat_fees.view_fees_terms_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='line_ids']/form" position="inside">
+                    <separator string="Fees Remider Lines" colspan="4"/>
+                    <field name="line_ids">
+                        <tree string="Fees Reminder Details" editable="top">
+                            <field name="duration_type" required="1"/>
+                            <field name="days" required="1"/>
+                            <field name="template_id" required="1"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

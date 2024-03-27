@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="batch_email_managers" model="mail.template">
+            <field name="name">Email managers</field>
+            <field name="subject">Khóa học nội bộ - ${object.name}</field>
+            <field name="email_from">${(user.email or '')|safe}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="model_id" ref="openeducat_core.model_op_batch"/>
+            <field name="body_html"><![CDATA[
+            <p>Kính gửi anh/chị,</p>
+            <p>Cảm phiền anh chị vào link <a href="/web#view_type=form&amp;model=op.batch&amp;id=${object.id}">này</a> để add nhân viên vài khóa học ${object.name}.</p>
+            <p>Trân trọng,</p>
+            <p>${user.signature | safe}</p>
+                            ]]>
+            </field>
+        </record>
+
+        <record id="student_id" model="ir.sequence">
+            <field name="name">Student ID</field>
+            <field name="code">op.student</field>
+            <field name="prefix">CS</field>
+            <field name="suffix">-%(y)s</field>
+            <field name="padding">4</field>
+        </record>
+
+    </data>
+</odoo>

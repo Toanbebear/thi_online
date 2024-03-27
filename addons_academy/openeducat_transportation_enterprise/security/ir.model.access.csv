@@ -1,0 +1,14 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_op_stop_transport_user","name_op_stop_transport_user","model_op_stop","group_op_transport_user",1,1,0,0
+"access_op_stop_transport_manager","name_op_stop_transport_manager","model_op_stop","group_op_transport_manager",1,1,1,1
+"access_op_route_transport_user","name_op_route_transport_user","model_op_route","group_op_transport_user",1,1,0,0
+"access_op_route_transport_manager","name_op_route_transport_manager","model_op_route","group_op_transport_manager",1,1,1,1
+"access_op_route_line_transport_user","name_op_route_line_transport_user","model_op_route_line","group_op_transport_user",1,1,1,0
+"access_op_route_line_transport_manager","name_op_route_line_transport_manager","model_op_route_line","group_op_transport_manager",1,1,1,1
+"access_op_route_stop_line_transport_user","name_op_route_stop_line_transport_user","model_op_route_stop_line","group_op_transport_user",1,1,1,0
+"access_op_route_stop_line_transport_manager","name_op_route_stop_line_transport_manager","model_op_route_stop_line","group_op_transport_manager",1,1,1,1
+"access_op_route_passenger_transport_user","name_op_route_passenger_transport_user","model_op_route_passenger","group_op_transport_user",1,1,1,0
+"access_op_route_passenger_transport_manager","name_op_route_passenger_transport_manager","model_op_route_passenger","group_op_transport_manager",1,1,1,1
+"access_op_vehicle_transport_user","name_op_vehicle_transport_user","model_op_vehicle","group_op_transport_user",1,1,0,0
+"access_op_vehicle_transport_manager","name_op_vehicle_transport_manager","model_op_vehicle","group_op_transport_manager",1,1,1,1
+"access_fleet_vehicle_transport_user","name_fleet_vehicle_transport_user","fleet.model_fleet_vehicle","group_op_transport_user",1,0,0,0

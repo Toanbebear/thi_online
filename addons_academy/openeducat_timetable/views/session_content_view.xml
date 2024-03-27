@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_session_content_tree" model="ir.ui.view">
+            <field name="name">op.session.content.tree</field>
+            <field name="model">op.session.content</field>
+            <field name="arch" type="xml">
+                <tree string="Session Content" editable="top">
+                    <field name="course_id"/>
+                    <field name="content"/>
+                    <field name="sequence"/>
+                    <field name="lesson_count"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_session_content_form" model="ir.ui.view">
+            <field name="name">op.session.content.form</field>
+            <field name="model">op.session.content</field>
+            <field name="arch" type="xml">
+                <form string="Session Content">
+                    <sheet>
+                        <group>
+                            <field name="course_id"/>
+                            <field name="content"/>
+                            <field name="sequence"/>
+                            <field name="lesson_count"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_session_content_search" model="ir.ui.view">
+            <field name="name">op.session.content.search</field>
+            <field name="model">op.session.content</field>
+            <field name="arch" type="xml">
+                <search string="Session content">
+                    <field name="content"/>
+                    <field name="course_id"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter name="group_by_course_id"
+                                string="Course" domain="[]"
+                                context="{'group_by':'course_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_session_content_view">
+            <field name="name">Session Content</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.session.content</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_session_content_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="view_op_course_form_session_content_inherit" model="ir.ui.view">
+            <field name="name">op.course.form.session.content.inherit</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='faculty_bom']" position="before">
+                    <page string="Content">
+                        <field name="session_contents" context="{'default_sequence': contents_onchange_len}">
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="content"/>
+                                <field name="sequence" />
+                                <field name="lesson_count"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='bom']" position="after">
+                    <field name="contents_onchange_len" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_op_batch_form_session_content_inherit" model="ir.ui.view">
+            <field name="name">op.batch.form.session.content.inherit</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='students']" position="after">
+                    <page string="Content">
+                        <field name="contents_onchange_len" invisible="1"/>
+                        <field name="session_contents" context="{'default_sequence': contents_onchange_len, 'default_course_id': course_id}" widget="one2many">
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="course_id" invisible="1"/>
+                                <field name="content"/>
+                                <field name="sequence"/>
+                                <field name="lesson_count"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='products_domain']" position="after">
+                    <field name="one_shot_batch" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='faculty_id']" position="attributes">
+                    <attribute name="attrs">{'required':[('one_shot_batch', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='end_date']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('one_shot_batch', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='end_date']" position="after">
+                    <field name="timing_id" attrs="{'invisible':[('one_shot_batch', '=', False)], 'required':[('one_shot_batch', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_op_batch_form_internal_session_content_inherit" model="ir.ui.view">
+            <field name="name">op.batch.form.internal.session.content.inherit</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form_internal"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//page[@name='students']" position="after">
+                    <page string="Content">
+                        <field name="contents_onchange_len" invisible="1"/>
+                        <field name="session_contents" context="{'default_sequence': contents_onchange_len, 'default_course_id': course_id}" widget="one2many">
+                            <tree editable="bottom" default_order="sequence">
+                                <field name="course_id" invisible="1"/>
+                                <field name="content"/>
+                                <field name="sequence"/>
+                                <field name="lesson_count"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='products_domain']" position="after">
+                    <field name="one_shot_batch" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='faculty_id']" position="attributes">
+                    <attribute name="attrs">{'required':[('one_shot_batch', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='end_date']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('one_shot_batch', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='end_date']" position="after">
+                    <field name="timing_id" attrs="{'invisible':[('one_shot_batch', '=', False)], 'required':[('one_shot_batch', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

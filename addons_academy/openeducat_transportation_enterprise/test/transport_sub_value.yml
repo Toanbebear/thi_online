@@ -1,0 +1,101 @@
+-
+  I create Partner Parent
+-
+  !record {model: res.partner, id: partner1_test}:
+    name: 'Shamaji'
+    user_id: res_users_transport_user_test
+-
+  Transport Manager can create Vehicle there for I checked it with that user who is Transport Manager.
+-
+  !context
+    uid: res_users_transport_manager_test
+-
+  I create Vehicle fleet
+-
+  !record {model: fleet.vehicle.model, id: model_bus_test}:
+    name: 'Bus'
+    brand_id: fleet.brand_bmw
+-
+  I create Vehicle
+-
+  !record {model: op.vehicle, id: vehicle_bus1_test}:
+    model_id: model_bus_test
+    license_plate: '8CA5565'
+    capacity: 30
+-
+  I create Route
+-
+  !record {model: op.route, id: route1_test}:
+    name: 'BOA First Trip 7 AM'
+    cost: 50
+    vehicle_id: vehicle_bus1_test
+-
+  I create 1st Stop
+-
+  !record {model: op.stop, id: stop1_test}:
+    name: 'Pickup Point'
+    sequence: 1
+    estimated_arrival_conf: 0.166
+    route_id: route1_test
+    company_id: base.main_company
+    partner_ids: 
+      - partner1_test
+-
+  I create 2nd Stop
+-
+  !record {model: op.stop, id: stop2_test}:
+    name: 'Court Road'
+    sequence: 2
+    estimated_arrival_conf: 0.5
+    route_id: route1_test
+    company_id: base.main_company
+    partner_ids: 
+      - partner1_test
+-
+  I create Route Line
+-
+  !record {model: op.route.line, id: route_line1_test}:
+    route_type: 'pickup'
+    start_time: 7.0
+    route_date: !eval datetime.date()
+    route_id: route1_test
+    driver_id: partner1_test
+    company_id: base.main_company
+    state: 'draft'
+-
+  I check that trip is now 'Draft'.
+-
+  !assert {model: op.route.line, id: route_line1_test}:
+    - state == 'draft'
+-
+  I clicked on Get Stop Button
+-
+  !python {model: op.route.line, id: route_line1_test}: |
+    self.create_route_stop_line()
+-
+  Transport User can start and End a trip there for I checked it with that user who is Transport user.
+-
+  !context
+    uid: res_users_transport_user_test
+-
+  I clicked on Start trip Button
+-
+  !python {model: op.route.line, id: route_line1_test}: |
+    self.start_trip()
+-
+  I check that trip is now 'Started'.
+-
+  !assert {model: op.route.line, id: route_line1_test}:
+    - state == 'start'
+-
+  I clicked on End trip Button
+-
+  !python {model: op.route.line, id: route_line1_test}: |
+    self.end_trip()
+-
+  I check that trip is now 'End'.
+-
+  !assert {model: op.route.line, id: route_line1_test}:
+    - state == 'end'
+
+

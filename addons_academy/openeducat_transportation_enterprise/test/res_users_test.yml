@@ -1,0 +1,29 @@
+-
+   Create a user as 'Transport Manager'
+-
+  !record {model: res.users, id: res_users_transport_manager_test, view: False}:
+    company_id: base.main_company
+    name: Transport Manager Test
+    login: transportmanager
+    email: transportmantest@openeducat.org
+-
+  I added groups to Transport Manager.
+-
+  !record {model: res.users, id: res_users_transport_manager_test}:
+    groups_id:
+      - openeducat_transportation_enterprise.group_op_transport_manager
+-
+   Create an user as 'Transport user'
+-
+  !record {model: res.users, id: res_users_transport_user_test, view: False}:
+    company_id: base.main_company
+    name: Transport Test
+    login: transport
+    email: transporttest@openeducat.org
+-
+  I added groups to Transport User.
+-
+  !record {model: res.users, id: res_users_transport_user_test}:
+    groups_id:
+      - openeducat_transportation_enterprise.group_op_transport_user
+

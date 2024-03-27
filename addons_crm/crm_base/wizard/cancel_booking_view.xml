@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id="view_form_cancel_booking">
+            <field name="name">Cancel booking</field>
+            <field name="model">cancel.booking</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name" required="True"/>
+                            <field name="booking_id" invisible="True"/>
+                        </group>
+                    </group>
+                    <footer class="text-center">
+                        <button name="set_cancel" type="object" string="Cancel" class="btn-danger"/>
+                        <button name="set_out_sold" type="object" string="Out sold" class="btn-info"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+
+
+</odoo>

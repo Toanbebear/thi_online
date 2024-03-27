@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="lms_faculty_form_view">
+        <field name="name">op.faculty.lms.form</field>
+        <field name="model">op.faculty</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_faculty_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='personal_information']" position="inside">
+                <group string="Bio Data" name="bio_data">
+                    <field name="bio_data"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

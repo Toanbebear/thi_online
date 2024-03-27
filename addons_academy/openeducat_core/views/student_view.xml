@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_op_student_course_pivot" model="ir.ui.view">
+            <field name="name">op.student.course.pivot</field>
+            <field name="model">op.student.course</field>
+            <field name="arch" type="xml">
+                <pivot string="Student report">
+                    <field name="department_id" type="col"/>
+                    <field name="status" type="row"/>
+                    <field name="course_code" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_op_student_course_graph" model="ir.ui.view">
+            <field name="name">op.student.course.graph</field>
+            <field name="model">op.student.course</field>
+            <field name="arch" type="xml">
+                <graph string="Student report" type="bar" stacked="True">
+                    <field name="department_id"/>
+                    <field name="status"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="view_op_student_course_internal_tree" model="ir.ui.view">
+            <field name="name">op.student.course.internal.tree</field>
+            <field name="model">op.student.course</field>
+            <field name="arch" type="xml">
+                <tree string="Internal student" create="0" editable="top" default_order="department_id, status">
+                    <field name="course_id" readonly="1"/>
+                    <field name="batch_id" readonly="1"/>
+                    <field name="student_id" readonly="1"/>
+                    <field name="department_id" readonly="1"/>
+                    <field name="job_id" readonly="1"/>
+                    <field name="status" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_student_course_search" model="ir.ui.view">
+            <field name="name">op.student.course.search</field>
+            <field name="model">op.student.course</field>
+            <field name="arch" type="xml">
+                <search string="Students">
+                    <field name="student_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="course_id" string="Courses" filter_domain="['|',('course_id','ilike',self),('course_code','ilike',self)]"/>
+                    <newline/>
+                    <filter string="Date" name="start_date" date="batch_start_date"/>
+                    <filter string="Not learned" name="not_learned" domain="[('status', '=', 'not')]"/>
+                    <filter string="Studying" name="studying" domain="[('status', '=', 'study')]"/>
+                    <filter string="Finished" name="finished" domain="[('status', '=', 'finish')]"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="status" string="Status"
+                                domain="[]" context="{'group_by':'status'}"/>
+                        <filter name="student_id" string="Student"
+                                domain="[]" context="{'group_by':'student_id'}"/>
+                        <filter name="department_id" string="Department"
+                                domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter name="job_id" string="Job position"
+                                domain="[]" context="{'group_by':'job_id'}"/>
+                        <filter name="course_id" string="Course"
+                                domain="[]" context="{'group_by':'course_id'}"/>
+                        <filter name="batch_id" string="Batch"
+                                domain="[]" context="{'group_by':'batch_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="kanban_view_student" model="ir.ui.view">
+            <field name="name">Student Kanban</field>
+            <field name="model">op.student</field>
+            <field name="arch" type="xml">
+                <kanban class="o_res_partner_kanban" create="false">
+                    <field name="id"/>
+                    <field name="image_1920"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_res_partner_kanban">
+                                <div class="o_kanban_image">
+                                    <t t-if="record.image_1920.value">
+                                        <img t-att-src="kanban_image('op.student', 'image_1920', record.id.value)" alt="Student"/>
+                                    </t>
+                                    <t t-if="!record.image_1920.value">
+                                        <img t-att-src='_s + "/base/static/img/avatar.png"' alt="Student"/>
+                                    </t>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <h4>
+                                        <a type="open">
+                                            <field name="name"/>
+                                            <t t-if="record.middle_name.raw_value">
+                                                <field name="middle_name" invisible="1"/>
+                                            </t>
+                                            <t t-if="record.last_name.raw_value">
+                                                <field name="last_name" invisible="1"/>
+                                            </t>
+                                        </a>
+                                    </h4>
+                                    <ul>
+                                        <li t-if="record.student_id.raw_value">
+                                            <field name="student_id"/>
+                                        </li>
+                                        <li t-if="record.phone.raw_value">
+                                            <field name="phone"/>
+                                        </li>
+                                        <li t-if="record.mobile.raw_value">
+                                            <field name="mobile"/>
+                                        </li>
+                                        <li t-if="record.email.raw_value">
+                                            <a t-attf-href="mailto:#{record.email.value}">
+                                                <field name="email"/>
+                                            </a>
+                                        </li>
+<!--                                        <li t-if="record.lang.raw_value">-->
+<!--                                            <field name="lang"/>-->
+<!--                                        </li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_op_student_tree" model="ir.ui.view">
+            <field name="name">op.student.tree</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Student" create="false">
+                    <field name="name"/>
+                    <field name="student_id"/>
+                    <field name="gender"/>
+                    <field name="phone"/>
+                    <field name="email"/>
+                    <field name="state_id"/>
+                    <field name="institute"/>
+                    <field name="visa_info" string="Visa / ID"/>
+                    <field name="emergency_contact" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_student_form" model="ir.ui.view">
+            <field name="name">op.student.form</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Student" create="false">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                        </div>
+                        <div class="oe_title">
+                            <field name="internal" invisible="1"/>
+<!--                            <label for="internal" string="Internal"/>-->
+                            <field name="emp_id" placeholder="Employee" options="{'no_create_edit': True}"
+                                   attrs="{'required':[('internal','=',True)],'invisible': [('internal','=', False)]}"
+                                   class="oe_edit_only"/>
+                        </div>
+                        <field name="image_1920" widget="image" class="oe_left oe_avatar"/>
+                        <div class="oe_title">
+                            <h3>
+                                <field name="title" placeholder="Title" invisible="1"/>
+                            </h3>
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td style="padding-right:10px;">
+                                            <field name="name" required="1" placeholder="Name"/>
+                                        </td>
+                                        <td style="padding-right:10px;">
+                                            <field name="middle_name" placeholder="Middle Name" invisible="1"/>
+                                        </td>
+                                        <td style="padding-right:10px;">
+                                            <field name="last_name" placeholder="Last Name" invisible="1" required="0"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                            <h2>
+                                <field name="student_id" readonly="1" force_save="1"/>
+                            </h2>
+                        </div>
+                        <notebook colspan="4">
+                            <page name="personal_information"
+                                  string="Personal Information">
+                                <group name="personal_detail">
+                                    <group>
+                                        <field name="gender" required="1"/>
+                                        <field name="birth_date" required="1"/>
+                                        <field name="academic_level"/>
+                                        <field name="job"/>
+                                        <field name="user_id" string="User" readonly="1"/>
+                                        <field name="email"/>
+                                        <field name="already_partner"/>
+                                        <field name="partner_id" placeholder="Partner"
+                                               options="{'no_create_edit': True}"
+                                               attrs="{'required':[('already_partner','=',True)],'invisible': [('already_partner','=', False)]}"/>
+                                        <field name="department_id" attrs="{'invisible': [('emp_id', '=', False)]}"/>
+                                        <field name="job_id" attrs="{'invisible': [('emp_id', '=', False)]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="communist_date"/>
+                                        <field name="official_communist"/>
+                                        <field name="youth_union_date"/>
+                                        <field name="objects"/>
+                                    </group>
+                                </group>
+                                <group name="address">
+                                    <group>
+                                        <field name="nationality" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                        <field name="visa_info" string="Visa / ID"/>
+                                        <field name="lang"/>
+                                        <field name="ethnic"/>
+                                        <field name="religion"/>
+                                    </group>
+                                    <group>
+                                        <field name="hometown"/>
+                                        <field name="phone" required="1"/>
+                                        <field name="state_id" domain="[('country_id', '=', nationality)]"/>
+                                        <field name="street" string="Permanent address"/>
+                                        <field name="street2" string="Temporary address"/>
+                                    </group>
+<!--                                    <label for="type"/>-->
+<!--                                    <div name="div_type">-->
+<!--                                        <field class="oe_inline" name="type"/>-->
+<!--                                    </div>-->
+<!--                                    <label for="street" string="Address"/>-->
+<!--                                    <div name="div_address">-->
+<!--                                        <field name="street" placeholder="Street..."/>-->
+<!--                                        <field name="street2" placeholder="Street2"/>-->
+<!--                                        <div class="address_format">-->
+<!--                                            <field name="city" placeholder="City" style="width: 40%%"/>-->
+<!--                                            <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}'/>-->
+<!--                                            <field name="zip" placeholder="ZIP" style="width: 20%%"/>-->
+<!--                                        </div>-->
+<!--                                        <field name="country_id"-->
+<!--                                               placeholder="Country" class="oe_no_button"-->
+<!--                                               options='{"no_open": True}'/>-->
+<!--                                    </div>-->
+                                </group>
+                            </page>
+                            <page name="educational" string="Educational">
+                                <group>
+                                    <group colspan="3">
+                                        <field name="institute_id" options="{'no_quick_create':True,'no_create_edit':True}" required="1"/>
+                                        <field name="academic_year"/>
+<!--                                        <field name="gr_no"/>-->
+                                    </group>
+                                </group>
+                                <group>
+                                    <separator string="Admission Details"
+                                               colspan="4"/>
+                                    <field name="course_detail_ids" nolabel="1" readonly="1">
+                                        <tree string="Course Details">
+                                            <field name="course_id"/>
+                                            <field name="batch_id" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+<!--                                            <field name="course_code" attrs="{'column_invisible': [('parent.internal', '=', False)]}"/>-->
+                                            <field name="batch_code" attrs="{'column_invisible': [('parent.internal', '=', False)]}"/>
+                                            <field name="roll_number" invisible="1"/>
+                                            <field name="status"/>
+                                            <field name="faculty_id" attrs="{'column_invisible': [('parent.internal', '=', False)]}"/>
+                                            <field name="subject_ids" widget="many2many_tags" invisible="1"/>
+                                        </tree>
+                                        <form>
+                                            <group cols="2" colspan="2">
+                                                <field name="course_id"/>
+                                                <field name="batch_id" domain="[('course_id', '=', course_id)]"/>
+                                                <field name="roll_number" invisible="1"/>
+                                            </group>
+                                            <group col="4" string="Subjects">
+                                                <field name="subject_ids" colspan="4" nolabel="1" invisible="1"/>
+                                            </group>
+                                        </form>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_student_search" model="ir.ui.view">
+            <field name="name">op.student.search</field>
+            <field name="model">op.student</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Student">
+                    <field name="name"/>
+                    <field name="blood_group"/>
+                    <newline/>
+                    <filter string="Miền Bắc" name="north" domain="[('institute', '=', 'hn')]"/>
+                    <filter string="Miền Nam" name="south" domain="[('institute', '=', 'hcm')]"/>
+                    <group expand="0" string="Group By...">
+                        <filter name="blood_group" string="Blood Group"
+                                domain="[]" context="{'group_by':'blood_group'}"/>
+                        <filter name="nationality" string="Nationality"
+                                domain="[]" context="{'group_by':'nationality'}"/>
+                        <filter name="language" string="Language"
+                                domain="[]" context="{'group_by':'lang'}"/>
+                        <filter name="department" string="Department"
+                                domain="[]" context="{'group_by':'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_course_view_internal_report">
+            <field name="name">Internal students report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student.course</field>
+            <field name="view_mode">pivot,graph,tree,form</field>
+            <field name="domain">[('course_id.internal', '=', True)]</field>
+            <field name="context">{'search_default_not_learned': True}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_course_view_internal_tree">
+            <field name="name">Internal students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('course_id', '=', active_id)]</field>
+<!--            <field name="context">{'default_internal': True}</field>-->
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_view">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_form">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_student_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_tree">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_student_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_student_view_kanban">
+            <field name="act_window_id" ref="act_open_op_student_view"/>
+            <field name="sequence" eval="5"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="kanban_view_student"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_view_2">
+            <field name="name">Students</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record id="open_view_external_student" model="ir.actions.act_window">
+            <field name="name">External student</field>
+            <field name="res_model">op.student</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('internal', '=', False)]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+        </record>
+
+        <record id="open_view_internal_student" model="ir.actions.act_window">
+            <field name="name">Internal student</field>
+            <field name="res_model">op.student</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('internal', '=', True)]</field>
+            <field name="search_view_id" ref="view_op_student_search"/>
+            <field name="context">{'search_default_department': 1,
+                                    'default_internal': True}</field>
+        </record>
+
+    </data>
+</odoo>

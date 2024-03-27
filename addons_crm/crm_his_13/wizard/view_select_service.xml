@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_inherit_crm_select_service">
+            <field name="name">Select service</field>
+            <field name="model">crm.select.service</field>
+            <field name="inherit_id" ref="crm_base.view_form_crm_select_service"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="institution_ids" invisible="True"/>
+                    <field name="institution"
+                           options="{'no_open':True,'no_create':True}" required="True" readonly="True"/>
+                    <field name="exam_room_id"
+                           options="{'no_open':True,'no_create':True}" required="True"/>
+                </xpath>
+                <xpath expr="//separator" position="before">
+                    <field name="dentistry" readonly="True" force_save="True" invisible="True"/>
+                    <field name="uom_price" attrs="{'invisible': [('dentistry', '=', False)],
+                            'required':[('dentistry','=',True)]}"/>
+                    <field name="set_total_order" attrs="{'invisible': [('dentistry', '=', False)],
+                            'required':[('dentistry','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

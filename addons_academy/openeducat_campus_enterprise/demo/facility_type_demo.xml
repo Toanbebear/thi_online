@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_facility_type_1" model="op.facility.type">
+            <field name="name">Hostel</field>
+            <field name="code">ho</field>
+        </record>
+
+        <record id="op_facility_type_2" model="op.facility.type">
+            <field name="name">Ground</field>
+            <field name="code">gd</field>
+        </record>
+
+        <record id="op_facility_type_3" model="op.facility.type">
+            <field name="name">Hall</field>
+            <field name="code">ha</field>
+        </record>
+
+        <record id="op_facility_type_4" model="op.facility.type">
+            <field name="name">Garden</field>
+            <field name="code">ga</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:04+0000\n"
+"PO-Revision-Date: 2018-04-13 01:28-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_lms_blog/i18n/openeducat_lms_blog.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "An interpreted language, Python has a design philosophy which emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly braces or keywords), and a syntax which allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java."
+msgstr "Python 具有一种设计哲学, 它强调代码可读性 (特别是使用空白缩进分隔代码块而不是大括号或关键字), 以及允许程序员用较少的行表达概念的语法。在 c++ 或 Java 等语言中可能出现的代码。"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_2
+msgid "Are you sure about your goal?"
+msgstr "你确定你的目标吗？"
+
+#. module: openeducat_lms_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_id
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "Blog"
+msgstr "博客"
+
+#. module: openeducat_lms_blog
+#: model:ir.model,name:openeducat_lms_blog.model_blog_post
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_post_ids
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post"
+msgstr "博客帖子"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post Title"
+msgstr "博客帖子标题"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Subtitle"
+msgstr "博客字幕"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Brand awareness is one of the most common goals for content marketing – businesses want their audience to see the valuable content and follow it back to them."
+msgstr "品牌意识是内容营销中最常见的目标之一--企业希望他们的观众看到有价值的内容并跟随它。"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_lms_blog_post_form
+msgid "Content"
+msgstr "内容"
+
+#. module: openeducat_lms_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_blog_post_course_id
+msgid "Course"
+msgstr "课程"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Create Blog"
+msgstr "创建博客"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_1
+msgid "Easy Learning with e-learning"
+msgstr "轻松学习与电子学习"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_1
+msgid "Ideas behind the e-learning tools."
+msgstr "电子学习工具背后的想法。"
+
+#. module: openeducat_lms_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_1
+msgid "Introduction To Python Programmi"
+msgstr "Python Programmi 简介"
+
+#. module: openeducat_lms_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_2
+msgid "Learn to Sell Anything"
+msgstr "学习销售任何东西"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "No keywords defined!"
+msgstr "没有定义关键字!"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Publishing Options"
+msgstr "发布选项"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is a general purpose programming language created in the late 1980s, and named after Monty Python, that's used by thousands of people to do things from testing microchips at Intel, to powering Instagram, to building video games with the PyGame library."
+msgstr "Python 是一个通用的编程语言创建于二十世纪八十年代代末, 并命名为蒙蒂 Python, 这是由成千上万的人用来做的事情, 从测试芯片在英特尔, 以供电 Instagram, 建设视频游戏与 PyGame 库。"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is powerful language."
+msgstr "Python 是强大的语言。"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Setup goal."
+msgstr "设置目标。"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_2
+msgid "Starts management with some GOAL"
+msgstr "以某种目标开始管理"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_2
+msgid "Study With e-learning"
+msgstr "学习与电子学习"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Success with content marketing goes well beyond research, writing, and publishing. Measuring the impact of your content marketing is the only way to know that what you’re doing is working."
+msgstr "内容营销的成功远远超出了研究、写作和出版的范围。衡量你的内容营销的影响是唯一的方法, 知道你正在做的是工作。"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Technical"
+msgstr "技术"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_2
+msgid "e-learning"
+msgstr "电子学习"
+
+#. module: openeducat_lms_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_2
+msgid "exercise"
+msgstr "运动"
+
+#. module: openeducat_lms_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_1
+msgid "learnig"
+msgstr "学习"
+
+#. module: openeducat_lms_blog
+#: model:ir.model,name:openeducat_lms_blog.model_op_course
+msgid "op.course"
+msgstr "课程"
+

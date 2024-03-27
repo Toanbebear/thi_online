@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="survey_user_input_search_inherit">
+            <field name="name">survey_user_input_search_inherit</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="replace">
+                    <search>
+                        <field name="survey_id"/>
+                        <field name="partner_id"/>
+                        <filter name="completed" string="Completed" domain="[('state', '=', 'done')]"/>
+                        <filter string="Partially Completed" name="partially_completed"
+                                domain="[('state', '=', 'skip')]"/>
+                        <filter string="New" name="new" domain="[('state', '=', 'new')]"/>
+                        <separator/>
+                        <filter string="Today" name="filter_session_today"
+                                domain="[('date_create', '&gt;=', time.strftime('%%Y-%%m-%%d 00:00:00')),('date_create', '&lt;=', time.strftime('%%Y-%%m-%%d 23:59:59'))]"/>
+                        <filter string="Yesterday" name="yesterday"
+                                domain="[('date_create','&gt;=', ((context_today() - datetime.timedelta(days=1)).strftime('%%Y-%%m-%%d 00:00:00'))),
+                            ('date_create','&lt;=', ((context_today() + datetime.timedelta(days=0)).strftime('%%Y-%%m-%%d 00:00:00')))]"/>
+                        <newline/>
+                        <filter string="This Week" name="this_week" separator="1"
+                                domain="[('date_create', '&gt;=', ((context_today() + relativedelta(weeks=-1, days=1, weekday=0)).strftime('%%Y-%%m-%%d'))),
+                            ('date_create', '&lt;=', ((context_today()+ relativedelta(weeks=0, weekday=6)).strftime('%%Y-%%m-%%d')))]"/>
+                        <filter string="Last week" name="last_week" separator="1"
+                                domain="[('date_create', '&gt;=', ((context_today()+ relativedelta(weeks=-2, days=1, weekday=0)).strftime('%%Y-%%m-%%d'))),
+                            ('date_create', '&lt;=', ((context_today()+ relativedelta(weeks=-1, weekday=6)).strftime('%%Y-%%m-%%d')))]"/>
+                        <newline/>
+                        <filter string="This Month" name="current_month"
+                                domain="[('date_create','&lt;',(context_today() + relativedelta(months=1)).strftime('%Y-%m-01')),
+                            ('date_create','&gt;=',time.strftime('%Y-%m-01'))]"/>
+                        <filter string="Last Month" name="last_month"
+                                domain="[('date_create','&lt;=', (context_today()-relativedelta(day=31, months=1)).strftime('%Y-%m-%d')),
+                            ('date_create','&gt;=',(context_today()-relativedelta(day=1,months=1)).strftime('%Y-%m-%d'))]"/>
+                        <newline/>
+                        <filter string="This Year" name="this_year"
+                                domain="[('date_create','&lt;=',(context_today() - relativedelta(years=0)).strftime('%Y-12-31')),
+                            ('date_create','&gt;=',time.strftime('%Y-01-01'))]"/>
+                        <filter string="Last Year" name="last_year"
+                                domain="[('date_create','&gt;=',(context_today() - relativedelta(years=1)).strftime('%Y-01-01')),
+                            ('date_create','&lt;=',time.strftime('%Y-01-01'))]"/>
+                        <separator/>
+                        <group expand="0" string="Group By">
+                            <filter name="group_by_survey" string="Survey" domain="[]"
+                                    context="{'group_by': 'survey_id'}"/>
+                        </group>
+                    </search>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_tree_line_inherit">
+            <field name="name">survey_user_input_tree_line_inherit</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="inherit_id" ref="survey.survey_response_line_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree string="Survey Answer Line" create="false" edit="false" delete="false">
+                        <field name="partner_id"/>
+                        <field name="date_create"/>
+                        <field name="answer"/>
+                        <field name="quizz_mark" groups="base.group_no_one"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_form_line_inherit">
+            <field name="name">survey_user_input_form_line_inherit</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="inherit_id" ref="survey.survey_user_input_line_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="replace">
+                    <form string="User input line details" create="false" edit="false" delete="false">
+                        <sheet>
+                            <group col="4">
+                                <field name="question_id"/>
+                                <field name="date_create"/>
+                                <field name="answer_type"/>
+                                <field name="skipped"/>
+                                <field name="quizz_mark" groups="base.group_no_one"/>
+                            </group>
+                            <group>
+                                <field name="value_text" colspan='2'
+                                       attrs="{'invisible': [('answer_type','!=','text')]}"/>
+                                <field name="value_number" colspan='2'
+                                       attrs="{'invisible': [('answer_type','!=','number')]}"/>
+                                <field name="value_date" colspan='2'
+                                       attrs="{'invisible': [('answer_type','!=','date')]}"/>
+                                <field name="value_free_text" colspan='2'
+                                       attrs="{'invisible': [('answer_type','!=','free_text')]}"/>
+                                <field name="value_suggested_row" colspan='2'/>
+                                <field name="value_suggested" colspan='2'
+                                       attrs="{'invisible': [('answer_type','!=','suggestion')]}"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_search_line_inherit">
+            <field name="name">survey_user_input_search_line_inherit</field>
+            <field name="model">survey.user_input_line</field>
+            <field name="inherit_id" ref="survey.survey_response_line_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//search" position="replace">
+                    <search string="Search User input lines">
+                        <field name="partner_id"/>
+                        <field name="survey_id"/>
+                        <field name="date_create"/>
+                        <group expand="1" string="Group By">
+                            <filter name="group_by_department_page" string="Bộ phận" domain="[]"
+                                    context="{'group_by':'department_page_id'}"/>
+                            <filter name="group_by_question" string="Question" domain="[]"
+                                    context="{'group_by':'question_id'}"/>
+                            <filter name="group_by_free_text" string="Câu trả lời với chữ tự do"
+                                    context="{'group_by':'value_free_text'}"/>
+                        </group>
+                    </search>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="survey.action_survey_user_input_line">
+            <field name="name">Department Page Statics</field>
+            <field name="res_model">survey.user_input_line</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="search_view_id" ref="survey.survey_response_line_search"/>
+            <field name="context">{'search_default_group_by_department_page': True,
+                'search_default_group_by_question':True}
+            </field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    No user input lines found
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_form_inherit">
+            <field name="name">survey_user_input_form_inherit</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='deadline']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="replace">
+                    <field name="partner_id" options='{"no_open": True}'/>
+                    <field name="survey_creator" options='{"no_open": True}' readonly="1"/>
+                    <field name="signature" widget='signature' readonly="1" colspan="1"/>
+                    <button name="%(sci_survey.action_open_survey_sign)d" string="Sign" type="action"
+                            context="{'default_user_input_id':active_id}" class="btn-success"
+                            attrs="{'invisible': [('signature', '!=', False)]}" colspan="2"/>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='user_input_line_ids']" position="replace">
+                    <field name="user_input_line_ids" mode="tree" attrs="{'readonly': False}">
+                        <tree create="false" edit="false" delete="false" default_order='department_page_id'>
+                            <field name="department_page_id"/>
+                            <field name="question_id"/>
+                            <field name="answer"/>
+                            <field name="skipped"/>
+                            <field name="date_create"/>
+                            <field name="quizz_mark" groups="base.group_no_one"/>
+                        </tree>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="survey_user_input_tree_inherit">
+            <field name="name">survey_user_input_tree_inherit</field>
+            <field name="model">survey.user_input</field>
+            <field name="inherit_id" ref="survey.survey_user_input_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree string="Survey User inputs" decoration-muted="test_entry == True"
+                          decoration-danger="status == 'warning'" create="false">
+                        <field name="partner_id"/>
+                        <field name="date_create"/>
+                        <field name="state"/>
+                        <field name="status"/>
+                        <field name="survey_creator"/>
+                        <field name="test_entry" invisible="True"/>
+                        <field name="quizz_score" groups="base.group_no_one"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="survey.action_survey_user_input">
+            <field name="name">Survey Statics</field>
+            <field name="res_model">survey.user_input</field>
+            <field name="view_mode">tree,pivot,form</field>
+            <field name="view_id" ref="survey.survey_user_input_tree"></field>
+            <field name="search_view_id" ref="survey.survey_user_input_search"/>
+            <field name="context">{'search_default_group_by_survey': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_empty_folder">
+                    Nobody has replied to your surveys yet
+                </p>
+            </field>
+        </record>
+
+        <record id="survey_survey_form_inherit" model="ir.ui.view">
+            <field name="name">survey.survey.form.inherit</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header groups="survey.group_survey_manager">
+                        <button name="action_test_survey" string="Test Survey" type="object"
+                                attrs="{'invisible': [('id', '=', False)]}"/>
+                        <button name="print_qr" string="Print QR" type="object" class="oe_highlight"/>
+                        <field name="stage_id" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='title']" position="after">
+                    <div class="oe_title" style="width: 100%;">
+                        <label for="description" class="oe_edit_only"/>
+                        <h2>
+                            <field name="description" placeholder="Description"/>
+                        </h2>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='users_can_go_back']" position="before">
+                    <field name="thank_you_message"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="survey_survey_kanban_inherit" model="ir.ui.view">
+            <field name="name">survey.survey.kanban.inherit</field>
+            <field name="model">survey.survey</field>
+            <field name="inherit_id" ref="survey.survey_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div/div[3]/ul/li[2]" position="replace">
+                </xpath>
+            </field>
+        </record>
+
+        <record id="survey_question_form_inherit" model="ir.ui.view">
+            <field name="name">survey.question.form.inherit</field>
+            <field name="model">survey.question</field>
+            <field name="inherit_id" ref="survey.survey_question_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='type']" position="after">
+                    <field name="department_page_id"/>
+                </xpath>
+                <xpath expr="//label[@for='validation_email']" position="after">
+                    <seperator/>
+                    <field name="validation_phone_number" attrs="{'invisible': [('type', '!=', 'textbox')]}"/>
+                    <label for="validation_phone_number" attrs="{'invisible': [('type', '!=', 'textbox')]}"/>
+                    <field name="is_picture_view" attrs="{'invisible': [('type', '!=', 'matrix')]}"/>
+                    <label for="is_picture_view" attrs="{'invisible': [('type', '!=', 'matrix')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='labels_ids']/tree" position="replace">
+                    <tree>
+                        <field name="sequence" widget="handle"/>
+                        <field name="value" string="Choices"/>
+                        <field name="icon" widget="image" style="width:100px;"
+                               attrs="{'column_invisible' : ['|',('parent.is_picture_view','=',True),('parent.display_mode', '!=', 'icon'),('parent.display_mode_multiple_choice', '!=', 'icon'),('parent.type', 'not in', ['matrix'])]}"/>
+                        <field name="is_warning"
+                               attrs="{'column_invisible' : [('parent.type', 'not in', ['matrix','simple_choice'])]}"/>
+                        <field name="email"
+                               attrs="{'column_invisible' : [('parent.type', 'not in', ['simple_choice','multiple_choice'])]}"/>
+                        <field name="quizz_mark" groups="base.group_no_one"/>
+                    </tree>
+                    <form>
+                        <group col="4">
+                            <field name="value" string="Choices"/>
+                            <field name="is_warning"
+                                   attrs="{'invisible' : [('parent.type', 'not in', ['matrix','simple_choice'])]}"/>
+                            <field name="email"
+                                   attrs="{'invisible' : [('parent.type', 'not in', ['simple_choice','multiple_choice'])]}"/>
+                            <field name="icon" widget="image" style="width:100px;"
+                                   attrs="{'invisible' : ['|',('parent.is_picture_view','=',True),('parent.display_mode', '!=', 'icon'),('parent.display_mode_multiple_choice', '!=', 'icon'),('parent.type', 'not in', ['matrix'])], 'required' : ['|','|','&amp;',('parent.type', '=', 'simple_choice'),('parent.display_mode', '=', 'icon'),'&amp;',('parent.is_picture_view','=',False),('parent.type', '=', 'matrix'),'&amp;',('parent.display_mode_multiple_choice','=','icon'),('parent.type', '=', 'multiple_choice')]}"/>
+                        </group>
+                    </form>
+                </xpath>
+                <xpath expr="//field[@name='labels_ids_2']/tree" position="replace">
+                    <tree>
+                        <field name="sequence" widget="handle"/>
+                        <field name="value" string="Rows"/>
+                        <field name="picture" widget="image" style="width:100px;"
+                               attrs="{'column_invisible' : [('parent.is_picture_view', '=', False)]}"/>
+                        <field name="department_id" attrs="{'required' : [('parent.is_picture_view', '=', True)]}"/>
+                        <field name="email"/>
+                    </tree>
+                    <form>
+                        <group col="4">
+                            <field name="value" string="Rows"/>
+                            <field name="picture" widget="image" style="width:100px;"
+                                   attrs="{'invisible' : [('parent.is_picture_view', '=', False)],'required' : [('parent.is_picture_view', '=', True)]}"/>
+                            <field name="department_id" attrs="{'required' : [('parent.is_picture_view', '=', True)]}"/>
+                            <field name="email"/>
+                        </group>
+                    </form>
+                </xpath>
+                <xpath expr="//field[@name='comment_count_as_answer']" position="after">
+                    <field name="email"
+                           attrs="{'invisible': ['|', ('comment_count_as_answer', '=', False), ('type', 'not in', ['multiple_choice'])]}"/>
+                </xpath>
+                <xpath expr="//page[2]/group[1]" position="replace">
+                    <group string="Constraints" attrs="{'invisible': [('is_picture_view','=',True)]}">
+                        <group colspan="2" col="4">
+                            <field name="constr_mandatory" string="Mandatory Answer"/>
+                            <field name="constr_error_msg" attrs="{'invisible': [('constr_mandatory', '=', False)]}"/>
+                        </group>
+                        <div colspan="2"
+                             attrs="{'invisible': [('type', 'not in', ['textbox', 'numerical_box', 'date'])]}">
+                            <group>
+                                <field name="validation_required"
+                                       attrs="{'invisible': [('validation_email', '=', True), ('type', '=', 'textbox')]}"/>
+                            </group>
+                            <group col="4" attrs="{'invisible': [('validation_required', '=', False)]}">
+                                <field name="validation_length_min" attrs="{'invisible': [('type', '!=', 'textbox')]}"/>
+                                <field name="validation_length_max" attrs="{'invisible': [('type', '!=', 'textbox')]}"/>
+                                <field name="validation_min_float_value"
+                                       attrs="{'invisible': [('type', '!=', 'numerical_box')]}"/>
+                                <field name="validation_max_float_value"
+                                       attrs="{'invisible': [('type', '!=', 'numerical_box')]}"/>
+                                <field name="validation_min_date" attrs="{'invisible': [('type', '!=', 'date')]}"/>
+                                <field name="validation_max_date" attrs="{'invisible': [('type', '!=', 'date')]}"/>
+                                <field name="validation_error_msg" colspan="4"/>
+                            </group>
+                        </div>
+                        <group>
+                            <field name="matrix_subtype" attrs="{'invisible':[('type','not in',['matrix'])]}"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//page[2]/group[2]" position="replace">
+                    <group string="Display mode"
+                           attrs="{'invisible':[('type','not in',['simple_choice', 'multiple_choice','matrix']),('is_picture_view','=',False)]}">
+                        <field name="display_mode_multiple_choice" string="Format"
+                               attrs="{'invisible':[('type','not in',['multiple_choice'])],'required':[('type','=','multiple_choice')]}"/>
+                        <field name="display_mode" string="Format"
+                               attrs="{'invisible':[('type','not in',['simple_choice'])],'required':[('type','=','simple_choice')]}"/>
+                        <field name="display_mode_matrix" string="Format"
+                               attrs="{'invisible':[('type','not in',['matrix'])],'required':[('type','=','matrix')]}"/>
+                        <field name="column_nb" string="Number of columns"
+                               attrs="{'invisible':[('display_mode','=','dropdown'), ('type','=','simple_choice')]}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_survey_department_form" model="ir.ui.view">
+            <field name="name">survey.department.form</field>
+            <field name="model">survey.department</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="main">
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_survey_department_tree" model="ir.ui.view">
+            <field name="name">survey.department.tree</field>
+            <field name="model">survey.department</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_survey_department_search" model="ir.ui.view">
+            <field name="name">survey.department.search</field>
+            <field name="model">survey.department</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_survey_department_view">
+            <field name="name">Department</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">survey.department</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_survey_department_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_survey_department_form_view">
+            <field name="act_window_id" ref="act_open_survey_department_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_survey_department_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_survey_department_tree_view">
+            <field name="act_window_id" ref="act_open_survey_department_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_survey_department_tree"/>
+        </record>
+    </data>
+</odoo>

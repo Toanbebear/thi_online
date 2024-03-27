@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_form_crm_partner" model="ir.ui.view">
+            <field name="name">Form crm partner</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="code_customer"/>
+                    <field name="source_id" readonly="True" force_save="True"/>
+                    <field name="pass_port"/>
+                    <field name="gender"/>
+                    <field name="birth_date"/>
+                    <field name="year_of_birth" required="True"/>
+                    <field name="age"/>
+                    <field name="relation_ids" widget="many2many_tags" options='{"no_open": True, "no_create": True}'/>
+                </xpath>
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="CRM" string="CRM">
+                        <field name="crm_ids">
+                            <tree create="false">
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="payment_ids" string="Payments">
+                        <field name="payment_ids">
+                            <tree create="false">
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="amount"/>
+                                <field name="currency_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Sale order">
+                        <field name="sale_order_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="amount_total"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="seq_code_partner" model="ir.sequence">
+            <field name="name">Code partner</field>
+            <field name="code">res.partner</field>
+            <field name="prefix">CUS</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

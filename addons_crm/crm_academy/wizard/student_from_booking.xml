@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="student_from_booking_form" model="ir.ui.view">
+        <field name="name">student.from.booking.form</field>
+        <field name="model">student.from.booking</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" readonly="True" force_save="True"/>
+                    <field name="covert_gender_to_op_student"/>
+                    <field name="phone" readonly="True" force_save="True"/>
+                    <field name="lead_id" readonly="True" force_save="True"/>
+                    <field name="institute_id" readonly="True" force_save="True" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="line_ids" required="True" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="course_ids" widget="many2many_tags" invisible="True" options="{'no_create': True, 'no_open': True}"/>
+                    <field name="class_ids" required="True" widget="many2many_tags" options="{'no_create': True, 'no_open': True}"/>
+                </group>
+                <footer>
+                    <button type="object" name="arrange_class" string="Arrange class"
+                            class="btn-info"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

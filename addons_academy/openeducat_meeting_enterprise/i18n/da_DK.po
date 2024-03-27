@@ -1,0 +1,579 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:05+0000\n"
+"PO-Revision-Date: 2018-03-08 23:51-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Danish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: da\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_meeting_enterprise/i18n/openeducat_meeting_enterprise.pot\n"
+"Language: da_DK\n"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_highlighted
+msgid "# Meetings Highlight"
+msgstr "# Møder fremhæve"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "<span> hours</span>"
+msgstr "<span> timer</span>"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Accept"
+msgstr "Acceptere"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "Active"
+msgstr "Aktive"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_activity_ids
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_allday
+msgid "All Day"
+msgstr "Hele dagen"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Are You Sure You Want To Create Meeting"
+msgstr "Vil du oprette møde"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_attendee
+msgid "Attendee"
+msgstr "Deltager"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_status
+msgid "Attendee Status"
+msgstr "Deltagerstatus"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_ids
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Attendees"
+msgstr "Deltagere"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Availability"
+msgstr "Tilgængelighed"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_byday
+msgid "By day"
+msgstr "Af dagen"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Cancel"
+msgstr "Annuller"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "Click to schedule a new meeting."
+msgstr "Klik for at planlægge et nyt møde."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Confirm"
+msgstr "Bekræfte"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: openeducat_meeting_enterprise
+#: code:addons/openeducat_meeting_enterprise/wizard/op_meeting_wizard.py:47
+#, python-format
+msgid "Create Event"
+msgstr "Opret Event"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Create Meeting Event"
+msgstr "Oprette møde Event"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_uid
+msgid "Created by"
+msgstr "Lavet af"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_date
+msgid "Created on"
+msgstr "Lavet på"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_start
+msgid "Date"
+msgstr "Dato"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_day
+msgid "Date of month"
+msgstr "Datoen for måned"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Decline"
+msgstr "Tilbagegang"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_description
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_name
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_display_name
+msgid "Display Name"
+msgstr "Visningsnavn"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_id
+msgid "Document ID"
+msgstr "Dokument-ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model_id
+msgid "Document Model"
+msgstr "Dokument Model"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model
+msgid "Document Model Name"
+msgstr "Dokumentnavnet Model"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_duration
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Duration"
+msgstr "Varighed"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "End Date"
+msgstr "Slutdato"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_datetime
+msgid "End Datetime"
+msgstr "Ende Datetime"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Ending at"
+msgstr "Slutter på"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_time
+msgid "Event Time"
+msgstr "Event tid"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_faculty
+msgid "Faculty"
+msgstr "Fakultet"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_fr
+msgid "Fri"
+msgstr "Fre"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Group By"
+msgstr "Gruppe af"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "If the active field is set to false, it will allow you to hide the event alarm information without removing it."
+msgstr "Hvis det aktive felt er angivet til false, kan du skjule event alarm oplysninger uden at fjerne den."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitation details"
+msgstr "Invitation detaljer"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitations"
+msgstr "Invitationer"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting___last_update
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard___last_update
+msgid "Last Modified on"
+msgstr "Sidst ændret på"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_date
+msgid "Last Updated on"
+msgstr "Senest opdateret"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Let the event automatically repeat at that interval"
+msgstr "Lad hændelsen automatisk gentage dette interval"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location"
+msgstr "Beliggenhed"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location of Event"
+msgstr "Placeringen af begivenhed"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_faculty
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_parent
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_wizard_student
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_meeting_id
+#: model:ir.ui.menu,name:openeducat_meeting_enterprise.menu_meeting
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Meeting"
+msgstr "Møde"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Meeting Details"
+msgstr "Mødedetaljer"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_name
+msgid "Meeting Subject"
+msgstr "Mødeemnet"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event_notify
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Meetings"
+msgstr "Møder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Misc"
+msgstr "Misc"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_mo
+msgid "Mon"
+msgstr "Mon"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Events"
+msgstr "Mine begivenheder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Meetings"
+msgstr "Mine møder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_month_by
+msgid "Option"
+msgstr "Indstilling"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Options"
+msgstr "Indstillinger"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Owner"
+msgstr "Ejer"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_parent
+msgid "Parent"
+msgstr "Forælder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_ids
+msgid "Participant"
+msgstr "Deltager"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_partner_id
+msgid "Partner-related data of the user"
+msgstr "Partner-relaterede data fra brugeren"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_privacy
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Privacy"
+msgstr "Beskyttelse af personlige oplysninger"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Recurrence"
+msgstr "Gentagelse"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_end_type
+msgid "Recurrence Termination"
+msgstr "Gentagelse opsigelse"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent"
+msgstr "Tilbagevendende"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id
+msgid "Recurrent ID"
+msgstr "Tilbagevendende ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id_date
+msgid "Recurrent ID date"
+msgstr "Tilbagevendende id-dato"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent Meeting"
+msgstr "Tilbagevendende møde"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule
+msgid "Recurrent Rule"
+msgstr "Tilbagevendende regel"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_alarm_ids
+msgid "Reminders"
+msgstr "Påmindelser"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat"
+msgstr "Gentag"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat Every"
+msgstr "Gentag hver"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_final_date
+msgid "Repeat Until"
+msgstr "Gentag indtil"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Gentag hvert (dage/uge/måned/år)"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat x times"
+msgstr "Gentag x gange"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_user_id
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Responsible"
+msgstr "Ansvarlig"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_sa
+msgid "Sat"
+msgstr "Lør"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Search Meetings"
+msgstr "Søg efter møder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Select attendees..."
+msgstr "Vælg deltagere..."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Send mail"
+msgstr "Send mail"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_show_as
+msgid "Show Time as"
+msgstr "Vis tidspunkt som"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start"
+msgstr "Start"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Start Date"
+msgstr "Start dato"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_datetime
+msgid "Start DateTime"
+msgstr "Start dato"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start date of an event, without time for full days events"
+msgstr "Startdatoen for en begivenhed, uden tid til fulde dage begivenheder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Starting at"
+msgstr "Startende fra"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_state
+msgid "Status"
+msgstr "Status"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop"
+msgstr "Stop"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop date of an event, without time for full days events"
+msgstr "Stop datoen for en hændelse, uden tid til fulde dage begivenheder"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_student
+msgid "Student"
+msgstr "Studerende"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Subject"
+msgstr "Emne"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_su
+msgid "Sun"
+msgstr "Solen"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_categ_ids
+msgid "Tags"
+msgstr "Tags"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "The calendar is shared between employees and fully integrated with\n"
+"                other applications such as the employee holidays or the\n"
+"                business\n"
+"                opportunities."
+msgstr "Kalenderen er delt mellem medarbejdere og fuldt integreret med andre applikationer som medarbejder ferie eller forretningsmæssige muligheder."
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_th
+msgid "Thu"
+msgstr "Skrevet tors"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_tu
+msgid "Tue"
+msgstr "Tue"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Uncertain"
+msgstr "Usikker"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Unread Messages"
+msgstr "Ulæste beskeder"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_we
+msgid "Wed"
+msgstr "Ons"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_week_list
+msgid "Weekday"
+msgstr "Ugedag"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "e.g. Business Lunch"
+msgstr "fx forretningsfrokost"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_faculty
+msgid "op.faculty"
+msgstr "op.Faculty"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting
+msgid "op.meeting"
+msgstr "op.Meeting"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting_wizard
+msgid "op.meeting.wizard"
+msgstr "op.Meeting.Wizard"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_parent
+msgid "op.parent"
+msgstr "op.Parent"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_student
+msgid "op.student"
+msgstr "op.student"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "or"
+msgstr "eller"
+

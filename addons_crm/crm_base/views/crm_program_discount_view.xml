@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="crm_discount_program_form">
+            <field name="name">Crm discount program</field>
+            <field name="model">crm.discount.program</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="stage_prg" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <field name="active" groups="base.group_system"/>
+                        <div class="oe_title">
+                            <label for="name" string="Name" style="color: #002050;font-size: 25px;"/>
+                            <h1>
+                                <field name="name" placeholder="Describe the program..." required="True"/>
+                            </h1>
+                            <h2>
+                                <field name="code" readonly="1"/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="start_date" required="True"/>
+                                <field name="end_date" required="True"/>
+                                <!--                                <field name="type_service" required="True"/>-->
+                                <field name="brand_id" required="True" options='{"no_open": True, "no_create": True}'/>
+                                <field name="company_ids" widget="many2many_tags"
+                                       placeholder="if the branch field has no value, it applies to all branches of the brand by default"
+                                       options='{"no_open": True, "no_create": True}'
+                                       domain="[('id', 'in', allowed_company_ids),('brand_id','=',brand_id)]"/>
+                            </group>
+                            <group>
+                                <field name="related_discounts_program_ids" widget="many2many_tags"/>
+                                <field name="campaign_id" options='{"no_open": True, "no_create": True}'
+                                       required="True"/>
+                                <field name="doc_attachment_id" widget="many2many_binary" class="oe_inline"/>
+                                <field name="loyalty_active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Product/Category product">
+                                <field name="discount_program_rule" context="{'default_discount_program':id,}"
+                                       mode="tree">
+                                    <tree>
+                                        <field name="product_id"/>
+                                        <field name="type_discount"/>
+                                        <field name="discount"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="product_id"/>
+                                                <field name="type_discount"/>
+                                                <field name="discount"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_discount_program_tree">
+            <field name="name">Discount program</field>
+            <field name="model">crm.discount.program</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="brand_id"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="open_discount_program" model="ir.actions.act_window">
+            <field name="name">Discount Program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.discount.program</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_crm_discount"
+                  name="Discount program"
+                  parent="crm.crm_menu_root"
+                  action="open_discount_program"
+                  sequence="9"
+        />
+
+    </data>
+</odoo>
+
+

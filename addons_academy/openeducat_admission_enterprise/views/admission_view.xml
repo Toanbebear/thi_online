@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="act_dashboard_op_admission_view">
+            <field name="name">Admissions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.admission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="openeducat_admission.view_op_admission_search"/>
+            <field name="domain">[('course_id', '=', active_id), ('state','!=','done')]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_dashboard_op_admission_register_view">
+            <field name="name">Admissions Register</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.admission.register</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('course_id', '=', active_id), ('state','!=','done')]</field>
+            <field name="context">{'default_course_id': active_id}</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="contract_sci_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức SCI</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/SCI/HD_CT_SCI.docx"/>
+            <field name="store_fname">HD_CT_SCI.docx</field>
+        </record>
+
+        <record id="contract_sci_probation_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc SCI</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/SCI/HD_TV_SCI.docx"/>
+            <field name="store_fname">HD_TT_SCI.docx</field>
+        </record>
+
+        <record id="contract_sci_trainee_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng học việc SCI</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/SCI/HD_HV_SCI.docx"/>
+            <field name="store_fname">HD_HV_SCI.docx</field>
+        </record>
+
+        <record id="contract_sci_sdha_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng sử dụng hình ảnh SCI</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/SCI/HD_SDHA_SCI.docx"/>
+            <field name="store_fname">HD_SDHA_SCI.docx</field>
+        </record>
+    </data>
+</odoo>

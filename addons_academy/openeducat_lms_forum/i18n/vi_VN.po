@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openeducat_lms_forum
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-10 06:16+0000\n"
+"PO-Revision-Date: 2021-06-10 06:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid ""
+"(Un)archiving a post automatically (un)archives its answers. Do you want to "
+"proceed?"
+msgstr ""
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Answered by"
+msgstr "Trả lời bởi"
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Answers"
+msgstr "Câu trả lời"
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.course_detail_inherit
+msgid "Ask a Question"
+msgstr "Đặt câu hỏi"
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_op_course__forum_post_ids
+msgid "Blog Post"
+msgstr "Bài Blog"
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_forum_post__course_id
+msgid "Course"
+msgstr "Khóa học"
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Create Forum"
+msgstr ""
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_op_course__forum_id
+msgid "Forum"
+msgstr "Diễn đàn"
+
+#. module: openeducat_lms_forum
+#: model:ir.model,name:openeducat_lms_forum.model_forum_post
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Forum Post"
+msgstr "Bài đăng"
+
+#. module: openeducat_lms_forum
+#: code:addons/openeducat_lms_forum/models/course.py:0
+#, python-format
+msgid ""
+"It appears your email has not been verified to                     "
+"participate in forum, Verify it from forum menu on                     "
+"homepage."
+msgstr ""
+"Dường như email của bạn đã không được xác minh để tham gia vào các diễn đàn,"
+" xác minh nó từ diễn đàn đơn trên trang chủ."
+
+#. module: openeducat_lms_forum
+#: model:ir.model,name:openeducat_lms_forum.model_op_course
+msgid "LMS Course"
+msgstr ""
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Name"
+msgstr "Tên"
+
+#. module: openeducat_lms_forum
+#: model_terms:ir.ui.view,arch_db:openeducat_lms_forum.course_detail_inherit
+msgid "Q&amp;A"
+msgstr ""

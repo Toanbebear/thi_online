@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+    <div t-name="OpenEduCatMainDashboard" class="container o_account_contract_dashboard">
+        <div class="box">
+            <center><h2>Main Dashboard</h2></center>
+        </div>
+
+        <div class="box">
+            <div class="row pl-4 pr-4">
+                <div class="col-md-3 text-center enrolled_student" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Male/Female Ratio</h4>
+                    <span id="mf_ratio">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center enrolled_student" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Enrolled Students</h4>
+                    <span id="erolled_students">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center enrolled_student" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Student Enrollment Rate</h4>
+                    <span id="student_enroll_rate">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center enrolled_student" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Student/Professor Ratio</h4>
+                    <span id="sp_ratio">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="col-xs-6">
+            <h4>Batches</h4>
+            </div>
+            <div class="col-xs-6">
+                <select id="batch_selection">
+                    <t t-if="batch_ids">
+                        <t t-foreach="batch_ids" t-as="batch">
+                            <option t-att-value="batch['id']"><t t-esc="batch['name']" /></option>
+                        </t>
+                    </t>
+                </select>
+            </div>
+        </div>
+
+        <div class="box o_graph_detailed">
+            <h3 class="o_blue">
+                Attendance Sheet
+            </h3>
+            <div id="stat_chart_div" />
+        </div>
+
+        <div class="box">
+            <div class="row pl-4 pr-4">
+                <div class="col-md-3 text-center" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Today's Attendance Ratio</h4>
+                    <span id="tar">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center today_lecture" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Today's Lecture</h4>
+                    <span id="tbl">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center total_assignment" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Total Assignments</h4>
+                    <span id="ta">
+                    </span>
+                </div>
+                <div class="col-md-3 text-center total_student" style="background-color:lightblue;">
+                    <h4 class="o_small_caps">Total Students</h4>
+                    <span id="ts">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="reward_form" model="ir.ui.view">
+        <field name="name">Reward</field>
+        <field name="model">crm.loyalty.line.reward</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="General information">
+                            <field name="name"/>
+                            <field name="brand_id" options="{'no_open':True,'no_create':True}" required="True"/>
+                            <field name="rank_id" options="{'no_open':True,'no_create':True}" required="True"/>
+                            <field name="loyalty_id" invisible="True"/>
+                            <field name="type_reward" required="True"/>
+                            <field name="active"/>
+                            <field name="reward_parent"/>
+                            <field name="crm_line_ids" widget="many2many_tags"/>
+                        </group>
+                        <group string="Reward information">
+                            <field name="product_id"
+                                   attrs="{'invisible':[('type_reward','!=','prd')],
+                                   'required':[('type_reward','=','prd')]}"/>
+                            <field name="quantity"
+                                   attrs="{'required':[('type_reward','=','prd')],
+                                   'invisible':[('type_reward','!=','prd')]}"/>
+                            <field name="number_use"
+                                   attrs="{'invisible':[('loyalty_id','=',False)]}" readonly="True" force_save="True"/>
+                            <field name="category_id"
+                                   attrs="{'invisible':[('type_reward','!=','ctg')],
+                                   'required':[('type_reward','=','ctg')]}"/>
+                            <field name="discount_percent"
+                                   attrs="{'invisible':[('type_reward','!=','ctg')],
+                                   'required':[('type_reward','=','ctg')]}"/>
+                            <field name="currency_id" readonly="True" force_save="True"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="reward_tree" model="ir.ui.view">
+        <field name="name">Reward</field>
+        <field name="model">crm.loyalty.line.reward</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="rank_id"/>
+                <field name="type_reward"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_open_reward" model="ir.actions.act_window">
+        <field name="name">Reward</field>
+        <field name="res_model">crm.loyalty.line.reward</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+            id="loyalty_menu_reward"
+            name="Reward"
+            action="action_open_reward"
+            parent="loyalty_menu_root"
+            sequence="3"/>
+
+    <record id="loyalty_date_form" model="ir.ui.view">
+        <field name="name">Loyalty date</field>
+        <field name="model">crm.loyalty.date</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="brand_id"/>
+                        <field name="type"/>
+                        <field name="date"/>
+                        <field name="month"/>
+                    </group>
+                    <notebook>
+                        <page string="Reward">
+                            <field name="reward_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="loyalty_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="loyalty_date_tree" model="ir.ui.view">
+        <field name="name">Loyalty date</field>
+        <field name="model">crm.loyalty.date</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="date"/>
+                <field name="month"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_open_loyalty_date" model="ir.actions.act_window">
+        <field name="name">Loyalty date</field>
+        <field name="res_model">crm.loyalty.date</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+            id="loyalty_date"
+            name="Loyalty date"
+            action="action_open_loyalty_date"
+            parent="loyalty.config_loyalty_menu_root"
+            sequence="3"/>
+
+    <record id="loyalty_bonus_date_form" model="ir.ui.view">
+        <field name="name">Loyalty bonus date</field>
+        <field name="model">crm.loyalty.reward.date.special</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="brand_id"/>
+                            <field name="currency_id"/>
+                            <field name="loyalty_id"/>
+                            <field name="type"/>
+                            <field name="bonus_date_parent_id"/>
+                            <field name="bonus_date_child_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="reward_origin"/>
+                            <field name="reward_used"/>
+                            <field name="reward_remain"/>
+                            <field name="active_date"/>
+                            <field name="end_date"/>
+                            <field name="stage"/>
+                            <field name="date_special"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="loyalty_bonus_date_tree" model="ir.ui.view">
+        <field name="name">Loyalty bonus date</field>
+        <field name="model">crm.loyalty.reward.date.special</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="type"/>
+                <field name="active_date"/>
+                <field name="end_date"/>
+                <field name="stage"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_open_loyalty_bonus_date" model="ir.actions.act_window">
+        <field name="name">Loyalty bonus date</field>
+        <field name="res_model">crm.loyalty.reward.date.special</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem
+            id="loyalty_bonus_date"
+            name="Loyalty Bonus date"
+            action="action_open_loyalty_bonus_date"
+            parent="loyalty.config_loyalty_menu_root"
+            sequence="10"/>
+
+</odoo>

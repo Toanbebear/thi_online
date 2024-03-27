@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_ad_batch_form_inherited" model="ir.ui.view">
+            <field name="name">ad.batch.form.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='faculty_bom_cost']" position="after">
+                    <field name="bom_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+<!--                    <field name="total_bom_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>-->
+                    <field name="total_cost" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

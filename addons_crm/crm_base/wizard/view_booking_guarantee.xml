@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_create_booking_guarantee">
+            <field name="name">Create booking guarantee</field>
+            <field name="model">crm.create.guarantee</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="crm_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                        <field name="partner_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                        <field name="brand_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                        <field name="code_booking" required="True"/>
+                        <field name="source_id" required="True" options="{'no_open':True}"/>
+                        <field name="price_list_id" required="True" options="{'no_open':True,'no_create':True}"/>
+                        <field name="date_guarantee" required="True"/>
+                    </group>
+                    <footer class="text-center">
+                        <button name="confirm" type="object" string="Create booking guarantee" class="btn-info"/>
+                        <button string="Cancel" special="cancel" class="btn-danger"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

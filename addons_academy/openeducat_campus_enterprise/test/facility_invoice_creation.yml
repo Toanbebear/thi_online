@@ -1,0 +1,83 @@
+-
+  In order to test facility type
+-
+  !record {model: op.facility.type, id: op_facility_type_hostel_test}:
+    name: 'Hostel'
+    code: 'ho'
+-
+  In order to test campus facility
+-
+  !record {model: op.campus.facility, id: op_campus_facility_boys_test}:
+    name: 'Boys Hostel'
+    facility_type_id: op_facility_type_hostel_test
+    capacity: 1
+-
+  create service product category
+-
+  !record {model: product.category, id: product_categ_service}:
+    name: 'Services'
+-
+  create Facility product
+-
+  !record {model: product.product, id: product_hostel_charge}:
+    name: 'Hostel Charge'
+    type: 'service'
+    default_code: 'Hostel Charge'
+    categ_id: product_categ_service
+    uom_id: product.product_uom_unit
+    uom_po_id: product.product_uom_unit
+-
+  create Partner
+-
+  !record {model: res.partner, id: res_partner1}:
+    name: 'Prachi'
+-
+  In order to test invoice creation I create first facility allocation and then create invoice from there
+-
+  !record {model: op.facility.allocation, id: facility_allocation}:
+    partner_id: res_partner1
+    facility_id: op_campus_facility_boys_test
+    company_id: base.main_company
+    product_id: product_hostel_charge
+    from_date: !eval datetime.now().strftime('%Y-%m-%d')
+    to_date: !eval time.strftime('%Y-%m')+'-15'
+-
+   Create a user as 'Backoffice user'
+-
+  !record {model: res.users, id: res_users_backoffice_user_test, view: False}:
+    company_id: base.main_company
+    name: 'Backoffice Test'
+    login: 'backoffice'
+    email: 'backofficetest@openeducat.org'
+-
+  I added groups to Backoffice User.
+-
+  !record {model: res.users, id: res_users_backoffice_user_test}:
+    groups_id:
+      - openeducat_core.group_op_back_office
+-
+  Accountant can also be created receipt and validate it there for I checked it with that user who is accountant.
+-
+  !context
+    uid: res_users_backoffice_user_test
+-
+  I called the "Confirm Draft Invoices" wizard
+-
+  !record {model: facility.invoice, id: facility_invoice_wiz_0}:
+    partner_id: res_partner1
+    product_id: product_hostel_charge
+    from_date: !eval datetime.now().strftime('%Y-%m-%d')
+    to_date: !eval time.strftime('%Y-%m')+'-15'
+-
+  I clicked on Create Invoice Button
+-
+  !python {model: facility.invoice, id: False}: |
+    self.browse(ref("facility_invoice_wiz_0")).with_context({"lang": 'en_US',
+      "tz": False, "active_model": "op.facility.allocation", "active_ids": [ref("facility_allocation")],
+      "type": "out_invoice", "active_id": ref("facility_allocation"), }).create_invoice()
+-
+  I check that the Invoice field is set automatically when create invoice.
+-
+  !assert {model: op.facility.allocation, id: facility_allocation}:
+    - invoice_id.id != False
+

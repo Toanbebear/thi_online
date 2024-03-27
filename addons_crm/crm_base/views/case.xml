@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="crm_complain_code_view_form">
+            <field name="name">Form complain code</field>
+            <field name="model">crm.complain.code</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="code" required="1"/>
+                            <field name="name"/>
+                            <field name="department_ids" widget="many2many_tags" required="True"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_complain_code_view_tree">
+            <field name="name">Tree complain code</field>
+            <field name="model">crm.complain.code</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="department_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_complain_code_view" model="ir.actions.act_window">
+            <field name="name">Complain code</field>
+            <field name="res_model">crm.complain.code</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="crm_menu_complain"
+                  name="Case complain"
+                  parent="crm.crm_menu_root"
+                  sequence="6"/>
+
+        <menuitem id="crm_menu_complain_code"
+                  name="Complain code"
+                  parent="crm_menu_complain"
+                  action="action_complain_code_view"
+                  sequence="1"/>
+
+        <record model="ir.ui.view" id="crm_case_view_form">
+            <field name="name">Form Case</field>
+            <field name="model">crm.case</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Complain..." required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="General information">
+                                <field name="subject_case" required="True"/>
+                                <field name="code" readonly="True" force_save="True"/>
+                                <field name="phone" required="True"/>
+                                <field name="partner_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="country_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="state_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="street"/>
+                                <field name="account_facebook"/>
+                            </group>
+                            <group string="Interactive">
+                                <field name="booking_id" options="{'no_open':True,'no_create':True}" readonly="True" string="Mã Booking"/>
+                                <field name="phone_call_id" options="{'no_open':True,'no_create':True}" readonly="True"
+                                       force_save="True"/>
+                                <field name="create_by" options="{'no_open':True,'no_create':True}" readonly="True"
+                                       force_save="True"/>
+                                <field name="user_id" options="{'no_open':True,'no_create':True}" required="True"/>
+                                <field name="stage_id" required="True"/>
+                                <field name="brand_id" options="{'no_open':True,'no_create':True}" required="True"/>
+                                <field name="company_id" options="{'no_open':True,'no_create':True}" required="True"
+                                       domain="[('id', 'in', allowed_company_ids)]"/>
+                                <field name="start_date" required="True"/>
+                                <field name="end_date"
+                                       attrs="{'required':[('stage_id','=','done')],'invisible':[('stage_id','!=','done')]}"/>
+                                <field name="duration"/>
+                            </group>
+                            <group string="Nội dung khiệu nại">
+                                <field name="product_ids" widget="many2many_tags" domain="[('type', '=', 'service')]"/>
+                                <field name="content_complain_ids" widget="one2many">
+                                    <tree editable="bottom">
+                                        <field name="department_id" options="{'no_open':True,'no_create':True}"/>
+                                        <field name="code_detail" options="{'no_open':True,'no_create':True}"
+                                               widget="many2many_tags"/>
+                                    </tree>
+                                </field>
+                                <field name="type_case" required="True"/>
+                                <field name="priority" required="True"/>
+                                <field name="note"/>
+                            </group>
+                            <group string="Giáp pháp xử lý">
+                                <field name="content_solution_ids" widget="one2many" string="Giải pháp">
+                                    <tree editable="bottom">
+                                        <field name="desc"/>
+                                        <field name="solution"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"
+                                   options="{'post_refresh': 'recipients'}"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_case_tree_view">
+            <field name="name">Tree case</field>
+            <field name="model">crm.case</field>
+            <field name="arch" type="xml">
+                <tree default_order="create_date desc">
+                    <field name="code"/>
+                    <field name="subject_case"/>
+                    <field name="partner_id"/>
+                    <field name="phone"/>
+                    <field name="content_complain_ids" widget="many2many_tags"/>
+                    <field name="stage_id"/>
+                    <field name="type_case"/>
+                    <field name="priority"/>
+                    <field name="create_by"/>
+                    <field name="create_on"/>
+                    <field name="user_id"/>
+                    <field name="write_date"/>
+                    <field name="write_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="crm_base_view_case_search" model="ir.ui.view">
+            <field name="name">crm.lead.search.case</field>
+            <field name="model">crm.case</field>
+            <field name="arch" type="xml">
+                <search string="Search Case">
+                    <field name="name" string="Case"
+                           filter_domain="['|','|','|','|',('code', 'ilike', self),('phone', 'ilike', self),('create_by', 'ilike', self),
+                           ('user_id', 'ilike', self),('partner_id', 'ilike', self)]"/>
+                    <separator/>
+                    <filter string="Start Date" name="st_date" date="start_date"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Stage" name="stage" context="{'group_by':'stage_id'}"/>
+                        <filter string="Type Case" name="Type case" context="{'group_by':'type_case'}"/>
+                        <filter string="Handler" name="salesperson" context="{'group_by':'user_id'}"/>
+                        <filter string="Owner" name="owner" context="{'group_by':'create_by'}"/>
+                        <filter string="Company" name="cp" context="{'group_by':'company_id'}"/>
+                        <filter string="Brand" name="br" context="{'group_by':'brand_id'}"/>
+                        <separator orientation="vertical"/>
+                        <filter string="Start Date" context="{'group_by':'start_date:month'}" name="month"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_complain_case_view" model="ir.actions.act_window">
+            <field name="name">Case</field>
+            <field name="res_model">crm.case</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="crm_menu_case"
+                  name="Case complain"
+                  parent="crm_menu_complain"
+                  action="action_complain_case_view"
+                  sequence="0"/>
+
+    </data>
+</odoo>

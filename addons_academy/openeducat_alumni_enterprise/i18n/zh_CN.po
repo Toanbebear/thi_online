@@ -1,0 +1,53 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 05:54+0000\n"
+"PO-Revision-Date: 2018-04-12 07:31-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_alumni_enterprise/i18n/openeducat_alumni_enterprise.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.ui.view,arch_db:openeducat_alumni_enterprise.alumni_form_view
+msgid "Alumni Details"
+msgstr "校友详细资料"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.model.fields,field_description:openeducat_alumni_enterprise.field_op_student_alumni_boolean
+msgid "Alumni Student"
+msgstr "校友学生"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.model.fields,field_description:openeducat_alumni_enterprise.field_op_student_current_job
+msgid "Current Job"
+msgstr "当前作业"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.model.fields,field_description:openeducat_alumni_enterprise.field_op_student_current_position
+msgid "Current Position"
+msgstr "当前位置"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.ui.view,arch_db:openeducat_alumni_enterprise.alumni_form_view
+msgid "Is an Alumni?"
+msgstr "是校友吗？"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.model.fields,field_description:openeducat_alumni_enterprise.field_op_student_passing_year
+msgid "Passing Year"
+msgstr "通过年"
+
+#. module: openeducat_alumni_enterprise
+#: model:ir.model,name:openeducat_alumni_enterprise.model_op_student
+msgid "op.student"
+msgstr "学生"
+

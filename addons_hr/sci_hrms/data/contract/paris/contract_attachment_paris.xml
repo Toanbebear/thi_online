@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--        Hợp đồng chính thức PR Đà Nẵng-->
+        <record id="contract_prdn_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Paris Đà Nẵng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_CT_PR_DN.docx"/>
+            <field name="store_fname">HD_CT_PR_DN.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức PR Hải Phòng-->
+        <record id="contract_prhp_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Paris Hải Phòng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_CT_PR_HP.docx"/>
+            <field name="store_fname">HD_CT_PR_HP.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức PR Quang Trung-->
+        <record id="contract_prqt_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Paris Quang Trung</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_CT_PR_QT.docx"/>
+            <field name="store_fname">HD_CT_PR_QT.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức PR Thái Thịnh-->
+        <record id="contract_prtt_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Paris Thái Thịnh</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_CT_PR_TT.docx"/>
+            <field name="store_fname">HD_CT_PR_TT.docx</field>
+        </record>
+
+        <!--        Hợp đồng chính thức PR Vinh-->
+        <record id="contract_prv_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Paris Thái Thịnh</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_CT_PR_Vinh.docx"/>
+            <field name="store_fname">HD_CT_PR_Vinh.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc PR Đà Nẵng-->
+        <record id="contract_prdn_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Paris Đà Nẵng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_TV_PR_DN.docx"/>
+            <field name="store_fname">HD_TV_PR_DN.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc PR Hải Phòng-->
+        <record id="contract_prhp_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Paris Hải Phòng</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_TV_PR_HP.docx"/>
+            <field name="store_fname">HD_TV_PR_HP.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc PR Thái Thịnh-->
+        <record id="contract_prtt_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Paris Thái Thịnh</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_TV_PR_TT.docx"/>
+            <field name="store_fname">HD_TV_PR_TT.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc PR Vinh-->
+        <record id="contract_prv_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Paris Vinh</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_TV_PR_Vinh.docx"/>
+            <field name="store_fname">HD_TV_PR_Vinh.docx</field>
+        </record>
+
+        <!--        Hợp đồng thử việc PR Quang Trung-->
+        <record id="contract_prqt_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Paris Quang Trung</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/paris/HD_TV_PR_QT.docx"/>
+            <field name="store_fname">HD_TV_PR_QT.docx</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+.crm_box_change_infor{position: fixed;background-color: #ced4da;bottom: 0;text-align: center;width: 100%;border: 1px solid #CED4DA;color: #000000;z-index: 1;}
+.crm_border{ text-align:center !important; padding: 0.5rem !important; float:right !important; border: 1px solid #002050 ;width:150px;box-sizing:border-box;}
+.crm-btn-dark-blue{color:#FFFFFF;background-color:#483D8B;border-color:#483D8B; }

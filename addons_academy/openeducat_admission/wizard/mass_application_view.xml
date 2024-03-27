@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mass_application_form">
+            <field name="name">op.admission.enroll.form</field>
+            <field name="model">op.admission.enroll</field>
+            <field name="arch" type="xml">
+                <form string="Mass application">
+                    <group>
+                        <field name="batch_id" options="{'no_create': True}"/>
+                    </group>
+                    <footer>
+                        <button name="enroll_students" type="object"
+                                string="Enroll students" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="mass_application_act">
+            <field name="name">Mass application</field>
+            <field name="res_model">op.admission.enroll</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="mass_application_form"/>
+            <field name="binding_model_id" ref="openeducat_admission.model_op_admission"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

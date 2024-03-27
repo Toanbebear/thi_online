@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_bundle_act" model="ir.actions.act_window">
+            <field name="name">BOM</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.bundle</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="product_bundle_tree" model="ir.ui.view">
+            <field name="name">product.bundle.tree</field>
+            <field name="model">product.bundle</field>
+            <field name="arch" type="xml">
+                <tree string="BOM">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="bom_type"/>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="total_cost" widget='monetary' options="{'currency_field': 'currency_id'}"
+                           invisible="1"/>
+                    <field name="total_price" widget='monetary' options="{'currency_field': 'currency_id'}"
+                           invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_bundle_form" model="ir.ui.view">
+            <field name="name">product.bundle.form</field>
+            <field name="model">product.bundle</field>
+            <field name="arch" type="xml">
+                <form string="BOM">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" required="1"/>
+                                <field name="name" required="1"/>
+                                <field name="bom_type"/>
+                                <field name="duplicate"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="total_cost" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                       invisible="1"/>
+                                <field name="total_price" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                       invisible="1"/>
+                                <field name="products_domain" widget="many2many_tags" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products">
+                                <field name="products">
+                                    <tree editable="bottom">
+                                        <field name="product"
+                                               domain="[('id', 'not in', parent.products_domain), ('type', '=', 'product')]"/>
+                                        <field name="quantity"/>
+                                        <field name="uom_id" domain="[('category_id', '=', uom_category)]" readonly="1"
+                                               force_save="1"/>
+                                        <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                               invisible="1"/>
+                                        <field name="price" widget='monetary'
+                                               options="{'currency_field': 'currency_id'}" invisible="1"/>
+                                        <field name="currency_id" invisible="1"/>
+                                        <field name="uom_category" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

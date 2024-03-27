@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Dashboard Action -->
+        <record model="ir.actions.act_window" id="act_dashboard_op_timetable_view">
+            <field name="name">Sessions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.session</field>
+            <field name="view_mode">kanban,calendar</field>
+            <field name="search_view_id" ref="openeducat_timetable.view_op_session_search"/>
+            <field name="domain">[('batch_id','in',[active_id]),('start_datetime','&gt;=',time.strftime('%Y-%m-%d 00:00:00')),('start_datetime','&lt;=',time.strftime('%Y-%m-%d 23:59:59'))]</field>
+        </record>
+
+        <!-- Main Dashboard Action -->
+        <record model="ir.actions.act_window" id="act_main_dashboard_op_timetable_view">
+            <field name="name">Sessions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.session</field>
+            <field name="view_mode">kanban,calendar</field>
+            <field name="search_view_id" ref="openeducat_timetable.view_op_session_search"/>
+            <field name="domain">[('batch_id','in',[context.active_id]),('start_datetime','&gt;=',time.strftime('%Y-%m-%d 00:00:00')),('start_datetime','&lt;=',time.strftime('%Y-%m-%d 23:59:59'))]</field>
+        </record>
+    </data>
+</odoo>

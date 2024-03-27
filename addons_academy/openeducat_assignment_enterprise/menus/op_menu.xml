@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="act_open_op_assignment_sub_line_view_pivot">
+            <field name="name">Assignment Submission Analysis Pivot</field>
+            <field name="res_model">op.assignment.sub.line</field>
+            <field name="view_mode">pivot</field>
+            <field name="view_id" ref="openeducat_assignment.view_op_assignment_sub_line_pivot"/>
+        </record>
+
+        <menuitem id="menu_op_assignment_reports"
+                  name="Report"
+                  parent="openeducat_assignment.menu_op_assignment_root"
+                  sequence="40"/>
+
+        <menuitem id="menu_op_assignment_sub_line_sub"
+                  name="Assignment Submissions Analysis"
+                  parent="menu_op_assignment_reports"
+                  sequence="20"
+                  action="act_open_op_assignment_sub_line_view_pivot"
+                  groups="openeducat_core.group_op_faculty"/>
+    </data>
+</odoo>

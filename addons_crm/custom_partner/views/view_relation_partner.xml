@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="type_relative_view_form" model="ir.ui.view">
+            <field name="name">type.relative.view.form</field>
+            <field name="model">type.relative</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="symmetry_relative"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="type_relative_view_tree" model="ir.ui.view">
+            <field name="name">type.relative.view.tree</field>
+            <field name="model">type.relative</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="symmetry_relative"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="open_view_type_relative">
+            <field name="name">Type relative</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">type.relative</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem
+                id="type_relative_menu"
+                name="Type relative"
+                parent="contacts.menu_contacts"
+                action="open_view_type_relative"
+                sequence="21"/>
+
+        <record id="relation_partner_view_form" model="ir.ui.view">
+            <field name="name">relation.partner.view.form</field>
+            <field name="model">relation.partner</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="partner_id"/>
+                            <field name="relative_name"/>
+                            <field name="phone"/>
+                            <field name="country_id"/>
+                            <field name="state_id"/>
+                            <field name="street"/>
+                            <field name="type_relative_id"/>
+                            <field name="relative_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="relation_partner_view_tree" model="ir.ui.view">
+            <field name="name">relation.partner.view.tree</field>
+            <field name="model">relation.partner</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="relative_name"/>
+                    <field name="partner_id"/>
+                    <field name="country_id"/>
+                    <field name="state_id"/>
+                    <field name="street"/>
+                    <field name="type_relative_id"/>
+                    <field name="relative_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_view_relation_partner">
+            <field name="name">Relation partner</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">relation.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem
+                id="relation_partner_menu"
+                name="Relation partner"
+                parent="contacts.menu_contacts"
+                action="open_view_relation_partner"
+                sequence="20"/>
+
+    </data>
+</odoo>

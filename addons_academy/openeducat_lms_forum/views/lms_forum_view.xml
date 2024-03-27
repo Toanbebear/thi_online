@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="course_detail_inherit" inherit_id="openeducat_lms.course_detail">
+        <xpath expr="//a[hasclass('course-comments')]" position="after">
+            <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100" t-if="course.forum_id">
+                <a href="#course-q-and-a" role="tab" aria-controls="settings"
+                   class="nav-link rounded-0 course-detail-tab" data-toggle="tab">Q&amp;A</a>
+            </li>
+        </xpath>
+        <xpath expr="//div[contains(@id, 'course-comments')]" position="after">
+            <div class="collapse" id="course-q-and-a" t-if="course.forum_id">
+                <a t-attf-href="/forum/#{slug(course.forum_id)}">
+                    <h2 class="text-center mb32" t-raw="course.forum_id.name"/>
+                </a>
+                <t t-foreach="post_ids" t-as="question">
+                    <t t-call="website_forum.display_post_question_block">
+                        <t t-set="forum" t-value="course.forum_id"/>
+                        <t t-set="question" t-value="question"/>
+                    </t>
+                </t>
+                <a type="button" t-attf-class="btn btn-primary btn-md" t-if="post_ids"
+                   t-attf-href="/forum/#{slug(course.forum_id)}/ask?post_type=#{course.forum_id.default_post_type}">
+                    <t t-if="course.forum_id.default_post_type == 'question'">Ask a Question</t>
+                </a>
+            </div>
+        </xpath>
+    </template>
+</odoo>

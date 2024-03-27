@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="debt_view_form_inherit" model="ir.ui.view">
+        <field name="name">debt.view.form.inherit</field>
+        <field name="model">crm.debt.review</field>
+        <field name="inherit_id" ref="crm_base.debt_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="type_brand" invisible="1"/>
+                <field name="crm_line_ids" widget="many2many_tags" attrs="{'invisible': [('type_brand', '!=', 'academy')]}"/>
+                <field name="note" attrs="{'invisible': [('type_brand', '!=', 'academy')]}"/>
+                <field name="amount_total" attrs="{'invisible': [('type_brand', '!=', 'academy')]}"/>
+                <field name="payment_amount" attrs="{'invisible': [('type_brand', '!=', 'academy')]}"/>
+            </xpath>
+            <xpath expr="//button[@name='set_approve']" position="replace">
+                <button name="set_approve"
+                        string="Approve"
+                        class="btn-info"
+                        type="object"
+                        groups="crm_base.branch_management"
+                        confirm="You certainly confirm"
+                        attrs="{'invisible': [('stage', '!=', 'offer')]}"
+                />
+            </xpath>
+
+            <xpath expr="//button[@name='set_refuse']" position="replace">
+                <button name="set_refuse"
+                        string="Refuse"
+                        class="btn-danger"
+                        type="object"
+                        groups="crm_base.branch_management"
+                        confirm="You definitely want to cancel"
+                        attrs="{'invisible': [('stage', '!=', 'offer')]}"
+                />
+            </xpath>
+            <xpath expr="//header//field[@name='stage']" position="replace">
+                <field name="stage" widget="statusbar" statusbar_visible="offer,approve,refuse"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

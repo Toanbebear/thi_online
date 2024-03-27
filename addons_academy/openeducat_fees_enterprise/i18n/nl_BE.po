@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:01+0000\n"
+"PO-Revision-Date: 2018-03-08 01:45-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Dutch, Belgium\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: nl-BE\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_fees_enterprise/i18n/openeducat_fees_enterprise.pot\n"
+"Language: nl_BE\n"
+
+#. module: openeducat_fees_enterprise
+#: selection:op.fees.template.line,duration_type:0
+msgid "After"
+msgstr "Na"
+
+#. module: openeducat_fees_enterprise
+#: selection:op.fees.template.line,duration_type:0
+msgid "Before"
+msgstr "Voordat"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_days
+msgid "Days"
+msgstr "Dagen"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_duration_type
+msgid "Duration Type"
+msgstr "Duur Type"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.actions.server,name:openeducat_fees_enterprise.ir_cron_send_fees_reminder_ir_actions_server
+#: model:ir.cron,cron_name:openeducat_fees_enterprise.ir_cron_send_fees_reminder
+#: model:ir.cron,name:openeducat_fees_enterprise.ir_cron_send_fees_reminder
+msgid "Fees Collection Reminder"
+msgstr "Vergoedingen collectie herinnering"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_line_id
+msgid "Fees Line"
+msgstr "Kosten lijn"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.ui.view,arch_db:openeducat_fees_enterprise.view_fees_term_reminder_form
+msgid "Fees Remider Lines"
+msgstr "Vergoedingen herinnering lijnen"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.ui.view,arch_db:openeducat_fees_enterprise.view_fees_term_reminder_form
+msgid "Fees Reminder Details"
+msgstr "Vergoedingen herinnering Details"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line___last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_terms_line_line_ids
+msgid "Lines"
+msgstr "Lijnen"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model.fields,field_description:openeducat_fees_enterprise.field_op_fees_template_line_template_id
+msgid "Template"
+msgstr "Sjabloon"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model,name:openeducat_fees_enterprise.model_op_fees_template_line
+msgid "op.fees.template.line"
+msgstr "op.fees.template.line"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model,name:openeducat_fees_enterprise.model_op_fees_terms
+msgid "op.fees.terms"
+msgstr "op.fees.Terms"
+
+#. module: openeducat_fees_enterprise
+#: model:ir.model,name:openeducat_fees_enterprise.model_op_fees_terms_line
+msgid "op.fees.terms.line"
+msgstr "op.fees.terms.line"
+

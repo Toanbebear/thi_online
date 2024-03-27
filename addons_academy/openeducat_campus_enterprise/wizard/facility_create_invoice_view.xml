@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="facility_invoice_form">
+            <field name="name">Facility Invoice Form</field>
+            <field name="model">facility.invoice</field>
+            <field name="arch" type="xml">
+                <form string="Room Booking">
+                    <group col="4">
+                        <field name="partner_id"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    <footer groups="base.group_user">
+                        <button name="create_invoice" type="object" string="Create" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="facility_invoice_act">
+            <field name="name">Facility Invoice</field>
+            <field name="res_model">facility.invoice</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="facility_invoice_form"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

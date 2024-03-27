@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_route_line_1" model="op.route.line">
+            <field name="route_id" ref="op_route_1"/>
+            <field name="route_type">pickup</field>
+            <field name="start_time">7.0</field>
+            <field name="route_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>

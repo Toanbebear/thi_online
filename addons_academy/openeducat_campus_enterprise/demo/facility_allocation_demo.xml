@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_campus_allocation_1" model="op.facility.allocation">
+            <field name="partner_id" ref="openeducat_core.op_res_partner_4"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_2"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_9"/>
+            <field name="from_date" eval="datetime.now()"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=15)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="op_campus_allocation_2" model="op.facility.allocation">
+            <field name="partner_id" ref="openeducat_core.op_res_partner_5"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_3"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_9"/>
+            <field name="from_date" eval="datetime.now()"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="op_campus_allocation_3" model="op.facility.allocation">
+            <field name="partner_id" ref="openeducat_core.op_res_partner_6"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_4"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_9"/>
+            <field name="from_date" eval="datetime.now()"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="op_campus_allocation_4" model="op.facility.allocation">
+            <field name="partner_id" ref="openeducat_core.op_res_partner_2"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_6"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_9"/>
+            <field name="from_date" eval="datetime.now()"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=12)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="op_campus_allocation_5" model="op.facility.allocation">
+            <field name="partner_id" ref="openeducat_core.op_res_partner_3"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_7"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_9"/>
+            <field name="from_date" eval="(DateTime.today() - relativedelta(days=5)).strftime('%Y-%m-%d')"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=5)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="op_campus_allocation_6" model="op.facility.allocation">
+            <field name="partner_id" ref="base.res_partner_18"/>
+            <field name="facility_id" ref="openeducat_campus_enterprise.op_campus_facility_9"/>
+            <field name="product_id" ref="openeducat_campus_enterprise.op_product_8"/>
+            <field name="from_date" eval="datetime.now()"/>
+            <field name="to_date" eval="(DateTime.today() + relativedelta(days=3)).strftime('%Y-%m-%d')"/>
+        </record>
+    </data>
+</odoo>

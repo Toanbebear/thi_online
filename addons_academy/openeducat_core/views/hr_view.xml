@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+         <record id="view_employee_form_address_inherit" model="ir.ui.view">
+            <field name="name">hr.employee.form.address.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="address_home_id" position="replace">
+                    <field name="address_home_id" domain="[('supplier', '=', True)]" context="{'show_address': 1, 'employee': True}" options='{"always_reload": True, "highlight_first_line": True}'/>
+                </field>
+                <field name="address_id" position="replace">
+                    <field name="address_id" context="{'show_address': 1}" options='{"always_reload": True, "highlight_first_line": True}'/>
+                </field>
+            </field>
+        </record>
+
+<!--        <record id="view_job_form_course_inherit" model="ir.ui.view">-->
+<!--            <field name="name">hr.job.form.course.inherit</field>-->
+<!--            <field name="model">hr.job</field>-->
+<!--            <field name="inherit_id" ref="hr.view_hr_job_form"/>-->
+<!--            <field name="arch" type="xml">-->
+
+<!--                <xpath expr="//div[3]" position="after">-->
+<!--                    <group string="Courses">-->
+<!--                        <field name="course_ids" nolabel="1" options="{'no_create': True}" domain="[('internal', '=', True)]"/>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="course_view_hr_job_tree" model="ir.ui.view">-->
+<!--            <field name="name">course.hr.job.tree</field>-->
+<!--            <field name="model">hr.job</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="Job" decoration-danger="not course_ids" editable="top" create="0">-->
+<!--                    <field name="name" readonly="1"/>-->
+<!--                    <field name="department_id" readonly="1"/>-->
+<!--                    <field name="no_of_employee" string="Current employees"/>-->
+<!--                    <field name="course_ids" widget="many2many_tags" domain="[('internal', '=', True)]"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="course_action_hr_job" model="ir.actions.act_window">-->
+<!--            <field name="name">Job Positions</field>-->
+<!--            <field name="res_model">hr.job</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="search_view_id" ref="hr.view_job_filter"/>-->
+<!--            <field name="context">{"search_default_Current":1,-->
+<!--                "code_only": 1}</field>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

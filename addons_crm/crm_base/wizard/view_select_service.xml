@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_form_crm_select_service">
+            <field name="name">Select service</field>
+            <field name="model">crm.select.service</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group string="Information Services">
+                            <field name="booking_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                            <field name="partner_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                            <field name="name" required="True"/>
+                            <field name="crm_line_ids" widget="many2many_tags" options="{'no_create_edit': True}"
+                                   required="True"/>
+                            <field name="company_ids" invisible="True"/>
+                        </group>
+                        <group string="Special">
+                            <separator string="Do you want to apply for debt approval?"/>
+                            <field name="debt_review" widget="radio" nolabel="1"/>
+                            <field name="debt_review_reason" attrs="{'invisible': [('debt_review', '=', 'no')],'required':[('debt_review','=','yes')]}"/>
+                        </group>
+                    </group>
+                    <footer class="text-center">
+                        <button name="create_quotation" type="object" string="Create quotation" class="btn-info"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

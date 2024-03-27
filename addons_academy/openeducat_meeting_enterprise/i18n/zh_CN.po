@@ -1,0 +1,579 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:05+0000\n"
+"PO-Revision-Date: 2018-04-13 01:48-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_meeting_enterprise/i18n/openeducat_meeting_enterprise.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_highlighted
+msgid "# Meetings Highlight"
+msgstr "会议亮点"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "<span> hours</span>"
+msgstr "<span> 小时</span>"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Accept"
+msgstr "接受"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "Active"
+msgstr "积极"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_allday
+msgid "All Day"
+msgstr "整天"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Are You Sure You Want To Create Meeting"
+msgstr "是否确实要创建会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_is_attendee
+msgid "Attendee"
+msgstr "与会者"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_status
+msgid "Attendee Status"
+msgstr "与会者状态"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_ids
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Attendees"
+msgstr "与会者"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Availability"
+msgstr "可用 性"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_byday
+msgid "By day"
+msgstr "白天"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Cancel"
+msgstr "取消"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "Click to schedule a new meeting."
+msgstr "单击以安排新会议。"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Confirm"
+msgstr "确认"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_res_partner
+msgid "Contact"
+msgstr "联系"
+
+#. module: openeducat_meeting_enterprise
+#: code:addons/openeducat_meeting_enterprise/wizard/op_meeting_wizard.py:47
+#, python-format
+msgid "Create Event"
+msgstr "创建事件"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "Create Meeting Event"
+msgstr "创建会议事件"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_create_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_start
+msgid "Date"
+msgstr "日期"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_day
+msgid "Date of month"
+msgstr "月份日期"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Decline"
+msgstr "下降"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_description
+msgid "Description"
+msgstr "描述"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_name
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_id
+msgid "Document ID"
+msgstr "文档 ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model_id
+msgid "Document Model"
+msgstr "文档模型"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_res_model
+msgid "Document Model Name"
+msgstr "文档模型名称"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_duration
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Duration"
+msgstr "时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "End Date"
+msgstr "结束日期"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop_datetime
+msgid "End Datetime"
+msgstr "结束日期时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Ending at"
+msgstr "结束于"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_display_time
+msgid "Event Time"
+msgstr "事件时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_faculty
+msgid "Faculty"
+msgstr "教师"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_fr
+msgid "Fri"
+msgstr "周五"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Group By"
+msgstr "组按"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_id
+msgid "ID"
+msgstr "Id"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_active
+msgid "If the active field is set to false, it will allow you to hide the event alarm information without removing it."
+msgstr "如果活动字段设置为 false, 它将允许您隐藏事件警报信息而不删除它。"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitation details"
+msgstr "邀请详细信息"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Invitations"
+msgstr "邀请"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting___last_update
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard___last_update
+msgid "Last Modified on"
+msgstr "上次修改时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_uid
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_wizard_write_date
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_write_date
+msgid "Last Updated on"
+msgstr "上次更新时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Let the event automatically repeat at that interval"
+msgstr "让事件在该时间间隔自动重复"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location"
+msgstr "位置"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_location
+msgid "Location of Event"
+msgstr "事件的位置"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_faculty
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_parent
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_meeting_wizard_student
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_meeting_id
+#: model:ir.ui.menu,name:openeducat_meeting_enterprise.menu_meeting
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Meeting"
+msgstr "会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Meeting Details"
+msgstr "会议详细信息"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_name
+msgid "Meeting Subject"
+msgstr "会议主题"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event
+#: model:ir.actions.act_window,name:openeducat_meeting_enterprise.action_op_meeting_event_notify
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Meetings"
+msgstr "会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Misc"
+msgstr "杂项"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_mo
+msgid "Mon"
+msgstr "周一"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Events"
+msgstr "我的活动"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "My Meetings"
+msgstr "我的会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_month_by
+msgid "Option"
+msgstr "选项"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Options"
+msgstr "选项"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Owner"
+msgstr "所有者"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_parent
+msgid "Parent"
+msgstr "父母"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_attendee_ids
+msgid "Participant"
+msgstr "参与者"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_partner_id
+msgid "Partner-related data of the user"
+msgstr "与合作伙伴相关的用户数据"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_privacy
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Privacy"
+msgstr "隐私"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule_type
+msgid "Recurrence"
+msgstr "复发"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_end_type
+msgid "Recurrence Termination"
+msgstr "定期终止"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent"
+msgstr "经常"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id
+msgid "Recurrent ID"
+msgstr "经常性 ID"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_recurrent_id_date
+msgid "Recurrent ID date"
+msgstr "经常性 ID 日期"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_recurrency
+msgid "Recurrent Meeting"
+msgstr "经常性会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_rrule
+msgid "Recurrent Rule"
+msgstr "经常性规则"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_alarm_ids
+msgid "Reminders"
+msgstr "提醒"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat"
+msgstr "重复"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat Every"
+msgstr "重复每"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_final_date
+msgid "Repeat Until"
+msgstr "重复直到"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_interval
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "重复每 (天/周/月/年)"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_count
+msgid "Repeat x times"
+msgstr "重复 x 次"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_partner_id
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_user_id
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Responsible"
+msgstr "负责"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_sa
+msgid "Sat"
+msgstr "坐"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Search Meetings"
+msgstr "搜索会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Select attendees..."
+msgstr "选择与会者..。"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Send mail"
+msgstr "发送邮件"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_show_as
+msgid "Show Time as"
+msgstr "显示时间为"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start"
+msgstr "开始"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_date
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Start Date"
+msgstr "开始日期"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_start_datetime
+msgid "Start DateTime"
+msgstr "开始日期时间"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_start
+msgid "Start date of an event, without time for full days events"
+msgstr "事件的开始日期, 没有时间进行全天事件"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form_popup
+msgid "Starting at"
+msgstr "开始于"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_state
+msgid "Status"
+msgstr "地位"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop"
+msgstr "停止"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,help:openeducat_meeting_enterprise.field_op_meeting_stop
+msgid "Stop date of an event, without time for full days events"
+msgstr "事件的停止日期, 没有时间进行全天事件"
+
+#. module: openeducat_meeting_enterprise
+#: model:res.partner.category,name:openeducat_meeting_enterprise.res_partner_category_student
+msgid "Student"
+msgstr "学生"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_tree
+msgid "Subject"
+msgstr "主题"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_su
+msgid "Sun"
+msgstr "太阳"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_categ_ids
+msgid "Tags"
+msgstr "标签"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.actions.act_window,help:openeducat_meeting_enterprise.action_op_meeting_event
+msgid "The calendar is shared between employees and fully integrated with\n"
+"                other applications such as the employee holidays or the\n"
+"                business\n"
+"                opportunities."
+msgstr "日历由员工共享, 并与其他应用程序 (如员工假期或商机) 完全集成。"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_th
+msgid "Thu"
+msgstr "星期四"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_tu
+msgid "Tue"
+msgstr "星期二"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "Uncertain"
+msgstr "不确定性"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_event_search
+msgid "Unread Messages"
+msgstr "未读邮件"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_we
+msgid "Wed"
+msgstr "结婚"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model.fields,field_description:openeducat_meeting_enterprise.field_op_meeting_week_list
+msgid "Weekday"
+msgstr "工作日"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.view_op_meeting_form
+msgid "e.g. Business Lunch"
+msgstr "商务午餐"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_faculty
+msgid "op.faculty"
+msgstr "教师"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting
+msgid "op.meeting"
+msgstr "会议"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_meeting_wizard
+msgid "op.meeting.wizard"
+msgstr "op.meeting.wizard"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_parent
+msgid "op.parent"
+msgstr "父项"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.model,name:openeducat_meeting_enterprise.model_op_student
+msgid "op.student"
+msgstr "学生"
+
+#. module: openeducat_meeting_enterprise
+#: model:ir.ui.view,arch_db:openeducat_meeting_enterprise.op_faculty_user_create_view
+msgid "or"
+msgstr "或"
+

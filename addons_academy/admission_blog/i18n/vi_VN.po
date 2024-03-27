@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:04+0000\n"
+"PO-Revision-Date: 2018-03-08 01:18-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Vietnamese\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /v11_crowdin/admission_blog/i18n/admission_blog.pot\n"
+"Language: vi_VN\n"
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "An interpreted language, Python has a design philosophy which emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly braces or keywords), and a syntax which allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java."
+msgstr "Một ngôn ngữ diễn giải, Python có một triết lý thiết kế nhấn mạnh khả năng đọc mã (đặc biệt là sử dụng khoảng trắng indentation delimit mã khối thay vì niềng răng xoăn hoặc từ khóa), một cú pháp cho phép lập trình để thể hiện các khái niệm trong ít hơn dòng Mã hơn có thể có trong các ngôn ngữ như C++ hay Java."
+
+#. module: admission_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_2
+msgid "Are you sure about your goal?"
+msgstr "Bạn có chắc chắn về mục tiêu của bạn?"
+
+#. module: admission_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_id
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "Blog"
+msgstr "Blog"
+
+#. module: admission_blog
+#: model:ir.model,name:openeducat_lms_blog.model_blog_post
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_post_ids
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post"
+msgstr "Bài đăng blog"
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post Title"
+msgstr "Tiêu đề bài viết blog"
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Subtitle"
+msgstr "Phụ đề blog"
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Brand awareness is one of the most common goals for content marketing – businesses want their audience to see the valuable content and follow it back to them."
+msgstr "Nhận thức về thương hiệu là một trong những mục tiêu phổ biến nhất cho nội dung tiếp thị-các doanh nghiệp muốn đối tượng của họ để xem nội dung có giá trị và làm theo nó lại cho họ."
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_lms_blog_post_form
+msgid "Content"
+msgstr "Nội dung"
+
+#. module: admission_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_blog_post_course_id
+msgid "Course"
+msgstr "Khóa học"
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Create Blog"
+msgstr "Tạo Blog"
+
+#. module: admission_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_1
+msgid "Easy Learning with e-learning"
+msgstr "Dễ dàng học tập với các e-learning"
+
+#. module: admission_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_1
+msgid "Ideas behind the e-learning tools."
+msgstr "Ý tưởng đằng sau các công cụ học."
+
+#. module: admission_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_1
+msgid "Introduction To Python Programmi"
+msgstr "Giới thiệu Python hữu"
+
+#. module: admission_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_2
+msgid "Learn to Sell Anything"
+msgstr "Tìm hiểu để bán bất cứ điều gì"
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "No keywords defined!"
+msgstr "Không có từ khoá xác định!"
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Publishing Options"
+msgstr "Xuất bản tùy chọn"
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is a general purpose programming language created in the late 1980s, and named after Monty Python, that's used by thousands of people to do things from testing microchips at Intel, to powering Instagram, to building video games with the PyGame library."
+msgstr "Python là một mục đích chung, ngôn ngữ lập trình tạo ra trong những năm 1980, và được đặt tên sau khi Monty Python, được sử dụng bởi hàng ngàn người dân để làm những điều từ thử nghiệm các vi mạch tại Intel, để cung cấp năng lượng Instagram, xây dựng trò chơi video với thư viện PyGame."
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is powerful language."
+msgstr "Python là ngôn ngữ mạnh mẽ."
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Setup goal."
+msgstr "Thiết lập mục tiêu."
+
+#. module: admission_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_2
+msgid "Starts management with some GOAL"
+msgstr "Quản lý bắt đầu với một số mục tiêu"
+
+#. module: admission_blog
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_2
+msgid "Study With e-learning"
+msgstr "Học với e-learning"
+
+#. module: admission_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Success with content marketing goes well beyond research, writing, and publishing. Measuring the impact of your content marketing is the only way to know that what you’re doing is working."
+msgstr "Thành công với các nội dung tiếp thị vượt xa cũng nghiên cứu, viết và xuất bản. Đo lường tác động của tiếp thị nội dung của bạn là cách duy nhất để biết rằng những gì bạn đang làm làm việc."
+
+#. module: admission_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Technical"
+msgstr "Kỹ thuật"
+
+#. module: admission_blog
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_2
+msgid "e-learning"
+msgstr "e-learning"
+
+#. module: admission_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_2
+msgid "exercise"
+msgstr "tập thể dục"
+
+#. module: admission_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_1
+msgid "learnig"
+msgstr "learnig"
+
+#. module: admission_blog
+#: model:ir.model,name:openeducat_lms_blog.model_op_course
+msgid "op.course"
+msgstr "op.Course"
+

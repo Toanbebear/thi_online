@@ -1,0 +1,117 @@
+@mixin f-form-view-responsive() {
+  @media (max-width: map-get($grid-breakpoints, 'sm')) {
+    .o_group_col_6, .o_inner_group {
+      width: 100%;
+    }
+  }
+  @media (max-width: 480px) {
+    .o_group_col_6, .o_inner_group {
+      tr {
+        display: flex; //.o-flex-display();
+        flex-flow: row wrap; //.o-flex-flow(row, wrap);
+        td {
+          flex: 1 0 auto; //.o-flex(1, 0, auto);
+          max-width: 100%;
+          width: auto !important;
+          display: block;
+
+          &.o_td_label {
+            width: 90% !important;
+            border: none;
+          }
+
+          .o_input_dropdown {
+            width: auto;
+            max-width: 100%;
+          }
+
+          .o_field_widget.o_field_many2one.o_with_button {
+            display: flex;
+          }
+        }
+
+        .o_td_label + td {
+          padding: 3px 5px 3px 5px;
+        }
+
+        .o_field_widget.o_text_overflow {
+          width: auto !important;
+        }
+      }
+    }
+  }
+}
+
+.o_form_view {
+  .o_form_sheet_bg {
+    background: #ffffff;
+
+    > .o_form_sheet {
+      max-width: 1172px;
+      min-width: 0;
+
+      .oe_title {
+        width: auto;
+      }
+
+      .oe_button_box {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: map-get($grid-breakpoints, 'xs')) {
+        margin: 24px 0;
+      }
+      @include f-form-view-responsive();
+    }
+  }
+
+  // Button box
+  .oe_button_box {
+    width: 100%;
+    text-align: right;
+    float: right;
+    margin-bottom: 12px;
+
+    .oe_stat_button {
+      .o_button_icon {
+        color: $o-brand-primary;
+      }
+    }
+  }
+
+  .oe_chatter {
+    background-color: #ffffff;
+    min-width: unset;
+    max-width: 1024px;
+
+    .o_mail_activity .o_thread_date:hover {
+      color: inherit;
+    }
+  }
+}
+
+.modal-dialog {
+  .modal-content {
+    .o_form_view {
+      @include f-form-view-responsive();
+    }
+  }
+}
+
+.o_form_view .o_notebook > .nav.nav-tabs > .nav-item + .nav-item {
+  margin-left: -1px;
+}
+
+.o_form_view .o_notebook > .nav.nav-tabs > .nav-item > .nav-link.active {
+    border: 1px solid #ced4da;
+    border-bottom: 0;
+}
+.o_form_view .o_notebook > .nav.nav-tabs > .nav-item > .nav-link.active, .o_form_view .o_notebook > .nav.nav-tabs > .nav-item > .nav-link.active:hover, .o_form_view .o_notebook > .nav.nav-tabs > .nav-item > .nav-link.active:focus, .o_form_view .o_notebook > .nav.nav-tabs > .nav-item > .nav-link.active:active {
+    color: #212529;
+    border-top-color: #424242;
+    background-color: white;
+}
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba(66, 66, 66, 0.1);
+}

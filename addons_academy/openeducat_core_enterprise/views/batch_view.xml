@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Dashboard Action -->
+        <record model="ir.actions.act_window" id="act_dashboard_op_batch_view">
+            <field name="name">Batch</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.batch</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="search_view_id" ref="openeducat_core.view_op_batch_search" />
+            <field name="domain">[('course_id','in',[active_id])]</field>
+            <field name="context">{'default_course_id': active_id, 'code_and_name': True}</field>
+        </record>
+    </data>
+</odoo>

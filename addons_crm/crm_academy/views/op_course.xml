@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_op_course_form_add_price" model="ir.ui.view">
+        <field name="name">op.course.form.with.price</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="product_id" groups="base.group_system" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="op_course_tree_view_inherit" model="ir.ui.view">
+        <field name="name">op.course.tree.view.inherit</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='internal']" position="after">
+                    <button name="%(openeducat_core_enterprise.act_course_dashboard_op_student_view)d" string="Students" type="action" class="btn btn-primary btn-sm"/>
+                    <button name="%(openeducat_core_enterprise.act_dashboard_op_batch_view)d" string="Batches" type="action" class="btn btn-primary btn-sm"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

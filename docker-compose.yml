@@ -1,0 +1,35 @@
+version: '2'
+services:
+  db:
+    image: postgres:12.3
+    shm_size: 1g
+    environment:
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo
+      - POSTGRES_DB=postgres
+    ports:
+      - "54322:5432"
+    restart: always
+    # run as a service
+
+  odoo:
+    image: odoo:13.0
+    depends_on:
+      - db
+    ports:
+      - "13002:8069"
+    tty: true
+    command: -- --dev=reload
+#    command: odoo scaffold /mnt/extra-addons/test_module
+    volumes:
+      - ./addons:/usr/lib/python3/dist-packages/odoo/addons
+      - ./addons_common:/mnt/extra-addons
+      - ./addons_hr:/mnt/extra-addons-hr
+      - ./addons_crm:/mnt/extra-addons-crm
+      - ./addons_his:/mnt/extra-addons-his
+      - ./addons_academy:/mnt/extra-addons-academy
+      - ./addons_accounting:/mnt/addons-accounting
+      - ./etc:/etc/odoo
+      - ./data:/var/lib/odoo
+    restart: always
+    # run as a service

@@ -1,0 +1,27 @@
+{
+    'name': 'Custom Partner',
+    'version': '1.0',
+    'category': 'CRM',
+    'author': 'Đỗ Duy Chiến',
+    'sequence': '10',
+    'summary': 'add customer codes for each company, and some basic fields of customer information',
+    'depends': [
+        'contacts',
+        'crm',
+        'account',
+        'sale',
+        'utm',
+    ],
+    'data': [
+        'data/default_data.xml',
+        'security/ir.model.access.csv',
+        'views/view_relation_partner.xml',
+        'views/res_partner.xml',
+        'views/res_company.xml',
+        'views/wallet.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'qweb': [],
+}

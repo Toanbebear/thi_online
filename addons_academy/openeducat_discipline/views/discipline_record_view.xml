@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_discipline_tree" model="ir.ui.view">
+            <field name="name">op.discipline.tree</field>
+            <field name="model">op.discipline</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Discipline Records">
+                    <field name="student_id"/>
+                    <field name="date"/>
+                    <field name="course_id"/>
+                    <field name="discipline_master"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_discipline_form" model="ir.ui.view">
+            <field name="name">op.discipline.form</field>
+            <field name="model">op.discipline</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Discipline Records">
+                    <header groups="base.group_user">
+                        <button name="send_email" states="draft" string="Send By Email" type="object"
+                                class="oe_highlight"/>
+                        <button name="apologies_letter" states="email_sent" string="Apology Letter" type="object"
+                                class="oe_highlight"/>
+                        <button name="meeting_awaiting" states="awaiting_letter" string="Meeting With Parents"
+                                type="object" class="oe_highlight"/>
+                        <button name="%(openeducat_discipline.take_action_act)s" states="awaiting_meeting"
+                                string="Take Action" type="action" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,email_sent,awaiting_letter,awaiting_meeting,action_taken"/>
+                    </header>
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="student_id"/>
+                            <field name="date"/>
+                            <field name="course_id" readonly="1"/>
+                            <field name="discipline_master"/>
+                            <field name="priority" widget="priority"/>
+                        </group>
+                        <group>
+                            <separator string="Misbehaviour Info" colspan="4"/>
+                            <group col="2" colspan="2">
+                                <field name="misbehaviour_type" style="width:35%"/>
+                            </group>
+                            <group col="4" colspan="4">
+                                <field name="misbehaviour_category_id"
+                                       domain="[('misbehaviour_type', '=', misbehaviour_type)]"/>
+                                <field name="misbehaviour_sub_category_id"
+                                       domain="[('misbehaviour_category_id', '=', misbehaviour_category_id)]"/>
+                                <field name="misbehaviour_action"/>
+                                <field name="meeting_datetime"/>
+                            </group>
+                        </group>
+                        <separator string="Note" colspan="4"/>
+                        <field name="note"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_discipline_search" model="ir.ui.view">
+            <field name="name">op.discipline.search</field>
+            <field name="model">op.discipline</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Discipline Records">
+                    <field name="student_id" select="True"/>
+                    <field name="date" select="True"/>
+                    <field name="course_id" select="True"/>
+                    <field name="discipline_master" select="True"/>
+                    <field name="misbehaviour_type" select="True"/>
+                    <field name="misbehaviour_category_id" select="True"/>
+                    <field name="misbehaviour_sub_category_id" select="True"/>
+                    <field name="misbehaviour_action" select="True"/>
+                    <newline/>
+                    <filter string="Today" name="today"
+                            domain="[('date', '&gt;=', time.strftime('%%Y-%%m-%%d 00:00:00')),('date', '&lt;=', time.strftime('%%Y-%%m-%%d 23:59:59'))]"/>
+                    <filter string="Week" name="week"
+                            domain="['&amp;',('date', '>=', (context_today() + relativedelta(weeks=-1,days=1,weekday=0)).strftime('%Y-%m-%d')),('date', '&lt;=', (context_today() + relativedelta(weekday=6)).strftime('%Y-%m-%d'))]"/>
+                    <filter string="Month" name="month"
+                            domain="[('date','&gt;=', context_today().strftime('%Y-%m-1')), ('date','&lt;', ((context_today() + relativedelta(months=1)).strftime('%Y-%m-1')) )]"/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Student" name="group_by_student"
+                                domain="[]" context="{'group_by':'student_id'}"/>
+                        <filter string="Course" name="group_by_course"
+                                domain="[]" context="{'group_by':'course_id'}"/>
+                        <filter string="Master" name="group_by_master"
+                                domain="[]" context="{'group_by':'discipline_master'}"/>
+                        <filter string="Type" name="group_by_type"
+                                domain="[]" context="{'group_by':'misbehaviour_type'}"/>
+                        <filter string="Category" name="group_by_category"
+                                domain="[]" context="{'group_by':'misbehaviour_category_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_op_discipline_pivot" model="ir.ui.view">
+            <field name="name">op.discipline.pivot</field>
+            <field name="model">op.discipline</field>
+            <field name="arch" type="xml">
+                <pivot string="Discipline Records">
+                    <field name="student_id"/>
+                    <field name="date"/>
+                    <field name="course_id"/>
+                    <field name="discipline_master"/>
+                    <field name="state"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="op_discipline_record_calendar_view" model="ir.ui.view">
+            <field name="name">op.discipline.record.calendar.view</field>
+            <field name="model">op.discipline</field>
+            <field name="arch" type="xml">
+                <calendar mode="month" string="Parents Meeting" color="state" date_start="meeting_datetime">
+                    <field name="student_id"/>
+                    <field name="course_id"/>
+                    <field name="state"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_discipline_view">
+            <field name="name">Discipline Records</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.discipline</field>
+            <field name="view_mode">calendar,tree,form,pivot</field>
+            <field name="search_view_id" ref="view_op_discipline_search"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_discipline_view_form">
+            <field name="act_window_id" ref="act_open_op_discipline_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_discipline_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_discipline_view_tree">
+            <field name="act_window_id" ref="act_open_op_discipline_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_discipline_tree"/>
+        </record>
+    </data>
+</odoo>

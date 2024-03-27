@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--Course For Python-->
+        <record id="demo_course_1" model="op.course">
+            <field name="name">Introduction To Python Programming</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="code">Py1</field>
+            <field name="section">A</field>
+            <field name="faculty_ids"
+                   eval="[(6,0,[ref('openeducat_core.op_faculty_1')])]"/>
+            <field name="category_ids"
+                   eval="[(6,0,[ref('category_2')])]"/>
+            <field name="visibility">public</field>
+            <field name="navigation_policy">free_learn</field>
+            <field name="state">open</field>
+            <field name="online_course" eval="True"/>
+            <field name="confirm_date" eval="(DateTime.today() - relativedelta(days=11))"/>
+            <field name="image" type="base64"
+                   file="openeducat_lms/static/src/img/python.png"/>
+            <field name="full_description"><![CDATA[
+<div class="description__title">
+                        Description
+                    </div>
+
+                    <p>So, you want to be a kickass Python programmer?
+
+                    </p>
+
+                    <p>Let me guess. You want to do this without attending class, or going through a pile of textbooks or online guides.
+
+                    </p>
+
+                    <p>Sound like you?
+
+                    </p>
+
+                    <p>Yep, and I know the drill – you want to learn it straight away, so you can put your big plans into action and create stunning Python programs.
+
+                    </p>
+
+                    <p>Well, I’m Tim Buchalka, one of your instructors, and I’ve designed the Complete Python Masterclass just for you!
+
+                    </p>
+
+                    <p>Choosing a course that’s perfect for you can be damn hard. You need Instructors:
+
+                    </p>
+
+                    <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Who are passionate about what they do
+
+                    </p>
+
+                    <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keep their courses continually updated
+
+                    </p>
+
+                    <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; And most important, provide outstanding support and follow up to your questions
+
+                    </p>
+
+                    <p>That’s what I do. And that’s the reason why I made it into the <strong>Top 10 List of Outstanding Instructors in the 2015 Udemy Instructor Awards</strong>.
+
+                    </p>
+
+                    <p>Know that you’re in the right place to <strong>master</strong> Python. For starters, this course will help you develop Python programs for Microsoft Windows, Mac OS X, and Linux.
+
+                    </p>
+
+                    <p>Learning Python will give you more&nbsp;<strong>opportunities for jobs and career advancement</strong>&nbsp;because Python is one of the most requested skills in 2017!
+
+                    </p>
+
+                    <p>This course assumes no previous programming or Python experience. If you’ve never programmed a computer before, or if you know another programming language and want to learn Python, this course will teach you how.
+
+                    </p>
+
+                    <p>To reinforce what you’ve learned, there are numerous challenges during the course designed to help you understand each concept being taught. You’re also shown the solution to the challenge so you know you’re always on the right track.
+
+                    </p>
+
+                    <p>The course is&nbsp;<strong>continually updated and enhanced, and fully supports Python 3</strong>. This guarantees what you’re learning is relevant for you today and will never be obsolete.
+
+                    </p>
+
+                    <p>Click the Free preview button on this page and check out a few of the videos to judge the quality yourself.
+
+                    </p>
+
+                    <p>And if you have any doubts about the course, be blown away by the glowing reviews left by students on this page.
+
+                        <br>
+                        <br>Your instructors are myself and Jean-Paul. Between us we&nbsp;have a collective sixty years of commercial software development experience,&nbsp;<strong>meaning you’re learning the right way to program to maximize your future development potential.</strong>
+                        <br>
+                    </p>
+
+                    <p>Importantly, our courses teach students the real-life skills needed to get those in-demand jobs or further your programming skills.
+
+                    </p>
+
+                    <p>Take this course in confidence today knowing you have just found the <strong>BEST</strong> Python course on Udemy!&nbsp; Don't delay. Every minute you’re not learning Python is another potential opportunity wasted.
+
+                    </p>
+
+                    <p>Click the <strong>Buy Now</strong> button and start learning now!
+
+                    </p>
+
+                    <p><strong>Testimonials
+
+ </strong>
+
+                    </p>
+            ]]></field>
+        </record>
+
+        <!--Course For French-->
+        <record id="demo_course_2" model="op.course">
+            <field name="name">Learn to Speak: French</field>
+            <field name="code">ConFr</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="section">A</field>
+            <field name="faculty_ids"
+                   eval="[(6,0,[ref('openeducat_core.op_faculty_4')])]"/>
+            <field name="category_ids"
+                   eval="[(6,0,[ref('category_1')])]"/>
+            <field name="suggested_course_ids"
+                   eval="[(6,0,[ref('demo_course_1')])]"/>
+            <field name="visibility">logged_user</field>
+            <field name="navigation_policy">seq_learn</field>
+            <field name="state">open</field>
+            <field name="online_course" eval="True"/>
+            <field name="confirm_date"
+                   eval="(DateTime.today() - relativedelta(days=8))"/>
+            <field name="image" type="base64"
+                   file="openeducat_lms/static/src/img/speak-french.png"/>
+            <field name="full_description"><![CDATA[
+<div>
+    <p> Do you want to become a programmer? </p>
+    <p> Or is it that Python interests you? </p>
+    <p> <span>If you need a quick brush-up, or learning Python for the first time, you've come to the right place!</span> </p>
+    <p> Let's get started learning one of the most easiest coding languages out there right now. There's no need to fret if you haven't coded before. By the time you finish this course, you'll be a pro at Python! </p>
+    <p> Python is a great and friendly language to use and learn. It fun, and can be adapted to both small and large projects. Python will cut your development time greatly and overall, its much faster to write Python than other languages. This course will be a quick way to understand all the major concepts of Python programming. You'll be a whiz in no time. </p>
+    <p> This course is a one-stop-shop for everything you'll need to know to get started with Python, along with a few incentives. We'll begin with the basics of Python, learning about strings, variables, and getting to know the data types. We'll soon move on to the loops and conditions in Python. Afterwards, we'll discuss a bit of file manipulation and functions. By then, you'll know all the basics of Python. </p>
+    <p> I hope you're excited to dive into the World of Python with this course. Well, what are you waiting for? Let's get started! </p>
+</div>
+            ]]></field>
+        </record>
+
+        <!--Course For Sell-->
+        <record id="demo_course_3" model="op.course">
+            <field name="name">Learn to Sell Anything</field>
+            <field name="code">sellAny</field>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="section">A</field>
+            <field name="faculty_ids"
+                   eval="[(6,0,[ref('openeducat_core.op_faculty_2'),ref('openeducat_core.op_faculty_3')])]"/>
+            <field name="category_ids"
+                   eval="[(6,0,[ref('category_3')])]"/>
+            <field name="suggested_course_ids"
+                   eval="[(6,0,[ref('demo_course_1'),ref('demo_course_2')])]"/>
+            <field name="visibility">invited_user</field>
+            <field name="navigation_policy">free_learn</field>
+            <field name="invited_users_ids"
+                   eval="[(6,0,[ref('base.user_admin')])]"/>
+            <field name="state">open</field>
+            <field name="online_course" eval="True"/>
+            <field name="confirm_date"
+                   eval="(DateTime.today() - relativedelta(days=5))"/>
+            <field name="image" type="base64"
+                   file="openeducat_lms/static/src/img/sell-business.jpg"/>
+        </record>
+    </data>
+</odoo>

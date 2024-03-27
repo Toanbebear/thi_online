@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_employee_wizard_form" model="ir.ui.view">
+            <field name="name">employee.wizard.form</field>
+            <field name="model">employee.wizard</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Questions">
+                        <field name="employee_id" nolabel="1" options="{'no_create': True}">
+                            <tree delete="false" readonly="True" editable="bottom" open="false">
+                                <field name="employee_code" readonly="True" options=""/>
+                                <field name="name" readonly="True"/>
+                                <field name="company_id" readonly="True" options='{"no_open": True, "no_create": True}'/>
+                                <field name="department_id" readonly="True" options='{"no_open": True, "no_create": True}'/>
+                                <field name="gender" readonly="True"/>
+                                <field name="job_id" readonly="True" options='{"no_open": True, "no_create": True}'/>
+                                <field name="user_id" readonly="True" options='{"no_open": True, "no_create": True}'/>
+                            </tree>
+                        </field>
+                        <field name="company_id" invisible="True" />
+                        <field name="quiz_id" invisible="True" />
+                    <footer>
+                        <button string="Thêm" class="oe_highlight" type="object" name="action_confirm"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_employee_wizard_view">
+            <field name="name">Question</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

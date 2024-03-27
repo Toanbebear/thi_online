@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="act_open_op_exam_batch_view">
+            <field name="name">Exams</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.exam</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_exam_search"/>
+            <field name="domain">[('batch_id', '=', active_id)]</field>
+            <field name="context">{'default_batch_id': active_id}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_result_line_batch_view">
+            <field name="name">Exam report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.result.line</field>
+            <field name="view_id" ref="openeducat_exam.view_op_result_line_pivot"/>
+            <field name="view_mode">pivot,tree,form</field>
+            <field name="domain">[('batch_id', '=', active_id)]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="student_act_open_op_result_line_view">
+            <field name="name">Mark sheet</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.result.line</field>
+            <field name="view_id" ref="openeducat_exam.student_view_op_result_line_pivot"/>
+            <field name="view_mode">pivot,tree,form</field>
+            <field name="domain">[('student_id', '=', active_id)]</field>
+        </record>
+
+        <record id="view_exam_student_form_inherited" model="ir.ui.view">
+            <field name="name">exam.student.form.inherited</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(openeducat_exam.student_act_open_op_result_line_view)d"
+                            string="Mark sheets" type="action" icon="fa-file-text-o"/>
+                </xpath>
+
+                <xpath expr="//field[@name='course_detail_ids']/tree/field[@name='subject_ids']" position="replace">
+                    <field name="subject_ids" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//field[@name='course_detail_ids']/tree/field[@name='roll_number']" position="after">
+                    <field name="percentage" string="Average"/>
+                </xpath>
+
+                <xpath expr="//field[@name='course_detail_ids']/form/group/field[@name='roll_number']" position="after">
+                    <field name="result_lines">
+                        <tree>
+                            <field name="exam_id"/>
+                            <field name="marks"/>
+                        </tree>
+                    </field>
+                </xpath>
+
+<!--                <xpath expr="//field[@name='course_detail_ids']/form/group[2]" position="replace">-->
+<!--                    <group col="4" string="Subjects" invisible="1">-->
+<!--                        <field name="subject_ids" colspan="4" nolabel="1"/>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+
+        <record id="view_exam_batch_form_inherited" model="ir.ui.view">
+            <field name="name">exam.batch.form.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="17"/>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="action" string="Exams" icon="fa-file-text-o" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_exam.act_open_op_exam_batch_view)d"/>
+                    <button type="action" string="Exam report" icon="fa-table" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_exam.act_open_op_result_line_batch_view)d"/>
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/tree/field[@name='roll_number']" position="after">
+                    <field name="percentage"/>
+<!--                    <field name="grade"/>-->
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/form/group/field[@name='roll_number']" position="after">
+                    <field name="result_lines">
+                        <tree>
+                            <field name="exam_id"/>
+                            <field name="marks"/>
+                        </tree>
+                    </field>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_exam_batch_form_internal_inherited" model="ir.ui.view">
+            <field name="name">exam.batch.form.internal.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="17"/>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form_internal"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="action" string="Exams" icon="fa-file-text-o" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_exam.act_open_op_exam_batch_view)d"/>
+                    <button type="action" string="Exam report" icon="fa-table" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_exam.act_open_op_result_line_batch_view)d"/>
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/tree/field[@name='roll_number']" position="after">
+                    <field name="percentage"/>
+<!--                    <field name="grade"/>-->
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/form/group/field[@name='roll_number']" position="after">
+                    <field name="result_lines">
+                        <tree>
+                            <field name="exam_id"/>
+                            <field name="marks"/>
+                        </tree>
+                    </field>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="exam_student_course_tree_internal_inherited" model="ir.ui.view">
+            <field name="name">exam.student.course.tree.internal.inherited</field>
+            <field name="model">op.student.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_course_internal_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="percentage" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

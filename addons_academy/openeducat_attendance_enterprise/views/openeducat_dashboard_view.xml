@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="openeducat_batch_attendance_dashboard_kanban_view" model="ir.ui.view">
+            <field name="name">op.batch.attendance.dashboard.kanban</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core_enterprise.openeducat_batch_dashboard_kanban_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//div[@name='third_column']" position="inside">
+                        <b>Attendance Details</b><br/>
+                        <span><field name="total_present_student"/>: Present</span><br/>
+                        <span><field name="total_absent_student"/>: Absent</span>
+                    </xpath>
+                    <xpath expr="//div[@name='openeducat_views']" position="after">
+                        <div>
+                            <a type="action"
+                               name="%(openeducat_attendance_enterprise.act_dashboard_op_attendance_sheet_view)d">Attendance Sheet</a>
+                            <a type="action"
+                               name="%(openeducat_attendance_enterprise.act_open_op_attendance_line_batch_view)d">Absent students</a>
+                        </div>
+                    </xpath>
+<!--                    <xpath expr="//div[@name='openeducat_new']" position="after">-->
+<!--                        <div><a type="object" name="create_attendance_sheet">Attendance Sheet</a></div>-->
+<!--                    </xpath>-->
+                    <xpath expr="//div[@name='graph_section']" position="inside">
+                        <field name="kanban_dashboard_graph" t-att-graph_type="'bar'" widget="dashboard_graph"/>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_attendance_batch_form_inherited" model="ir.ui.view">
+            <field name="name">attendance.batch.form.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="17"/>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object" string="Generate timetable" icon="fa-calendar"
+                             name="open_generate_timetable" groups="openeducat_core.group_op_faculty"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Timetable" icon="fa-calendar" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_batch_open_session_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Attendance sheet" icon="fa-list-alt" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_dashboard_op_attendance_sheet_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Absence students" icon="fa-window-close-o" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_open_op_attendance_line_batch_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_attendance_batch_form_internal_inherited" model="ir.ui.view">
+            <field name="name">attendance.batch.form.internal.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="priority" eval="17"/>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form_internal"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object" string="Generate timetable" icon="fa-calendar"
+                             name="open_generate_timetable" groups="openeducat_core.group_op_faculty"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Timetable" icon="fa-calendar" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_batch_open_session_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Attendance sheet" icon="fa-list-alt" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_dashboard_op_attendance_sheet_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Absence students" icon="fa-window-close-o" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance_enterprise.act_open_op_attendance_line_batch_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', True)]}"/>
+                    <button type="action" string="Attendance check" icon="fa-list-alt" groups="openeducat_core.group_op_faculty"
+                             name="%(openeducat_attendance.act_open_op_attendance_import_view)d"
+                             attrs="{'invisible':[('one_shot_batch', '=', False)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_attendance_session_form_inherited" model="ir.ui.view">
+            <field name="name">attendance.session.form.inherited</field>
+            <field name="model">op.session</field>
+            <field name="inherit_id" ref="openeducat_timetable.view_op_session_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object" string="Attendance sheet" icon="fa-list-alt"
+                             name="open_attendance_sheet"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="view_attendance_session_tree2_inherited" model="ir.ui.view">
+            <field name="name">attendance.session.tree2.inherited</field>
+            <field name="model">op.session</field>
+            <field name="inherit_id" ref="openeducat_timetable.batch_view_op_session_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//button[@name='open_cancel_session_wizard']" position="after">
+                    <button type="object" string="Attendance sheet" name="open_attendance_sheet"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

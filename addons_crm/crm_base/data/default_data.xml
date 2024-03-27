@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="type_lead_new" model="crm.type">
+            <field name="name">Lead new</field>
+            <field name="type_crm">lead</field>
+        </record>
+
+        <record id="type_oppor_new" model="crm.type">
+            <field name="name">Booking new</field>
+            <field name="type_crm">opportunity</field>
+        </record>
+
+        <record id="type_oppor_guarantee" model="crm.type">
+            <field name="name">Booking bảo hành</field>
+            <field name="type_crm">opportunity</field>
+        </record>
+
+        <record id="type_phone_call_confirm_appointment" model="crm.type">
+            <field name="name">Xác nhận lịch hẹn</field>
+            <field name="phone_call">True</field>
+        </record>
+
+        <record id="type_phone_call_after_service_care" model="crm.type">
+            <field name="name">Chăm sóc sau dịch vụ</field>
+            <field name="phone_call">True</field>
+        </record>
+
+        <record id="type_phone_call_exam_schedule" model="crm.type">
+            <field name="name">Hẹn lịch tái khám</field>
+            <field name="phone_call">True</field>
+        </record>
+
+        <record id="type_phone_call_customer_ask_info" model="crm.type">
+            <field name="name">Hỏi khách hàng thêm thông tin</field>
+            <field name="phone_call">True</field>
+        </record>
+
+        <record id="crm_stage_no_process" model="crm.stage">
+            <field name="name">No process</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="crm_stage_re_open" model="crm.stage">
+            <field name="name">Re-open</field>
+        </record>
+
+        <record id="crm_stage_refer" model="crm.stage">
+            <field name="name">Refer</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">2</field>
+        </record>
+
+        <record id="crm_stage_potential" model="crm.stage">
+            <field name="name">Potential</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">3</field>
+        </record>
+
+        <record id="crm_stage_lead_not_quality" model="crm.stage">
+            <field name="name">Lead not quality</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="crm_stage_see_you_later" model="crm.stage">
+            <field name="name">See you later</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">5</field>
+        </record>
+
+        <record id="crm_stage_no_first_call" model="crm.stage">
+            <field name="name">No first call</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">6</field>
+        </record>
+
+        <record id="crm_stage_no_second_call" model="crm.stage">
+            <field name="name">No second call</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="crm_stage_no_3_4_call" model="crm.stage">
+            <field name="name">No phone answering 3,4</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">8</field>
+        </record>
+
+        <record id="crm_stage_wrong_phone" model="crm.stage">
+            <field name="name">Wrong phone</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">9</field>
+        </record>
+
+        <record id="crm_stage_no_coincide_customer" model="crm.stage">
+            <field name="name">Coincide customer</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="crm_stage_send_email" model="crm.stage">
+            <field name="name">Send email</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">11</field>
+        </record>
+
+        <record id="crm_stage_test" model="crm.stage">
+            <field name="name">Test</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">12</field>
+        </record>
+
+        <record id="crm_stage_booking" model="crm.stage">
+            <field name="name">Booking</field>
+            <field name="crm_type_id" eval="[(4,ref('type_lead_new'))]"/>
+            <field name="sequence">13</field>
+        </record>
+
+        <record id="crm_stage_not_confirm" model="crm.stage">
+            <field name="name">Not confirm</field>
+            <field name="sequence">14</field>
+            <field name="crm_type_id" eval="[(4,ref('type_oppor_new'))]"/>
+        </record>
+
+        <record id="crm_stage_confirm" model="crm.stage">
+            <field name="name">Confirm</field>
+            <field name="sequence">15</field>
+            <field name="crm_type_id" eval="[(4,ref('type_oppor_new'))]"/>
+        </record>
+
+        <record id="crm_stage_paid" model="crm.stage">
+            <field name="name">Paid</field>
+            <field name="sequence">16</field>
+            <field name="crm_type_id" eval="[(4,ref('type_oppor_new'))]"/>
+        </record>
+
+        <record id="crm_stage_out_sold" model="crm.stage">
+            <field name="name">Out sold</field>
+            <field name="sequence">17</field>
+            <field name="crm_type_id" eval="[(4,ref('type_oppor_new'))]"/>
+        </record>
+
+        <record id="crm_stage_cancel" model="crm.stage">
+            <field name="name">Cancel</field>
+            <field name="sequence">18</field>
+            <field name="crm_type_id" eval="[(4,ref('type_oppor_new'))]"/>
+        </record>
+
+        <record id="crm_stage_bk_insight" model="crm.stage">
+            <field name="name">Đặt lịch insight</field>
+            <field name="sequence">19</field>
+            <field name="crm_stage_insight_id">17</field>
+        </record>
+
+        <record id="crm_stage_change_schedule" model="crm.stage">
+            <field name="name">Change schedule</field>
+            <field name="sequence">19</field>
+        </record>
+
+        <record id="sync_insight" model="crm.sync">
+            <field name="name">Sync insight</field>
+            <field name="ip">103.146.22.160</field>
+            <field name="port">12000</field>
+            <field name="database">crm_insight</field>
+            <field name="user">root</field>
+            <field name="password">Scigroup@123123</field>
+        </record>
+        
+    </data>
+</odoo>

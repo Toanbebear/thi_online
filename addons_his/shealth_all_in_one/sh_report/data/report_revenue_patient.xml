@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record model="temp.creation" id="report_revenue_patient_template">
+            <field name="template" type="base64" file="shealth_all_in_one/static/xls/bao_cao_doanh_thu.xlsx"/>
+            <field name="name">Báo cáo doanh thu theo bệnh nhân</field>
+            <field name="max_samples">3</field>
+            <field name="template_name">bao_cao_doanh_thu.xlsx</field>
+            <field name="max_row">10001</field>
+            <field name="all_in_one" eval="True"/>
+            <field name="main_model" model="ir.model"
+                   search="[('model', '=', 'account.move.line')]"/>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_1">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">partner_id.code_customer</field>
+            <field name="temp_mark">B8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_2">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">partner_id.name</field>
+            <field name="temp_mark">C8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_3">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">partner_id.street</field>
+            <field name="temp_mark">D8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_4">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">product_id.default_code</field>
+            <field name="temp_mark">E8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_5">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">product_id.name</field>
+            <field name="temp_mark">F8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_6">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">price_unit</field>
+            <field name="temp_mark">G8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_7">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">quantity</field>
+            <field name="temp_mark">H8</field>
+        </record>
+        <record model="fields.line" id="report_revenue_patient_fields_line_8">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">discount</field>
+            <field name="temp_mark">M8</field>
+        </record>
+<!--        <record model="fields.line" id="report_revenue_patient_fields_line_9">-->
+<!--            <field name="line" ref="report_revenue_patient_template"/>-->
+<!--            <field name="python_code">discount_cash</field>-->
+<!--            <field name="temp_mark">N8</field>-->
+<!--        </record>-->
+        <record model="fields.line" id="report_revenue_patient_fields_line_10">
+            <field name="line" ref="report_revenue_patient_template"/>
+            <field name="python_code">date</field>
+            <field name="replacement_format">{'time_format': '%d-%m-%Y'}</field>
+            <field name="temp_mark">L8</field>
+        </record>
+
+<!--        BÁO CÁO DOANH THU THEO DỊCH VỤ-->
+        <record id="report_revenue_service_template" model="temp.creation">
+            <field name="template" type="base64" file="shealth_all_in_one/static/xls/bao_cao_doanh_thu_theo_dich_vu.xlsx"/>
+            <field name="name">BÁO CÁO DOANH THU THEO DỊCH VỤ</field>
+            <field name="max_samples">3</field>
+            <field name="template_name">DOANH_THU_THEO_DICH_VU.xlsx</field>
+            <field name="max_row">10001</field>
+            <field name="grp_by_field" model="ir.model.fields" search="[('model', '=', 'account.move.line'), ('name', '=', 'product_id')]"/>
+            <field name="grp_by_cell">B8</field>
+            <field name="all_in_one" eval="True"/>
+            <field name="main_model" model="ir.model"
+                   search="[('model', '=', 'account.move.line')]"/>
+        </record>
+
+<!--        <record model="fields.line" id="report_revenue_service_template_line_4">-->
+<!--            <field name="line" ref="report_revenue_service_template"/>-->
+<!--            <field name="python_code">product_id.default_code</field>-->
+<!--            <field name="temp_mark">B8</field>-->
+<!--        </record>-->
+
+<!--        <record model="fields.line" id="report_revenue_service_template_line_5">-->
+<!--            <field name="line" ref="report_revenue_service_template"/>-->
+<!--            <field name="python_code">product_id.name</field>-->
+<!--            <field name="temp_mark">C8</field>-->
+<!--        </record>-->
+
+        <record model="fields.line" id="report_revenue_service_template_line_6">
+            <field name="line" ref="report_revenue_service_template"/>
+            <field name="python_code">price_unit</field>
+            <field name="temp_mark">C9</field>
+        </record>
+
+        <record model="fields.line" id="report_revenue_service_template_line_7">
+            <field name="line" ref="report_revenue_service_template"/>
+            <field name="python_code">quantity</field>
+            <field name="temp_mark">D9</field>
+        </record>
+
+        <record model="fields.line" id="report_revenue_service_template_fields_line_8">
+            <field name="line" ref="report_revenue_service_template"/>
+            <field name="python_code">discount</field>
+            <field name="temp_mark">H9</field>
+        </record>
+
+<!--        <record model="fields.line" id="report_revenue_service_template_fields_line_9">-->
+<!--            <field name="line" ref="report_revenue_service_template"/>-->
+<!--            <field name="python_code">discount_cash</field>-->
+<!--            <field name="temp_mark">I9</field>-->
+<!--        </record>-->
+
+        <record model="fields.line" id="report_revenue_service_template_line_10">
+            <field name="line" ref="report_revenue_service_template"/>
+            <field name="python_code">price_subtotal</field>
+            <field name="temp_mark">G9</field>
+        </record>
+    </data>
+</odoo>

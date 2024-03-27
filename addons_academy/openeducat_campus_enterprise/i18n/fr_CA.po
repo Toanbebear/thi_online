@@ -1,0 +1,309 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 05:58+0000\n"
+"PO-Revision-Date: 2018-03-07 06:50-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: French, Canada\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: fr-CA\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_campus_enterprise/i18n/openeducat_campus_enterprise.pot\n"
+"Language: fr_CA\n"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_form
+msgid "<span class=\"o_stat_text\">Allocations\n"
+"                                        </span>"
+msgstr "<span class=\"o_stat_text\">Allocations\n"
+"                                        </span>"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_main_facility
+msgid "All Facilities"
+msgstr "Toutes les installations"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_facility_allocation_lines
+msgid "Allocations"
+msgstr "Allocations de"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_campus_management
+msgid "Campus"
+msgstr "Campus de"
+
+#. module: openeducat_campus_enterprise
+#: model:product.product,name:openeducat_campus_enterprise.op_product_8
+#: model:product.template,name:openeducat_campus_enterprise.op_product_8_product_template
+msgid "Campus Charge"
+msgstr "Charge de campus"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.facility_invoice_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_capacity
+msgid "Capacity"
+msgstr "Capacité"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_child_ids
+msgid "Child Facility"
+msgstr "Installation de l’enfant"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_code
+msgid "Code"
+msgstr "Code"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_company_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_company_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_company_id
+msgid "Company"
+msgstr "Compagnie"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_op_hostel_configuration_sub
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.facility_invoice_form
+msgid "Create"
+msgstr "Créer"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_form
+msgid "Create Invoice"
+msgstr "Créer facture"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_create_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_create_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_create_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_create_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_create_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_create_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_create_date
+msgid "Created on"
+msgstr "Créée le"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_display_name
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_display_name
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_display_name
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_display_name
+msgid "Display Name"
+msgstr "Nom d’affichage"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.actions.act_window,name:openeducat_campus_enterprise.act_open_op_campus_facility_view
+msgid "Facilities"
+msgstr "Installations"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_facility_id
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_all_facility
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_tree
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_search
+msgid "Facility"
+msgstr "Installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_calendar
+msgid "Facility ALlocation"
+msgstr "ALlocation d’installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_form
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_form
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_search
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_tree
+msgid "Facility Allocation"
+msgstr "Allocation d’installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.actions.act_window,name:openeducat_campus_enterprise.act_open_op_facility_allocation_view
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_op_hostel_room_sub
+msgid "Facility Allocations"
+msgstr "Allocations d’installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.actions.act_window,name:openeducat_campus_enterprise.facility_invoice_act
+msgid "Facility Invoice"
+msgstr "Facture de l’installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_form
+msgid "Facility Name"
+msgstr "Nom de l’établissement"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.actions.act_window,name:openeducat_campus_enterprise.act_open_op_facility_type_view
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_facility_type_id
+#: model:ir.ui.menu,name:openeducat_campus_enterprise.menu_facility_type
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_search
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_type_search
+msgid "Facility Type"
+msgstr "Type d’établissement"
+
+#. module: openeducat_campus_enterprise
+#: code:addons/openeducat_campus_enterprise/models/facility_allocation.py:59
+#, python-format
+msgid "Facility is not available                 in that Dates."
+msgstr "Installation n’est pas disponible à cette date."
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_from_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_from_date
+msgid "From Date"
+msgstr "De la Date"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_search
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_search
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_type_search
+msgid "Group By..."
+msgstr "Group By..."
+
+#. module: openeducat_campus_enterprise
+#: model:product.product,name:openeducat_campus_enterprise.op_product_9
+#: model:product.template,name:openeducat_campus_enterprise.op_product_9_product_template
+msgid "Hostel Charge"
+msgstr "Charge de l’Auberge de jeunesse"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_invoice_id
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice___last_update
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility___last_update
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation___last_update
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type___last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_write_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_write_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_write_uid
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_write_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_write_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_write_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_name
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_type_name
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_search
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_type_search
+msgid "Name"
+msgstr "Nom"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_campus_facility_parent_id
+msgid "Parent Facility"
+msgstr "Installation de parent"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_partner_id
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_allocation_form
+msgid "Person"
+msgstr "Personne"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_product_id
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_product_id
+msgid "Product"
+msgstr "Produit"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.facility_invoice_form
+msgid "Room Booking"
+msgstr "Réservation de chambre"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_form
+msgid "Sub Facilities"
+msgstr "Installations de void"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_type_form
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_facility_type_tree
+msgid "Tag"
+msgstr "Balise"
+
+#. module: openeducat_campus_enterprise
+#: code:addons/openeducat_campus_enterprise/wizard/facility_create_invoice.py:47
+#, python-format
+msgid "There is no income account defined for this product: \"%s\".                    You may have to install a chart of account from Accounting                    app, settings menu."
+msgstr "Il n’y a aucun compte de revenu défini pour ce produit : «%s».                    Vous devrez peut-être installer un tableau du compte de comptabilité app, menu des réglages."
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_facility_invoice_to_date
+#: model:ir.model.fields,field_description:openeducat_campus_enterprise.field_op_facility_allocation_to_date
+msgid "To Date"
+msgstr "À ce jour"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_form
+#: model:ir.ui.view,arch_db:openeducat_campus_enterprise.view_op_campus_facility_search
+msgid "facility"
+msgstr "installation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model,name:openeducat_campus_enterprise.model_facility_invoice
+msgid "facility.invoice"
+msgstr "facility.Invoice"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model,name:openeducat_campus_enterprise.model_op_campus_facility
+msgid "op.campus.facility"
+msgstr "op.campus.Facility"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model,name:openeducat_campus_enterprise.model_op_facility_allocation
+msgid "op.facility.allocation"
+msgstr "op.Facility.allocation"
+
+#. module: openeducat_campus_enterprise
+#: model:ir.model,name:openeducat_campus_enterprise.model_op_facility_type
+msgid "op.facility.type"
+msgstr "op.Facility.type"
+

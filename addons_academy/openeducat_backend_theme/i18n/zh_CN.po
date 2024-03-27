@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:14+0000\n"
+"PO-Revision-Date: 2018-04-12 06:23-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_backend_theme/i18n/openeducat_backend_theme.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "<span class=\"oe_topbar_name\" style=\"color:#fff;\">Menu</span>\n"
+"                        <b class=\"caret\" style=\"color:#fff;\"/>"
+msgstr "<span class=\"oe_topbar_name\" style=\"color:#fff;\">菜单</span>\n"
+"                        <b class=\"caret\" style=\"color:#fff;\"/>"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "About"
+msgstr "关于"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.webclient_bootstrap
+msgid "Apps"
+msgstr "应用程序"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "Documentation"
+msgstr "文档"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "Log out"
+msgstr "注销"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "My Odoo.com account"
+msgstr "我的 Odoo.com 帐户"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.webclient_bootstrap
+msgid "Search..."
+msgstr "搜索。。。"
+
+#. module: openeducat_backend_theme
+#: model:ir.ui.view,arch_db:openeducat_backend_theme.home_page
+msgid "Support"
+msgstr "支持"
+

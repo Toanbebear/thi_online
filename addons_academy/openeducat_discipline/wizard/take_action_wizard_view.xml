@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+    <record model="ir.ui.view" id="take_action_form">
+        <field name="name">take.action.form</field>
+        <field name="model">take.action</field>
+        <field name="arch" type="xml">
+            <form string="Take Action">
+                <group>
+                    <field name="fine"/>
+                    <field name="fine_amount"
+                           widget="monetary"
+                           attrs="{'invisible':[('fine', '!=', True)], 'required':[('fine', '=', True)]}"
+                           style="width:35%%"/>
+                    <field name="suspend"/>
+                    <field name="suspend_from_date"
+                           attrs="{'invisible':[('suspend', '!=', True)], 'required':[('suspend', '=', True)]}"
+                           style="width:35%%"/>
+                    <field name="suspend_to_date"
+                           attrs="{'invisible':[('suspend', '!=', True)], 'required':[('suspend', '=', True)]}"
+                           style="width:35%%"/>
+                    <field name="action_remark"/>
+                </group>
+                <footer groups="base.group_user">
+                    <button name="take_action" type="object" string="Submit" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="take_action_act">
+        <field name="name">Take Action</field>
+        <field name="res_model">take.action</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="take_action_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

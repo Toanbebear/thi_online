@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inheriting evaluation screen to display walkin reference -->
+    <record id="sh_medical_evaluation_walkin_view" model="ir.ui.view">
+        <field name="name">Evaluations</field>
+        <field name="model">sh.medical.evaluation</field>
+        <field name="inherit_id" ref="shealth_all_in_one.sh_medical_evaluation_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//h1" position="after">
+                <label for="walkin" string="Phiếu khám liên quan"/>
+                <field name="walkin" required="1" force_save="1" options="{'no_create':True}"/>
+                <!--                        <field name="walkin" required="1" force_save="1" options="{'no_create':True}" domain="[('state','=','Completed')]"/>-->
+                <field name="service_related" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_medical_evaluation_walkin_view1" model="ir.ui.view">
+        <field name="name">Evaluations</field>
+        <field name="model">sh.medical.evaluation</field>
+        <field name="inherit_id" ref="shealth_all_in_one.sh_medical_evaluation_walkin_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='services']" position="attributes">
+                <attribute name="domain">[('id','in',service_related)]</attribute>
+            </xpath>
+            <xpath expr="//field[@name='patient']" position="before">
+                <field name="patient_level" force_save="1"/>
+                <field name="code_booking" options="{'no_create': True}" readonly="1" force_save="1"/>
+            </xpath>
+            <xpath expr="//field[@name='evaluation_team']/tree/field[@name='team_member']" position="before">
+                <field name="service_performances" options="{'no_create': True}" domain="[('id','in',parent.services)]"
+                       required="1" widget="many2many_tags"/>
+            </xpath>
+            <xpath expr="//page[@id='team_member']" position="after">
+                <page string="Đơn thuốc" attrs="{'invisible': [('name', '=', '/')]}">
+                    <field nolabel="1" name="prescription_ids" options="{'reload_on_button': true}"
+                           domain="[('evaluation', '=', active_id)]"
+                           context="{'view_only_name': True,'default_institution': institution,'default_walkin': walkin,'default_evaluation': active_id, 'default_date': evaluation_start_date, 'default_date_out': evaluation_start_date, 'default_is_normal': True, 'default_patient': patient,'default_doctor': doctor,'default_services':services}">
+                        <tree string="Prescriptions" class="sh_has_icon" delete="false"
+                              decoration-info="state=='Draft'" decoration-success="state=='Đã xuất thuốc'">
+                            <field name="walkin" force_save="1" invisible="1"/>
+                            <field name="date_out"/>
+                            <field name="name" force_save="1"/>
+                            <field name="patient" class="text-uppercase" invisible="1"/>
+                            <field name="services" invisible="1"/>
+                            <field name="doctor"/>
+                            <field name="pharmacy" invisible="1"/>
+                            <field name="institution"/>
+                            <field name="location_id" domain="[('usage', '=', 'internal')]"
+                                   options="{'no_create': True,'no_open': True}"/>
+                            <field name="state"/>
+                            <button attrs="{'invisible': [('state','!=','Draft')]}" class="oe_edit_only"
+                                    name="unlink" type="object" icon="fa-trash-o" title="Xóa"
+                                    style="font-size: 20px;color:#000;"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sh_medical_evaluation_walkin_tree_view" model="ir.ui.view">
+        <field name="name">Evaluations</field>
+        <field name="model">sh.medical.evaluation</field>
+        <field name="inherit_id" ref="shealth_all_in_one.sh_medical_evaluation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="patient_level" widget="label_selection"
+                       options="{'classes': {'1': 'success', '2': 'info', '3': 'warning', '4': 'danger'}}"/>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="walkin" readonly="1" force_save="1" options="{'no_open':True}"/>
+            </xpath>
+            <xpath expr="//field[@name='patient']" position="after">
+                <field name="institution" readonly="1" force_save="1" options="{'no_open':True}"/>
+                <field name="room" readonly="1" force_save="1" options="{'no_open':True}"/>
+                <field name="services" readonly="1" force_save="1" options="{'no_open':True}"
+                       widget="many2many_tags" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

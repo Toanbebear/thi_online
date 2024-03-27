@@ -1,0 +1,730 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:09+0000\n"
+"PO-Revision-Date: 2018-04-13 00:52-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_transportation_enterprise/i18n/openeducat_transportation_enterprise.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_needaction
+msgid "Action Needed"
+msgstr "需要采取的行动"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_active
+msgid "Active"
+msgstr "积极"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_co2
+msgid "CO2 Emissions"
+msgstr "CO2 排放量"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_co2
+msgid "CO2 emissions of the vehicle"
+msgstr "CO2 排放的车辆"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_capacity
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Capacity"
+msgstr "能力"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_car_value
+msgid "Catalog Value (VAT Incl.)"
+msgstr "目录值 (增值税)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_vin_sn
+msgid "Chassis Number"
+msgstr "机箱编号"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_color
+msgid "Color"
+msgstr "颜色"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_color
+msgid "Color of the vehicle"
+msgstr "车辆颜色"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_company_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_count
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_contracts
+msgid "Contracts"
+msgstr "合同"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_cost
+msgid "Cost"
+msgstr "成本"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_cost_count
+msgid "Costs"
+msgstr "成本"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_create_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_create_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_create_date
+msgid "Created on"
+msgstr "创建于"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_state_id
+msgid "Current state of the vehicle"
+msgstr "车辆的当前状态"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_date
+msgid "Date"
+msgstr "日期"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "在记录上张贴的最后一条消息的日期。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_acquisition_date
+msgid "Date when the vehicle has been immatriculated"
+msgstr "车辆已 immatriculated 的日期"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_display_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_doors
+msgid "Doors Number"
+msgstr "门号"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "Draft"
+msgstr "草案"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_driver_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_driver_id
+msgid "Driver"
+msgstr "司机"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_route_line_driver_id
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_driver_id
+msgid "Driver of the vehicle"
+msgstr "汽车司机"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,route_type:0
+msgid "Drop"
+msgstr "下降"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "End"
+msgstr "结束"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "End Trip"
+msgstr "结束行程"
+
+#. module: openeducat_transportation_enterprise
+#: code:addons/openeducat_transportation_enterprise/models/vehicle.py:40
+#, python-format
+msgid "Enter proper Capacity."
+msgstr "输入适当的容量。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_estimated_time
+msgid "Estimated Arrival"
+msgstr "预计抵达"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_estimated_arrival_conf
+msgid "Estimated Arrival Time"
+msgstr "预计到达时间"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_follower_ids
+msgid "Followers"
+msgstr "追随 者"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "追随者 (渠道)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "追随者 (合作伙伴)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_fuel_logs_count
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_fuel
+msgid "Fuel Logs"
+msgstr "燃油记录"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_fuel_type
+msgid "Fuel Type"
+msgstr "燃油类型"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_fuel_type
+msgid "Fuel Used by the vehicle"
+msgstr "车辆使用的燃料"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Get Stops"
+msgstr "获取停止"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Group By..."
+msgstr "分组通过..。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_overdue
+msgid "Has Contracts Overdue"
+msgstr "合同逾期"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_due_soon
+msgid "Has Contracts to renew"
+msgstr "有续约合同"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.module.category,description:openeducat_transportation_enterprise.module_category_openeducat_transportation
+msgid "Helps you manage user related to transportation."
+msgstr "帮助您管理与运输相关的用户。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_horsepower
+msgid "Horsepower"
+msgstr "马力"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_horsepower_tax
+msgid "Horsepower Taxation"
+msgstr "马力税"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_id
+msgid "ID"
+msgstr "Id"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_unread
+msgid "If checked new messages require your attention."
+msgstr "如果选中的新邮件需要您的注意。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果选中, 则需要注意新邮件。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_acquisition_date
+msgid "Immatriculation Date"
+msgstr "Immatriculation 日期"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_is_follower
+msgid "Is Follower"
+msgstr "是追随者"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_last_post
+msgid "Last Message Date"
+msgstr "上次邮件日期"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop___last_update
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle___last_update
+msgid "Last Modified on"
+msgstr "上次修改时间"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer
+msgid "Last Odometer"
+msgstr "最后里程计"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_write_uid
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_write_date
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_write_date
+msgid "Last Updated on"
+msgstr "上次更新时间"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_license_plate
+msgid "License Plate"
+msgstr "车牌"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_license_plate
+msgid "License plate number of the vehicle (i = plate number for a car)"
+msgstr "车辆牌照号码 (一辆车的车牌号)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_location
+msgid "Location"
+msgstr "位置"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_location
+msgid "Location of the vehicle (garage, ...)"
+msgstr "车辆的位置 (车库,...)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image
+msgid "Logo"
+msgstr "标志"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image_medium
+msgid "Logo (medium)"
+msgstr "徽标 (中型)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_image_small
+msgid "Logo (small)"
+msgstr "徽标 (小)"
+
+#. module: openeducat_transportation_enterprise
+#: model:res.groups,name:openeducat_transportation_enterprise.group_op_transport_manager
+msgid "Manager"
+msgstr "经理"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image_medium
+msgid "Medium-sized logo of the brand. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "中型商标品牌。它将自动调整为128x128px 图像, 并保留纵横比。在窗体视图或某些看板视图中使用此字段。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_model_year
+msgid "Model Year"
+msgstr "式样年"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_model_id
+msgid "Model of the vehicle"
+msgstr "汽车模型"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_name
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_name
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+msgid "Name"
+msgstr "名字"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_name
+msgid "Name of contract to renew soon"
+msgstr "即将续订的合同名称"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作数"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_doors
+msgid "Number of doors of the vehicle"
+msgstr "车辆门数"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "需要操作的消息数"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_seats
+msgid "Number of seats of the vehicle"
+msgstr "车辆座位数"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_message_unread_counter
+msgid "Number of unread messages"
+msgstr "未读邮件数"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer_count
+msgid "Odometer"
+msgstr "里程表"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_odometer_unit
+msgid "Odometer Unit"
+msgstr "里程表单位"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_odometer
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "车辆在该测井时刻的里程计测量"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.module.category,name:openeducat_transportation_enterprise.module_category_openeducat_transportation
+msgid "OpenEduCat Transportation"
+msgstr "OpenEduCat 交通"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_passenger_ids
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_partner_id
+msgid "Passenger"
+msgstr "乘客"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Passengers"
+msgstr "乘客"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_partner_ids
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_form
+msgid "Person(s)"
+msgstr "人 (s)"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,route_type:0
+msgid "Pickup"
+msgstr "皮卡"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_power
+msgid "Power"
+msgstr "权力"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_power
+msgid "Power in kW of the vehicle"
+msgstr "车辆功率"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_present
+msgid "Present/Absent"
+msgstr "出席/缺席"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_residual_value
+msgid "Residual Value"
+msgstr "剩余值"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_route_id
+msgid "Route"
+msgstr "路线"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_route_line_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_route_line_id
+msgid "Route Line"
+msgstr "路线线"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_type
+msgid "Route Type"
+msgstr "工艺路线类型"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_line_view
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_stop_line_view
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_route_view
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_route_sub
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_tree
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_stop_line_tree
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_tree
+msgid "Routes"
+msgstr "路线"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_seats
+msgid "Seats Number"
+msgstr "座位号码"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_sequence
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_stop_sequence
+msgid "Sequence"
+msgstr "序列"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_service_count
+msgid "Services"
+msgstr "服务"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_log_services
+msgid "Services Logs"
+msgstr "服务日志"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image_small
+msgid "Small-sized logo of the brand. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "品牌的小尺寸标识。它将自动调整为64x64px 图像, 并保留纵横比。在需要小图像的地方使用此字段。"
+
+#. module: openeducat_transportation_enterprise
+#: selection:op.route.line,state:0
+msgid "Start"
+msgstr "开始"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_start_time
+msgid "Start Time"
+msgstr "开始时间"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Start Trip"
+msgstr "开始行程"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_state
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_state_id
+msgid "State"
+msgstr "状态"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_passenger_stop_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_line_stop_id
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_stop_tree
+msgid "Stop"
+msgstr "停止"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_form
+msgid "Stop(s)"
+msgstr "停止 (s)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_stop_view
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_line_route_stop_ids
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_stop_ids
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_stop_sub
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_line_form
+msgid "Stops"
+msgstr "停止"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_tag_ids
+msgid "Tags"
+msgstr "标签"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_image
+msgid "This field holds the image used as logo for the brand, limited to 1024x1024px."
+msgstr "这一领域持有的形象作为商标的品牌, 限于1024x1024px。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_contract_renewal_total
+msgid "Total of contracts due or overdue minus one"
+msgstr "到期或逾期减去一项的合同合计"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_transmission
+msgid "Transmission"
+msgstr "传输"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_transmission
+msgid "Transmission Used by the vehicle"
+msgstr "车辆使用的变速器"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_transportations_main
+msgid "Transportation"
+msgstr "运输"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_route_line_sub
+msgid "Trips"
+msgstr "旅行"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr "在汽车马达上写的唯一数字 (车牌号/SN 编号)"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_odometer_unit
+msgid "Unit of the odometer "
+msgstr "里程表单位 "
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_unread
+msgid "Unread Messages"
+msgstr "未读邮件"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "未读邮件计数器"
+
+#. module: openeducat_transportation_enterprise
+#: model:res.groups,name:openeducat_transportation_enterprise.group_op_transport_user
+msgid "User"
+msgstr "用户"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_car_value
+msgid "Value of the bought vehicle"
+msgstr "购买车辆的价值"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_route_vehicle_id
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_vehicle_id
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_route_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_form
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_search
+#: model:ir.ui.view,arch_db:openeducat_transportation_enterprise.view_op_vehicle_tree
+msgid "Vehicle"
+msgstr "车辆"
+
+#. module: openeducat_transportation_enterprise
+#: code:addons/openeducat_transportation_enterprise/models/stop.py:45
+#, python-format
+msgid "Vehicle capacity is over."
+msgstr "车辆容量已过。"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.actions.act_window,name:openeducat_transportation_enterprise.act_open_op_vehicle_view
+#: model:ir.ui.menu,name:openeducat_transportation_enterprise.menu_op_vehicle_sub
+msgid "Vehicles"
+msgstr "车辆"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,field_description:openeducat_transportation_enterprise.field_op_vehicle_website_message_ids
+msgid "Website Messages"
+msgstr "网站留言"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_website_message_ids
+msgid "Website communication history"
+msgstr "网站通信历史记录"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model.fields,help:openeducat_transportation_enterprise.field_op_vehicle_model_year
+msgid "Year of the model"
+msgstr "模型的年份"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route
+msgid "op.route"
+msgstr "工艺路线"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_line
+msgid "op.route.line"
+msgstr "op.route.line"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_passenger
+msgid "op.route.passenger"
+msgstr "op.route.passenger"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_route_stop_line
+msgid "op.route.stop.line"
+msgstr "op.route.stop.line"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_stop
+msgid "op.stop"
+msgstr "停止"
+
+#. module: openeducat_transportation_enterprise
+#: model:ir.model,name:openeducat_transportation_enterprise.model_op_vehicle
+msgid "op.vehicle"
+msgstr "车辆"
+

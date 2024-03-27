@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_materials_template" model="ir.attachment">
+            <field name="name">BÁO CÁO VẬT TƯ THEO KHÓA HỌC</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="crm_academy/static/xls/bao_cao_vat_tu_theo_khoa_hoc.xlsx"/>
+<!--            <field name="datas_fname">bao_cao_vat_tu_theo_khoa_hoc.xlsx</field>-->
+        </record>
+
+        <record id="gift_materials_report_template" model="ir.attachment">
+            <field name="name">BÁO CÁO ĐỒ DÙNG TẶNG HỌC VIÊN</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="crm_academy/static/xls/bao_cao_vat_tu_tang_hoc_vien.xlsx"/>
+        </record>
+
+<!--        <record id="internal_general_student_report_template" model="ir.attachment">-->
+<!--            <field name="name">BÁO CÁO TỔNG HỢP THEO HỌC VIÊN</field>-->
+<!--            <field name="type">binary</field>-->
+<!--            <field name="datas" type="base64"-->
+<!--                   file="crm_academy/static/xls/bao_cao_tong_hop_theo_hoc_vien.xlsx"/>-->
+<!--        </record>-->
+
+<!--        <record id="internal_detailed_student_report_template" model="ir.attachment">-->
+<!--            <field name="name">BÁO CÁO CHI TIẾT THEO HỌC VIÊN</field>-->
+<!--            <field name="type">binary</field>-->
+<!--            <field name="datas" type="base64"-->
+<!--                   file="crm_academy/static/xls/bao_cao_chi_tiet_theo_hoc_vien.xlsx"/>-->
+<!--        </record>-->
+
+<!--        <record id="internal_general_report_template" model="ir.attachment">-->
+<!--            <field name="name">BÁO CÁO TỔNG HỢP ĐÀO TẠO NỘI BỘ</field>-->
+<!--            <field name="type">binary</field>-->
+<!--            <field name="datas" type="base64"-->
+<!--                   file="crm_academy/static/xls/bao_cao_tong_hop_dao_tao_noi_bo.xlsx"/>-->
+<!--        </record>-->
+
+        <record id="course_report_template" model="ir.attachment">
+            <field name="name">BÁO CÁO ĐÁNH GIÁ KHÓA HỌC</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="crm_academy/static/xls/bao_cao_danh_gia_khoa_hoc.xlsx"/>
+        </record>
+
+        <record id="faculty_report_template" model="ir.attachment">
+            <field name="name">BÁO CÁO ĐÁNH GIÁ GIẢNG VIÊN</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64"
+                   file="crm_academy/static/xls/bao_cao_danh_gia_giang_vien.xlsx"/>
+        </record>
+
+    </data>
+</odoo>

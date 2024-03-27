@@ -1,0 +1,9 @@
+nav.o_main_navbar {
+    > ul > li {
+        > a {
+            &.full {
+                font-size: 20px;
+            }
+        }
+    }
+}

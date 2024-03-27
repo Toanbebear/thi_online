@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="online_survey_page" name="Survey Main View">
+            <t t-call="website.layout">
+                <div class="container mt32">
+                    <hr class="row"/>
+                    <div class="row">
+                        <t t-foreach="surveys" t-as="survey">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="feature">
+                                    <div class="card card-body bg-primary-light well1 mb-4"
+                                         style="border-radius: 10px;">
+                                        <div class="feature-content-box">
+                                            <center>
+                                                <h3 class="feature_title">
+                                                    <span t-esc="survey.title"/>
+                                                </h3>
+                                            </center>
+                                            <hr/>
+                                            <div>
+                                                <center>
+                                                    <a class="btn btn-primary btn-lg"
+                                                       t-attf-href="/survey/start/#{slug(survey)}">Bắt đầu khảo sát
+                                                    </a>
+                                                </center>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

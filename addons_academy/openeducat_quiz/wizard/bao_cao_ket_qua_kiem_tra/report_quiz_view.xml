@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="quiz_report_form">
+            <field name="name">quiz.report</field>
+            <field name="model">quiz.report</field>
+            <field name="arch" type="xml">
+                <form string="Báo cáo ">
+                    <group>
+                        <field name="status" required="1"/>
+                        <field name="company_ids" options='{"no_open": True, "no_create": True}' attrs="{'invisible': [('status','=','all')], 'required': [('status','!=','all')]}" string="Chi nhánh" widget="many2many_tags"/>
+                        <field name="start_date" string="Ngày kiểm tra: Từ" required="1"/>
+                        <field name="end_date" string="Ngày kiểm tra: Đến" required="1"/>
+                    </group>
+                    <footer>
+                        <button name="create_report" type="object" string="Báo cáo" class="oe_highlight"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_quiz_report_act">
+            <field name="name">Báo cáo kết quả kiểm tra</field>
+            <field name="res_model">quiz.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="quiz_report_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_op_report_quiz"
+          name="Báo cáo"
+          sequence="30"
+          action="action_quiz_report_act"
+          parent="openeducat_quiz.op_quiz_main_menu"/>
+
+        <menuitem   id="menu_report_quiz"
+                    name="Báo cáo kết quả kiểm tra"
+                    action="action_quiz_report_act"
+                    sequence="1"
+                    parent="menu_op_report_quiz"
+        />
+        <record id="bao_cao_ket_qua_thi_attachment" model="ir.attachment">
+            <field name="name">BÁO CÁO KẾT QUẢ THI</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="openeducat_quiz/static/xls/bao_cao_ket_qua_thi.xlsx"/>
+            <field name="store_fname">bao_cao_ket_qua_thi.xls</field>
+        </record>
+    </data>
+</odoo>

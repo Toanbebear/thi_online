@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+
+	<record id="account_asset_cron" model="ir.cron">
+        <field name="name">Account Asset: Generate asset entries</field>
+        <field name="model_id" ref="model_account_asset_asset"/>
+        <field name="state">code</field>
+        <field name="code">model._cron_generate_entries()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+    </record>
+
+        <record id="seq_account_asset_asset" model="ir.sequence">
+            <field name="name">asset Ins</field>
+            <field name="code">account.asset.asset</field>
+            <field name="prefix">-%(range_year)s-</field>
+            <field name="implementation">no_gap</field>
+            <field name="padding">9</field>
+        </record>
+</odoo>

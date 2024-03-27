@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_report_misbehaviour_type"
+                string="Misbehaviour Type Wise"
+                model="op.discipline"
+                report_type="qweb-pdf"
+                file="openeducat_discipline.misbehaviour_type_report"
+                name="openeducat_discipline.misbehaviour_type_report"
+                menu="False"/>
+
+        <report
+                id="action_report_student_wise"
+                string="Student Wise"
+                model="op.discipline"
+                report_type="qweb-pdf"
+                file="openeducat_discipline.student_wise_report"
+                name="openeducat_discipline.student_wise_report"
+                menu="False"/>
+    </data>
+</odoo>

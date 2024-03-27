@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_route_1" model="op.route">
+            <field name="name">BOA First Trip 7 AM</field>
+            <field name="cost">50</field>
+            <field name="vehicle_id" ref="op_vehicle_1"/>
+        </record>
+
+        <record id="op_route_2" model="op.route">
+            <field name="name">LTRP First 7 AM</field>
+            <field name="cost">50</field>
+            <field name="vehicle_id" ref="op_vehicle_2"/>
+        </record>
+
+        <record id="op_route_3" model="op.route">
+            <field name="name">General 7 AM</field>
+            <field name="cost">50</field>
+            <field name="vehicle_id" ref="op_vehicle_3"/>
+        </record>
+    </data>
+</odoo>

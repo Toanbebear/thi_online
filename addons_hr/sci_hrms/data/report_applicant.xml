@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<data>
+    <record model="temp.creation" id="report_applicant_template">
+        <field name="template" type="base64" file="sci_hrms/static/xls/bao_cao_ung_vien.xlsx"/>
+        <field name="name">Báo cáo danh sách ứng viên</field>
+        <field name="max_samples">10</field>
+        <field name="template_name">bao_cao_ung_vien.xlsx</field>
+        <field name="all_in_one" eval="True"/>
+        <field name="max_row">1501</field>
+        <field name="grp_by_cell">a7</field>
+        <field name="main_model" model="ir.model" search="[('model', '=', 'hr.applicant')]"/>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_1">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">create_date</field>
+        <field name="replacement_format">{'time_format': ' %d/ %m/ %Y'}</field>
+        <field name="temp_mark">c8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_2">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">job_id</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">d8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_3">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">name</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">e8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_4">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">birthday</field>
+        <field name="replacement_format">{'False': '','time_format': ' %d/ %m/ %Y'}</field>
+        <field name="temp_mark">f8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_5">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">partner_phone</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">g8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_6">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">email_from</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">h8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_7">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">address</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">i8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_8">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">qualification</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">j8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_9">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">last_workplace</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">k8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_10">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">source_id</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">l8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_11">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">priority</field>
+        <field name="replacement_format">{'0': 'Bình thường', '1':' Tốt', '2':'Rất tốt', '3':'Tuyệt vời'}</field>
+        <field name="temp_mark">s8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_12">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.stage_id</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">m8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_13">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.location</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">n8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_14">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.start</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">o8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_15">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.partner_ids</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">p8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_16">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.description</field>
+        <field name="replacement_format">{'False': ''}</field>
+        <field name="temp_mark">q8</field>
+    </record>
+    <record model="fields.line" id="report_applicant_template_fields_line_17">
+        <field name="line" ref="report_applicant_template"/>
+        <field name="python_code">applicant_state.result</field>
+        <field name="replacement_format">{'False': '','fail':'Loại','wait':'Chờ xét thêm','pass':'Đạt'}</field>
+        <field name="temp_mark">r8</field>
+    </record>
+<!--    <record model="ir.actions.act_window" id="act_report_applicant_template">-->
+<!--        <field name="name">Báo cáo danh sách ứng viên</field>-->
+<!--        <field name="type">ir.actions.act_window</field>-->
+<!--        <field name="res_model">temp.wizard</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--        <field name="view_type">form</field>-->
+<!--        <field name="target">inline</field>-->
+<!--        <field name="view_id" ref="ms_templates.report_wizard"/>-->
+<!--        <field name="binding_model_id" model="ir.model" search="[('model', '=', 'hr.applicant')]"/>-->
+<!--        <field name="context" eval="{'default_template_id': ref('report_applicant_template')}"/>-->
+<!--    </record>-->
+
+
+</data>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="openeducat_lms_assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="/openeducat_lms/static/src/scss/account_contract_dashboard.scss" />
+            <script type="text/javascript" src="/openeducat_lms/static/src/js/openeducat_lms_dashboard.js" />
+        </xpath>
+    </template>
+
+    <template id="assets_frontend_js" name="Corousel Slider JS frontend assets"
+              inherit_id="website.assets_frontend">
+        <xpath expr="." position="inside">
+            <link type="text/css"
+                  href="/openeducat_lms/static/src/scss/owl.carousel.css"
+                  rel="stylesheet"/>
+            <link type="text/css"
+                  href="/openeducat_lms/static/src/scss/lms_common.scss"
+                  rel="stylesheet"/>
+            <script type="text/javascript"
+                    src="/openeducat_lms/static/src/js/owl.carousel.js"></script>
+            <script type="text/javascript"
+                    src="/openeducat_lms/static/src/js/carousel_slider.js"></script>
+            <script type="text/javascript"
+                    src="/openeducat_lms/static/src/js/category_menu.js"/>
+            <script type="text/javascript"
+                    src="/openeducat_lms/static/src/js/progress.js"/>
+        </xpath>
+    </template>
+</odoo>

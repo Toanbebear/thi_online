@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_BbbMeeting_form" model="ir.ui.view">
+            <field name="name">bbb.meeting.form</field>
+            <field name="model">bbb.meeting</field>
+            <field name="type">form</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Meetings">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="apw" required="1"/>
+                                <field name="session_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="user_id" readonly="1"/>
+                                <field name="mpw" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="welcome_str" required="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Create Meeting" class="oe_highlight" type="object" name="create_meeting"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_BbbMeeting_view">
+            <field name="name">Meetings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">bbb.meeting</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_BbbMeeting_view_form">
+            <field name="act_window_id" ref="act_open_BbbMeeting_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_BbbMeeting_form"/>
+        </record>
+    </data>
+</odoo>

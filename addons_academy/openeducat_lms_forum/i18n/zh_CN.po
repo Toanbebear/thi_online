@@ -1,0 +1,405 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducaterp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:04+0000\n"
+"PO-Revision-Date: 2018-04-12 10:01-0400\n"
+"Last-Translator: Shau_4594 <shaunakamin099@gmail.com>\n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducaterp\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /master/openeducat_lms_forum/i18n/openeducat_lms_forum.pot\n"
+"Language: zh_CN\n"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "(The above section was adapted from Stackoverflow’s FAQ.)"
+msgstr "(以上部分是根据 Stackoverflow 的常见问题改编的。"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "(Un)archiving a post automatically (un)archives its answers. Do you want to proceed?"
+msgstr "(联合国) 自动存档帖子 (联合国) 存档其答案。是否继续？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers should not add or expand questions</b>. Instead\n"
+"    either edit the question or add a comment."
+msgstr "<b>答案不应添加或扩展问题</b>。而是编辑问题或添加注释。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers should not add or expand questions</b>. Instead either edit the question or add a question comment."
+msgstr "<b>答案不应添加或扩展问题</b>。而是编辑问题或添加问题注释。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers should not comment other answers</b>. Instead\n"
+"    add a comment on the other answers."
+msgstr "<b>回答不应该评论其他答案</b>。而是在其他答案上添加注释。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers should not comment other answers</b>. Instead add a comment on the other answers."
+msgstr "<b>回答不应该评论其他答案</b>。而是在其他答案上添加注释。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers should not start debates</b>\n"
+"    This community Q&amp;A is not a discussion group. Please avoid holding debates in\n"
+"    your answers as they tend to dilute the essence of questions and answers. For\n"
+"    brief discussions please use commenting facility."
+msgstr "<b>回答不应该开始辩论</b>\n"
+"    这个社区 Q&amp;不是一个讨论小组。请避免在你的答案中举行辩论, 因为他们倾向于淡化问题和答案的本质。简要讨论请使用评论设施。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers shouldn't just point to other Questions</b>. Instead add a question comment indication \"Possible duplicate of...\". However, it's ok to include links to other questions or answers providing relevant additional information."
+msgstr "<b>答案不应该只是指向其他问题</b>。而是添加一个问题注释指示 \"可能的副本...\"。但是, 可以包含指向其他问题或答案的链接, 以提供相关的附加信息。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers shouldn't just point to other questions</b>.\n"
+"    Instead add a comment indicating <i>\"Possible duplicate\n"
+"    of...\"</i>. However, it's fine to include links to other\n"
+"    questions or answers providing relevant additional\n"
+"    information."
+msgstr "<b>答案不应该只是指向其他问题</b>。    而是添加一个注释, 指示 <i>\"可能的副本...\"</i>。但是, 在提供相关附加信息的其他问题或答案的链接时, 也可以这样做。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers shouldn't just provide a\n"
+"    link a solution</b>. Instead provide the solution\n"
+"    description text in your answer, even if it's just a\n"
+"    copy/paste. Links are welcome, but should be complementary to\n"
+"    answer, referring sources or additional reading."
+msgstr "<b>答案不应该只是提供一个链接解决方案</b>。而是在答案中提供解决方案说明文本, 即使它只是一个拷贝/粘贴。链接是受欢迎的, 但应该是互补的回答, 参考源或额外的阅读。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Answers shouldn't just provide a link a solution</b>. Instead provide the solution description text in your answer, even if it's just a copy/paste. Links are welcome, but should be complementary to answer, referring sources or additional reading."
+msgstr "<b>答案不应该只是提供一个链接解决方案</b>。而是在答案中提供解决方案说明文本, 即使它只是一个拷贝/粘贴。链接是受欢迎的, 但应该是互补的回答, 参考源或额外的阅读。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Before you ask - please make sure to search for a similar question.</b> You can\n"
+"    search questions by their title or tags.  It’s also OK to\n"
+"    answer your own question."
+msgstr "<b>在你问之前-请确保搜索类似的问题。</b> 您可以搜索问题的标题或标签。 回答你自己的问题也是可以的。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "<b>Please avoid asking questions that are too subjective\n"
+"    and argumentative</b> or not relevant to this community."
+msgstr "<b>请避免问过于主观和议论</b> 或与这个社区无关的问题。"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Answered by"
+msgstr "回答的"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Answers"
+msgstr "答案"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.course_detail_inherit
+msgid "Ask a Question"
+msgstr "提问"
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_op_course_forum_post_ids
+msgid "Blog Post"
+msgstr "博客帖子"
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_forum_post_course_id
+msgid "Course"
+msgstr "课程"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Create Forum"
+msgstr "创建论坛"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "For example, if you ask an interesting question or give a helpful answer, your\n"
+"    input will be upvoted. On the other hand if the answer is misleading - it will\n"
+"    be downvoted. Each vote in favor will generate 10 points, each vote against\n"
+"    will subtract 10 points. There is a limit of 200 points that can be accumulated\n"
+"    for a question or answer per day. The table given at the end explains reputation point\n"
+"    requirements for each type of moderation task."
+msgstr "例如, 如果你问一个有趣的问题或者给出一个有用的答案, 你的输入将被 upvoted。另一方面, 如果答案是误导的话--那将是 downvoted 的。每票赞成将产生10分, 每票反对将减去10分。有一个200点的限制, 可以为一个问题或回答每天积累。最后给出的表解释了每种类型的缓和任务的声望点要求。"
+
+#. module: openeducat_lms_forum
+#: model:ir.model.fields,field_description:openeducat_lms_forum.field_op_course_forum_id
+msgid "Forum"
+msgstr "论坛"
+
+#. module: openeducat_lms_forum
+#: model:ir.model,name:openeducat_lms_forum.model_forum_post
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Forum Post"
+msgstr "论坛帖子"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "Guidelines"
+msgstr "指引"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "If this approach is not for you, please respect the community and use Google+\n"
+"    communities instead."
+msgstr "如果这种方法不适合您, 请尊重社区, 转而使用 Google + 社区。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "If you fit in one of these example or if your motivation for asking the\n"
+"    question is “I would like to participate in a discussion about ______”, then\n"
+"    you should not be asking here but on our mailing lists.\n"
+"    However, if your motivation is “I would like others to explain ______ to me”,\n"
+"    then you are probably OK."
+msgstr "如果你适合这些例子之一, 或者如果你问这个问题的动机是 \"我想参加一个关于 ______的讨论\", 那么你不应该在这里问, 而是在我们的邮寄名单上。    然而, 如果你的动机是 \"我想别人解释 ______ 给我\", 那么你可能是好的。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,name:openeducat_lms_forum.demo_course_1_forum
+msgid "Introduction To Python Programming"
+msgstr "Python 编程简介"
+
+#. module: openeducat_lms_forum
+#: code:addons/openeducat_lms_forum/models/course.py:39
+#, python-format
+msgid "It appears your email has not been verified to                     participate in forum, Verify it from forum menu on                     homepage."
+msgstr "看来您的电子邮件还没有被验证参加论坛, 从论坛菜单上验证网页。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,name:openeducat_lms_forum.demo_course_3_forum
+msgid "Learn to Sell Anything"
+msgstr "学习销售任何东西"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,name:openeducat_lms_forum.demo_course_2_forum
+msgid "Learn to Speak: French"
+msgstr "学会说话: 法语"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "More over:"
+msgstr "更多:"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.view_course_lms_forum_form
+msgid "Name"
+msgstr "名字"
+
+#. module: openeducat_lms_forum
+#: model:ir.ui.view,arch_db:openeducat_lms_forum.course_detail_inherit
+msgid "Q&amp;A"
+msgstr "Q&amp;A"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "The goal of this site is create a relevant knowledge base that would answer\n"
+"    questions related to Odoo."
+msgstr "本网站的目标是创建一个相关的知识库, 回答与 Odoo 有关的问题。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "Therefore questions and answers can be edited like wiki pages by experienced users of\n"
+"    this site in order to improve the overall quality of the knowledge base content.\n"
+"    Such privileges are granted based on user karma level: you will be able to do the same\n"
+"    once your karma gets high enough."
+msgstr "因此, 问题和答案可以编辑像维基网页的经验丰富的用户本网站, 以提高总体质量的知识库内容。    这些特权是根据用户业力级别授予的: 当你的业力得到足够高的时候, 你就能做同样的事。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "This community is for professional and enthusiast users,\n"
+"    partners and programmers. You can ask questions about:"
+msgstr "这个社区是为专业和热心的用户, 合作伙伴和程序员。您可以问以下问题:"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,description:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,description:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,description:openeducat_lms_forum.demo_course_3_forum
+msgid "This community is for professionals and enthusiasts of our products and services. Share and discuss the best content and new marketing ideas, build your professional profile and become a better marketer together."
+msgstr "这个社区是为我们的产品和服务的专业人士和爱好者。分享和讨论最好的内容和新的营销理念, 建立你的专业形象, 成为一个更好的营销一起。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "To prevent your question from being flagged and possibly removed, avoid asking\n"
+"    subjective questions where …"
+msgstr "为了防止您的问题被标记和可能被删除, 避免问主观问题在哪里..。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "What kinds of questions can I ask here?"
+msgstr "我可以在这里问什么问题？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "What should I avoid in my answers?"
+msgstr "在我的回答中, 我应该避免什么？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "What should I avoid in my questions?"
+msgstr "在我的问题中, 我应该避免什么？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "When a question or answer is upvoted, the user who posted them will gain some\n"
+"    points, which are called \"karma points\". These points serve as a rough\n"
+"    measure of the community trust to him/her. Various moderation tasks are\n"
+"    gradually assigned to the users based on those points."
+msgstr "当一个问题或答案是 upvoted, 张贴他们的用户将获得一些点, 这被称为 \"因果报应点\"。这些观点是对他/她的社会信任的粗略衡量。各种缓和任务根据这些点逐渐分配给用户。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "Why can other people edit my questions/answers?"
+msgstr "为什么其他人可以编辑我的问题/答案？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "You should only ask practical, answerable questions based\n"
+"    on actual problems that you face. Chatty, open-ended\n"
+"    questions diminish the usefulness of this site and push\n"
+"    other questions off the front page."
+msgstr "你应该只根据你所面对的实际问题问一些实际的、负责任的问题。健谈、不限成员名额的问题减少了本网站的用处, 并将其他问题推到了头版。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "every answer is equally valid: “What’s your favorite ______?”"
+msgstr "每个答案都同样有效: \"你最喜欢的 ______ 是什么？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "how to configure or customize Odoo to specific business needs,"
+msgstr "如何配置或自定义 Odoo 以满足特定业务需求,"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "how to develop modules for your own need,"
+msgstr "如何根据自己的需要开发模块,"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "how to install Odoo on a specific infrastructure,"
+msgstr "如何在特定的基础结构上安装 Odoo,"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "it is a rant disguised as a question: “______ sucks, am I right?”"
+msgstr "这是一个伪装成一个问题的咆哮: \"______ 烂, 我说得对吗？"
+
+#. module: openeducat_lms_forum
+#: model:ir.model,name:openeducat_lms_forum.model_op_course
+msgid "op.course"
+msgstr "课程"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "specific questions about Odoo service offers, etc."
+msgstr "有关 Odoo 服务提供等的具体问题。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "there is no actual problem to be solved: “I’m curious if other people feel like I do.”"
+msgstr "没有真正的问题要解决: \"我很好奇, 如果别人觉得我这样做。"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "we are being asked an open-ended, hypothetical question: “What if ______ happened?”"
+msgstr "我们被问到一个不限成员名额的假设性问题: \"如果 ______ 发生了怎么办？"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "what's the best way to use Odoo for a specific business need,"
+msgstr "什么是最好的方式来使用 Odoo 的特定业务需要,"
+
+#. module: openeducat_lms_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_1_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_2_forum
+#: model:forum.forum,faq:openeducat_lms_forum.demo_course_3_forum
+msgid "your answer is provided along with the question, and you expect more answers: “I use ______ for ______, what do you use?”"
+msgstr "你的答案连同问题一起提供, 你期待更多的答案: \"我用 ______ ______, 你用什么？"
+

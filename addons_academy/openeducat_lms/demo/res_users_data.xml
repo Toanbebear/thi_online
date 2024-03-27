@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_user_student_1" model="res.users">
+            <field name="name">Elliot</field>
+            <field name="password">openeducat</field>
+            <field name="login">elliot@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_2" model="res.users">
+            <field name="name">Diane</field>
+            <field name="password">openeducat</field>
+            <field name="login">diane@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_3" model="res.users">
+            <field name="name">Mark</field>
+            <field name="password">openeducat</field>
+            <field name="login">mark@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_4" model="res.users">
+            <field name="name">Ramon</field>
+            <field name="password">openeducat</field>
+            <field name="login">ramon@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_5" model="res.users">
+            <field name="name">Robert</field>
+            <field name="password">openeducat</field>
+            <field name="login">robert@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_6" model="res.users">
+            <field name="name">Keith</field>
+            <field name="password">openeducat</field>
+            <field name="login">keith@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_7" model="res.users">
+            <field name="name">Jorge</field>
+            <field name="password">openeducat</field>
+            <field name="login">jorge@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_8" model="res.users">
+            <field name="name">John</field>
+            <field name="password">openeducat</field>
+            <field name="login">john@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_9" model="res.users">
+            <field name="name">Shirley</field>
+            <field name="password">openeducat</field>
+            <field name="login">shirley@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_10" model="res.users">
+            <field name="name">Edna</field>
+            <field name="password">openeducat</field>
+            <field name="login">edna@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_11" model="res.users">
+            <field name="name">Warren</field>
+            <field name="password">openeducat</field>
+            <field name="login">warren@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_12" model="res.users">
+            <field name="name">Colleen</field>
+            <field name="password">openeducat</field>
+            <field name="login">colleen@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_14" model="res.users">
+            <field name="name">Shawn</field>
+            <field name="password">openeducat</field>
+            <field name="login">shawn@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_15" model="res.users">
+            <field name="name">Ashley</field>
+            <field name="password">openeducat</field>
+            <field name="login">ashley@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_16" model="res.users">
+            <field name="name">James</field>
+            <field name="password">openeducat</field>
+            <field name="login">james@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_17" model="res.users">
+            <field name="name">Frankie</field>
+            <field name="password">openeducat</field>
+            <field name="login">frankie@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_18" model="res.users">
+            <field name="name">Christian</field>
+            <field name="password">openeducat</field>
+            <field name="login">christian@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_19" model="res.users">
+            <field name="name">Elizabeth</field>
+            <field name="password">openeducat</field>
+            <field name="login">elizabeth@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_20" model="res.users">
+            <field name="name">Joanne</field>
+            <field name="password">openeducat</field>
+            <field name="login">joanne@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_21" model="res.users">
+            <field name="name">Richard</field>
+            <field name="password">openeducat</field>
+            <field name="login">richard@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_22" model="res.users">
+            <field name="name">Delbert</field>
+            <field name="password">openeducat</field>
+            <field name="login">delbert@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_23" model="res.users">
+            <field name="name">Walter</field>
+            <field name="password">openeducat</field>
+            <field name="login">walter@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_24" model="res.users">
+            <field name="name">Jesse</field>
+            <field name="password">openeducat</field>
+            <field name="login">jesse@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_25" model="res.users">
+            <field name="name">Skyler</field>
+            <field name="password">openeducat</field>
+            <field name="login">skyler@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_26" model="res.users">
+            <field name="name">Sandra</field>
+            <field name="password">openeducat</field>
+            <field name="login">sandra@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_27" model="res.users">
+            <field name="name">Edwin</field>
+            <field name="password">openeducat</field>
+            <field name="login">edwin@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_28" model="res.users">
+            <field name="name">Brenda</field>
+            <field name="password">openeducat</field>
+            <field name="login">brenda@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_29" model="res.users">
+            <field name="name">William</field>
+            <field name="password">openeducat</field>
+            <field name="login">william@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_30" model="res.users">
+            <field name="name">Sean</field>
+            <field name="password">openeducat</field>
+            <field name="login">sean@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_31" model="res.users">
+            <field name="name">Jeff</field>
+            <field name="password">openeducat</field>
+            <field name="login">jeff@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_32" model="res.users">
+            <field name="name">Donald</field>
+            <field name="password">openeducat</field>
+            <field name="login">donald@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_33" model="res.users">
+            <field name="name">Charles</field>
+            <field name="password">openeducat</field>
+            <field name="login">charles@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_34" model="res.users">
+            <field name="name">Anita</field>
+            <field name="password">openeducat</field>
+            <field name="login">anita@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_35" model="res.users">
+            <field name="name">Jeffery</field>
+            <field name="password">openeducat</field>
+            <field name="login">jeffery@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_36" model="res.users">
+            <field name="name">Flynn</field>
+            <field name="password">openeducat</field>
+            <field name="login">flynn@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_37" model="res.users">
+            <field name="name">Hank</field>
+            <field name="password">openeducat</field>
+            <field name="login">hank@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_38" model="res.users">
+            <field name="name">Maurice</field>
+            <field name="password">openeducat</field>
+            <field name="login">maurice@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_39" model="res.users">
+            <field name="name">Daniel</field>
+            <field name="password">openeducat</field>
+            <field name="login">daniel@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+
+        <record id="op_user_student_40" model="res.users">
+            <field name="name">Philip</field>
+            <field name="password">openeducat</field>
+            <field name="login">philip@openeducat.org</field>
+            <field name="groups_id"
+                   eval="[(4,ref('openeducat_core.group_op_student'))]"/>
+        </record>
+    </data>
+</odoo>

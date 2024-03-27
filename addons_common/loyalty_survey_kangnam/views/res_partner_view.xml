@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_partner_inherit_survey" model="ir.ui.view">
+            <field name="name">view.partner.inherit_survey</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="CRM_HH_Partner.view_partner_HH"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="start_survey" string="Survey HN" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('id', '=', False)]}"/>
+                    <button name="start_hcm_survey" string="Survey HCM" type="object" class="oe_highlight"
+                            attrs="{'invisible': [('id', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='birth_date']" position="after">
+                    <label for="survey_qr" string="QR Khảo sát"/>
+                    <field name="survey_qr" widget="image" style="width:100px" nolabel="1"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

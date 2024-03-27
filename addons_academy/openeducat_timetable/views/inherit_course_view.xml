@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="op_course_form_inherit" model="ir.ui.view">
+        <field name="name">op.course.form.inherit</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='min_attendance']" position="before">
+                <field name="num_lessons"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="op_course_tree_inherit" model="ir.ui.view">
+        <field name="name">op.course.tree.inherit</field>
+        <field name="model">op.course</field>
+        <field name="inherit_id" ref="openeducat_core.view_op_course_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='evaluation_type']" position="before">
+                <field name="num_lessons" required="1"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

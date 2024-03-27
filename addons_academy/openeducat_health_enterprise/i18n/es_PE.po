@@ -1,0 +1,275 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:01+0000\n"
+"PO-Revision-Date: 2018-03-07 01:12-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Spanish, Peru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: es-PE\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_health_enterprise/i18n/openeducat_health_enterprise.pot\n"
+"Language: es_PE\n"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "A+ve"
+msgstr "A + ve"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "A-ve"
+msgstr "A-ve"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "AB+ve"
+msgstr "AB + ve"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "AB-ve"
+msgstr "AB-ve"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_regular_checkup
+msgid "Any Regular Checkup Required?"
+msgstr "¿Cualquier chequeo Regular requerida?"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "B+ve"
+msgstr "B + ve"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "B-ve"
+msgstr "B-ve"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_blood_group
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Blood Group"
+msgstr "Grupo sanguíneo"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_name
+msgid "Checkup Detail"
+msgstr "Detalle de comprobación"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Checkup Details"
+msgstr "Datos de comprobación"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Checkup Line"
+msgstr "Línea de comprobación"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_health_line
+msgid "Checkup Lines"
+msgstr "Líneas de chequeo"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_recommendation
+msgid "Checkup Recommendation"
+msgstr "Recomendación de chequeo"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_company_id
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_create_uid
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_create_date
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_display_name
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: openeducat_health_enterprise
+#: code:addons/openeducat_health_enterprise/models/health.py:59
+#, python-format
+msgid "Enter proper height and weight!"
+msgstr "¡Introduzca el peso y la altura correcta!"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_eyeglasses_no
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Eye Glasses"
+msgstr "Gafas"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_eyeglasses
+msgid "Eye Glasses?"
+msgstr "¿Gafas?"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_faculty_id
+#: selection:op.health,type:0
+msgid "Faculty"
+msgstr "Facultad"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Group By..."
+msgstr "Grupo por..."
+
+#. module: openeducat_health_enterprise
+#: model:ir.actions.act_window,name:openeducat_health_enterprise.act_open_op_health_view
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_health_id
+#: model:ir.ui.menu,name:openeducat_health_enterprise.menu_op_health
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_tree
+msgid "Health"
+msgstr "Salud"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_faculty_health_faculty_lines
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_student_health_lines
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.health_faculty_form_view
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.health_student_form_view
+msgid "Health Detail"
+msgstr "Detalle de la salud"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_health
+msgid "Health Detail for Students and Faculties"
+msgstr "Detalle de salud para estudiantes y facultades"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_height
+msgid "Height(C.M.)"
+msgstr "Height(C.M.)"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_id
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health___last_update
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line___last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_write_uid
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line_write_date
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Major Disease"
+msgstr "Enfermedad de mayor"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_major_diseases_note
+msgid "Major Diseases"
+msgstr "Enfermedades importantes"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_major_diseases
+msgid "Major Diseases?"
+msgstr "¿Principales enfermedades?"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "O+ve"
+msgstr "O + ve"
+
+#. module: openeducat_health_enterprise
+#: selection:op.health,blood_group:0
+msgid "O-ve"
+msgstr "O ve"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Other Details"
+msgstr "Otros detalles"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_physical_challenges_note
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Physical Challenge"
+msgstr "Reto físico"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_physical_challenges
+msgid "Physical Challenge?"
+msgstr "Reto físico?"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Regular Checkup"
+msgstr "Chequeo regular"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_student_id
+#: selection:op.health,type:0
+msgid "Student"
+msgstr "Estudiante"
+
+#. module: openeducat_health_enterprise
+#: model:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Student Name"
+msgstr "Nombre del estudiante"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_faculty
+msgid "op.faculty"
+msgstr "op.Faculty"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_health_line
+msgid "op.health.line"
+msgstr "op.Health.line"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_student
+msgid "op.student"
+msgstr "op.Student"
+

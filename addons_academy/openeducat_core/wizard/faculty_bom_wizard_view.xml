@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="faculty_bom_form">
+            <field name="name">op.faculty.bom.form</field>
+            <field name="model">op.faculty.bom</field>
+            <field name="arch" type="xml">
+                <form string="Faculty BOM wizard">
+                    <group>
+                        <field name="reverse" group="openeducat_core.group_op_faculty"/>
+                        <field name="reverse_pick" groups="openeducat_core.group_op_faculty"
+                                attrs="{'required':[('reverse', '=', True)], 'invisible': [('reverse','=', False)]}"
+                                options='{"no_open": True, "no_create": True}'/>
+                        <field name="faculty_stock_location"
+                               groups="openeducat_core.group_op_back_office"
+                                attrs="{'invisible': [('reverse', '=', True)]}"/>
+                    </group>
+                    <field name="products" domain="[('bundle', '=', False), ('course_id', '=', False), ('batch_id', '=', False)]"
+                           attrs="{'invisible': [('reverse', '=', True)]}" widget="one2many">
+                        <tree editable="bottom">
+                            <field name="product" domain="[('id', 'not in', parent.products_domain), ('type', '=', 'product')]"/>
+                            <field name="quantity"/>
+                            <field name="uom_id" domain="[('category_id', '=', uom_category)]"/>
+                            <field name="cost" widget='monetary' options="{'currency_field': 'currency_id'}" readonly="1" force_save="1" invisible="1"/>
+                            <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}" readonly="1" force_save="1" invisible="1"/>
+                            <field name="uom_category" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                        </tree>
+                    </field>
+                    <field name="products_domain" widget="many2many_tags" invisible="1"/>
+                    <footer>
+                        <button name="update_materials" type="object"
+                                string="Update" class="oe_highlight"
+                                attrs="{'invisible': [('reverse', '=', True)]}"
+                                confirm="Are you sure you want to update materials? This action can only be undone by administrators."/>
+                        <button name="reverse_materials" type="object"
+                                string="Reverse pick" class="oe_highlight"
+                                attrs="{'invisible': [('reverse', '=', False)]}"
+                                confirm="Are you sure you want to reverse the stock picking? This action cannot be undone."/>
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="faculty_bom_act">
+            <field name="name">Faculty BOM wizard</field>
+            <field name="res_model">op.faculty.bom</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="faculty_bom_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

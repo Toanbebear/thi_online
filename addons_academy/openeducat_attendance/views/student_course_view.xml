@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="student_view_op_attendance_line_tree" model="ir.ui.view">
+            <field name="name">op.student.attendance.line.tree</field>
+            <field name="model">op.attendance.line</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Line" editable="top" create="false"
+                      default_order="batch_id, attendance_date" decoration-danger="(present==False and catch_up==False)">
+                    <field name="course_id"/>
+                    <field name="batch_id"/>
+                    <field name="present"/>
+                    <field name="catch_up" attrs="{'readonly': [('present','=', True)]}" force_save="1"/>
+                    <field name="session_content"/>
+                    <field name="attendance_date"/>
+                    <field name="remark"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_attendance_line_student_view">
+            <field name="name">Attendances</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.attendance.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="openeducat_attendance.student_view_op_attendance_line_tree"/>
+            <field name="search_view_id" ref="openeducat_attendance.view_op_attendance_line_search"/>
+            <field name="domain">[('student_id', '=', active_id)]</field>
+            <field name="context">{'search_default_group_by_attendance_batch': 1}</field>
+        </record>
+
+        <record id="attendance_student_form_inherited" model="ir.ui.view">
+            <field name="name">attendance.student.form.inherited</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(openeducat_attendance.act_open_op_attendance_line_student_view)d"
+                            string="Attendances" type="action" icon="fa-list-alt"/>
+                </xpath>
+
+                <xpath expr="//field[@name='course_detail_ids']/tree/field[@name='batch_code']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='course_detail_ids']/form/group/field[@name='batch_id']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="attendance_batch_form_inherited" model="ir.ui.view">
+            <field name="name">attendance.batch.form.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='student_course']/tree/field[@name='student_id']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/form/group/field[@name='student_id']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="attendance_batch_form_internal_inherited" model="ir.ui.view">
+            <field name="name">attendance.batch.form.internal.inherited</field>
+            <field name="model">op.batch</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_batch_form_internal"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='student_course']/tree/field[@name='student_id']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+                <xpath expr="//field[@name='student_course']/form/group/field[@name='student_id']" position="after">
+                    <field name="attendance"/>
+                    <field name="progress" attrs="{'column_invisible': [('parent.internal', '=', True)]}"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="attendance_student_course_tree_internal_inherited" model="ir.ui.view">
+            <field name="name">attendance.student.course.tree.internal.inherited</field>
+            <field name="model">op.student.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_course_internal_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="attendance" readonly="1"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

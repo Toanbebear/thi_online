@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_op_transportations_main" name="Transportation"
+            web_icon="openeducat_transportation_enterprise,static/description/icon.png"
+            sequence="100" />
+
+        <menuitem id="menu_op_route_sub" name="Routes"
+            parent="menu_op_transportations_main" sequence="10"
+            action="act_open_op_route_view"/>
+
+        <menuitem id="menu_op_stop_sub" name="Stops"
+            parent="menu_op_transportations_main" sequence="20"
+            action="act_open_op_stop_view"/>
+
+        <menuitem id="menu_op_route_line_sub" name="Trips"
+            parent="menu_op_transportations_main" sequence="30"
+            action="act_open_op_route_line_view"/>
+
+        <menuitem id="menu_op_vehicle_sub" name="Vehicles"
+            parent="menu_op_transportations_main" sequence="40"
+            action="act_open_op_vehicle_view"/>
+    </data>
+</odoo>

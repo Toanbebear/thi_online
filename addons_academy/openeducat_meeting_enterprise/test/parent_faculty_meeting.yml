@@ -1,0 +1,75 @@
+-
+  I create calendar event type for faculty with Parent
+-
+  !record {model: calendar.event.type, id: event_type1_test}:
+    name: 'Student Counciling Test'
+-
+  I create calendar event type for Parent with faculty
+-
+  !record {model: calendar.event.type, id: event_type2_test}:
+    name: 'Child Progress reporting'
+-
+  I create Partner Parent
+-
+  !record {model: res.partner, id: partner1_test}:
+    name: 'Satya'
+-
+  I create Partner Faculty
+-
+  !record {model: res.partner, id: partner2_test}:
+    name: 'Maaike'
+-
+  Faculty can also create meetinge there for I checked it with that user who is faculty.
+-
+  !context
+    uid: res_users_faculty_user_test
+-
+  Faculty can also access menu for creating meeting with Parent
+-
+  !menuitem {id: openeducat_meeting_enterprise.menu_meeting, name: Meeting}
+-
+  I create meeting with Parent
+-
+  !record {model: op.meeting, id: meeting_with_parent_test}:
+    name: 'Parent Teacher Meeting'
+    active: True
+    user_id: res_users_faculty_user_test
+    partner_ids: 
+      - partner1_test
+    description: 'Parent teacher meeting for monthly review for students'
+    start: !eval datetime.today().strftime('%Y-%m-%d 10:20:00')
+    stop: !eval datetime.today().strftime('%Y-%m-%d 16:30:00')
+    duration: '6.3'
+    allday: False
+    state: 'open'
+    categ_ids: 
+      - event_type1_test
+-
+  Parent can also create meetinge there for I checked it with that user who is parent.
+-
+  !context
+    uid: res_users_parent_user_test
+-
+  Parent can also access menu for creating meeting with faculty
+-
+  !menuitem {id: openeducat_meeting_enterprise.menu_meeting, name: Meeting}
+-
+  I create meeting with Faculty
+-
+  !record {model: op.meeting, id: meeting_with_parent_test}:
+    name: 'Parent Teacher Meeting'
+    active: True
+    user_id: res_users_parent_user_test
+    partner_ids: 
+      - partner2_test
+    description: 'Parent teacher meeting for Progres report of student'
+    start: !eval datetime.today().strftime('%Y-%m-%d 10:30:00')
+    stop: !eval datetime.today().strftime('%Y-%m-%d 11:00:00')
+    duration: '0.3'
+    allday: False
+    state: 'open'
+    categ_ids: 
+      - event_type2_test
+
+
+

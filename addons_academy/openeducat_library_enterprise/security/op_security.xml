@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.rule" id="author_multi_comp_rule">
+            <field name="name">Author multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_author" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_movement_multi_comp_rule">
+            <field name="name">Media Movement multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_movement" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_purchase_multi_comp_rule">
+            <field name="name">Media Purchase multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_purchase" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_purchase_req_comp_rule">
+            <field name="name">Media Purchase Requested By</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_purchase" />
+            <field name="groups" eval="[(4, ref('openeducat_core.group_op_student'))]" />
+            <field name="domain_force">['|', ('requested_id.user_ids','=',user.id), ('requested_id.user_ids', 'in', user.child_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_queue_multi_comp_rule">
+            <field name="name">Media Queue multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_queue" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_unit_multi_comp_rule">
+            <field name="name">Media Unit multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_unit" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_multi_comp_rule">
+            <field name="name">Media multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="library_card_multi_comp_rule">
+            <field name="name">Library Card multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_library_card" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="library_card_type_multi_comp_rule">
+            <field name="name">Library Card Type multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_library_card_type" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="media_type_multi_comp_rule">
+            <field name="name">Media Type multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_media_type" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="publisher_multi_comp_rule">
+            <field name="name">Publisher multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_publisher" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+
+        <record model="ir.rule" id="tag_multi_comp_rule">
+            <field name="name">Tag multi-company</field>
+            <field name="model_id" ref="openeducat_library.model_op_tag" />
+            <field name="global" eval="True" />
+            <field name="domain_force">['|','|',('company_id','=',False),('company_id','child_of',[user.company_id.id]),('company_id','in',user.company_ids.ids)]</field>
+        </record>
+    </data>
+</odoo>

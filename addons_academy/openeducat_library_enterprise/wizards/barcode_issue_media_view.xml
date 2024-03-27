@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="barcode_issue_media_form">
+            <field name="name">barcode.issue.media.form</field>
+            <field name="model">barcode.issue.media</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" string="media Issue">
+                    <group>
+                        <group col="2">
+                            <field name="transaction_type"/>
+                        </group>
+                    </group>
+                    <group col="4">
+                        <field name="media_unit_number" required="1"/>
+                        <field name="library_card_number" attrs="{'invisible':[('transaction_type','=','return')],'required':[('transaction_type','=','issue')]}"/>
+                    </group>
+                    <footer groups="base.group_user">
+                        <button name="barcode_do_issue" type="object" string="Proceed" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="barcode_issue_media_act">
+            <field name="name">Issue media</field>
+            <field name="res_model">barcode.issue.media</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="barcode_issue_media_form"/>
+            <field name="target">new</field>
+        </record>
+
+<!--        <menuitem id="barcode_issue_media_menu"-->
+<!--                  parent="openeducat_library.menu_library_medias"-->
+<!--                  sequence="60"-->
+<!--                  name="Issue Media"-->
+<!--                  action="barcode_issue_media_act"-->
+<!--                  groups="openeducat_library.group_op_library"/>-->
+    </data>
+</odoo>

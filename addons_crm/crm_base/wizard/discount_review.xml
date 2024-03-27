@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_discount_review">
+            <field name="name">Discount</field>
+            <field name="model">discount.review</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="True"/>
+                                <field name="booking_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                                <field name="partner_id" readonly="True" force_save="True" options="{'no_open':True}"/>
+                                <field name="rule_discount_id" widget="radio"/>
+                                <field name="crm_line_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="type" required="True"/>
+                                <field name="discount"/>
+                            </group>
+                        </group>
+                        <footer class="text-center">
+                            <button name="offer" type="object" string="Send offer" class="btn-info"/>
+                            <button string="Cancel" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_view_discount_review_wizard" model="ir.actions.act_window">
+            <field name="name">Discount review</field>
+            <field name="res_model">discount.review</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_discount_review"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="view_discount_review_finish" model="ir.ui.view">
+            <field name="name">Discount review finish</field>
+            <field name="model">discount.review</field>
+            <field name="arch" type="xml">
+                <form>
+                    <separator
+                            string="Your discount request has been sent!!"/>
+                    <footer>
+                        <button string="Ok" class="oe_highlight" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

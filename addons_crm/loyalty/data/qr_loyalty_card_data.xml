@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <record id="loyalty_card_url_kn" model="ir.config_parameter">
+        <field name="key">loyalty.card.url</field>
+        <field name="value">https://membershiphn.benhvienthammykangnam.vn/card/</field>
+    </record>
+
+    <record id="loyalty_card_url_da" model="ir.config_parameter">
+        <field name="key">loyalty.card.url</field>
+        <field name="value">https://member.benhvienthammydonga.vn/card/</field>
+    </record>
+
+<!--    <record id="loyalty_bonus_date" model="ir.cron">-->
+<!--        <field name="name">Bonus date</field>-->
+<!--        <field name="model_id" ref="model_crm_Loyalty_card"/>-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">model.cron_money_reward_loyalty()</field>-->
+<!--        <field name='interval_number'>1</field>-->
+<!--        <field name='interval_type'>days</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--&lt;!&ndash;        <field name="active">False</field>&ndash;&gt;-->
+<!--    </record>-->
+
+</odoo>

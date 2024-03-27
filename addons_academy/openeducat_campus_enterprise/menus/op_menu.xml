@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_campus_management"
+                  name="Campus"
+                  web_icon="openeducat_campus_enterprise,static/description/icon.png"
+                  sequence="60"/>
+
+        <menuitem id="menu_main_facility"
+                  parent="menu_campus_management"
+                  name="All Facilities"
+                  sequence="10"/>
+
+        <menuitem id="menu_all_facility"
+                  name="Facility"
+                  parent="menu_main_facility"
+                  sequence="10"
+                  action="act_open_op_campus_facility_view"
+                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin"/>
+
+        <menuitem id="menu_op_hostel_room_sub"
+                  name="Facility Allocations"
+                  parent="menu_main_facility"
+                  sequence="30"
+                  action="act_open_op_facility_allocation_view"
+                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin"/>
+
+        <menuitem id="menu_op_hostel_configuration_sub"
+                  name="Configuration"
+                  parent="menu_campus_management"
+                  sequence="60"
+                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin"/>
+
+        <menuitem id="menu_facility_type"
+                  name="Facility Type"
+                  parent="menu_op_hostel_configuration_sub"
+                  sequence="40"
+                  groups="openeducat_core.group_op_back_office,openeducat_core.group_op_back_office_admin"
+                  action="act_open_op_facility_type_view"/>
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lms_sale_order,access_lms_sale_order,sale.model_sale_order,openeducat_core.group_op_student,1,0,0,0
+access_lms_account_invoice,access_lms_account_invoice,account.model_account_move,openeducat_core.group_op_student,1,0,0,0

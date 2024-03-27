@@ -1,0 +1,158 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:04+0000\n"
+"PO-Revision-Date: 2017-12-12 06:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "An interpreted language, Python has a design philosophy which emphasizes code readability (notably using whitespace indentation to delimit code blocks rather than curly braces or keywords), and a syntax which allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java."
+msgstr "Python a une philosophie de conception qui privilégie la lisibilité du code (notamment l'indentation des espaces pour délimiter les blocs de code plutôt que les accolades ou les mots-clés) et une syntaxe permettant aux programmeurs d'exprimer leurs concepts dans moins de lignes que possible. C ++ ou Java."
+
+#. module: openeducat_lms_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_2
+msgid "Are you sure about your goal?"
+msgstr "Êtes-vous sûr de votre objectif?"
+
+#. module: openeducat_lms_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_id
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "Blog"
+msgstr "Blog"
+
+#. module: openeducat_lms_blog
+#: model:ir.model,name:openeducat_lms_blog.model_blog_post
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_op_course_blog_post_ids
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post"
+msgstr "Blog Post"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Post Title"
+msgstr "Titre du blog"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Blog Subtitle"
+msgstr "Sous-titre du blog"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Brand awareness is one of the most common goals for content marketing – businesses want their audience to see the valuable content and follow it back to them."
+msgstr "La notoriété de la marque est l'un des objectifs les plus courants du marketing de contenu. Les entreprises souhaitent que leur audience puisse voir le contenu précieux et le suivre."
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_lms_blog_post_form
+msgid "Content"
+msgstr "Contenu"
+
+#. module: openeducat_lms_blog
+#: model:ir.model.fields,field_description:openeducat_lms_blog.field_blog_post_course_id
+msgid "Course"
+msgstr "Cours"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Create Blog"
+msgstr "Créer un blog"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_1
+msgid "Easy Learning with e-learning"
+msgstr "Facile d'apprentissage avec e-learning"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,subtitle:openeducat_lms_blog.blog_post_1
+msgid "Ideas behind the e-learning tools."
+msgstr "Des idées derrière les outils d'apprentissage en ligne."
+
+#. module: openeducat_lms_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_1
+msgid "Introduction To Python Programmi"
+msgstr "Introduction à la programmation Python"
+
+#. module: openeducat_lms_blog
+#: model:blog.blog,name:openeducat_lms_blog.blog_2
+msgid "Learn to Sell Anything"
+msgstr "Apprenez à vendre n'importe quoi"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.course_detail_inherit_blog
+msgid "No keywords defined!"
+msgstr "Aucun mot-clé défini!"
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Publishing Options"
+msgstr "Options de publication"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is a general purpose programming language created in the late 1980s, and named after Monty Python, that's used by thousands of people to do things from testing microchips at Intel, to powering Instagram, to building video games with the PyGame library."
+msgstr "Python est un langage de programmation généraliste créé à la fin des années 1980 et nommé d'après Monty Python, utilisé par des milliers de personnes pour tester des puces électroniques chez Intel, pour alimenter Instagram, pour construire des jeux vidéo avec la bibliothèque PyGame."
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_1
+msgid "Python is powerful language."
+msgstr "Python est un langage puissant."
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Setup goal."
+msgstr "Objectif d'installation"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,name:openeducat_lms_blog.blog_post_2
+msgid "Starts management with some GOAL"
+msgstr "Démarre la gestion avec un certain Objectif"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_description:openeducat_lms_blog.blog_post_2
+msgid "Study With e-learning"
+msgstr "Étudier avec e-learning"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,content:openeducat_lms_blog.blog_post_2
+msgid "Success with content marketing goes well beyond research, writing, and publishing. Measuring the impact of your content marketing is the only way to know that what you’re doing is working."
+msgstr "Le succès du marketing de contenu va bien au-delà de la recherche, de l'écriture et de la publication. Mesurer l'impact de votre marketing de contenu est la seule façon de savoir que ce que vous faites fonctionne."
+
+#. module: openeducat_lms_blog
+#: model:ir.ui.view,arch_db:openeducat_lms_blog.view_course_lms_blog_form
+msgid "Technical"
+msgstr "Technique"
+
+#. module: openeducat_lms_blog
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_1
+#: model:blog.post,website_meta_keywords:openeducat_lms_blog.blog_post_2
+msgid "e-learning"
+msgstr "e-learning"
+
+#. module: openeducat_lms_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_2
+msgid "exercise"
+msgstr "exercice"
+
+#. module: openeducat_lms_blog
+#: model:blog.tag,name:openeducat_lms_blog.blog_tag_1
+msgid "learnig"
+msgstr "apprendre"
+
+#. module: openeducat_lms_blog
+#: model:ir.model,name:openeducat_lms_blog.model_op_course
+msgid "op.course"
+msgstr "op.course"
+

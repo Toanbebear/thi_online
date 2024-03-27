@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="student_report_form" model="ir.ui.view">
+        <field name="name">student_report</field>
+        <field name="model">student.report</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <div>
+                            <label for="start_date"
+                                   style="font-weight: bold !important;margin-right:107px;margin-left: 0px;"/>
+                            <field name="start_date" style="width:110px" required="True"/>
+                            <field name="end_date" style="width:110px;margin-left: 34px;"
+                                   required="True"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="type_report"/>
+                        <field name="company_id" widget="many2many_tags"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="department_id" widget="many2many_tags" domain="[('company_id', 'in', company_id)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="job_id" widget="many2many_tags" domain="[('department_id', 'in', department_id)]"
+                               options="{'no_create': True, 'no_open': True}"/>
+                        <field name="student_id" widget="many2many_tags"
+                               options="{'no_create': True, 'no_open': True}"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="student_report" type="object" string="Report" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="student_report_act">
+        <field name="name">Báo cáo học viên</field>
+        <field name="res_model">student.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="student_report_form"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="student_report_menu"
+              name="Báo cáo học viên"
+              parent="openeducat_core.menu_op_report_internal"
+              action="student_report_act" groups="openeducat_core.group_op_back_office"/>
+</odoo>

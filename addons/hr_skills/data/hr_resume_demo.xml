@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <!--Skill Types-->
+    <record id="hr_skill_type_lang" model="hr.skill.type">
+        <field name="name">Ngoại ngữ</field>
+    </record>
+    <record id="hr_skill_type_dev" model="hr.skill.type">
+        <field name="name">Kỹ năng</field>
+    </record>
+    <record id="hr_skill_type_music" model="hr.skill.type">
+        <field name="name">Sở thích</field>
+    </record>
+    <record id="hr_skill_type_marketing" model="hr.skill.type">
+        <field name="name">Tin học</field>
+    </record>
+
+    <!--Skill Levels-->
+    <record id="hr_skill_level_a1" model="hr.skill.level">
+        <field name="name">LV1</field>
+        <field name="level_progress">10</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_level_a2" model="hr.skill.level">
+        <field name="name">LV2</field>
+        <field name="level_progress">25</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_level_b1" model="hr.skill.level">
+        <field name="name">LV3</field>
+        <field name="level_progress">50</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_level_b2" model="hr.skill.level">
+        <field name="name">LV4</field>
+        <field name="level_progress">75</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_level_c1" model="hr.skill.level">
+        <field name="name">LV5</field>
+        <field name="level_progress">100</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+
+    <record id="hr_skill_level_beginner" model="hr.skill.level">
+        <field name="name">LV1</field>
+        <field name="level_progress">15</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_level_elementary" model="hr.skill.level">
+        <field name="name">LV2</field>
+        <field name="level_progress">25</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_level_intermediate" model="hr.skill.level">
+        <field name="name">LV3</field>
+        <field name="level_progress">50</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_level_advanced" model="hr.skill.level">
+        <field name="name">LV4</field>
+        <field name="level_progress">80</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_level_expert" model="hr.skill.level">
+        <field name="name">LV5</field>
+        <field name="level_progress">100</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+
+    <record id="hr_skill_level_l1" model="hr.skill.level">
+        <field name="name">LV1</field>
+        <field name="level_progress">10</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_level_l2" model="hr.skill.level">
+        <field name="name">LV2</field>
+        <field name="level_progress">25</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_level_l3" model="hr.skill.level">
+        <field name="name">LV3</field>
+        <field name="level_progress">50</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_level_l4" model="hr.skill.level">
+        <field name="name">LV4</field>
+        <field name="level_progress">75</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_level_l5" model="hr.skill.level">
+        <field name="name">LV5</field>
+        <field name="level_progress">100</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+
+    <record id="hr_skill_level_ml1" model="hr.skill.level">
+        <field name="name">LV1</field>
+        <field name="level_progress">10</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_level_ml2" model="hr.skill.level">
+        <field name="name">LV2</field>
+        <field name="level_progress">25</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_level_ml3" model="hr.skill.level">
+        <field name="name">LV3</field>
+        <field name="level_progress">50</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_level_ml4" model="hr.skill.level">
+        <field name="name">LV4</field>
+        <field name="level_progress">75</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_level_ml5" model="hr.skill.level">
+        <field name="name">LV5</field>
+        <field name="level_progress">100</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+
+    <!-- **** Skills **** -->
+    <!-- Languages -->
+    <record id="hr_skill_french" model="hr.skill">
+        <field name="name">Tiếng Pháp</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_english" model="hr.skill">
+        <field name="name">Tiếng Anh</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_japan" model="hr.skill">
+        <field name="name">Tiếng Nhật</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+    <record id="hr_skill_China" model="hr.skill">
+        <field name="name">Tiếng Trung</field>
+        <field name="skill_type_id" ref="hr_skill_type_lang"/>
+    </record>
+
+    <!-- Dev -->
+    <record id="hr_skill_js" model="hr.skill">
+        <field name="name">Javascript</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_python" model="hr.skill">
+        <field name="name">Python</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_c" model="hr.skill">
+        <field name="name">C/C++</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+    <record id="hr_skill_android" model="hr.skill">
+        <field name="name">Android</field>
+        <field name="skill_type_id" ref="hr_skill_type_dev"/>
+    </record>
+
+    <!-- Music -->
+    <record id="hr_skill_piano" model="hr.skill">
+        <field name="name">Piano</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_violin" model="hr.skill">
+        <field name="name">Violin</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_singing" model="hr.skill">
+        <field name="name">Singing</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+    <record id="hr_skill_flute" model="hr.skill">
+        <field name="name">Flute</field>
+        <field name="skill_type_id" ref="hr_skill_type_music"/>
+    </record>
+
+    <!-- Marketing -->
+    <record id="hr_skill_com" model="hr.skill">
+        <field name="name">Word</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_analytics" model="hr.skill">
+        <field name="name">Excel</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_digital_ad" model="hr.skill">
+        <field name="name">Outlook</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+    <record id="hr_skill_public" model="hr.skill">
+        <field name="name">Powerpoint</field>
+        <field name="skill_type_id" ref="hr_skill_type_marketing"/>
+    </record>
+</data>
+</odoo>

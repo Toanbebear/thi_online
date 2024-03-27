@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="act_dashboard_op_attendance_sheet_view">
+            <field name="name">Attendance Sheets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.attendance.sheet</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id"
+                   ref="openeducat_attendance.view_op_attendance_sheet_search"/>
+            <field name="domain">[('batch_id','in',[active_id])]</field>
+            <field name="context">{'search_default_today': 1}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_batch_open_session_view">
+            <field name="name">Sessions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.session</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('batch_id','in',[active_id])]</field>
+            <field name="context">{'default_batch_id': active_id}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_attendance_line_batch_view">
+            <field name="name">Attendance Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.attendance.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="openeducat_attendance.view_op_attendance_line_search"/>
+            <field name="domain">[('batch_id', '=', active_id)]</field>
+            <field name="context">{'search_default_absence': 1}</field>
+        </record>
+
+    </data>
+</odoo>

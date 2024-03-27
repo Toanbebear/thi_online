@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_op_faculty_form_session_inherit" model="ir.ui.view">
+            <field name="name">op.faculty.form.session.inherit</field>
+            <field name="model">op.faculty</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_faculty_form"/>
+            <field name="priority" eval="9"/>
+            <field name="arch" type="xml">
+
+                <notebook position="inside">
+                    <page name="time_table" string="Courses">
+                        <field name="batch_line_ids" colspan="4">
+                                <tree>
+                                    <field name="batch_id"/>
+                                    <field name="batch_status"/>
+                                    <field name="batch_num_students"/>
+                                    <field name="num_sessions"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="tutor_fee" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                    attrs="{'column_invisible': [('parent.full_time', '=', True)]}"/>
+                                </tree>
+                        </field>
+                    </page>
+                </notebook>
+
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="attendance_line_view_op_session_form" model="ir.ui.view">
+            <field name="name">attendance.line.op.session.form</field>
+            <field name="model">op.session</field>
+            <field name="arch" type="xml">
+                <form string="Catch up">
+                    <sheet>
+                        <group>
+                            <field name="timing_id" required="1"/>
+                            <field name="start_datetime" required="1"/>
+                            <field name="course_id" invisible="1"/>
+                            <field name="batch_id" invisible="1"/>
+                            <field name="faculty_id" invisible="1"/>
+                            <field name="session_content" invisible="1"/>
+                            <field name="lesson_count" invisible="1"/>
+                            <field name="tutor_fee" invisible="1"/>
+                            <field name="classroom_id" invisible="1"/>
+                            <field name="end_datetime" invisible="1"/>
+                            <field name="type" invisible="1"/>
+                            <field name="paid" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="subject_id" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_attendance_line_tree" model="ir.ui.view">
+            <field name="name">op.attendance.line.tree</field>
+            <field name="model">op.attendance.line</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Attendance Line" editable="top" create="false" default_order="batch_id, attendance_date">
+                    <field name="attendance_id"/>
+                    <field name="course_id"/>
+                    <field name="batch_id"/>
+                    <field name="student_id"/>
+                    <field name="present"/>
+                    <field name="catch_up" attrs="{'readonly': [('present','=', True)]}" force_save="1"
+                           domain="[('batch_id', '=', batch_id), ('date', '&gt;=', attendance_date)]"
+                           context="{'session_name_date': 1, 'default_batch_id': batch_id, 'default_session_content': session_content, 'form_view_ref': 'openeducat_attendance.attendance_line_view_op_session_form'}" />
+                    <field name="session_content"/>
+                    <field name="attendance_date"/>
+                    <field name="remark"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_attendance_line_form" model="ir.ui.view">
+            <field name="name">op.attendance.line.form</field>
+            <field name="model">op.attendance.line</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Attendance Line">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="attendance_id" widget="selection"/>
+                            <field name="student_id"
+                                   domain="[('course_detail_ids.course_id','=',course_id),('course_detail_ids.batch_id','=',batch_id)]"/>
+                            <field name="present"/>
+                            <field name="remark"/>
+                            <field name="course_id" widget="selection"/>
+                            <field name="batch_id" widget="selection"/>
+                            <field name="attendance_date"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_attendance_line_search" model="ir.ui.view">
+            <field name="name">op.attendance.line.search</field>
+            <field name="model">op.attendance.line</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Attendance Line">
+                    <field name="attendance_id"/>
+                    <field name="student_id"/>
+                    <field name="present"/>
+                    <newline/>
+                    <filter string="Absence" name="absence" domain="[('present', '=', False), ('catch_up', '=', False)]"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Attendance" name="group_by_attendance"
+                                domain="[]" context="{'group_by':'attendance_id'}"/>
+                        <filter string="Course" name="group_by_attendance_course"
+                                domain="[]" context="{'group_by':'course_id'}"/>
+                        <filter string="Batch" name="group_by_attendance_batch"
+                                domain="[]" context="{'group_by':'batch_id'}"/>
+                        <filter string="Student" name="group_by_attendance_student"
+                                domain="[]" context="{'group_by':'student_id'}"/>
+                        <filter string="Present ?" name="group_by_attendance_present"
+                                domain="[]" context="{'group_by':'present'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_op_attendance_line_pivot" model="ir.ui.view">
+            <field name="name">op.attendance.line.pivot</field>
+            <field name="model">op.attendance.line</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <pivot string="Attendance Analysis">
+                    <field name="attendance_id"/>
+                    <field name="student_id"/>
+                    <field name="present"/>
+                    <field name="remark"/>
+                    <field name="course_id"/>
+                    <field name="batch_id"/>
+                    <field name="session_content"/>
+                    <field name="attendance_date"/>
+                    <field name="register_id"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_attendance_line_view">
+            <field name="name">Attendance Line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.attendance.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_attendance_line_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_absence': 1}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_attendance_line_view_form">
+            <field name="act_window_id" ref="act_open_op_attendance_line_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_op_attendance_line_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_op_attendance_line_view_tree">
+            <field name="act_window_id" ref="act_open_op_attendance_line_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_op_attendance_line_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_attendance_view_pivot">
+            <field name="name">Attendance Analysis Pivot</field>
+            <field name="res_model">op.attendance.line</field>
+            <field name="view_mode">pivot</field>
+            <field name="view_id" ref="view_op_attendance_line_pivot"/>
+        </record>
+    </data>
+</odoo>

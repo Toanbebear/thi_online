@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="debt_view_form" model="ir.ui.view">
+            <field name="name">Debt review</field>
+            <field name="model">crm.debt.review</field>
+            <field name="arch" type="xml">
+                <form create="false">
+                    <header>
+                        <button name="set_approve" string="Approve" class="btn-info" type="object" groups="crm_base.branch_management"/>
+                        <button name="set_refuse" string="Refuse" class="btn-danger" type="object" groups="crm_base.branch_management"/>
+                        <field name="stage" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('stage', '!=', 'offer')]}"/>
+                            <field name="order_id" attrs="{'readonly': [('stage', '!=', 'offer')]}" options="{'no_open':True,'no_create':True}"/>
+                            <field name="booking_id" options="{'no_open':True,'no_create':True}" attrs="{'readonly': [('stage', '!=', 'offer')]}"/>
+                            <field name="company_id" options="{'no_open':True,'no_create':True}" attrs="{'readonly': [('stage', '!=', 'offer')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="debt_view_tree" model="ir.ui.view">
+            <field name="name">Debt view</field>
+            <field name="model">crm.debt.review</field>
+            <field name="arch" type="xml">
+                <tree create="false" default_order="create_date desc">
+                    <field name="order_id"/>
+                    <field name="booking_id"/>
+                    <field name="stage"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="debt_review_action" model="ir.actions.act_window">
+            <field name="name">Debt review</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.debt.review</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_crm_debt_review"
+                  name="Debt review"
+                  parent="crm.crm_menu_root"
+                  sequence="13"
+                  action="debt_review_action"
+                  groups="crm_base.receptionist_crm"
+        />
+
+    </data>
+</odoo>

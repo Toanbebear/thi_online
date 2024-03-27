@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="employee_admission_form">
+            <field name="name">employee.admission.form</field>
+            <field name="model">employee.admission</field>
+            <field name="arch" type="xml">
+                <form string="Employee admission">
+                    <group string="Choose employees to add or remove">
+                        <field name="emp_ids" nolabel="1" options="{'no_create': True}"/>
+                    </group>
+                    <footer>
+                        <button name="add_employee" type="object"
+                                string="Add employee" class="oe_highlight"/>
+                        <button name="remove_employee" type="object"
+                                string="Remove employee" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="email_managers_form">
+            <field name="name">email.managers.form</field>
+            <field name="model">employee.admission</field>
+            <field name="arch" type="xml">
+                <form string="Send emails">
+                    <group string="Choose recipients">
+                        <field name="manager_ids" nolabel="1" options="{'no_create': True}"/>
+                    </group>
+                    <footer>
+                        <button name="email_managers" type="object"
+                                string="Send emails" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="employee_admission_act">
+            <field name="name">Employee admission</field>
+            <field name="res_model">employee.admission</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_admission_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="email_manager_act">
+            <field name="name">Email managers</field>
+            <field name="res_model">employee.admission</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="email_managers_form"/>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

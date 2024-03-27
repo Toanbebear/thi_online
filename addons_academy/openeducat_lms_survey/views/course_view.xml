@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_course_lms_survey_form">
+            <field name="name">op.course.form.survey.inherit</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_lms.view_op_lms_course_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='categories']" position="after">
+                    <page name="survey" string="Surveys">
+                        <field name="survey_ids" options="{'no_create': True}" />
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

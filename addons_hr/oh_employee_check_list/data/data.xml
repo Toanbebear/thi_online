@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="entry_document1" model="employee.checklist">
+        <field name="name">Sơ yếu lý lịch</field>
+    </record>
+    <record id="entry_document2" model="employee.checklist">
+        <field name="name">CMTND</field>
+    </record>
+    <record id="entry_document3" model="employee.checklist">
+        <field name="name">Giấy khai sinh</field>
+    </record>
+    <record id="entry_document4" model="employee.checklist">
+        <field name="name">Sổ hộ khẩu</field>
+    </record>
+    <record id="entry_document5" model="employee.checklist">
+        <field name="name">Giấy khám sức khỏe</field>
+    </record>
+    <record id="entry_document6" model="employee.checklist">
+        <field name="name">Bằng cấp, chứng chỉ</field>
+    </record>
+    <record id="entry_document7" model="employee.checklist">
+        <field name="name">Ảnh thẻ</field>
+    </record>
+</odoo>

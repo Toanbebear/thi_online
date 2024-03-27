@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="admission_registration" name="Course Registration Form">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty">
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-8">
+                                    <br></br>
+                                    <form role="form" data-toggle="validator" method="post" action="/shop/confirm_order" id="request_demo">
+                                        <div class="row">
+                                            <div class="form-group col-md-12">
+                                                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                <label for="register_id">Select Class</label>
+                                                <select name="register_id" id="register_id" class="form-control" required="1">
+                                                    <option value="">Select Course</option>
+                                                    <t t-foreach="register_ids or []" t-as="register">
+                                                        <t t-if="register.id != register_id">
+                                                            <option t-att-value="register.id">
+                                                                <t t-esc="register.name"/>
+                                                            </option>
+                                                        </t>
+                                                        <t t-if="register.id == register_id">
+                                                            <option t-att-value="register.id" selected="1">
+                                                                <t t-esc="register.name"/>
+                                                            </option>
+                                                        </t>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="name">First Name</label>
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="First Name" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="name">Middle Name</label>
+                                                <input type="text" class="form-control" id="middle_name" name="middle_name" placeholder="Middle Name" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="name">Last Name</label>
+                                                <input type="text" class="form-control" name='last_name' id="last_name" placeholder="Last Name" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="gender">Gender</label><br/>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="gender" id="male" value="m" required="1">Male</input>
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" name="gender" id="female" value="f" required="1">Female</input>
+                                                </label>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="name">Date of Birth</label>
+                                                <input type="date" class="form-control" id="birth_date" name="birth_date" placeholder="mm/dd/yyyy" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="email">Email</label>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="phone">Mobile Number</label>
+                                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Mobile Number" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="street2">Street</label>
+                                                <input type="text" name="street2" class="form-control" placeholder="Street" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="control-label" for="city">City</label>
+                                                <input type="text" name="city" class="form-control" placeholder="City" required="1"/>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="control-label label-optional" for="zip">Zip / Postal Code</label>
+                                                <input type="text" name="zip" class="form-control" placeholder="Zip / Postal Code" required="1"/>
+                                            </div>
+                                            <div class="from-group col-md-6">
+                                                <label class="control-label" for="country_id">Country</label>
+                                                <select name="country_id" class="form-control" required="1">
+                                                    <option value="">Country...</option>
+                                                    <t t-foreach="countries or []" t-as="country">
+                                                        <option t-att-value="country.id">
+                                                            <t t-esc="country.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
+                                            </div>
+                                            <div class="from-group col-md-12">
+                                                <button type="submit" class="btn btn-primary mb16 mt16 col-md-12">Next</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <template id="application_confirmed" name="Proceed for Payment">
+            <t t-call="website.layout">
+                <div id="wrap" class="oe_structure oe_empty">
+                    <section class="mt32 mb64">
+                        <div class="container">
+                            <div class="row">
+                                <div class="text-center">
+                                    <br></br>
+                                    <h2>Your application has been confirmed.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+
+        <record id="menu_admissionregistration" model="website.menu">
+            <field name="name">Registration</field>
+            <field name="url">/admissionregistration</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">50</field>
+        </record>
+    </data>
+</odoo>

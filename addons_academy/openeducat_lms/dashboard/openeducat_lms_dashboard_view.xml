@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="openeducat_lms_dashboard_kanban_view" model="ir.ui.view">
+        <field name="name">op.lms.dashboard.kanban</field>
+        <field name="model">op.course</field>
+        <field name="arch" type="xml">
+            <kanban create="false" class="oe_background_grey o_kanban_dashboard o_account_kanban">
+                <field name="id"/>
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="#{kanban_color(0)}">
+                            <div class="o_kanban_card_header">
+                                <div class="o_kanban_card_header_title">
+                                    <div class="o_primary">
+                                        <a><field name="name"/></a>
+                                    </div>
+                                    <div class="o_secondary">
+                                        <a><field name="code"/></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container o_kanban_card_content o_visible">
+                                <div class="row">
+                                    <div name="first_column" class="col-xs-4 o_kanban_primary_left ml-3 mr-5">
+                                        <b>Course Enrollment</b><br/>
+                                        <span><field name="enrolled_users"/>: Enrolled Users</span><br/>
+                                        <span><field name="days_since_launch"/>: Days Since Launch</span><br/>
+                                    </div>
+                                    <div name="second_column" class="col-xs-4 o_kanban_primary_left mr-5">
+                                        <b>Course Content</b><br/>
+                                        <span><field name="training_material"/>: Training Material</span><br/>
+                                        <span><field name="display_time"/>: Course Duration</span><br/>
+                                    </div>
+                                    <div name="third_column" class="col-xs-4 o_kanban_primary_left">
+                                        <b>Course Count</b><br/>
+                                        <span><field name="course_to_begin"/>: Course To Begin</span><br/>
+                                        <span><field name="course_in_progress"/>: Course In Progress</span><br/>
+                                        <span><field name="course_completed"/>: Course Completed</span><br/>
+                                    </div>
+                                </div>
+                                <div name="graph_section" class="o_kanban_graph_section">
+                                    <field name="kanban_lms_course_dashboard_graph" t-att-graph_type="'bar'" widget="dashboard_graph"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="op_lms_dashboard_kanban" model="ir.actions.act_window">
+        <field name="name">Course Dashboard</field>
+        <field name="res_model">op.course</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="usage">menu</field>
+        <field name="domain">[('online_course','=',True),('user_id','=',uid)]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html"><p>This is the LMS Course Dashboard.</p></field>
+    </record>
+
+    <record id="act_op_lms_dashboard_kanban" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="op_lms_dashboard_kanban"/>
+        <field name="sequence" eval="10"/>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="openeducat_lms_dashboard_kanban_view"/>
+    </record>
+</odoo>

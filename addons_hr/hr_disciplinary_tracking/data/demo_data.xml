@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+           <!--Discipline Category Creation-->
+
+        <record id="discipline_category_care" model="discipline.category">
+            <field name="code">RULES</field>
+            <field name="name">Vi phạm nội quy Công ty</field>
+        </record>
+        <record id="discipline_category_behave" model="discipline.category">
+            <field name="code">BEHAVE</field>
+            <field name="name">Hành vi sai trái với đồng nghiệp</field>
+        </record>
+        <record id="discipline_category_damage" model="discipline.category">
+            <field name="code">DAMAGE</field>
+            <field name="name">Thiệt hại đối với tài sản của công ty</field>
+        </record>
+
+        <record id="action_category_wrt" model="discipline.category">
+            <field name="code">WRITTEN</field>
+            <field name="name">Cảnh báo bằng văn bản</field>
+        </record>
+
+        <record id="action_category_kpi" model="discipline.category">
+            <field name="code">KPI</field>
+            <field name="name">Trừ % KPI</field>
+        </record>
+
+        <record id="action_category_susp" model="discipline.category">
+            <field name="code">SUSPENSION</field>
+            <field name="name">Đình chỉ nhân viên trong một tuần</field>
+        </record>
+
+        <record id="action_category_term" model="discipline.category">
+            <field name="code">TERMINATE</field>
+            <field name="name">Chấm dứt hợp đồng nhân viên</field>
+        </record>
+    </data>
+</odoo>

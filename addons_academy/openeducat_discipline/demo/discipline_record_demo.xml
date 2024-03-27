@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_discipline_1" model="op.discipline">
+            <field name="student_id" ref="openeducat_core.op_student_1" />
+            <field name="date" eval="DateTime.now()" />
+            <field name="course_id" ref="openeducat_core.op_course_2" />
+            <field name="discipline_master" ref="base.user_root" />
+            <field name="priority">1</field>
+            <field name="misbehaviour_type">major</field>
+            <field name="misbehaviour_category_id" ref="op_misbehaviour_category_1" />
+            <field name="misbehaviour_sub_category_id" ref="op_misbehaviour_sub_category_1" />
+            <field name="misbehaviour_action">Fine</field>
+            <field name="meeting_datetime" eval="DateTime.now() + relativedelta(days=3)" />
+            <field name="meeting_remark">Remark For Meeting</field>
+            <field name="master_comment">Comment By Discipline Master</field>
+            <field name="parent_comment">Comment By Meeting With Parents</field>
+        </record>
+
+        <record id="op_discipline_2" model="op.discipline">
+            <field name="student_id" ref="openeducat_core.op_student_2" />
+            <field name="date" eval="DateTime.now()" />
+            <field name="course_id" ref="openeducat_core.op_course_2" />
+            <field name="discipline_master" ref="base.user_root" />
+            <field name="priority">1</field>
+            <field name="misbehaviour_type">minor</field>
+            <field name="misbehaviour_category_id" ref="op_misbehaviour_category_2" />
+            <field name="misbehaviour_sub_category_id" ref="op_misbehaviour_sub_category_4" />
+            <field name="misbehaviour_action">Suspend</field>
+            <field name="meeting_datetime" eval="DateTime.now() + relativedelta(days=3)" />
+            <field name="meeting_remark">Remark For Meeting</field>
+            <field name="master_comment">Comment By Discipline Master</field>
+            <field name="parent_comment">Comment By Meeting With Parents</field>
+        </record>
+    </data>
+</odoo>

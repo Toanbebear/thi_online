@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="material_detail_view" name="Material Detailed View">
+        <t t-call="website.layout">
+            <t t-set="main_object" t-value="material"/>
+            <div class="container mt16">
+                <div class="row">
+                    <div class="row mt16">
+                        <div class="col-md-10">
+                            <h2 class="mt0" t-field="material.name"/>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="pull-right">
+                                <a t-attf-href="/course/#{slug(course)}/section/#{slug(section)}/material/#{slug(material)}/1"
+                                   t-if="last_material == false"
+                                   class="btn btn-block btn-primary" style="border-radius: 0px;">Next</a>
+                                <a t-attf-href="/course/#{slug(course)}/section/#{slug(section)}/material/#{slug(material)}/1"
+                                   t-if="last_material == true"
+                                   class="btn btn-block btn-primary" style="border-radius: 0px;">Finish</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt16"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <t t-if="material.datas and material.material_type == 'infographic'">
+                            <img t-attf-src="/web/image/op.material/#{material.id}/datas"
+                                 class="img-responsive" style="width:100%"/>
+                        </t>
+                        <div t-if="material.material_type in ('presentation', 'document')"
+                             class="embed-responsive embed-responsive-4by3 embed-responsive-item mb8">
+                            <t t-raw="material.embed_code"/>
+                        </div>
+                        <div t-if="material.material_type == 'video' and material.document_id"
+                             class="embed-responsive embed-responsive-16by9 embed-responsive-item mb8">
+                            <t t-raw="material.embed_code"/>
+                        </div>
+                        <div t-if="material.material_type == 'video' and material.datas"
+                             class="embed-responsive embed-responsive-16by9 embed-responsive-item mb8">
+                            <t t-raw="material.embed_code"/>
+                        </div>
+                        <div t-if="material.material_type == 'audio'"
+                             class="embed-responsive embed-responsive-16by9 embed-responsive-item mb8">
+                            <t t-raw="material.embed_code"/>
+                        </div>
+                        <div t-if="material.material_type == 'quiz'"
+                             class="embed-responsive embed-responsive-16by9 test-result embed-responsive-item mb8">
+                            <t t-if="quiz_limit == 1 and is_result == 0">
+                                <center>
+                                    <h3>The maximum number of quiz attempts has been reached !</h3>
+                                </center>
+                            </t>
+                            <t t-if="is_result == 0 and quiz_limit == 0"
+                               t-call="openeducat_quiz.quiz_web_page_single_form"/>
+                            <t t-if="is_result == 1 and is_thanks == 0 and quiz_limit == 0"
+                               t-call="openeducat_quiz.quiz_results_form"/>
+                            <t t-if="is_result == 1 and is_thanks == 1 and quiz_limit == 0"
+                               t-call="openeducat_quiz.quiz_completed"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="tab-content">
+                            <div id="related" class="tab-pane active mt4">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 card card-default dyn-height">
+                                    <ul class="media-list card-body">
+                                        <t t-foreach="related_materials" t-as="x">
+                                            <li class="media">
+                                                <div class="media-body">
+                                                    <a class="row" t-attf-href="/course/#{slug(course)}/section/#{slug(x['section'])}/material/#{slug(x['material'])}">
+                                                        <div class="col-md-2">
+                                                            <i t-if="x['material'].material_type == 'audio'" class="fa fa-headphones fa-2x"></i>
+                                                            <i t-if="x['material'].material_type == 'video'" class="fa fa-play-circle-o fa-2x"></i>
+                                                            <i t-if="x['material'].material_type == 'document'" class="fa fa-file-pdf-o fa-2x"></i>
+                                                            <i t-if="x['material'].material_type == 'infographic'" class="fa fa-file-image-o fa-2x"></i>
+                                                            <i t-if="x['material'].material_type == 'quiz'" class="fa fa-question-circle fa-2x"></i>
+                                                        </div>
+                                                        <div class="col-md-10">
+                                                            <span><t t-esc="x['material'].name"/>
+                                                                <p class="text-muted material-right">
+                                                                    <i t-if="x['completed']" class="fa fa-check"></i>
+                                                                </p>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </t>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

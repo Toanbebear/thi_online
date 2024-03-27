@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Employee -->
+        <record id="op_sessions_employee_form_inherited" model="ir.ui.view">
+            <field name="name">op.sessions.employee.form.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//header" position="inside">
+                    <field name="unpaid_sessions_count" invisible="1"/>
+                    <button type="action"
+                            name="%(act_open_teaching_payslip_view)d"
+                            groups="hr_payroll.group_hr_payroll_user"
+                            class="oe_stat_button"
+                            icon="fa-money"
+                            attrs="{'invisible': [('unpaid_sessions_count', '=', 0)]}">
+                            <field name="unpaid_sessions_count" widget="statinfo" string="Sessions"/>
+                    </button>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

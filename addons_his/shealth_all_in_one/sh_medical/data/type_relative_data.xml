@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!--        RELATIVE-->
+        <record id="Father" model="type.relative">
+            <field name="name">Ba</field>
+        </record>
+        <record id="Mother" model="type.relative">
+            <field name="name">Mẹ</field>
+        </record>
+        <record id="Daughter" model="type.relative">
+            <field name="name">Con gái</field>
+        </record>
+        <record id="Son" model="type.relative">
+            <field name="name">Con trai</field>
+        </record>
+        <record id="Brother" model="type.relative">
+            <field name="name">Anh</field>
+        </record>
+        <record id="Sister" model="type.relative">
+            <field name="name">Chị</field>
+        </record>
+        <record id="Wife" model="type.relative">
+            <field name="name">Vợ</field>
+        </record>
+        <record id="Husband" model="type.relative">
+            <field name="name">Chồng</field>
+        </record>
+        <record id="Aunt" model="type.relative">
+            <field name="name">Cô/Bác gái</field>
+        </record>
+        <record id="Uncle" model="type.relative">
+            <field name="name">Chú/Bác trai</field>
+        </record>
+        <record id="Nephew" model="type.relative">
+            <field name="name">Cháu trai</field>
+        </record>
+        <record id="Niece" model="type.relative">
+            <field name="name">Cháu gái</field>
+        </record>
+        <record id="Cousin" model="type.relative">
+            <field name="name">Anh chị em họ</field>
+        </record>
+        <record id="Relative" model="type.relative">
+            <field name="name">Họ hàng</field>
+        </record>
+        <record id="Other" model="type.relative">
+            <field name="name">Khác</field>
+        </record>
+
+        <!--        BRAND-->
+        <record id="brand_kangnam" model="crm.brand">
+            <field name="name">Kangnam</field>
+            <field name="code">KN</field>
+            <field name="phone">19006466</field>
+            <field name="type">hospital</field>
+        </record>
+
+        <record id="brand_donga" model="crm.brand">
+            <field name="name">Đông Á</field>
+            <field name="code">DA</field>
+            <field name="phone">19006499</field>
+            <field name="type">hospital</field>
+        </record>
+
+        <record id="brand_paris" model="crm.brand">
+            <field name="name">Paris</field>
+            <field name="code">PR</field>
+            <field name="phone">19006900</field>
+            <field name="type">hospital</field>
+        </record>
+
+        <record id="brand_hongha" model="crm.brand">
+            <field name="name">Hồng Hà</field>
+            <field name="code">HH</field>
+            <field name="phone"></field>
+            <field name="type">hospital</field>
+        </record>
+
+        <record id="brand_academy" model="crm.brand">
+            <field name="name">Academy</field>
+            <field name="code">HV</field>
+            <field name="phone"></field>
+        </record>
+
+        <record id="brand_richardhuy" model="crm.brand">
+            <field name="name">Richard Huy</field>
+            <field name="code">RH</field>
+            <field name="phone"></field>
+            <field name="type">hospital</field>
+        </record>
+    </data>
+</odoo>

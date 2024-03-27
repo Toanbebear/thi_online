@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.loyalty</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="20"/>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]" position="inside">
+                <div class="app_settings_block" data-string="Loyalty" string="Loyalty" data-key="sci_survey"
+                     groups="loyalty.group_loyalty_manager,survey.group_survey_manager">
+                    <h2>Select the Survey to Configure</h2>
+                    <div class="row mt16 o_settings_container" id="survey">
+                        <div class="col-xs-12 col-md-6" id="survey">
+                            <div class="o_setting_right_pane">
+                                <label string="Survey Kangnam HN" for="survey_id"/>
+                                <div class="mt16">
+                                    <field name="survey_id" widget="selection"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container" id="survey_hcm">
+                        <div class="col-xs-12 col-md-6" id="survey_hcm">
+                            <div class="o_setting_right_pane">
+                                <label string="Survey Kangnam HCM" for="survey_hcm_id"/>
+                                <div class="mt16">
+                                    <field name="survey_hcm_id" widget="selection"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

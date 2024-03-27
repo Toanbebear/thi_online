@@ -1,0 +1,971 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_academy
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-22 07:55+0000\n"
+"PO-Revision-Date: 2021-05-22 07:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid ""
+"<span attrs=\"{'invisible':[('reconciled_invoices_count','&gt;',1)]}\">Invoice</span>\n"
+"                            <span attrs=\"{'invisible':[('reconciled_invoices_count','&lt;=',1)]}\">Invoices</span>"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__account_payment
+msgid "Account Payment"
+msgstr "Học phí"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_debt_review__amount_total
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__amount_total
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__amount_total
+msgid "Amount total"
+msgstr "Tổng tiền"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.debt_view_form_inherit
+msgid "Approve"
+msgstr "Xác nhận"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.add_button_cancel_batch
+msgid "Are you sure cancel ?"
+msgstr "Bạn chắc chắn muốn hủy?"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.crm_lead_form_booking_add_button_create_student
+#: model_terms:ir.ui.view,arch_db:crm_academy.student_from_booking_form
+msgid "Arrange class"
+msgstr "Ghi danh học viên"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__batch
+#: model:ir.model.fields,field_description:crm_academy.field_op_course__batch_id
+msgid "Batch"
+msgstr "Lớp"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.op_course_tree_view_inherit
+msgid "Batches"
+msgstr "Lớp"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__booking_id
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__booking_id
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Booking"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.report_materials_academy_template
+msgid "Báo cáo"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.student_report_act
+#: model:ir.ui.menu,name:crm_academy.student_report_menu
+msgid "Báo cáo học viên"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.internal_general_report_act
+#: model:ir.ui.menu,name:crm_academy.internal_general_report_menu
+msgid "Báo cáo tổng hợp đào tạo nội bộ"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.report_materials_academy_act
+#: model:ir.ui.menu,name:crm_academy.report_materials
+msgid "Báo cáo vật tư"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.report_materials_academy_template
+msgid "Báo cáo vật tư theo khóa học"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.training_qualify_report_act
+#: model:ir.ui.menu,name:crm_academy.training_qualify_report_menu
+msgid "Báo cáo đánh giá khóa học và giảng viên"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.check_partner_academy_view_form
+msgid "CHECK PARTNER"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.add_button_cancel_batch
+#: model_terms:ir.ui.view,arch_db:crm_academy.internal_general_report_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.request_debt_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.student_report_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.training_qualify_report_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_lead__check_payment
+msgid "Check Payment"
+msgstr "Kiểm tra thanh toán"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__class_ids
+msgid "Class"
+msgstr "Lớp"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__company_ids
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__company_id
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_line__course_id
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__course
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__course_ids
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Course"
+msgstr "Khóa học"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__training_quality_reports__type_report__course
+msgid "Course evaluation reports"
+msgstr "Báo cáo đánh giá giảng viên theo khóa học"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__line_ids
+msgid "Courses"
+msgstr "Khóa học"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__create_uid
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__create_date
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__create_date
+msgid "Created on"
+msgstr "Tạo ngày"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__currency_id
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__currency_id
+msgid "Currency"
+msgstr "Tiền tệ"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__start_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__start_date
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__start_date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__department_id
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__name
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__name
+msgid "Desc"
+msgstr "Lý do"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__student_report__type_report__detail
+msgid "Detail student report"
+msgstr "Báo cáo chi tiết học viên"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__display_name
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__op_student_fees_details__state__draft
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__end_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__end_date
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__end_date
+msgid "End date"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_stock_location__faculty_id
+msgid "Faculty"
+msgstr "Giảng viên"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__amount
+msgid "Fees Amount"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student__fees_detail_ids
+msgid "Fees Collection Details"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__fees_line_id
+msgid "Fees Line"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__student_from_booking__covert_gender_to_op_student__f
+msgid "Female"
+msgstr "Nữ"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__covert_gender_to_op_student
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__student_report__type_report__general
+msgid "General student report"
+msgstr "Báo cáo tổng hợp học viên"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__materials_report__report_type__gift_materials
+msgid "Gift Materials"
+msgstr "Vật tư tặng"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Group By..."
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.tution_action
+#: model:ir.ui.menu,name:crm_academy.menu_tuition_root
+msgid "Học phí"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Học viên"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__id
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__id
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__id
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__id
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__id
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__id
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__id
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__request_payment__payment_type__in_bound
+msgid "In bound"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.check_partner_academy_view_form
+msgid "Information"
+msgstr "Thông tin"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__institute_id
+msgid "Institute"
+msgstr "Cơ sở"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_internal_general_report
+msgid "Internal General Report"
+msgstr "Báo cáo đào tạo nội bộ"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_stock_location
+msgid "Inventory Locations"
+msgstr "Địa điểm Kiểm kê"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student__count_sale_orders
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__op_student_fees_details__state__invoice
+msgid "Invoice Created"
+msgstr "Tạo hóa đơn"
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.action_orders_invoiced
+#: model_terms:ir.ui.view,arch_db:crm_academy.view_op_student_form_fees_inherit
+msgid "Invoiced"
+msgstr "Đã xuất hóa đơn"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__job_id
+msgid "Job"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Journal Items"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Khách hàng"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_course
+msgid "LMS Course"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Label"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_student_report____last_update
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối vào"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__write_uid
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi "
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_internal_general_report__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__write_date
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__write_date
+msgid "Last Updated on"
+msgstr "Lần cập nhật cuối"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__lead_id
+msgid "Lead"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Tiềm năng/Cơ hội"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_batch__learn_number
+msgid "Learn Number"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_account_payment__crm_line_ids
+#: model:ir.model.fields,field_description:crm_academy.field_crm_debt_review__crm_line_ids
+msgid "List product"
+msgstr "Dịch vụ"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Loại"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Loại thanh toán"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Lý do thanh toán"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_survey_survey__batch_id
+#: model:ir.model.fields,field_description:crm_academy.field_survey_user_input__batch_id
+msgid "Lớp học"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__student_from_booking__covert_gender_to_op_student__m
+msgid "Male"
+msgstr "Nam"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_materials_report
+msgid "Materials Report"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_line__money_receive
+msgid "Money receive"
+msgstr "Số tiền nhận"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Mã phiếu"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Ngày thanh toán"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_debt_review__note
+msgid "Note"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_line__note
+msgid "Notes"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_batch_line__num_lessons
+msgid "Number of lessons"
+msgstr "Số tiết"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_batch
+msgid "OpenEduCat Batch"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__student_from_booking__covert_gender_to_op_student__o
+msgid "Other"
+msgstr "Khác"
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__request_payment__payment_type__out_bound
+msgid "Out bound"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_line__paid
+msgid "Paid"
+msgstr "Đã thanh toán"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__partner_id
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__partner_id
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_debt_review__payment_amount
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__payment_amount
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__payment_amount
+msgid "Payment Amount"
+msgstr "Số tiền"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Payment Matching"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__payment_type
+msgid "Payment method"
+msgstr "Phương thức thanh toán"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_account_payment
+msgid "Payments"
+msgstr "Thanh toán"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_from_booking__phone
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_batch_line__total_fee
+msgid "Phí giảng viên/lớp"
+msgstr ""
+
+#. module: crm_academy
+#: code:addons/crm_academy/models/op_batch.py:0
+#, python-format
+msgid "Please choose Survey."
+msgstr "Chọn khảo sát"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Post Difference In"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_course__product_id
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__product_id
+msgid "Product"
+msgstr "Sản phẩm"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.check_partner_academy_view_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.form_crm_lead_inherit
+msgid "Qualify"
+msgstr "Đặt lịch"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__debt_review_reason
+msgid "Reason for debt"
+msgstr "Lý do"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.debt_view_form_inherit
+msgid "Refuse"
+msgstr "Từ chối"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Register Payment"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.internal_general_report_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.student_report_form
+#: model_terms:ir.ui.view,arch_db:crm_academy.training_qualify_report_form
+msgid "Report"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_materials_report__report_type
+msgid "Report type"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.request_debt_form
+msgid "Request"
+msgstr "Gửi yêu cầu"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.crm_lead_form_booking_add_button_create_student
+#: model_terms:ir.ui.view,arch_db:crm_academy.request_debt_form
+msgid "Request Debt"
+msgstr "Yêu cầu duyệt nợ"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.crm_lead_form_booking_add_button_create_student
+msgid "Request Fees"
+msgstr "Yêu cầu thu học phí"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_request_payment
+#: model_terms:ir.ui.view,arch_db:crm_academy.request_payment_form_view
+msgid "Request Payment"
+msgstr "Yêu cầu thu học phí"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.request_payment_form_view
+msgid "Request payment"
+msgstr "Yêu cầu thu học phí"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_form_view
+msgid "Reset To Draft"
+msgstr "Đưa về dạng nháp"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.form_internal_batch_add_survey
+msgid "Send Surveys"
+msgstr "Gửi khảo sát"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_request_debt__crm_line_ids
+#: model:ir.model.fields,field_description:crm_academy.field_request_payment__crm_line_ids
+msgid "Services"
+msgstr "Dịch vụ"
+
+#. module: crm_academy
+#: model:ir.actions.act_window,name:crm_academy.act_open_op_session_external_batch_view
+#: model:ir.actions.act_window,name:crm_academy.act_open_op_session_internal_batch_view
+msgid "Sessions"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_account_payment__source
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__invoice_state
+msgid "State"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__state
+msgid "Status"
+msgstr "Trạng thái"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_student
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__student_id
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__student_id
+msgid "Student"
+msgstr "Sinh viên"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_student_course
+msgid "Student Course Details"
+msgstr "Thông tin chi tiết khóa học viên"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_student_fees_details
+msgid "Student Fees Details"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_student_report
+msgid "Student Report"
+msgstr "Báo cáo học viên"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.op_course_tree_view_inherit
+msgid "Students"
+msgstr "Học viên"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_student_fees_details__date
+msgid "Submit Date"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_survey_survey
+#: model:ir.model.fields,field_description:crm_academy.field_op_batch__survey_survey
+msgid "Survey"
+msgstr "Khảo sát"
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_survey_user_input
+msgid "Survey User Input"
+msgstr "Dữ liệu người dùng nhập vào khảo sát"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Số tiền"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__training_quality_reports__type_report__faculty
+msgid "Teacher evaluation report"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields.selection,name:crm_academy.selection__materials_report__report_type__teaching_materials
+msgid "Teaching Materials"
+msgstr "Vật tư giảng viên"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Thanh toán Nháp"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Thanh toán Đã vào sổ"
+msgstr ""
+
+#. module: crm_academy
+#: code:addons/crm_academy/models/student.py:0
+#, python-format
+msgid "The value of the deposit amount must be positive."
+msgstr ""
+
+#. module: crm_academy
+#: code:addons/crm_academy/models/op_batch.py:0
+#, python-format
+msgid "There are currently no students in this class"
+msgstr "Hiện tại không có học sinh nào trong lớp học này"
+
+#. module: crm_academy
+#: code:addons/crm_academy/models/student.py:0
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\".You may have to "
+"install a chart of account from Accounting app, settings menu."
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_training_quality_reports
+msgid "Training Quality Reports"
+msgstr "Báo cáo chất lượng đào tạo"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_view_tree
+msgid "Trạng thái"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_op_batch_line__tutor_fee_related
+msgid "Tutor fee per lesson"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_debt_review__type_brand
+msgid "Type brand"
+msgstr "Loại thương hiệu"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_student_report__type_report
+#: model:ir.model.fields,field_description:crm_academy.field_training_quality_reports__type_report
+msgid "Type report"
+msgstr "Loại báo cáo"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.tuition_search_view
+msgid "Tìm phiếu"
+msgstr ""
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.debt_view_form_inherit
+msgid "You certainly confirm"
+msgstr "Bạn muốn xác nhận phiếu duyệt nợ này?"
+
+#. module: crm_academy
+#: model_terms:ir.ui.view,arch_db:crm_academy.debt_view_form_inherit
+msgid "You definitely want to cancel"
+msgstr "Bạn muốn hủy phiếu duyệt nợ này"
+
+#. module: crm_academy
+#: model:ir.model.fields,field_description:crm_academy.field_crm_line__check_payment
+msgid "check"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_check_partner_qualify
+msgid "check.partner.qualify"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_crm_debt_review
+msgid "crm.debt.review"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_crm_line
+msgid "crm.line"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_op_batch_line
+msgid "op.batch.line"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_request_debt
+msgid "request.debt"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.model,name:crm_academy.model_student_from_booking
+msgid "student.from.booking"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.ui.menu,name:crm_academy.menu_op_session_external_batch
+msgid "Đào tạo chiêu sinh"
+msgstr ""
+
+#. module: crm_academy
+#: model:ir.ui.menu,name:crm_academy.menu_op_session_internal_batch
+msgid "Đào tạo nội bộ"
+msgstr ""
+
+#. module: openeducat_core
+#: model:ir.actions.act_window,name:openeducat_core.act_open_op_year_view
+#: model:ir.ui.menu,name:openeducat_core.menu_timetable
+msgid "Academic years"
+msgstr "Thời gian biểu"
+
+#. module: openeducat_core
+#: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_bom__reverse
+msgid "Reverse"
+msgstr "Hoàn trả"
+
+#. module: openeducat_core
+#: code:addons/openeducat_core/models/faculty.py:0
+#: model:ir.model.fields,field_description:openeducat_core.field_op_faculty_bom__faculty_stock_location
+#, python-format
+msgid "Faculty stock"
+msgstr " Tủ giảng viên"
+
+#. module: openeducat_core
+#: model_terms:ir.ui.view,arch_db:openeducat_core.faculty_bom_form
+msgid "Update"
+msgstr "Cập nhập"
+
+#. modules: openeducat_timetable, openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_student_course__status__cancel
+#: model_terms:ir.ui.view,arch_db:openeducat_core.email_managers_form
+#: model_terms:ir.ui.view,arch_db:openeducat_core.employee_admission_form
+#: model_terms:ir.ui.view,arch_db:openeducat_core.faculty_bom_form
+#: model_terms:ir.ui.view,arch_db:openeducat_timetable.teaching_payslip_wizard
+#: model_terms:ir.ui.view,arch_db:openeducat_timetable.view_op_session_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: openeducat_core
+#: model:ir.actions.act_window,name:openeducat_core.faculty_bom_act
+#: model_terms:ir.ui.view,arch_db:openeducat_core.faculty_bom_form
+msgid "Faculty BOM wizard"
+msgstr "Cập nhập vật tư tiêu hao cho lớp"
+
+#. module: openeducat_timetable
+#: model:ir.model.fields.selection,name:openeducat_timetable.selection__gen_time_table_line__day__3
+#: model_terms:ir.ui.view,arch_db:openeducat_timetable.view_generate_time_table_form
+msgid "Thursday"
+msgstr "Thứ năm"
+
+#. module: openeducat_core
+#: model:ir.ui.menu,name:openeducat_core.menu_op_report_internal
+msgid "Internal reports"
+msgstr "Báo cáo nội bộ"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line__catch_up
+#: model_terms:ir.ui.view,arch_db:openeducat_attendance.attendance_line_view_op_session_form
+msgid "Catch up"
+msgstr "Học bù"
+
+#. module: openeducat_attendance_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_attendance_enterprise.openeducat_batch_attendance_dashboard_kanban_view
+msgid ": Absent"
+msgstr "Vắng mặt"
+
+#. module: openeducat_attendance_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_attendance_enterprise.openeducat_batch_attendance_dashboard_kanban_view
+msgid ": Present"
+msgstr "Có mặt"
+
+#. modules: openeducat_attendance_enterprise, openeducat_attendance
+#: model:ir.actions.act_window,name:openeducat_attendance.act_open_op_attendance_sheet_view
+#: model:ir.actions.act_window,name:openeducat_attendance_enterprise.act_dashboard_op_attendance_sheet_view
+msgid "Attendance Sheets"
+msgstr "Phiếu điểm danh"
+
+#. module: openeducat_attendance
+#: model:ir.model.fields,field_description:openeducat_attendance.field_op_attendance_line__remark
+#: model_terms:ir.ui.view,arch_db:openeducat_attendance.student_attendance_report
+msgid "Remark"
+msgstr ""
+
+#. module: openeducat_exam
+#: model:ir.model.fields,field_description:openeducat_exam.field_op_exam__exam_type
+msgid "Type"
+msgstr "Loại kiểm tra"
+
+#. module: openeducat_exam
+#: model:ir.ui.menu,name:openeducat_exam.exam_type_menu
+msgid "Type Exam"
+msgstr "Loại kiểm tra"
+
+#. module: openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_student_course__status__study
+#: model_terms:ir.ui.view,arch_db:openeducat_core.view_op_student_course_search
+msgid "Studying"
+msgstr "Đang học"
+
+#. module: openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_student_course__status__not
+#: model_terms:ir.ui.view,arch_db:openeducat_core.view_op_student_course_search
+msgid "Not learned"
+msgstr "Chưa học"
+
+#. module: openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_student_course__status__trial
+msgid "Trial"
+msgstr "Học thử"
+
+#. module: openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_student_course__status__reserve
+msgid "Reserved"
+msgstr "Bảo lưu"
+
+#. module: openeducat_core
+#: model:ir.model.fields.selection,name:openeducat_core.selection__op_batch__status__ongoing
+msgid "Ongoing"
+msgstr "Đang diễn ra"
+
+#. module: openeducat_core
+#: code:addons/openeducat_core/models/batch.py:0
+#: code:addons/openeducat_core/models/course.py:0
+#, python-format
+msgid "Invalid Number of lessons"
+msgstr "Tổng số tiết không hợp lệ"
+
+#. module: openeducat_core
+#: code:addons/openeducat_core/models/batch.py:0
+#: code:addons/openeducat_core/models/course.py:0
+#, python-format
+msgid "Invalid Maximum absence"
+msgstr "Số tiết tối thiểu không hợp lệ"

@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 05:57+0000\n"
+"PO-Revision-Date: 2018-03-07 00:34-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Spanish, Dominican Republic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: es-DO\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_bigbluebutton/i18n/openeducat_bigbluebutton.pot\n"
+"Language: es_DO\n"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_apw
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_apw
+msgid "Attendee password"
+msgstr "Contraseña de participante"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.ui.view,arch_db:openeducat_bigbluebutton.view_BbbMeeting_form
+msgid "Create Meeting"
+msgstr "Crear la reunión"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.ui.view,arch_db:openeducat_bigbluebutton.view_op_session_meeting_form
+msgid "Create Online Meeting"
+msgstr "Crear reuniones en línea"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_create_uid
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_create_date
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_display_name
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_name
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_id
+msgid "ID"
+msgstr "ID"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting___last_update
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link___last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_write_uid
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_write_date
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_meeting_name
+msgid "Meeting ID"
+msgstr "ID de la reunión"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_meeting_link_name
+#: model:ir.ui.view,arch_db:openeducat_bigbluebutton.view_op_session_meeting_form
+msgid "Meeting Link"
+msgstr "Reunión de enlace"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.actions.act_window,name:openeducat_bigbluebutton.act_open_BbbMeeting_view
+#: model:ir.ui.view,arch_db:openeducat_bigbluebutton.view_BbbMeeting_form
+msgid "Meetings"
+msgstr "Reuniones"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_mpw
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_mpw
+msgid "Moderator password"
+msgstr "Contraseña de asesor de la"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_name
+msgid "Name / Subject"
+msgstr "Nombre / tema"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_online_meeting
+msgid "Online Meeting"
+msgstr "Reunión en línea"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.actions.act_window,name:openeducat_bigbluebutton.act_open_MeetingLink_view
+#: model:ir.ui.view,arch_db:openeducat_bigbluebutton.view_MeetingLink_form
+msgid "Online Meeting Link"
+msgstr "Reunión en línea vínculo"
+
+#. module: openeducat_bigbluebutton
+#: code:addons/openeducat_bigbluebutton/wizard/meeting.py:60
+#: code:addons/openeducat_bigbluebutton/wizard/meeting.py:66
+#, python-format
+msgid "Please Configure BigBlueButton Credentials"
+msgstr "Por favor, configurar las credenciales de BigBlueButton"
+
+#. module: openeducat_bigbluebutton
+#: code:addons/openeducat_bigbluebutton/wizard/meeting.py:72
+#, python-format
+msgid "Please Configure URL in System Parameters"
+msgstr "Por favor, configurar URL en parámetros del sistema"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_salt
+msgid "Salt"
+msgstr "Sal"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_session_id
+msgid "Session"
+msgstr "Período de sesiones"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_op_session
+msgid "Sessions"
+msgstr "Sesiones de"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_op_session_url
+msgid "URL"
+msgstr "URL"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,field_description:openeducat_bigbluebutton.field_bbb_meeting_welcome_str
+msgid "Welcome String"
+msgstr "¡Bienvenido cadena"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_bbb_meeting
+msgid "bbb.meeting"
+msgstr "bbb.Meeting"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model,name:openeducat_bigbluebutton.model_meeting_link
+msgid "meeting.link"
+msgstr "meeting.Link"
+
+#. module: openeducat_bigbluebutton
+#: model:ir.model.fields,help:openeducat_bigbluebutton.field_bbb_meeting_welcome_str
+msgid "welcome message to be                               displayed when a user logs in to the meeting"
+msgstr "mensaje de bienvenida que se mostrará cuando un usuario inicia sesión la reunión"
+

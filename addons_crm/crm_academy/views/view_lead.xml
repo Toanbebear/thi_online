@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_lead_form_booking_add_button_create_student" model="ir.ui.view">
+        <field name="name">crm.lead.form.booking.add.button.create.student</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_base.crm_lead_form_booking"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='create_phone_call_info']" position="after">
+                <button name="create_students" type="object"
+                        string="Arrange class" class="btn-info"
+                        attrs="{'invisible': ['|',('customer_come', '=', 'no'),('type_brand', '!=', 'academy')]}"
+                        groups="openeducat_core.group_advising_education_enrollment"/>
+                <button name="request_payment" type="object"
+                        attrs="{'invisible': ['|',('customer_come', '=', 'no'),('type_brand', '!=', 'academy')]}"
+                        string="Request Fees" class="btn-info"/>
+                <button name="request_debt" type="object" string="Request Debt" class="btn btn-danger js_publish_btn"
+                        attrs="{'invisible': ['|',('customer_come', '=', 'no'),('type_brand', '!=', 'academy')]}"/>
+            </xpath>
+            <xpath expr="//group[@name='service']/field[@name='product_id']" position="before">
+                <field name="course_id"
+                       attrs="{'invisible':[('parent.type_brand','!=', 'academy')],
+                       'required':[('parent.type_brand','=', 'academy')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='type_data']" position="after">
+                <field name="check_payment" invisible='1'/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="academy_institute" domain="[('company_id', '=', company_id)]"
+                       attrs="{'invisible': [('type_brand', '!=', 'academy')]}"
+                       options="{'no_create': True, 'no_open': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="form_crm_lead_inherit" model="ir.ui.view">
+        <field name="name">form.crm.lead.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_base.form_crm_lead"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='qualify_partner']" position="after">
+                <button name="qualify_partner_academy" type="object"
+                        attrs="{'invisible': [('type_brand', '!=', 'academy')]}"
+                        string="Qualify" class="btn-info"/>
+            </xpath>
+            <xpath expr="//field[@name='type_data']" position="after">
+                <field name="check_payment" invisible='1'/>
+            </xpath>
+            <xpath expr="//group[@name='service']/field[@name='product_id']" position="before">
+                <field name="course_id"
+                       attrs="{'invisible':[('parent.type_brand','!=', 'academy')],
+                       'required':[('parent.type_brand','=', 'academy')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="academy_institute" domain="[('company_id', '=', company_id)]"
+                       attrs="{'invisible': [('type_brand', '!=', 'academy')]}"
+                       options="{'no_create': True, 'no_open': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

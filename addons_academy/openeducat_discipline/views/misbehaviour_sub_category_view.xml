@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_misbehaviour_sub_category_tree" model="ir.ui.view">
+            <field name="name">op.misbehaviour.sub.category.tree</field>
+            <field name="model">op.misbehaviour.sub.category</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Misbehaviour Sub Category">
+                    <field name="name"/>
+                    <field name="misbehaviour_category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_misbehaviour_sub_category_form" model="ir.ui.view">
+            <field name="name">op.misbehaviour.sub.category.form</field>
+            <field name="model">op.misbehaviour.sub.category</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Misbehaviour Sub Category">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="misbehaviour_category_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_misbehaviour_sub_category_search" model="ir.ui.view">
+            <field name="name">op.misbehaviour.sub.category.search</field>
+            <field name="model">op.misbehaviour.sub.category</field>
+            <field name="type">search</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Misbehaviour Sub Category">
+                    <field name="name" select="True"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_misbehaviour_sub_category_view">
+            <field name="name">Misbehaviour Sub Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.misbehaviour.sub.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_misbehaviour_sub_category_search"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_misbehaviour_sub_category_view_form">
+            <field name="act_window_id" ref="act_open_misbehaviour_sub_category_view"/>
+            <field name="sequence" eval="20"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_misbehaviour_sub_category_form"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="act_open_misbehaviour_sub_category_view_tree">
+            <field name="act_window_id" ref="act_open_misbehaviour_sub_category_view"/>
+            <field name="sequence" eval="10"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_misbehaviour_sub_category_tree"/>
+        </record>
+    </data>
+</odoo>

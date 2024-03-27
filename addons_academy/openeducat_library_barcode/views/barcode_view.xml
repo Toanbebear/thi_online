@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_library_barcode_scan"
+                  name="Library Barcode"
+                  action="library_barcode_action_main_view"
+                  sequence="85"
+                  groups="openeducat_library.group_op_library"
+                  web_icon="openeducat_library_barcode,static/description/icon.png"/>
+    </data>
+</odoo>

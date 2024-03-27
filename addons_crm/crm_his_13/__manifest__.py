@@ -1,0 +1,26 @@
+{
+    'name': 'CRM HIS 13',
+    'version': '1.0',
+    'category': 'CRM',
+    'author': 'Đỗ Duy Chiến',
+    'sequence': '10',
+    'summary': 'Custom workflow CRM',
+    'depends': [
+        'crm_base',
+        'shealth_all_in_one',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/default.xml',
+        'views/rule_debt_view.xml',
+        'views/view_crm_line.xml',
+        'views/sale_order.xml',
+        'views/payment.xml',
+        'views/phone_call.xml',
+        'wizard/view_select_service.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'qweb': [],
+}

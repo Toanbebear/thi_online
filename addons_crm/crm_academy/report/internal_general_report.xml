@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="internal_general_report_form" model="ir.ui.view">
+        <field name="name">internal_general_report</field>
+        <field name="model">internal.general.report</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <div>
+                            <label for="start_date"
+                                   style="font-weight: bold !important;margin-right:107px;margin-left: 0px;"/>
+                            <field name="start_date" style="width:110px" required="True"/>
+                            <field name="end_date" style="width:110px;margin-left: 34px;" required="True"/>
+                        </div>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="internal_general_report" type="object" string="Report" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="internal_general_report_act">
+        <field name="name">Báo cáo tổng hợp đào tạo nội bộ</field>
+        <field name="res_model">internal.general.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="internal_general_report_form"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="internal_general_report_menu"
+              name="Báo cáo tổng hợp đào tạo nội bộ"
+              parent="openeducat_core.menu_op_report_internal"
+              action="internal_general_report_act" groups="openeducat_core.group_op_back_office"/>
+</odoo>

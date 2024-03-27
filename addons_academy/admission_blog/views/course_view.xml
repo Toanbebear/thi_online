@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_ofcourse_blog_form">
+            <field name="name">op.admission.register.form.blog.inherit</field>
+            <field name="model">op.admission.register</field>
+            <field name="inherit_id" ref="openeducat_admission.view_op_admission_register_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='cancel_register']" position="after">
+                    <button name="action_create_blog" states="application"
+                            string="Create Blog" type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|',('blog_id', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='max_count']" position="after">
+                    <field name="blog_id" readonly="1"/>
+                </xpath>
+                <xpath expr="//page[@name='Application']" position="after">
+                    <page name="blog_post" string="Blog Post" attrs="{'invisible':[('blog_id','=',False)]}">
+                        <group name="blog_post" string="Blog Post">
+                            <field name="blog_post_ids" nolabel="1" context="{'default_blog_id':blog_id}">
+                                <form string="Blog Post">
+                                    <sheet>
+                                        <div class="oe_button_box" name="button_box">
+                                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                                            </button>
+                                            <button class="oe_stat_button" name="website_publish_button" type="object" icon="fa-globe">
+                                                <field name="website_published" widget="website_button"/>
+                                            </button>
+                                        </div>
+                                        <group>
+                                            <field name="blog_id" invisible="1"/>
+                                            <field name="name" placeholder="Blog Post Title"/>
+                                            <field name="subtitle" placeholder="Blog Subtitle"/>
+                                            <field name="tag_ids" widget="many2many_tags"/>
+                                        </group>
+                                        <group string="Publishing Options">
+                                            <field name="author_id"/>
+                                            <field name="create_date"/>
+                                            <field name="post_date"/>
+                                            <field name="write_uid"/>
+                                            <field name="write_date"/>
+                                        </group>
+                                        <group string="Content" name="content">
+                                            <field name="content" nolabel="1"/>
+                                        </group>
+                                        <group string="Technical" groups="base.group_no_one">
+                                            <field name="ranking" invisible="1"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

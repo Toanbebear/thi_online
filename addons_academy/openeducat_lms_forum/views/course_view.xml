@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_course_lms_forum_form">
+            <field name="name">op.course.form.forum.inherit</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_lms.view_op_lms_course_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/header/button[@name='action_closed']" position="after">
+                    <button name="action_create_forum" states="open"
+                            string="Create Forum" type="object" class="oe_highlight"
+                            attrs="{'invisible': ['|',('forum_id', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="/form/sheet/group/group/field[@name='user_id']" position="after">
+                    <field name="forum_id" readonly="1"/>
+                </xpath>
+                <xpath expr="//notebook/page[@name='categories']" position="after">
+                    <page name="forum_post" string="Forum Post" attrs="{'invisible':[('forum_id','=',False)]}">
+                        <group name="forum_post" string="Forum Post">
+                            <field name="forum_post_ids" nolabel="1" context="{'default_forum_id':forum_id}">
+                                <form string="Forum Post">
+                                    <sheet>
+                                        <div class="oe_button_box" name="button_box">
+                                            <button name="toggle_active" type="object"
+                                                    confirm="(Un)archiving a post automatically (un)archives its answers. Do you want to proceed?"
+                                                    class="oe_stat_button" icon="fa-archive">
+                                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                                            </button>
+                                        </div>
+                                        <label for="name" class="oe_edit_only"/>
+                                        <h1><field name="name" placeholder="Name"/></h1>
+                                        <group>
+                                            <group>
+                                                <field name="forum_id" invisible="1"/>
+                                                <field name="parent_id"/>
+                                            </group>
+                                            <group>
+                                                <field name="tag_ids" widget="many2many_tags"/>
+                                                <field name="state"/>
+                                                <field name="closed_reason_id"/>
+                                                <field name="closed_uid"/>
+                                                <field name="closed_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="create_uid"/>
+                                                <field name="create_date"/>
+                                                <field name="write_uid"/>
+                                                <field name="write_date"/>
+                                            </group>
+                                            <group>
+                                                <field name="is_correct"/>
+                                                <field name="views"/>
+                                                <field name="vote_count"/>
+                                                <field name="favourite_count"/>
+                                                <field name="child_count"/>
+                                                <field name="relevancy"/>
+                                            </group>
+                                        </group>
+                                        <group string="Answers" attrs="{'invisible':[('parent_id','!=',False)]}">
+                                            <field name="child_ids" nolabel="1">
+                                                <tree>
+                                                    <field name="create_uid" string="Answered by"/>
+                                                    <field name="vote_count"/>
+                                                    <field name="state"/>
+                                                    <field name="is_correct"/>
+                                                </tree>
+                                            </field>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

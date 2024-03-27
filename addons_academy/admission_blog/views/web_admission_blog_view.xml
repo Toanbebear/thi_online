@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="ofcourse_detail_inherit_blog" inherit_id="admission_web.ofcourse_detail">
+<!--        <xpath expr="//a[hasclass('course-comments')]" position="after">-->
+<!--            <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100" t-if="course.blog_id">-->
+<!--                <a href="#course-blg" class="nav-link rounded-0 course-detail-tab" aria-controls="settings" role="tab" data-toggle="tab">Blog</a>-->
+<!--            </li>-->
+<!--        </xpath>-->
+        <xpath expr="//section[@name='detail']" position="after">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav nav-fill nav-pills" role="tablist">
+                            <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100" t-if="course.blog_id">
+                                <a href="#course-blg" class="nav-link rounded-0 course-detail-tab" aria-controls="settings" role="tab" data-toggle="tab">Blog</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content m-2 m-md-4">
+                            <div class="collapse" id="course-blg">
+                                <a t-attf-href="/blog/#{slug(course.blog_id)}">
+                                    <h2 class="text-center mb32" t-raw="course.blog_id.name"/>
+                                </a>
+                                <t t-foreach="blog_post_ids" t-as="blog_post">
+                                    <t t-if="blog_post.website_published">
+                                        <h4>
+                                            <a t-attf-href="/blog/#{slug(course.blog_id)}/post/#{slug(course.blog_post_ids)}">
+                                                <t t-esc="blog_post.name"/>
+                                            </a>
+                                                <span t-if="not blog_post.website_published" class="text-warning">
+                                                    <span class="fa fa-exclamation-triangle ml8" title="Unpublished"/>
+                                                </span>
+                                        </h4>
+                                        <div class="text-muted">
+                                            <span class="fa fa-calendar mr8">
+                                                <span t-field="blog_post.post_date"/>
+                                            </span>
+                                        </div>
+                                        <div class="text-muted fa fa-tags">
+                                            <span t-field="blog_post.website_meta_keywords"/>
+                                            <span t-if="editable and not blog_post.blog_id.website_meta_keywords"
+                                            class="label label-danger"> No keywords defined!</span>
+                                        </div>
+                                    </t>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+<!--        <xpath expr="//div[contains(@id, 'course-comments')]" position="after">-->
+
+<!--        </xpath>-->
+    </template>
+</odoo>

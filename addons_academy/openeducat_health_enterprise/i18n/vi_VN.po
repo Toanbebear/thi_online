@@ -1,0 +1,222 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openeducat_health_enterprise
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-10 06:10+0000\n"
+"PO-Revision-Date: 2021-06-10 06:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__regular_checkup
+msgid "Any Regular Checkup Required?"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__name
+msgid "Checkup Detail"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Checkup Details"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Checkup Line"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__health_line
+msgid "Checkup Lines"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__recommendation
+msgid "Checkup Recommendation"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__company_id
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__create_uid
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__create_date
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__create_date
+msgid "Created on"
+msgstr "Thời điểm tạo"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__date
+msgid "Date"
+msgstr "Ngày"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__display_name
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: openeducat_health_enterprise
+#: code:addons/openeducat_health_enterprise/models/health.py:0
+#, python-format
+msgid "Enter proper height and weight!"
+msgstr "Nhập đúng chiều cao và cân nặng!"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__eyeglasses_no
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Eye Glasses"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__eyeglasses
+msgid "Eye Glasses?"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__faculty_id
+#: model:ir.model.fields.selection,name:openeducat_health_enterprise.selection__op_health__type__faculty
+msgid "Faculty"
+msgstr "Giảng viên"
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Group By..."
+msgstr "Nhóm theo..."
+
+#. module: openeducat_health_enterprise
+#: model:ir.actions.act_window,name:openeducat_health_enterprise.act_open_op_health_view
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__health_id
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_tree
+msgid "Health"
+msgstr "Sức khỏe"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_faculty__health_faculty_lines
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_student__health_lines
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.health_faculty_form_view
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.health_student_form_view
+msgid "Health Detail"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_health
+msgid "Health Detail for Students and Faculties"
+msgstr "Chi tiết y tế cho khoa và sinh viên"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_health_line
+msgid "Health Line"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__height
+msgid "Height(C.M.)"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__id
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__id
+msgid "ID"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health____last_update
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line____last_update
+msgid "Last Modified on"
+msgstr "Sửa lần cuối"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__write_uid
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật gần đây bởi"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__write_date
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health_line__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật gần đây vào"
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Major Disease"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__major_diseases_note
+msgid "Major Diseases"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__major_diseases
+msgid "Major Diseases?"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_faculty
+msgid "OpenEduCat Faculty"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_form
+msgid "Other Details"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__physical_challenges_note
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Physical Challenge"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__physical_challenges
+msgid "Physical Challenge?"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Regular Checkup"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model,name:openeducat_health_enterprise.model_op_student
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__student_id
+#: model:ir.model.fields.selection,name:openeducat_health_enterprise.selection__op_health__type__student
+msgid "Student"
+msgstr "Sinh viên"
+
+#. module: openeducat_health_enterprise
+#: model_terms:ir.ui.view,arch_db:openeducat_health_enterprise.view_op_health_search
+msgid "Student Name"
+msgstr ""
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__type
+msgid "Type"
+msgstr "Loại"
+
+#. module: openeducat_health_enterprise
+#: model:ir.model.fields,field_description:openeducat_health_enterprise.field_op_health__weight
+msgid "Weight"
+msgstr "Khối lượng"

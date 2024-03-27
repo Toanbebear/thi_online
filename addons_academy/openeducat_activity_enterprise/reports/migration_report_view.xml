@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_report_migration_pivot">
+        <field name="name">migration.pivot</field>
+        <field name="model">migration.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Migration Statistics" disable_linking="True">
+                <field name="date"/>
+                <field name="student_id"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_migration_report" model="ir.actions.act_window">
+        <field name="name">Migration Analysis</field>
+        <field name="res_model">migration.report</field>
+        <field name="view_mode">pivot</field>
+        <field name="view_id" ref="view_report_migration_pivot"/>
+    </record>
+
+<!--    <menuitem id="menu_migration_report"-->
+<!--              name="Migration Report"-->
+<!--              sequence="20"-->
+<!--              parent="openeducat_core.menu_op_report_main"-->
+<!--              action="action_migration_report"/>-->
+</odoo>

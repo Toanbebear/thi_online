@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_school_offences_tree" model="ir.ui.view">
+        <field name="name">school.offences.tree</field>
+        <field name="model">school.offences</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <tree string="School Offences">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="offences_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_school_offences_form" model="ir.ui.view">
+        <field name="name">school.offences.form</field>
+        <field name="model">school.offences</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <form string="School Offences">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="offences_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_school_offences_search" model="ir.ui.view">
+        <field name="name">school.offences.search</field>
+        <field name="model">school.offences</field>
+        <field name="priority" eval="8"/>
+        <field name="arch" type="xml">
+            <search string="School Offences">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_school_offences_view">
+        <field name="name">School Offences</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">school.offences</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_school_offences_search"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_open_school_offences_view_form">
+        <field name="act_window_id" ref="act_open_school_offences_view"/>
+        <field name="sequence" eval="20"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_school_offences_form"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_open_school_offences_view_tree">
+        <field name="act_window_id" ref="act_open_school_offences_view"/>
+        <field name="sequence" eval="10"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_school_offences_tree"/>
+    </record>
+</odoo>

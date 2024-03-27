@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="contract_aca_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Học viện</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/academy/HD_TV_HV.docx"/>
+            <field name="store_fname">HD_TV_HV.docx</field>
+        </record>
+
+        <record id="contract_aca_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Học viện</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/academy/HD_CT_HV.docx"/>
+            <field name="store_fname">HD_CT_HV.docx</field>
+        </record>
+
+    </data>
+</odoo>

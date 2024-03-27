@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_1">
+            <field name="name">Thay băng</field>
+            <field name="has_supply">True</field>
+        </record>
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_2">
+            <field name="name">Cắt chỉ</field>
+            <field name="has_supply">True</field>
+        </record>
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_3">
+            <field name="name">Hút dịch</field>
+            <field name="has_supply">True</field>
+        </record>
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_4">
+            <field name="name">Rút ống</field>
+            <field name="has_supply">True</field>
+        </record>
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_5">
+            <field name="name">Tiêm kháng sinh</field>
+            <field name="has_supply">True</field>
+        </record>
+        <record model="sh.medical.evaluation.services" id="sh_evaluation_services_6">
+            <field name="name">Định kỳ</field>
+            <field name="has_supply">False</field>
+        </record>
+    </data>
+</odoo>

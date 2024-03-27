@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_campus_facility_1" model="op.campus.facility">
+            <field name="name">Boys Hostel</field>
+            <field name="capacity">1</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+        </record>
+
+        <record id="op_campus_facility_2" model="op.campus.facility">
+            <field name="name">Room-101</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_1"/>
+        </record>
+
+        <record id="op_campus_facility_3" model="op.campus.facility">
+            <field name="name">Room-102</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_1"/>
+        </record>
+
+        <record id="op_campus_facility_4" model="op.campus.facility">
+            <field name="name">Room-103</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_1"/>
+        </record>
+
+        <record id="op_campus_facility_5" model="op.campus.facility">
+            <field name="name">Girls Hostel</field>
+            <field name="capacity">1</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+        </record>
+
+        <record id="op_campus_facility_6" model="op.campus.facility">
+            <field name="name">Room-101</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_5"/>
+        </record>
+
+        <record id="op_campus_facility_7" model="op.campus.facility">
+            <field name="name">Room-102</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_5"/>
+        </record>
+
+        <record id="op_campus_facility_8" model="op.campus.facility">
+            <field name="name">Room-103</field>
+            <field name="capacity">5</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_1"/>
+            <field name="parent_id" ref="openeducat_campus_enterprise.op_campus_facility_5"/>
+        </record>
+
+        <record id="op_campus_facility_9" model="op.campus.facility">
+            <field name="name">Auditorium</field>
+            <field name="capacity">1</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_3"/>
+        </record>
+
+        <record id="op_campus_facility_10" model="op.campus.facility">
+            <field name="name">Cricket Ground</field>
+            <field name="capacity">1</field>
+            <field name="facility_type_id" ref="openeducat_campus_enterprise.op_facility_type_2"/>
+        </record>
+    </data>
+</odoo>

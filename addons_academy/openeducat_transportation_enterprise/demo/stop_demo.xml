@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="op_stop_1" model="op.stop">
+            <field name="name">Pickup Point</field>
+            <field name="sequence">1</field>
+            <field name="estimated_arrival_conf">0.166</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+            <field name="partner_ids" eval="[(4, ref('openeducat_core.op_res_partner_2'))]"/>
+        </record>
+
+        <record id="op_stop_2" model="op.stop">
+            <field name="name">Public Garden</field>
+            <field name="sequence">2</field>
+            <field name="estimated_arrival_conf">0.333</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+            <field name="partner_ids" eval="[(4, ref('openeducat_core.op_res_partner_4'))]"/>
+        </record>
+
+        <record id="op_stop_3" model="op.stop">
+            <field name="name">Court Road</field>
+            <field name="sequence">3</field>
+            <field name="estimated_arrival_conf">0.5</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+            <field name="partner_ids" eval="[(4, ref('openeducat_core.op_res_partner_5'))]"/>
+        </record>
+
+        <record id="op_stop_4" model="op.stop">
+            <field name="name">Ring Road</field>
+            <field name="sequence">4</field>
+            <field name="estimated_arrival_conf">0.666</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+            <field name="partner_ids" eval="[(4, ref('openeducat_core.op_res_partner_6'))]"/>
+        </record>
+
+        <record id="op_stop_5" model="op.stop">
+            <field name="name">Barton Library</field>
+            <field name="sequence">5</field>
+            <field name="estimated_arrival_conf">0.833</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+        </record>
+
+        <record id="op_stop_6" model="op.stop">
+            <field name="name">Pickup Point</field>
+            <field name="sequence">6</field>
+            <field name="estimated_arrival_conf">1.0</field>
+            <field name="route_id" ref="openeducat_transportation_enterprise.op_route_1"/>
+        </record>
+    </data>
+</odoo>

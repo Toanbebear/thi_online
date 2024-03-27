@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Website LMS -->
+    <record id="website_menu_lms_courses" model="website.menu">
+        <field name="name">Courses</field>
+        <field name="url">/courses</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+
+    <!-- Website LMS -->
+    <record id="website_menu_lms_my_course" model="website.menu">
+        <field name="name">My Courses</field>
+        <field name="url">/my-courses</field>
+        <field name="parent_id" ref="website.main_menu" />
+        <field name="sequence" type="int">50</field>
+    </record>
+
+    <!-- Main Menu of LMS -->
+<!--    <menuitem id="menu_lms_main"-->
+<!--              sequence="20"-->
+<!--              name="LMS"-->
+<!--              groups="openeducat_core.group_op_faculty"-->
+<!--              web_icon="openeducat_lms,static/description/icon.png"/>-->
+
+    <!-- Dashboard -->
+<!--    <menuitem id="menu_lms_main_dashboard"-->
+<!--              parent="menu_lms_main"-->
+<!--              name="Dashboard"-->
+<!--              sequence="15"/>-->
+
+    <record id="action_lms_dashboard" model="ir.actions.client">
+        <field name="name">Dashboard</field>
+        <field name="tag">openeducat_lms_dashboard</field>
+        <field name="target">main</field>
+    </record>
+
+<!--    <menuitem id="menu_lms_dashboard"-->
+<!--              parent="menu_lms_main_dashboard"-->
+<!--              name="KPI Dashboard"-->
+<!--              groups="openeducat_core.group_op_back_office"-->
+<!--              sequence="15"-->
+<!--              action="action_lms_dashboard"/>-->
+
+<!--    <menuitem id="menu_openeducat_lms_dashboard"-->
+<!--              name="Course Dashboard"-->
+<!--              action="op_lms_dashboard_kanban"-->
+<!--              parent="menu_lms_main_dashboard"-->
+<!--              groups="openeducat_core.group_op_faculty"-->
+<!--              sequence="6"/>-->
+
+    <!-- Course -->
+<!--    <menuitem id="menu_op_course"-->
+<!--              parent="menu_lms_main"-->
+<!--              name="Courses"-->
+<!--              sequence="10"-->
+<!--              groups="openeducat_core.group_op_faculty"-->
+<!--              action="act_open_op_lms_course_view"/>-->
+
+    <!-- Course material -->
+<!--    <menuitem id="menu_op_course_material"-->
+<!--              parent="menu_lms_main"-->
+<!--              sequence="20"-->
+<!--              groups="openeducat_core.group_op_faculty"-->
+<!--              action="act_open_op_course_material_view"/>-->
+
+    <!-- Enrollments -->
+<!--    <menuitem id="menu_course_enrollment"-->
+<!--              parent="menu_lms_main"-->
+<!--              sequence="30"-->
+<!--              action="act_open_op_course_enrollment_view"-->
+<!--              groups="openeducat_core.group_op_back_office"/>-->
+
+    <!-- Configuration -->
+<!--    <menuitem id="menu_op_lms_configuration"-->
+<!--              parent="menu_lms_main"-->
+<!--              name="Configuration"-->
+<!--              sequence="50"-->
+<!--              groups="openeducat_core.group_op_back_office"/>-->
+
+    <!-- Course Category -->
+<!--    <menuitem id="menu_course_category"-->
+<!--              parent="menu_op_lms_configuration"-->
+<!--              name="Course Category"-->
+<!--              sequence="10"-->
+<!--              action="act_open_course_category_view"/>-->
+</odoo>

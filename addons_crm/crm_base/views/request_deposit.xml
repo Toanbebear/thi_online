@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="form_request_deposit" model="ir.ui.view">
+            <field name="name">Form request deposit</field>
+            <field name="model">crm.request.deposit</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="convert_payment" string="Chuyển đổi sang payment" type="object" class="btn-info"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="lead_id" options="{'no_open':True,'no_create':True}" readonly="True" force_save="True"/>
+                                <field name="partner_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="brand_id" options="{'no_open':True,'no_create':True}" readonly="True" force_save="True"/>
+                                <field name="company_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="program_id" options="{'no_open':True,'no_create':True}"/>
+                            </group>
+                            <group>
+                                <field name="payment_date"/>
+                                <field name="currency_id" options="{'no_open':True,'no_create':True}"/>
+                                <field name="amount"/>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="tree_request_deposit" model="ir.ui.view">
+            <field name="name">Tree request deposit</field>
+            <field name="model">crm.request.deposit</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="partner_id"/>
+                    <field name="brand_id"/>
+                    <field name="company_id"/>
+                    <field name="payment_date"/>
+                    <field name="currency_id"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_request_deposit" model="ir.actions.act_window">
+            <field name="name">Request deposit</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.request.deposit</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="menu_request_deposit"
+                  name="Request deposit"
+                  parent="crm.crm_menu_root"
+                  sequence="9"
+                  action="action_request_deposit"/>
+
+    </data>
+</odoo>

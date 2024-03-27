@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="seq_crm_opp_sci" model="ir.sequence">
+            <field name="name">Opp</field>
+            <field name="code">crm.lead</field>
+            <field name="prefix">Book-</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_crm_complain_sci" model="ir.sequence">
+            <field name="name">Case</field>
+            <field name="code">crm.case</field>
+            <field name="prefix">CAS-</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="contract_kn_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức KangNam</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/kangnam/HD_CT_KN.docx"/>
+            <field name="store_fname">HD_CT_KN.docx</field>
+        </record>
+
+        <record id="contract_kn_trial_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc KangNam</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/kangnam/HD_TV_KN.docx"/>
+            <field name="store_fname">HD_TV_KN.docx</field>
+        </record>
+
+        <record id="contract_kn_sdha_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng sử dụng hình ảnh KangNam</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/kangnam/HD_SDHA_KN.docx"/>
+            <field name="store_fname">HD_SDHA_KN.docx</field>
+        </record>
+    </data>
+</odoo>

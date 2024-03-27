@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mt_leave_ot" model="mail.message.subtype">
+            <field name="name">Làm thêm</field>
+            <field name="res_model">hr.leave</field>
+            <field name="description">Làm thêm</field>
+        </record>
+
+        <!-- Công tác -->
+        <record id="holiday_status_ct" model="hr.leave.type">
+            <field name="name">Công tác</field>
+            <field name="code">CT</field>
+            <field name="allocation_type">no</field>
+            <field name="color_name">red</field>
+            <field name="validity_start" eval="time.strftime('%Y-01-01')"/>
+            <field name="leave_notif_subtype_id" eval="ref('mt_leave_ot')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!--Trực -->
+        <record id="holiday_status_t" model="hr.leave.type">
+            <field name="name">Trực</field>
+            <field name="code">T</field>
+            <field name="allocation_type">no</field>
+            <field name="validation_type">both</field>
+            <field name="color_name">brown</field>
+            <field name="request_unit">hour</field>
+            <field name="validity_start" eval="time.strftime('%Y-01-01')"/>
+            <field name="leave_notif_subtype_id" eval="ref('mt_leave_ot')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!--Làm thêm -->
+        <record id="holiday_status_ot" model="hr.leave.type">
+            <field name="name">Làm thêm(OT)</field>
+            <field name="code">OT</field>
+            <field name="allocation_type">no</field>
+            <field name="validation_type">both</field>
+            <field name="color_name">brown</field>
+            <field name="request_unit">hour</field>
+            <field name="validity_start" eval="time.strftime('%Y-01-01')"/>
+            <field name="leave_notif_subtype_id" eval="ref('mt_leave_ot')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!-- inherit khóa học -->
+        <record id="view_ofcourse_inherit" model="ir.ui.view">
+            <field name="name">ofcourse.form.inherited</field>
+            <field name="model">op.course</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_course_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='max_unit_load']" position="after">
+                    <field name="time_ofcourse" attrs="{'invisible': [('internal', '=', True)]}"/>
+                </xpath>
+            </field>
+        </record>
+        <!-- inherit admission_register -->
+        <record id="view_admision_ofcourse_inherit" model="ir.ui.view">
+            <field name="name">view.admission.form.ofcourse.inherit</field>
+            <field name="model">op.admission.register</field>
+            <field name="inherit_id" ref="openeducat_admission.view_op_admission_register_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='max_count']" position="after">
+                    <field name="category_ids"/>
+                </xpath>
+                <xpath expr="//field[@name='min_count']" position="after">
+                    <field name="publish"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="image" widget="image" class="oe_avatar"/>
+                </xpath>
+                <xpath expr="//page[@name='Application']" position="after">
+                    <page name="detail" string="detail">
+                        <field name="short_description" placeholder="Tóm tắt"/>
+                        <field name="full_description" placeholder="Nội dung khóa học"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="tuition_view_tree">
+        <field name="name">Học phí</field>
+        <field name="model">account.payment</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="state=='draft'" decoration-success="state=='posted'"
+                  default_order="payment_date desc, create_date desc">
+                <field name="payment_date" string="Ngày thanh toán"/>
+                <field name="name" string="Mã phiếu"/>
+                <field name="crm_id" string="Booking"/>
+                <field name="partner_id" string="Khách hàng"/>
+                <field name="payment_type" string="Loại"/>
+                <field name="amount" string="Số tiền"/>
+                <field name="currency_id" invisible="True"/>
+                <field name="journal_id"/>
+                <field name="communication" string="Lý do thanh toán"/>
+                <field name="state" string="Trạng thái"/>
+                <field name="company_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="tuition_form_view" model="ir.ui.view">
+        <field name="name">Học phí</field>
+        <field name="model">account.payment</field>
+        <field name="arch" type="xml">
+            <form string="Register Payment">
+                <header>
+                    <button name="post" class="oe_highlight" states="draft" string="Confirm" type="object"/>
+                    <button name="action_draft" class="btn btn-secondary" states="posted" string="Reset To Draft"
+                            type="object"/>
+                    <button name="cancel" attrs="{'invisible': [('state', 'in', ('cancelled', 'posted'))]}"
+                            string="Cancel" type="object"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,posted,reconciled,cancelled"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="button_journal_entries" string="Journal Items"
+                                type="object" groups="account.group_account_user"
+                                attrs="{'invisible':[('move_line_ids','=',[])]}" icon="fa-bars"/>
+                        <field name="move_line_ids" invisible="1"/>
+                        <button class="oe_stat_button" name="button_invoices" type="object" icon="fa-bars"
+                                attrs="{'invisible':[('reconciled_invoices_count','=', 0)]}">
+                            <field name="reconciled_invoices_count"/>
+                            <span attrs="{'invisible':[('reconciled_invoices_count','&gt;',1)]}">Invoice</span>
+                            <span attrs="{'invisible':[('reconciled_invoices_count','&lt;=',1)]}">Invoices</span>
+                        </button>
+                        <button class="oe_stat_button" name="open_payment_matching_screen" string="Payment Matching"
+                                type="object" groups="account.group_account_user"
+                                attrs="{'invisible':[('move_reconciled','=',True)]}" icon="fa-dollar"/>
+                        <field name="has_invoices" invisible="1"/>
+                        <field name="move_reconciled" invisible="1"/>
+                    </div>
+                    <field name="id" invisible="1"/>
+                    <div class="oe_title" attrs="{'invisible': [('state', '=', 'draft')]}">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="invoice_ids" invisible="1"/>
+                        <group name="partner_group" invisible="context.get('active_model') == 'account.move'">
+                            <field name="payment_type" widget="radio"/>
+                            <field name="payment_method" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="partner_type" widget="selection"
+                                   attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))]}"/>
+                            <field name="crm_id" options="{'no_open':True,'no_create':True}"
+                                   attrs="{'readonly':[('state','!=','draft'),('crm_id','!=',False)]}" force_save="True"/>
+                            <field name="partner_id"
+                                   attrs="{'required': [('state', '=', 'draft'), ('payment_type', 'in', ('inbound', 'outbound'))], 'invisible': [('payment_type', 'not in', ('inbound', 'outbound'))]}"
+                                   context="{'default_is_company': True}"/>
+                            <field name="company_id" groups="base.group_multi_company" required="1"/>
+                            <field name="brand_id" options="{'no_open':True,'no_create':True}"/>
+                        </group>
+                        <group>
+                            <field name="journal_id" widget="selection"
+                                   attrs="{'invisible': [('amount', '=', 0), ('state', '!=', 'draft')]}"/>
+                            <field name="destination_journal_id" widget="selection"
+                                   attrs="{'required': [('payment_type', '=', 'transfer')], 'invisible': [('payment_type', '!=', 'transfer')]}"/>
+                            <field name="hide_payment_method" invisible="1"/>
+                            <field name="payment_method_id" widget="radio"
+                                   attrs="{'invisible': [('hide_payment_method', '=', True)]}"/>
+                            <field name="partner_bank_account_id"
+                                   attrs="{'invisible': [('show_partner_bank_account', '!=', True)], 'required': [('require_partner_bank_account', '=', True)]}"
+                                   context="{'default_partner_id': partner_id}"/>
+                            <field name="show_partner_bank_account" invisible="1"/>
+                            <field name="require_partner_bank_account" invisible="1"/>
+                            <field name="payment_method_code" invisible="1"/>
+                        </group>
+                        <group name="right_column">
+                            <label for="amount" readonly="1"/>
+                            <div name="amount_div" class="o_row">
+                                <field name="amount" readonly="1"/>
+                                <field name="currency_id" options="{'no_create': True, 'no_open': True}"
+                                       groups="base.group_multi_currency"/>
+                            </div>
+                            <field name="currency_rate_id" options="{'no_open':True,'no_create':True}"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="amount_vnd"/>
+                            <field name="text_total" required="1" force_save="1" readonly="1"/>
+                            <field name="payment_date"/>
+                            <field name="communication" required="True"/>
+                            <field name="user" attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                   options="{'no_create': True}" required="1"/>
+                        </group>
+                        <group name="payment_difference" attrs="{'invisible': [('payment_difference', '=', 0.0)]}"
+                               groups="account.group_account_user">
+                            <label for="payment_difference"/>
+                            <div>
+                                <field name="payment_difference"/>
+                                <field name="payment_difference_handling" widget="radio" nolabel="1"/>
+                                <div attrs="{'invisible': [('payment_difference_handling','=','open')]}">
+                                    <label for="writeoff_account_id" class="oe_edit_only" string="Post Difference In"/>
+                                    <field name="writeoff_account_id" options="{'no_create': True}"
+                                           string="Post Difference In"
+                                           attrs="{'required': [('payment_difference_handling', '=', 'reconcile')]}"/>
+                                    <label for="writeoff_label" class="oe_edit_only" string="Label"/>
+                                    <field name="writeoff_label"
+                                           attrs="{'required': [('payment_difference_handling', '=', 'reconcile')]}"/>
+                                </div>
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <notebook>
+                            <page>
+                                <field name="crm_line_ids">
+                                    <tree editable="1">
+                                        <field name="product_id" readonly="True"/>
+                                        <field name="course_id" string="Course" readonly="1"/>
+                                        <field name="money_receive"/>
+                                        <field name="paid" readonly="True"/>
+                                        <field name="total"/>
+                                        <field name="currency_id" invisible="True"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <field name="product_id" readonly="True"/>
+                                            <field name="course_id" string="Course" readonly="1"/>
+                                            <field name="money_receive"/>
+                                            <field name="paid" readonly="True"/>
+                                            <field name="total"/>
+                                            <field name="currency_id" invisible="True"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+                <div class="o_attachment_preview"/>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="tuition_search_view">
+        <field name="name">Tìm kiếm thanh toán</field>
+        <field name="model">account.payment</field>
+        <field name="arch" type="xml">
+            <search string="Tìm phiếu">
+                <separator orientation="vertical"/>
+                <field name="crm_id" string="Booking" select="1"/>
+                <field name="partner_id" string="Học viên" select="1"/>
+                <field name="state" string="Trạng thái" select="1"/>
+                <filter string="Thanh toán Nháp" name="state_draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="Thanh toán Đã vào sổ" name="state_posted" domain="[('state', '=', 'posted')]"/>
+                <group expand="0" string="Group By..." colspan="11" col="11">
+                    <filter name="group_crm_id" string="Booking" context="{'group_by':'crm_id'}"/>
+                    <filter name="group_tuition_date" string="Ngày thanh toán"
+                            context="{'group_by':'payment_date:month'}"/>
+                    <filter name="group_payment_type" string="Loại thanh toán" context="{'group_by':'payment_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="tution_action" model="ir.actions.act_window">
+        <field name="name">Học phí</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.payment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="crm_academy.tuition_search_view"/>
+        <field name="context">{'search_default_group_tuition_date':1, 'search_default_group_payment_type':1}</field>
+        <field name="domain">[('type_brand', '=', 'academy')]</field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_open_tuition_view_tree">
+        <field name="act_window_id" ref="tution_action"/>
+        <field name="sequence" eval="20"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="tuition_view_tree"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="act_open_tuition_view_form">
+        <field name="act_window_id" ref="tution_action"/>
+        <field name="sequence" eval="30"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tuition_form_view"/>
+    </record>
+
+    <menuitem id="menu_tuition_root"
+              parent="openeducat_core.menu_op_school_root"
+              name="Học phí"
+              sequence="28"
+              action="crm_academy.tution_action"
+              groups="openeducat_core.group_cashier,openeducat_core.group_op_back_office_admin"/>
+
+</odoo>

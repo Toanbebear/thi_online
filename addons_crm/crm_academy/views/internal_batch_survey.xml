@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="internal_batch_survey" model="ir.ui.view">
+        <field name="name">internal_batch_survey</field>
+        <field name="model">survey.survey</field>
+        <field name="inherit_id" ref="survey.survey_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='category']" position="after">
+                <field name="batch_id" widget="many2many_tags"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="internal_batch_survey_user_input" model="ir.ui.view">
+        <field name="name">internal_batch_survey_user_input</field>
+        <field name="model">survey.user_input</field>
+        <field name="inherit_id" ref="survey.survey_user_input_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='survey_id']" position="after">
+                <field name="batch_id" widget="many2many_tags"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

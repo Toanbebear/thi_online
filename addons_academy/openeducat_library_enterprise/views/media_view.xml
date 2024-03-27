@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List VIEW of medias To be Due by Today -->
+        <record model="ir.actions.act_window" id="act_op_media_today">
+            <field name="name">Media</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.media.movement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="openeducat_library.view_op_media_movement_search"/>
+            <field name="domain">[('media_type_id', 'in', [active_id]), ('state', '=', 'issue'),('return_date','=',time.strftime('%Y-%m-%d'))]</field>
+        </record>
+
+        <!-- List VIEW of medias To be Due by This Week -->
+        <record model="ir.actions.act_window" id="act_op_media_month">
+            <field name="name">Media</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.media.movement</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="openeducat_library.view_op_media_movement_search"/>
+            <field name="domain">[('media_type_id', 'in', [active_id]), ('state', '=', 'issue'), ('return_date','&lt;=',(context_today()+datetime.timedelta(days=31)).strftime('%Y-%m-%d')),('return_date','&gt;=',(context_today()-datetime.timedelta(days=1)).strftime('%Y-%m-%d'))]</field>
+            <field name="context">{'search_default_month':1}</field>
+        </record>
+
+        <record id="view_op_media_enterprise_form" model="ir.ui.view">
+            <field name="name">op.media.form</field>
+            <field name="model">op.media</field>
+            <field name="inherit_id" ref="openeducat_library.view_op_media_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/h1" position="after">
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button"
+                                name="%(openeducat_library.act_open_media_unit_view)d"
+                                context="{'search_default_media_id': active_id}"
+                                groups="openeducat_core.group_op_back_office,openeducat_library.group_op_library"
+                                type="action"
+                                icon="fa-tasks">
+                            <field name="total_units" widget="statinfo" string="Units"/>
+                        </button>
+                        <button class="oe_stat_button"
+                                name="%(openeducat_library.act_open_op_media_movement_view)d"
+                                context="{'search_default_media_id': active_id}"
+                                groups="openeducat_core.group_op_back_office,openeducat_library.group_op_library"
+                                type="action"
+                                icon="fa-tasks"
+                                string="Movements">
+                        </button>
+                    </div>
+                </xpath>
+                <xpath expr="//notebook/page[@name='units']" position="replace"></xpath>
+                <xpath expr="//notebook/page[@name='movements']" position="replace"></xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

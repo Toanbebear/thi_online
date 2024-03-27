@@ -1,0 +1,113 @@
+
+.que_hide{
+    display:none !important;
+    color:black;
+}
+
+.que_show{
+    display:block !important;
+    color:black;
+}
+.que_active{
+    background-color:#ccc;
+}
+.que_answered{
+    background-color:#33cc33;
+}
+/*======================== Progress bar =======================*/
+#progressBar {
+    background-color: #f3f3f3;
+    height: 35px;
+}
+.progress-value{
+    display:none !important;
+}
+#progressBar div {
+    height: 100%;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 0;
+    background-color: $o-brand-primary;
+}
+
+/* =================== Main Exam Page ================ */
+
+.btn-number{
+    margin: 4px 0;
+}
+
+#progressBar div{
+    color: white;
+}
+
+@media all and (max-width: 960px) {
+    .well1 {
+        padding-top: 40px;
+        padding-bottom: 35px;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .well1 {
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    .well1 {
+        padding-top: 35px;
+        padding-bottom: 30px;
+    }
+}
+
+@media all and (max-width: 770px) {
+    .well1 {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .well1 {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+
+}
+
+@media all and (max-width: 660px) {
+//     body.o_connected_user{
+//         padding-top: 0 !important;
+//     }
+//     #from_quiz_dynamic{
+//         margin-top: 0 !important;
+//     }
+    .quiz_prv,
+    .quiz_finish1{
+        width: 40%;
+        padding: 25px;
+        margin: 4%;
+    }
+
+    .btn-number{
+        margin: 4px 0;
+    }
+
+    .well1 {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+}
+
+@media all and (max-width: 600px) {
+
+}
+
+@media all and (max-width: 510px) {
+
+}

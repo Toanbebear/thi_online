@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_op_exam_form_inherited" model="ir.ui.view">
+            <field name="name">exam.form.inherited</field>
+            <field name="model">op.exam</field>
+            <field name="inherit_id" ref="openeducat_exam.view_op_exam_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='exam_type']" position="after">
+                    <field name="exam_formation" widget="radio" options="{'horizontal': true}"/>
+                    <field name="quiz_id" domain="[('batch_ids','=',batch_id)]"
+                           attrs="{'required': [('exam_formation','=', 'online')],'invisible': [('exam_formation','!=', 'online')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='attendees_line']/tree/field[@name='marks']" position="replace">
+                    <field name="online_marks" attrs="{'column_invisible': [('parent.exam_formation','=','offline')]}"/>
+                    <field name="offline_marks" attrs="{'column_invisible': [('parent.exam_formation','=','online')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='update_student']" position="after">
+                    <button type="object" name="retrieving_points" string="Update score" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

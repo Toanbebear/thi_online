@@ -1,0 +1,153 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: openeducat11enttranslation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-12 06:07+0000\n"
+"PO-Revision-Date: 2018-03-06 01:08-0500\n"
+"Last-Translator: aakash.kodwani <aakash@techreceptives.com>\n"
+"Language-Team: Persian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: openeducat11enttranslation\n"
+"X-Crowdin-Language: fa\n"
+"X-Crowdin-File: /v11_crowdin/openeducat_placement_enterprise/i18n/openeducat_placement_enterprise.pot\n"
+"Language: fa_IR\n"
+
+#. module: openeducat_placement_enterprise
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+#: selection:op.placement.offer,state:0
+msgid "Cancel"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_company_id
+msgid "Company"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_name
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+msgid "Company Name"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: selection:op.placement.offer,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_id
+msgid "ID"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+#: selection:op.placement.offer,state:0
+msgid "Join"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_join_date
+msgid "Join Date"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+#: selection:op.placement.offer,state:0
+msgid "Offer"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_offer_package
+msgid "Offered Package"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_student_placement_line
+msgid "Placement Details"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model,name:openeducat_placement_enterprise.model_op_placement_offer
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_search
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_tree
+msgid "Placement Offer"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.actions.act_window,name:openeducat_placement_enterprise.act_open_op_placement_offer_view
+#: model:ir.ui.menu,name:openeducat_placement_enterprise.menu_op_placement_offer
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.placement_student_form_view
+msgid "Placement Offers"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+msgid "Reject"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: selection:op.placement.offer,state:0
+msgid "Rejected"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+msgid "Set to Draft"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_state
+msgid "State"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_student_id
+#: model:ir.ui.view,arch_db:openeducat_placement_enterprise.view_op_placement_offer_form
+msgid "Student Name"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model.fields,field_description:openeducat_placement_enterprise.field_op_placement_offer_training_period
+msgid "Training Period"
+msgstr ""
+
+#. module: openeducat_placement_enterprise
+#: model:ir.model,name:openeducat_placement_enterprise.model_op_student
+msgid "op.student"
+msgstr ""
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<!--        <record id="structure_type_faculty" model="hr.salary.rule.category">-->
+<!--            <field name="name">Faculty</field>-->
+<!--            <field name="code">FACUL</field>-->
+<!--        </record>-->
+
+        <record id="teaching_salary_rule" model="hr.salary.rule">
+            <field name="name">Teaching salary rule</field>
+            <field name="code">TEACHING</field>
+            <field name="sequence" eval="1"/>
+            <field name="category_id" ref="om_hr_payroll.COMP"/>
+            <field name="condition_select">none</field>
+<!--            <field name="struct_id" ref="teaching_salary_structure"/>-->
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = inputs.TOTALTEACHING.amount</field>
+        </record>
+
+        <record id="teaching_salary_structure" model="hr.payroll.structure">
+            <field name="name">Teaching salary</field>
+            <field name="code">TEACHING</field>
+            <field name="rule_ids" eval="[(6,0, (ref('teaching_salary_rule'),))]"/>
+        </record>
+
+    </data>
+</odoo>

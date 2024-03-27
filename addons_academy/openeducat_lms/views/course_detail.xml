@@ -1,0 +1,320 @@
+<?xml version="1.0" ?>
+<odoo>
+    <template id="course_detail" name="Course Detail" t-name="course-detail">
+        <t t-call="website.layout">
+            <div class="oe_structure oe_empty">
+                <section style="background-color: rgba(0,0,0,.8);" class="pt-1 pb-2">
+                    <div class="container">
+                        <div class="row mt48">
+                            <div class="col-md-9 learndash_course_info text-white">
+                                <h2 class="course-derail-h2 text-white" t-esc="course.name"></h2>
+                                <div class="lead__headline">
+                                    <t t-raw="course.short_description"/>
+                                </div>
+                                <div class="col-md-12 nbt-category-name">
+                                    Category:<br/>
+                                    <t t-foreach="course.category_ids" t-as='cat'>
+                                        <p t-esc="cat.name" class="text-white" style="display: inline-block;"/>
+                                    </t>
+                                </div>
+                                <div class="row pt-2">
+                                    <div class="col-md-3 nbt-date-price">
+                                        Price: <br/>
+                                        <span class="text-white" t-esc="course.type"/>
+                                    </div>
+                                    <div class="col-md-3 total-lecture">
+                                        Total Duration: <br/>
+                                        <span class="text-white" t-esc="course.display_time"/>
+                                    </div>
+                                    <div class="col-md-3 nbt-date-lang">
+                                        Language: <br/>
+                                        <span class="text-white" t-esc="course.language"/>
+                                    </div>
+                                    <div class="col-md-3 learndash_course_review">
+                                        Review :
+                                        <t t-name="website_rating.rating_stars_static">
+                                            <t t-set="val_integer" t-value="round(rating_course['avg'])"/>
+                                            <t t-set="val_decimal" t-value="0"/>
+                                            <t t-set="empty_star" t-value="5 - val_integer"/>
+                                            <div class="o_website_rating_static">
+                                                <t t-foreach="range(0,val_integer)" t-as="num">
+                                                    <i class="fa fa-star"/>
+                                                </t>
+                                                <t t-if="val_decimal">
+                                                    <i class="fa fa-star-half-o"/>
+                                                </t>
+                                                <t t-foreach="range(0,empty_star)" t-as="num">
+                                                    <i class="fa fa-star-o"/>
+                                                </t>
+                                            </div>
+                                        </t>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-9 col-xs-12 pt-4" t-if="enrolled">
+                                    <span class="progress-value" t-raw="completed_percentage"></span>
+                                    <div id="progressBar">
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="course-thumbnail hidden-sm">
+                                    <a t-attf-href="#">
+                                        <img t-if="not course.image"
+                                             t-attf-src="/openeducat_lms/static/src/img/channel-default.jpg"
+                                             class="img img-fluid"
+                                             style="width: 100%; border: 3px solid white;"/>
+                                        <img t-if="course.image"
+                                             t-attf-src="/web/image/op.course/#{course.id}/image"
+                                             class="img img-fluid"
+                                             style="width: 100%; border: 3px solid white;"/>
+                                    </a>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 mt16 mb16" style="padding:0px">
+                                    <a t-attf-href="/course/enroll/#{slug(course)}"
+                                       t-if="not enrolled"
+                                       class="btn btn-block btn-primary"
+                                       style="border-radius: 0px; padding: 14px 12px;">
+                                        Enroll Course
+                                    </a>
+                                    <a t-attf-href="/course/#{slug(course)}"
+                                       t-if="completed_percentage == 0 and enrolled"
+                                       class="btn btn-block btn-primary"
+                                       style="border-radius: 0px; padding: 14px 12px;">
+                                        Start Course
+                                    </a>
+                                    <a t-attf-href="/course/#{slug(course)}"
+                                       t-if="completed_percentage"
+                                       class="btn btn-block btn-primary"
+                                       style="border-radius: 0px; padding: 14px 12px;">
+                                        Continue Learning
+                                    </a>
+                                </div>
+                                <div class="price_view">
+                                    <t t-if="course.type == 'paid'">
+                                        <p class="text-white text-center"
+                                           t-esc="course.product_id.website_price"
+                                           t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+                                        <!-- <t t-esc="course.price"/> -->
+                                        <!-- <span itemprop="priceCurrency" t-esc="website.currency_id.name" /> -->
+                                    </t>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 learndash_course_info mt32">
+                                <h2 class="course-derail-h2"
+                                    style="font-size: 18px;margin-bottom: 12px;">Description</h2>
+                                <div class="text-overflow">
+                                    <p t-raw="course.full_description"/>
+                                </div>
+                                <a class="btn-overflow mb32"
+                                   href="javascript:void(0)">
+                                    Show more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="nav nav-fill nav-pills" role="tablist">
+                                    <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100 active">
+                                        <a href="#course-curriculum"
+                                           class="nav-link active rounded-0 course-detail-tab"
+                                           aria-controls="profile"
+                                           role="tab"
+                                           data-toggle="tab">
+                                            Curriculum
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100">
+                                        <a href="#course-instructor"
+                                           class="nav-link rounded-0 course-detail-tab"
+                                           aria-controls="messages"
+                                           role="tab"
+                                           data-toggle="tab">
+                                            Instructor
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="nav-item bg-300 m-1 w-md-auto w-100">
+                                        <a href="#course-comments"
+                                           class="nav-link rounded-0 course-detail-tab course-comments"
+                                           aria-controls="settings"
+                                           role="tab"
+                                           data-toggle="tab">
+                                            Comments
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content m-2 m-md-4">
+                                    <div class="collapse active show" id="course-curriculum">
+                                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                                            <t t-foreach="sections" t-as="section">
+                                                <div class="card card-default">
+                                                    <div class="card-header p-2 bg-600 rounded-0" t-attf-id="#session-heading-#{section.id}">
+                                                        <a class="btn btn-block text-left collapsed rounded-0 font-weight-bold"
+                                                                data-toggle="collapse"
+                                                                aria-expanded="false"
+                                                                data-parent="#accordion"
+                                                                t-attf-data-target="#session-#{section.id}"
+                                                                t-attf-aria-controls="#session-#{section.id}">
+                                                            <t t-raw="section.name"/>
+                                                            <span class="hidden-xs hidden-sm pull-right"
+                                                                  t-raw="section.display_time"/>
+                                                        </a>
+                                                    </div>
+                                                    <div t-attf-id="session-#{section.id}"
+                                                         class="collapse rounded-0"
+                                                         data-parent="#accordion"
+                                                         t-attf-aria-labelledby="session-heading-#{section.id}">
+                                                        <div class="card-body pt-0 pb-0">
+                                                            <table class="table m-0">
+                                                                <tbody>
+                                                                    <t t-foreach="section.section_material_ids" t-as="m"
+                                                                       t-if="m.material_id.website_published">
+                                                                        <tr class="mt8 mb8">
+                                                                            <td>
+                                                                                <i t-if="m.material_id.material_type == 'audio'" class="fa fa-headphones"></i>
+                                                                                <i t-if="m.material_id.material_type == 'video'" class="fa fa-play-circle-o "></i>
+                                                                                <i t-if="m.material_id.material_type == 'document'" class="fa fa-file-pdf-o"></i>
+                                                                                <i t-if="m.material_id.material_type == 'infographic'" class="fa fa-file-image-o"></i>
+                                                                                <i t-if="m.material_id.material_type == 'quiz'" class="fa fa-question-circle"></i>
+                                                                                <span t-raw="m.material_id.name"/>
+                                                                            </td>
+                                                                            <td>
+                                                                                <a t-attf-href="##{slug(m.material_id)}"
+                                                                                   data-toggle="modal"
+                                                                                   t-if="m.preview and m.material_id.material_type != 'quiz'">
+                                                                                    <i class="fa fa-eye"></i>
+                                                                                    <span class="hidden-xs hidden-sm">Preview</span>
+                                                                                </a>
+                                                                            </td>
+                                                                            <td class="hidden-xs hidden-sm" style="text-align: right; padding-right: 15px;">
+                                                                                <span t-raw="m.display_time"/>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <!-- Modal HTML -->
+                                                                        <div t-attf-if="#{m.preview}"
+                                                                             t-attf-id="#{slug(m.material_id)}"
+                                                                             class="modal fade in videoToggleOff"
+                                                                             role="dialog"
+                                                                             tabindex="-1">
+                                                                            <div class="modal-dialog modal-lg">
+                                                                                <div class="modal-content">
+                                                                                    <div class="modal-header">
+                                                                                        <h4 class="modal-title">
+                                                                                            <h4 class="modal-title">
+                                                                                                <t t-raw="m.material_id.name"/>
+                                                                                            </h4>
+                                                                                            <button class="btn close" data-dismiss="modal">×</button>
+                                                                                        </h4>
+                                                                                    </div>
+                                                                                    <div class="modal-body">
+                                                                                        <div class="embed-responsive embed-responsive-16by9">
+                                                                                            <span class="embed-responsive-item" t-raw="m.material_id.embed_code"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </t>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="course-instructor">
+                                        <div class="row ">
+                                            <t t-foreach="course.faculty_ids" t-as="faculty">
+                                                <div class="row course_faculty_ids">
+                                                    <div class="offset-md-2 col-md-4">
+                                                        <img t-att-src="'data:image/png;base64,%s' % to_text(faculty.image)"
+                                                             class="img img-fluid"
+                                                             style="border-radius: 50%"/>
+                                                    </div>
+                                                    <div class="col-md-6 pt-4">
+                                                        <h3><span t-raw="faculty.name"/></h3>
+                                                        Email :<span t-raw="faculty.email"/><br/><br/>
+                                                        <span t-raw="faculty.bio_data"/>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </div>
+                                    <div class="collapse" id="course-comments">
+                                        <t t-call="portal.message_thread">
+                                            <t t-set="object" t-value="course"/>
+                                            <t t-set="display_rating" t-value="True"/>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row" t-if="course.suggested_course_ids">
+                            <div class="mt48 mb16 col-md-12">
+                                <h3>Suggested Courses</h3>
+                            </div>
+                            <div class="owl-carousel owl-theme col-md-12">
+                                <t t-foreach="course.suggested_course_ids" t-as="c">
+                                    <div class="item">
+                                        <div class="car" style="padding:0px;">
+                                            <div class="card-body">
+                                                <div class="suggested-img">
+                                                    <a t-attf-href="/course-detail/#{slug(c)}">
+                                                        <img t-if="not c.image"
+                                                             t-attf-src="/openeducat_lms/static/src/img/channel-default.jpg"
+                                                             class="img img-responsive"/>
+                                                        <img t-if="c.image"
+                                                             t-attf-src="/web/image/op.course/#{c.id}/image"
+                                                             class="img img-responsive"/>
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <div class="course-title">
+                                                        <h2 class="website_lms_h2">
+                                                            <a t-attf-href="/course-detail/#{slug(c)}" t-esc="c.name"/>
+                                                        </h2>
+                                                    </div>
+                                                    <div class="course-instructor">
+                                                        Teacher:
+                                                        <span style="font-weight: 600;">
+                                                            <t t-if="c.faculty_ids" t-esc="c.faculty_ids[0].name"/>
+                                                        </span>
+                                                    </div>
+                                                    <div class="course-price">
+                                                        <span t-if="c.type == 'free'">Free</span>
+                                                        <span t-if="c.type == 'paid'"><t t-esc="c.price"/></span>
+                                                    </div>
+                                                    <div class="course-student">
+                                                        <span>
+                                                            <i class="fa fa-users"></i>
+                                                            Students: <b><t t-esc="len(course.course_enrollment_ids)"/></b>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

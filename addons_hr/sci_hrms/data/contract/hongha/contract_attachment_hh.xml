@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="contract_hh_official_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng chính thức Hồng Hà</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/hongha/HD_CT_HH.docx"/>
+            <field name="store_fname">HD_CT_HH.docx</field>
+        </record>
+
+        <record id="contract_hh_probation_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng thử việc Hồng Hà</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/hongha/HD_TV_HH.docx"/>
+            <field name="store_fname">HD_TV_HH.docx</field>
+        </record>
+
+        <record id="contract_hh_trainee_report_attachment" model="ir.attachment">
+            <field name="name">Hợp đồng học việc Hồng Hà</field>
+            <field name="type">binary</field>
+            <field name="datas" type="base64" file="sci_hrms/data/contract/hongha/HD_HV_HH.docx"/>
+            <field name="store_fname">HD_HV_HH.docx</field>
+        </record>
+    </data>
+</odoo>
